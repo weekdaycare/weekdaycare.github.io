@@ -118,7 +118,7 @@ IconifyProviders = {
 <h2 id="自动续期"><a href="#自动续期" class="headerlink" title="自动续期"></a>自动续期</h2><p>订阅的有效期是 <code>90</code> 天。到期前，如果微软检测到账号被用于开发，即 <code>API 被频繁且无规律调用</code>，将自动续期。因此，只需编写几行代码，定时高频调用其 API 即可。</p>
 <p><code>Github Action</code> 是 Github 提供给开发者使用的 <code>虚拟 Linux 环境</code>，可 <code>根据条件</code>，例如指定时间，<code>执行指定代码</code>。</p>
 <h3 id="添加任务"><a href="#添加任务" class="headerlink" title="添加任务"></a>添加任务</h3><p>首先 <a target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9naXRodWIuY29tLw==">登录或注册</a> 一个 Github 账号，在此不再赘述。<del>随后打开 <a target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9naXRodWIuY29tL3ZjaGVja3plbi9BdXRvQXBpU2VjcmV0">该仓库</a>，点击右上角的 <code>Fork</code></del>（会遭到攻击，想收藏可以 Star，禁止 Fork）。随后<a target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZ2l0aHViL2ltcG9ydGluZy15b3VyLXByb2plY3RzLXRvLWdpdGh1Yi9pbXBvcnRpbmctYS1yZXBvc2l0b3J5LXdpdGgtZ2l0aHViLWltcG9ydGVy">导入私有仓库</a>，在 <code>Your old repository’s clone URL</code> 里填写</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*   https://github.com/vcheckzen/KeepAliveE5.git </span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">*   https:&#x2F;&#x2F;github.com&#x2F;vcheckzen&#x2F;KeepAliveE5.git </code></pre>
 
 <p>Privacy 务必选择 <code>Private</code>。</p>
 <p>点击 <code>Begin Import</code>，稍等片刻，你的账号下便会复制一份该项目。</p>
@@ -187,7 +187,8 @@ IconifyProviders = {
 <li><p>OneDrive 世纪互联使用了不同的 API 参数，所以我们要修改 <code>authApi</code> 和 <code>driveApi</code></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></p>
 <p>将它们修改为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">authApi: &quot;https://login.partner.microsoftonline.cn/common/oauth2/v2.0/token&quot;,</span><br><span class="line">driveApi: &quot;https://microsoftgraph.chinacloudapi.cn/v1.0/me/drive&quot;,</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">authApi: &quot;https:&#x2F;&#x2F;login.partner.microsoftonline.cn&#x2F;common&#x2F;oauth2&#x2F;v2.0&#x2F;token&quot;,
+driveApi: &quot;https:&#x2F;&#x2F;microsoftgraph.chinacloudapi.cn&#x2F;v1.0&#x2F;me&#x2F;drive&quot;,</code></pre>
 </li>
 <li><p>OneDrive 企业版、教育版以及 E5 订阅的用户需要注意：先尝试在不修改 <code>config/api.config.js</code> 的情况下进行 OAuth <strong>无论你是否有管理权限</strong>。如果你被告知需要管理权限，你就要使用你自己的 <code>clientId</code> 与 <code>clientSecret</code> 了。</p>
 </li>
@@ -205,7 +206,8 @@ IconifyProviders = {
 <li><p>输入一个名字，例如 my-onedrive-vercel-index。</p>
 </li>
 <li><p>将 <em>Supported account types</em> 设置为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+</code></pre>
 
 <p>OneDrive 世纪互联用户设置为 - 任何组织目录（任何 Azure AD 目录 - 多租户）中的帐户。</p>
 </li>
@@ -229,7 +231,8 @@ IconifyProviders = {
 <p>最后，点击 <em>Add</em> ，然后复制 client_secret 的值并妥善保管。（只有一次复制机会）</p>
 <p>![](data:image&#x2F;svg+xml,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1846' height='416'/>)<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></p>
 <h5 id="修改-API-权限"><a href="#修改-API-权限" class="headerlink" title="修改 API 权限#"></a><a href="#%E4%BF%AE%E6%94%B9-api-%E6%9D%83%E9%99%90">修改 API 权限#</a></h5><p>Microsoft Graph API 可以设置 API 范围，我们只需要以下三个（ <code>api.config.js</code> 里要求的）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user.read files.read.all offline_access</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">user.read files.read.all offline_access
+</code></pre>
 
 <p>点击 _API permissions_，再点击 _Microsoft Graph_，再点击 _Delegated permissions_，然后搜索：</p>
 <ul>
@@ -246,7 +249,7 @@ IconifyProviders = {
 <p>Your client secret:</p>
 <p>Your obfuscated client secret:</p>
 <p>填写 client secret 后，你应该得到一个长得像这样的字符串：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">U2FsdGVkX1830zo3/pFDqaBCVBb37iLw3WnBDWGF9GIB2f4apzv0roemp8Y+iIxI3Ih5ecyukqELQEGzZlYiWg==</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">U2FsdGVkX1830zo3&#x2F;pFDqaBCVBb37iLw3WnBDWGF9GIB2f4apzv0roemp8Y+iIxI3Ih5ecyukqELQEGzZlYiWg&#x3D;&#x3D;</code></pre>
 
 <p>将它替换到 <code>obfuscatedClientSecret</code> 里。</p>
 <p>如果你修改了 <code>redirectUri</code> 为其他值，你也要在 <code>api.config.js</code> 里设置好。</p>
@@ -267,10 +270,12 @@ IconifyProviders = {
 <li>你可以使用你自己的 Redis 数据库，只要有 Vercel 能用的访问链接就行。</li>
 </ul>
 <p>无论你用什么方式，你应该在 Vercel 的 <code>REDIS_URL</code> 环境变量里填好一个类似这样的 Redis URL：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis://:xxx...@some-thing-like-35533.upstash.io:35533</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">redis:&#x2F;&#x2F;:xxx...@some-thing-like-35533.upstash.io:35533
+</code></pre>
 
 <p>如果你为 Redis 数据库启用了 <a target="_blank" rel="noopener" href="https://docs.upstash.com/redis/howto/connectwithtls">传输加密</a>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rediss://:xxx...@some-thing-like-35533.upstash.io:35533</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">rediss:&#x2F;&#x2F;:xxx...@some-thing-like-35533.upstash.io:35533
+</code></pre>
 
 <p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></p>
 <h4 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a><a href="#%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2">重新部署</a></h4><p>最后，重新进行一次部署。并在部署完成后访问 Vercel 提供的链接，<code>onedrive-vercel-index</code> 将会引导你进行 OAuth 认证。你也可以在 Vercel 自定义访问链接，详情请参考 <a target="_blank" rel="noopener" href="https://ovi.swo.moe/zh/docs/advanced">自定义域名</a>。</p>
@@ -305,23 +310,38 @@ IconifyProviders = {
 </ul>
 <h3 id="设置受密码保护的文件夹"><a href="#设置受密码保护的文件夹" class="headerlink" title="设置受密码保护的文件夹#"></a><a href="#%E8%AE%BE%E7%BD%AE%E5%8F%97%E5%AF%86%E7%A0%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9">设置受密码保护的文件夹#</a></h3><p>受密码保护的文件夹主要由 <code>config/site.json</code> 中的 <code>protectedRoutes</code> 属性指定，举个例子 👇</p>
 <p>假设你有这样一个文件结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── 📕 Books</span><br><span class="line">│   └── ...</span><br><span class="line">├── 🌞 Private folder</span><br><span class="line">│   ├── this-is-public</span><br><span class="line">│   └── u-need-a-password   &lt;-- 你想要用密码保护这个文件夹</span><br><span class="line">├── 🍡 Genshin PV</span><br><span class="line">│   └── ...</span><br><span class="line">└── README.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">.
+├── 📕 Books
+│   └── ...
+├── 🌞 Private folder
+│   ├── this-is-public
+│   └── u-need-a-password   &lt;-- 你想要用密码保护这个文件夹
+├── 🍡 Genshin PV
+│   └── ...
+└── README.md
+</code></pre>
 
 <p>我们想要将 <code>/u-need-a-password</code> 设为受密码保护的文件夹，就把它的绝对路径按下列格式填写到 <code>protectedRoutes</code> 里：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;protectedRoutes&quot;: [</span><br><span class="line">  &quot;/🌞 Private folder/u-need-a-password&quot;,</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">&quot;protectedRoutes&quot;: [
+  &quot;&#x2F;🌞 Private folder&#x2F;u-need-a-password&quot;,
+],</code></pre>
 
 <p>如果你想设置另一个受密码保护的文件夹，那就在下一行按下列格式添加它的绝对路径：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;protectedRoutes&quot;: [</span><br><span class="line">  &quot;/🌞 Private folder/u-need-a-password&quot;,</span><br><span class="line">   &quot;/another/route/for/me/to/protect&quot;,</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">&quot;protectedRoutes&quot;: [
+  &quot;&#x2F;🌞 Private folder&#x2F;u-need-a-password&quot;,
+   &quot;&#x2F;another&#x2F;route&#x2F;for&#x2F;me&#x2F;to&#x2F;protect&quot;,
+],</code></pre>
 
 <p>如果你没有任何受密码保护的文件夹，那么就添加一个 <code>[]</code> 以关闭此功能：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;protectedRoutes&quot;: [],</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">&quot;protectedRoutes&quot;: [],</code></pre>
 
 <p>在上述添加的受密码保护的路径的根目录下内创建一个 <code>.password</code> 文件，该文件内的纯文本内容就是你访问该文件夹时需要的密码。</p>
 <p>![](data:image&#x2F;svg+xml,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='800' height='410'/>)<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项#"></a><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项#</a></h3><p>是的，所有看起来安全的保护措施都并非无懈可击。</p>
 <ol>
 <li><p>受密码保护的文件夹中的文件直链可以通过 URL 参数 <code>&amp;odpt=&lt;hashed_token&gt;</code> 分享，如果你真的需要的话：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://drive.swo.moe/api/raw/?path=/🌞%20Private%20folder/u-need-a-password/watch%20this.mp4&amp;odpt=c8ebdc273d673d167c238dd25a997bdf9b4ecbf589452697c1a6cb416b2ed11d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">https:&#x2F;&#x2F;drive.swo.moe&#x2F;api&#x2F;raw&#x2F;?path&#x3D;&#x2F;🌞%20Private%20folder&#x2F;u-need-a-password&#x2F;watch%20this.mp4&amp;odpt&#x3D;c8ebdc273d673d167c238dd25a997bdf9b4ecbf589452697c1a6cb416b2ed11d
+</code></pre>
 
 <p>我们并不知道这是否会暴露你的密码，受密码保护的文件，个人信息等等，所以请谨慎使用。</p>
 </li>
@@ -337,7 +357,19 @@ IconifyProviders = {
 <li>如果上游的更改与你的项目存在冲突，GitHub 会推荐你开启一个 Pull request 以解决冲突。</li>
 </ul>
 <h3 id="在命令行更新"><a href="#在命令行更新" class="headerlink" title="在命令行更新#"></a><a href="#%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%96%B0">在命令行更新#</a></h3><p>将你的项目 Clone 到本地，然后：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 拉取上游的更改</span><br><span class="line">git fetch upstream</span><br><span class="line"></span><br><span class="line"># 检查你的项目的默认分支（通常是 main）</span><br><span class="line">git checkout main</span><br><span class="line"></span><br><span class="line"># 合并上游的更改</span><br><span class="line">git merge upstream/main</span><br><span class="line"></span><br><span class="line"># 如果存在冲突，便在本地解决</span><br><span class="line"># 提交更改并推送到 GitHub</span><br><span class="line">git commit -m &quot;xxx&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none"># 拉取上游的更改
+git fetch upstream
+
+# 检查你的项目的默认分支（通常是 main）
+git checkout main
+
+# 合并上游的更改
+git merge upstream&#x2F;main
+
+# 如果存在冲突，便在本地解决
+# 提交更改并推送到 GitHub
+git commit -m &quot;xxx&quot;
+git push</code></pre>
 
 <blockquote>
 <p>文章出处：<a target="_blank" rel="noopener" href="https://logi.im/script/permanently-keeping-an-office-e5-account.html">Office 365 E5 账号申请及永久续期教程 - LOGI</a></p>
