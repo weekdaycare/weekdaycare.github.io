@@ -21,8 +21,10 @@ document.addEventListener("pjax:success", initScrollReveal);
 <meta property="og:description" content="Java学习安装第一步就踩坑，配置完环境变量之后报错，无法运行JVM C:\Users\weekdaycare&gt;java  &lt;JAVA_HOME&gt;&#x2F;lib&#x2F;ext exists, extensions mechanism no longer supported; Use -classpath instead. .Error: Could not create the Java Virtual">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/07/23/gRsc1MzrG3OIF4b.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/25/jNelECg7rm5tWzR.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/25/BIE7uxvipNDslJb.png">
 <meta property="article:published_time" content="2022-07-04T05:49:05.000Z">
-<meta property="article:modified_time" content="2022-07-23T13:04:35.811Z">
+<meta property="article:modified_time" content="2022-07-25T12:48:15.832Z">
 <meta property="article:author" content="Wave Still">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="编程">
@@ -43,7 +45,7 @@ IconifyProviders = {
     // Wait for 1 second before switching API hosts
     rotate: 1000,
   },
-};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Wave Still"><img width="96" loading="lazy" src="https://pic.imgdb.cn/item/62c4fbde5be16ec74abc5c8d.jpg" alt="Wave Still"><span class="site-author-status" title="永远相信美好的事情即将发生">😉</span></a><div class="site-author-name"><a href="/about/">Wave Still</a></div><span class="site-name">涛声依旧的博客</span><sub class="site-subtitle"></sub><div class="site-description">Wave Still Blog</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">12</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">3</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">5</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://github.com/weekdaycare/weekdaycare.github.io/issues" title="反馈"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:mail-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/weekdaycare" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=1387091413" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/355825473" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" target="_blank" rel="noopener" href="https://weekdrive.vercel.app/" title="我的云盘" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:cloud-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">Java学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World%EF%BC%81"><span class="toc-number">1.2.</span> <span class="toc-text">Hello World！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">常量分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">数据类型</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="http://example.com/2022/07/04/Java%E5%AD%A6%E4%B9%A0/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Wave Still"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="涛声依旧的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Java学习</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-07-04 13:49:05" itemprop="dateCreated datePublished" datetime="2022-07-04T13:49:05+08:00">2022-07-04</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-07-23 21:04:35" itemprop="dateModified" datetime="2022-07-23T21:04:35+08:00">2022-07-23</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">487</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E5%AD%A6%E4%B9%A0/" style="--text-color:#F14E32" itemprop="url" rel="index"><span itemprop="text">学习</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E6%8A%80%E6%9C%AF/" style="--text-color:#4980C2"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">技术</span></a><a class="tag-item" href="/tags/%E7%BC%96%E7%A8%8B/" style="--text-color:#61dafb"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">编程</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>第一步就踩坑，配置完环境变量之后报错，无法运行JVM</p>
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Wave Still"><img width="96" loading="lazy" src="https://pic.imgdb.cn/item/62c4fbde5be16ec74abc5c8d.jpg" alt="Wave Still"><span class="site-author-status" title="永远相信美好的事情即将发生">😉</span></a><div class="site-author-name"><a href="/about/">Wave Still</a></div><span class="site-name">涛声依旧的博客</span><sub class="site-subtitle"></sub><div class="site-description">Wave Still Blog</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">12</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">3</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">5</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://github.com/weekdaycare/weekdaycare.github.io/issues" title="反馈"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:mail-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/weekdaycare" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=1387091413" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/355825473" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" target="_blank" rel="noopener" href="https://weekdrive.vercel.app/" title="我的云盘" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:cloud-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">Java学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World%EF%BC%81"><span class="toc-number">1.2.</span> <span class="toc-text">Hello World！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">常量分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F-amp-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">变量&amp;数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%A4%AA%E5%A4%A7"><span class="toc-number">1.4.1.</span> <span class="toc-text">整数太大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8Edouble%E8%BD%AC%E6%8D%A2%E5%88%B0float%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E6%8D%9F%E5%A4%B1"><span class="toc-number">1.4.2.</span> <span class="toc-text">从double转换到float可能会有损失</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6-amp-%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A"><span class="toc-number">1.5.</span> <span class="toc-text">标识符&amp;命名约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95%EF%BC%9A%E6%96%B9%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">小驼峰命名法：方法、变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95%EF%BC%9A%E7%B1%BB"><span class="toc-number">1.5.2.</span> <span class="toc-text">大驼峰命名法：类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-number">1.6.</span> <span class="toc-text">类型转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-number">1.6.1.</span> <span class="toc-text">自动类型转化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-number">1.6.2.</span> <span class="toc-text">强制类型转化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.7.</span> <span class="toc-text">算数运算符</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="http://example.com/2022/07/04/Java%E5%AD%A6%E4%B9%A0/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Wave Still"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="涛声依旧的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Java学习</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-07-04 13:49:05" itemprop="dateCreated datePublished" datetime="2022-07-04T13:49:05+08:00">2022-07-04</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-07-25 20:48:15" itemprop="dateModified" datetime="2022-07-25T20:48:15+08:00">2022-07-25</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">1.4k</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E5%AD%A6%E4%B9%A0/" style="--text-color:#F14E32" itemprop="url" rel="index"><span itemprop="text">学习</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E6%8A%80%E6%9C%AF/" style="--text-color:#4980C2"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">技术</span></a><a class="tag-item" href="/tags/%E7%BC%96%E7%A8%8B/" style="--text-color:#61dafb"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">编程</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>第一步就踩坑，配置完环境变量之后报错，无法运行JVM</p>
 <pre class="language-bash" data-language="bash"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>weekdaycare<span class="token operator">></span>java 
 <span class="token operator">&lt;</span>JAVA_HOME<span class="token operator">></span>/lib/ext exists, extensions mechanism no longer supported<span class="token punctuation">;</span> Use -classpath instead.
 .Error: Could not create the Java Virtual Machine.
@@ -109,78 +111,137 @@ Java HotSpot<span class="token punctuation">(</span>TM<span class="token punctua
 <td align="center">值为null</td>
 </tr>
 </tbody></table>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><img src="https://s2.loli.net/2022/07/23/gRsc1MzrG3OIF4b.png" alt="数据类型.png" title="和C有点像" loading="lazy"></p>
-<table border=0 cellpadding=0 cellspacing=0 width=700 style='border-collapse:
- collapse;table-layout:fixed;width:370pt'>
- <col class=xl65 width=69 style='mso-width-source:userset;mso-width-alt:2446;
- width:52pt'>
- <col class=xl65 width=61 style='mso-width-source:userset;mso-width-alt:2161;
- width:46pt'>
- <col class=xl65 width=69 style='mso-width-source:userset;mso-width-alt:2446;
- width:52pt'>
- <col class=xl65 width=294 style='mso-width-source:userset;mso-width-alt:10353;
- width:220pt'>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 width=69 style='height:13.95pt;width:52pt'>数据类型</td>
-  <td class=xl65 width=61 style='width:46pt'>关键字</td>
-  <td class=xl65 width=69 style='width:52pt'>内存占用</td>
-  <td class=xl65 width=294 style='width:220pt'>取值范围</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td rowspan=4 height=76 class=xl65 style='height:55.8pt'>整数</td>
-  <td class=xl65>byte</td>
-  <td class=xl65>1</td>
-  <td class=xl65>-128~127</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 style='height:13.95pt'>short</td>
-  <td class=xl65>2</td>
-  <td class=xl65>-32768~32767</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 style='height:13.95pt'>int</td>
-  <td class=xl65>4</td>
-  <td class=xl65>-2的31次方到2的31次方-1</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 style='height:13.95pt'>long</td>
-  <td class=xl65>8</td>
-  <td class=xl65>-2的63次方到2的63次方-1</td>
- </tr>
- <tr height=37 style='height:27.85pt'>
-  <td rowspan=2 height=74 class=xl65 style='height:55.7pt'>浮点数</td>
-  <td class=xl65>float</td>
-  <td class=xl65>4</td>
-  <td class=xl66 width=294 style='width:220pt'>负数：-3.402823E+38到-1.401298E-45<br>
-    正数：1.401298E-45到3.402823E+38</td>
- </tr>
- <tr height=37 style='height:27.85pt'>
-  <td height=37 class=xl65 style='height:27.85pt'>double</td>
-  <td class=xl65>8</td>
-  <td class=xl66 width=294 style='width:220pt'>负数：-1.797693E+308到-4.9000000E-324<br>
-    正数：4.9000000E-324到1.797693E+308</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 style='height:13.95pt'>字符</td>
-  <td class=xl65>char</td>
-  <td class=xl65>2</td>
-  <td class=xl65>0-65535</td>
- </tr>
- <tr height=19 style='height:13.95pt'>
-  <td height=19 class=xl65 style='height:13.95pt'>布尔</td>
-  <td class=xl65>boolean</td>
-  <td class=xl65>1</td>
-  <td class=xl65>true,false</td>
- </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=69 style='width:52pt'></td>
-  <td width=61 style='width:46pt'></td>
-  <td width=69 style='width:52pt'></td>
-  <td width=294 style='width:220pt'></td>
- </tr>
- <![endif]>
-</table>
+<h2 id="变量-amp-数据类型"><a href="#变量-amp-数据类型" class="headerlink" title="变量&amp;数据类型"></a>变量&amp;数据类型</h2><p>变量使用的注意事项：</p>
+<ol>
+<li>名字不能重复</li>
+<li>变量未赋值，不能使用</li>
+<li><code>long</code>类型的变量定义的时候，为了防止整数过大，后面要加<code>l</code>或<code>L</code></li>
+<li><code>float</code>类型的变量定义的时候，为了防止类型不兼容，后面要加<code>f</code>或<code>F</code></li>
+</ol>
+<p><img src="https://s2.loli.net/2022/07/23/gRsc1MzrG3OIF4b.png" alt="数据类型.png" title="和C有点像" loading="lazy"></p>
+<p><img src="https://s2.loli.net/2022/07/25/jNelECg7rm5tWzR.png" alt="image.png" loading="lazy"></p>
+<blockquote>
+<p>注：<code>java</code>中默认整数为<code>int</code>型，浮点数默认为<code>double</code>型，见如下两个报错</p>
+</blockquote>
+<h3 id="整数太大"><a href="#整数太大" class="headerlink" title="整数太大"></a>整数太大</h3><p><code>long</code>定义变量后<code>javac</code>编译时遇到以下错误</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">HelloWorld.java:3: 错误: 整数太大
+                long a <span class="token operator">=</span> <span class="token number">999999999999</span><span class="token punctuation">;</span>
+                         ^
+<span class="token number">1</span> 个错误</code></pre>
+
+<p>报错原因：在<code>java</code>中给出整数默认是<code>int</code>类型，导致数据越界</p>
+<p>解决方案：定义<code>long</code>类型变量是要在数据之后加<code>l(L)</code>，例：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">long</span> a <span class="token operator">=</span> <span class="token number">999999999999l</span><span class="token punctuation">;</span></code></pre>
+
+<p>再次编译没有报错越界。</p>
+<h3 id="从double转换到float可能会有损失"><a href="#从double转换到float可能会有损失" class="headerlink" title="从double转换到float可能会有损失"></a>从double转换到float可能会有损失</h3><p><code>float</code>定义变量后编译报错</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">HelloWorld.java:4: 错误: 不兼容的类型: 从double转换到float可能会有损失
+                float a <span class="token operator">=</span> <span class="token number">13.14</span><span class="token punctuation">;</span>
+                          ^
+<span class="token number">1</span> 个错误</code></pre>
+
+<p>报错原因：<code>java</code>中给出浮点数默认为<code>double</code>类型</p>
+<p>解决方案：定义<code>double</code>类型变量要在数据后加<code>f(F)</code>，例：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">float</span> a <span class="token operator">=</span> <span class="token number">13.14f</span><span class="token punctuation">;</span></code></pre>
+
+<h2 id="标识符-amp-命名约定"><a href="#标识符-amp-命名约定" class="headerlink" title="标识符&amp;命名约定"></a>标识符&amp;命名约定</h2><ol>
+<li>由数字、字母、下划线(_)和美元符($)组成</li>
+<li>不能以数字开头</li>
+<li>不能是关键字(比如<code>class</code>)</li>
+<li>区分大小写</li>
+</ol>
+<h3 id="小驼峰命名法：方法、变量"><a href="#小驼峰命名法：方法、变量" class="headerlink" title="小驼峰命名法：方法、变量"></a>小驼峰命名法：方法、变量</h3><ol>
+<li><p>标识符是一个单词的时候，首字母小写</p>
+<p><code>name</code></p>
+</li>
+<li><p>约定2：标识符由多个单词组成的时候，第一个单词首字母小写，其他单词首字母大写</p>
+<p><code>firstName</code></p>
+</li>
+</ol>
+<h3 id="大驼峰命名法：类"><a href="#大驼峰命名法：类" class="headerlink" title="大驼峰命名法：类"></a>大驼峰命名法：类</h3><ol>
+<li><p>标识符是一个单词的时候， 首字母大写</p>
+<p>范例1：<code>Student</code></p>
+</li>
+<li><p>约定2：标识符由多个单词组成的时候，每个单词的首字母大写</p>
+<p>范例2：<code>GoodStudent</code></p>
+</li>
+</ol>
+<h2 id="类型转化"><a href="#类型转化" class="headerlink" title="类型转化"></a>类型转化</h2><h3 id="自动类型转化"><a href="#自动类型转化" class="headerlink" title="自动类型转化"></a>自动类型转化</h3><p>把一个表示<strong>数据范围小的数值</strong>或者变量赋值给另一个表示<strong>数据范围大的变量</strong></p>
+<img src="https://s2.loli.net/2022/07/25/BIE7uxvipNDslJb.png" alt="数据范围.png" style="zoom:80%;" / loading="lazy">
+
+<h3 id="强制类型转化"><a href="#强制类型转化" class="headerlink" title="强制类型转化"></a>强制类型转化</h3><p>把一个表示数据<strong>范围大的数值</strong>或者变量赋值给另一个表示<strong>数据范围小的变量</strong></p>
+<p>格式：目标数据类型变量名&#x3D;(目标数据类型)值或者变量；</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token comment">//自动类型转化</span>
+	<span class="token keyword">double</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+	<span class="token class-name">System</span><span class="token punctuation">.</span> out<span class="token punctuation">.</span> <span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//定义byte类型变量</span>
+    <span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">short</span> s <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    
+    <span class="token comment">//这是不行的，类型不兼容</span>
+    <span class="token comment">//char c = b;</span>
+    
+    <span class="token comment">//强制类型转化</span>
+    <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token number">88.88</span><span class="token punctuation">;</span><span class="token comment">//数据丢失</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><ul>
+<li>运算符：对常量或者变量进行操作的<strong>符号</strong></li>
+<li>表达式：用<strong>运算符</strong>把常量或者变量连接起来<strong>符合java语法的式子</strong>就可以称为表达式。不同运算符连接的表达式体现的是不同类型的表达式</li>
+</ul>
+<blockquote>
+<p>整数相除只能得到整数，要想得到小数，必须有浮点数参与</p>
+</blockquote>
+<p>字符的 “+” 操作：拿字符在计算机底层<strong>对应的数值</strong>来计算的</p>
+<blockquote>
+<p>在<code>java</code>与<code>C语言</code>中都是将字符转化为<code>ASCII</code>编码</p>
+</blockquote>
+<p>以下列出常见的几种字符对应的<code>ASCII</code>编码</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">‘A’(A~Z是连续的)</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">‘a’(a~z是连续的)</td>
+<td align="center">97</td>
+</tr>
+<tr>
+<td align="center">‘0’(0~9是连续的)</td>
+<td align="center">48</td>
+</tr>
+</tbody></table>
+<p><em>算术表达式中包含多个基本数据类型的值的时候，整个算术表达式的类型会自动进行提升。</em></p>
+<p>提升规则：<code>byte</code>类型， <code>short</code>类型和<code>char</code>类型将被提升到<code>int</code>类型<br>整个表达式的类型自动提升到表达式中最高等级操作数同样的类型</p>
+<blockquote>
+<p>等级顺序: <code>byte</code>,<code>short</code>,<code>char</code> →<code>int</code>→<code>long</code>→<code>float</code> → <code>double</code></p>
+</blockquote>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//定义两个变量</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> c <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span><span class="token comment">//'A'的值是65</span>
+    c <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span><span class="token comment">//'a'的值是97</span>
+    c <span class="token operator">=</span> <span class="token char">'0'</span><span class="token punctuation">;</span><span class="token comment">//'0'的值是48</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span> out<span class="token punctuation">.</span> <span class="token function">println</span><span class="token punctuation">(</span>i <span class="token operator">+</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//char ch = i + c;</span>
+    <span class="token comment">//char类型会被自动提升为int类型</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> c<span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span> out<span class="token punctuation">.</span> <span class="token function">println</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//int k = 10 + 13.14;</span>
+    <span class="token keyword">double</span> k <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token number">13.14</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
 </div></section><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Wave Still</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://example.com/2022/07/04/Java%E5%AD%A6%E4%B9%A0/" title="Java学习">http://example.com/2022/07/04/Java%E5%AD%A6%E4%B9%A0/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2022/07/04/%E8%BD%BB%E9%87%8F%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%9C%9F%E6%90%AD%E5%BB%BAOndrive%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/" rel="prev" title="轻量云服务期搭建Ondrive离线下载"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">轻量云服务期搭建Ondrive离线下载</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2022/06/11/RSS/" rel="next" title="RSS"><span class="post-nav-text">RSS</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/2022/07/04/Java%E5%AD%A6%E4%B9%A0/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2021 – 2022 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> Wave Still</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.4</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
   setTimeout(blog_live_time, 1000);
   const start = new Date('2021-11-16T23:30:00');
