@@ -11,6 +11,10 @@ date: 2022-08-28 01:40:36
 
 <img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/15-16-39.png" alt="找不到表情包来描述我的心情惹" style="zoom: 67%;" />
 
+vercel.app 确认被污染，我焯，看来我把站点部署在cf上是个正确的选择
+
+[`vercel.app` Blocked by SNI and DNS Pollution in China · Discussion #803 · vercel/community (github.com)](https://github.com/vercel/community/discussions/803)
+
 ## 2022/8/27
 
 将站点同时部署在[Cloudflare Page](https://pages.cloudflare.com/)（我馋它的速度了）上并启用新域名 https://weekdaycare.cf 

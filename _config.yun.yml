@@ -219,7 +219,7 @@ google_analytics:
 # comments
 waline:
   enable: true
-  serverURL: https://blog-sigma-mauve.vercel.app/
+  serverURL: https://weekcomment.tk/
   # visitor: true
   comment: true
   emoji:
