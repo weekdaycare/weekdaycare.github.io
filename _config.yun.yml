@@ -1,0 +1,235 @@
+# Favicon
+# ---------------
+favicon: https://pic.imgdb.cn/item/62c4ff0d5be16ec74ac035b9.png
+
+# Colors
+colors:
+  primary: '#f07c82'
+  # bg: "#A5DEE4"
+  selection_bg: '#D05A6E' # 选取文字时的背景色
+  # 标签云中标签的起始色和结束色
+  # tag_start_color:
+  # tag_end_color:
+
+# Fonts
+font:
+  cdn:
+    enable: false
+    lib:
+
+  serif:
+    family: '''Songti SC'', STZhongsong, STKaiti, KaiTi, Georgia, serif'
+  sans_serif:
+    family: '微软雅黑, ''PingFang SC'', Arial, sans-serif'
+  monospace:
+    family: '''Comic Sans MS'', ''Cascade Code PL'', ''Microsoft YaHei'', Monaco, monospace'
+
+# Social Links.
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: /atom.xml # config.feed.path
+    icon: ri:rss-line
+    color: orange
+#  - name: QQ 1847258390
+#    # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
+#    link: https://qm.qq.com/cgi-bin/qm/qr?k=kZJzggTTCf4SpvEQ8lXWoi5ZjhAx0ILZ&jump_from=webapi
+#    icon: icon-qq-line
+#    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/weekdaycare
+    icon: ri:github-line
+    color: "#6e5494"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=1387091413
+    icon: ri:netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/355825473
+    icon: ri:bilibili-line
+    color: "#FF8EB3"
+#  - name: E-Mail
+#    link: 1847258390@foxmail.com
+#    icon: icon-mail-line
+#    color: "#8E71C1"
+
+# Extra links
+pages:
+  - name: 我的云盘
+    url: https://weeklist.cf
+    icon: ri:cloud-line
+    color: dodgerblue
+
+# Sidebar Avatar
+avatar:
+  enable: true
+  url: https://pic.imgdb.cn/item/62c4fbde5be16ec74abc5c8d.jpg
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: true
+    emoji: 🤔
+    message: 永远相信美好的事情即将发生
+
+
+
+# main menu navigation
+menu:
+  custom:
+    title: 留言板
+    path: /about/#comment
+    icon: bx:message-alt-detail
+
+wordcloud:
+  enable: true
+  height: 350
+
+# You can set color for every tag or category.
+tags:
+  生活: "#9ADDB3"
+  技术: "#4980C2"
+  作业: "#227D51"
+  编程: "#61dafb"
+  hexo: "#FACAC0"
+
+categories:
+  其他: "#854836"
+  学习: "#F14E32"
+  捣鼓: "#877F6C"
+  
+
+codeblock:
+  copy_btn: true
+
+# UI
+banner:
+  enable: true
+  title: 涛声依旧
+  border: true
+  cloud:
+    enable: true
+    color: white
+  go_down:
+    enable: true
+    icon: ri:arrow-down-s-line
+
+
+# custom your color in fireworks
+fireworks:
+  enable: true
+  colors:
+    - "249, 204, 226"
+    - "242, 156, 177"
+    - "245, 212, 217"
+    # - '3, 28, 95'
+    # - '0, 8, 55'
+
+cursor:
+  enable: true
+  default: https://cdn.yunyoujun.cn/css/md-cursors/pointer.cur
+  pointer: https://cdn.yunyoujun.cn/css/md-cursors/link.cur
+  text: https://cdn.yunyoujun.cn/css/md-cursors/text.cur
+
+
+bg_image:
+  enable: true
+  url: https://pic.imgdb.cn/item/6195a5c12ab3f51d91de587a.jpg # recomend image related to your mode
+  dark: https://pic.imgdb.cn/item/62f3532e16f2c2beb1d3710f.jpg
+  # blur: 20px
+  opacity: 0.9
+
+# Reward (Donate)
+# If enable true, reward would be displayed in every posts and pages by default.
+# You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
+reward:
+  enable: false
+  icon: icon-hand-coin-line
+  comment: I'm so cute. Please give me money.
+  # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+  methods:
+    - name: 支付宝
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: QQ 支付
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png
+      color: "#12B7F5"
+      icon: icon-qq-line
+    - name: 微信支付
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
+    # - name: paypal
+    #   link: https://paypal.com
+    #   path: https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg
+    #   color: "#2D70B5"
+    #   icon: icon-paypal-line
+
+# Footer Settings
+# ---------------
+footer:
+  since: 2021
+  live_time:
+    enable: true
+    prefix: 已萌萌哒地运行
+    suffix: ヾ(•ω•`)o
+    start_time: "2021-11-16T23:30:00"
+
+# third party
+# ----------------
+
+# search
+algolia_search:
+  enable: true
+  hits:
+    per_page: 10 # the number of search results per page
+
+engine_search:
+  enable: false
+
+# Show Views / Visitors of the website / page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: ri:user-line
+  site_pv: true
+  site_pv_icon: ri:eye-line
+  page_pv: true
+  page_pv_icon: ri:eye-line
+  
+# Post wordcount
+# https://github.com/willin/hexo-wordcount
+wordcount:
+  enable: true
+  count: true
+  time: false
+
+# Analysis
+# ---------------
+google_analytics:
+  enable: false
+  # GA4
+  id: G-K8QLLZPTBV
+  
+# comments
+waline:
+  enable: true
+  serverURL: https://blog-sigma-mauve.vercel.app/
+  # visitor: true
+  comment: true
+  emoji:
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+
+# Mermaid 允许您使用文本和代码创建图表和可视化
+mermaid:
+  enable: false
+  options: # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    startOnload: true # default true
+  global: false # default true
