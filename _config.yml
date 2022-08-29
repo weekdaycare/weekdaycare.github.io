@@ -124,4 +124,3 @@ backup:
     type: git
     repository:
        github: git@github.com:weekdaycare/weekdaycare.github.io.git,source
-       gitcafe: git@github.com:weekdaycare/weekdaycare.github.io.git,source

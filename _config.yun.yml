@@ -57,14 +57,14 @@ social:
 # Extra links
 pages:
   - name: 我的云盘
-    url: https://weeklist.cf
+    url: https://weekpan.cf/
     icon: ri:cloud-line
     color: dodgerblue
 
 # Sidebar Avatar
 avatar:
   enable: true
-  url: https://pic.imgdb.cn/item/62c4fbde5be16ec74abc5c8d.jpg
+  url: https://pic.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -137,10 +137,10 @@ cursor:
 
 bg_image:
   enable: true
-  url: https://pic.imgdb.cn/item/6195a5c12ab3f51d91de587a.jpg # recomend image related to your mode
-  dark: https://pic.imgdb.cn/item/62f3532e16f2c2beb1d3710f.jpg
+  url: https://pic.imgdb.cn/item/630ca5bb16f2c2beb1487414.jpg # recomend image related to your mode
+  dark: https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg
   # blur: 20px
-  opacity: 0.9
+  opacity: 0.8
 
 # Reward (Donate)
 # If enable true, reward would be displayed in every posts and pages by default.

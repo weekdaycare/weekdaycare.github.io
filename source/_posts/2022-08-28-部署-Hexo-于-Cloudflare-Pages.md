@@ -12,19 +12,19 @@ abbrlink: cloudflare-pages
 
 现在你的Github应该是类似这样的
 
-![github](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-01-30.png)
+![github](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-05-47.webp)
 
 现在我们新建分支用来存放你的Hexo目录文件（注：main主分支中的是Hexo渲染好了的html文件）
 
-<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-17-39.png" alt="image-20220828171739789" style="zoom:80%;" />
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-40-29.webp" alt="image-20220828171739789" style="zoom:80%;" />
 
 点击view all branches，选择New branch（新建分支）
 
-<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-20-08.png" alt="image-20220828172008926" style="zoom:80%;" />
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-40-41.webp" alt="image-20220828172008926" style="zoom:80%;" />
 
 为你的分支取一个名字，我的分支名称是`source`
 
-<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-21-42.png" alt="image-20220828172142168" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-40-46.webp" alt="image-20220828172142168" style="zoom:67%;" />
 
 # 安装插件
 
@@ -45,7 +45,7 @@ abbrlink: cloudflare-pages
 
 安装完这个插件之后，我们配置这个插件，打开Hexo目录下的`_config.yml`
 
-![config.yml](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-10-30.png)
+![config.yml](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-41-21.webp)
 
 在文件末尾添加以下内容
 
@@ -58,7 +58,7 @@ backup:
        gitcafe: git@github.com:xxx/xxx.git,branchName
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/18-31-59.png" alt="git@github" style="zoom:80%;" />
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-51-56.webp" alt="git@github" style="zoom:80%;" />
 
 <details>
 <summary>这里给出我的文件配置</summary>
@@ -131,7 +131,7 @@ hexo backup
 
 现在打开你的Github，切换一下分支，你就可以看到你的Hexo目录已经上传到分支中咯
 
-![github](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-45-19.png)
+![github](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-55-59.webp)
 
 <div class="danger">
 
@@ -148,19 +148,19 @@ hexo backup
 
 会让你登录Github账户，登录后在这里选择你的仓库（上一步创建的那个）即可。
 
-![选择你的仓库](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/17-55-36.png)
+![选择你的仓库](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-57-58.webp)
 
 创建Cloudflare Pages站点
 
 在下一个页面中，项目名称可以改成你喜欢的名字，生产分支选择你刚刚创建的分支，下面的内容按照这个填，不要改动
 
-![image-20220828180256905](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/18-02-56.png)
+![image-20220828180256905](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-01-05.webp)
 
 设置完成后，便可以直接保存并部署了。
 
 部署成功的栗子
 
-![部署成功的栗子](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/18-26-47.png)
+![部署成功的栗子](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-01-33.webp)
 
 上面圈起来的地址即为你的网站地址，点击即可范围
 
@@ -178,11 +178,11 @@ hexo backup
 
 进入Cloudflare Pages，点击你的项目
 
-![cloudflare pages](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/18-14-43.png)
+![cloudflare pages](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-05-31.webp)
 
 点击切换到自定义域，旁边有个设置自定义域
 
-![image-20220828181730607](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/28/18-17-30.png)
+![image-20220828181730607](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-06-13.webp)
 
 输入你的域名，按照流程走，完成后你就能通过自己的域名访问你的网站啦
 
