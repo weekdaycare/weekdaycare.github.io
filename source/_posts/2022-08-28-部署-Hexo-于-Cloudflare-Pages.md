@@ -186,6 +186,38 @@ hexo backup
 
 输入你的域名，按照流程走，完成后你就能通过自己的域名访问你的网站啦
 
+# 补充
+
+如果你原来就是在用Hexo+Github+Vercel的方案的话，你新建分支以后vercel也会构建新分支与`main`分支，如果你不介意每次更新都要部署两次的话就可以直接忽略，没什么问题。
+
+但是如果你的`main`分支构建部署没有报错，而新分支部署出现问题的话，我们可以关掉新分支的部署，操作如下
+
+在vercel进入你的项目，右上角点`settings`，找到侧边栏中的`Git`
+
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/20-26-56.webp" alt="git" style="zoom:67%;" />
+
+划到最下面有个`Ignored Build Step`，填入以下代码
+
+<img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/20-27-53.webp" alt="Ignored Build Step" style="zoom:67%;" />
+
+```sh
+[ "$VERCEL_ENV" != production ]
+```
+
+意思是忽略除了`prodution`的构建部署
+
+同样，Cloudflare Pages在构建部署新分支`source`（我的是叫这个名儿）的时候检测到`main`分支有提交也会构建`main`分支，然而Cloudflare Pages构建`main`分支是不可能成功的，所以我们要禁用Cloudflare Pages的自动部署，因为Cloudflare Pages免费版限制每月500次构建（~~绝不是因为穷~~），操作如下
+
+进入[Cloudflare Pages](https://dash.cloudflare.com/)，点击你的项目，上边点击进入**设置**，然后再进入侧边栏中的**构建与部署**，进入预览分支中的**配置预览部署**
+
+![image-20220829203838036](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/20-38-38.webp)
+
+选择**无（禁用自动分支部署）**，点保存就OK了
+
+![配置预览部署](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/20-41-43.webp)
+
+
+
 # 优缺点
 
 1.  速度快：相对于单独购买VPS或使用GitHub Pages，Cloudflare Pages的全球相应速度挺不错的。

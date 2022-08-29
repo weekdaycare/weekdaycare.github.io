@@ -140,7 +140,7 @@ bg_image:
   url: https://pic.imgdb.cn/item/630ca5bb16f2c2beb1487414.jpg # recomend image related to your mode
   dark: https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg
   # blur: 20px
-  opacity: 0.8
+  opacity: 0.9
 
 # Reward (Donate)
 # If enable true, reward would be displayed in every posts and pages by default.
