@@ -221,6 +221,11 @@ say:
     enable: false
     api: https://v1.hitokoto.cn
 
+# 公告
+notice:
+  enable: true
+  content: vercel.app被DNS污染了，新域名<a>https://weekdaycare.tk</a>&<a>https://weekdaycare.cf</a>
+
 
 # Analysis
 # ---------------
