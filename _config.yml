@@ -123,5 +123,5 @@ deploy:
 backup:
     type: git
     message: Back up my site
-    repository: git@github.com:weekdaycare/hexo-backup.git
-    branch: main
+    repository:
+       github: git@github.com:weekdaycare/weekdaycare.github.io.git, source
