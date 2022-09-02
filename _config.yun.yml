@@ -137,7 +137,7 @@ cursor:
 
 bg_image:
   enable: true
-  url: https://pic.imgdb.cn/item/630ca5bb16f2c2beb1487414.jpg # recomend image related to your mode
+  url: https://pic.imgdb.cn/item/630d58fc16f2c2beb1a9679f.jpg # recomend image related to your mode
   dark: https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg
   # blur: 20px
   opacity: 0.9
@@ -225,7 +225,6 @@ waline:
   emoji:
     - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
     - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
-    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/
 
 # Mermaid 允许您使用文本和代码创建图表和可视化
 mermaid:

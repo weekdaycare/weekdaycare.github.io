@@ -1,7 +1,9 @@
 ---
 title: 部署 Hexo 于 Cloudflare Pages
 date: 2022-08-28 15:53:27
-tags: 技术
+tags: 
+  - 技术
+  - hexo
 categories: 捣鼓
 abbrlink: cloudflare-pages
 ---
@@ -32,6 +34,8 @@ abbrlink: cloudflare-pages
 
 右键，`git bash here`，安装[hexo-git-backup](https://github.com/coneycode/hexo-git-backup)这个插件
 
+使用`hexo -v`命令查看`hexo`版本
+
 - 如果你的hexo版本是2.x.x，你应该使用以下代码
     ```shell
     $ npm install hexo-git-backup@0.0.91 --save
@@ -54,6 +58,7 @@ backup:
     type: git
     repository:
     #branchName是分支名称，把branchName改为你刚刚新建的分支名称
+    #github与gitcafe是托管平台
        github: git@github.com:xxx/xxx.git,branchName
        gitcafe: git@github.com:xxx/xxx.git,branchName
 ```
@@ -76,7 +81,7 @@ backup:
     type: git
     repository:
        github: git@github.com:weekdaycare/weekdaycare.github.io.git,source
-       gitcafe: git@github.com:weekdaycare/weekdaycare.github.io.git,source
+
 ```
 
 </details>
@@ -90,9 +95,10 @@ backup:
 如果你和我一样用的是[Yun](https://yun.yunyoujun.cn/)主题的话，那你可以照抄我的配置，否则请自行修改，要不然到时候站点缺少啥依赖不跑了
 
 ```sh
+
 #!/bin/bash
 
-# 配置环境
+#配置环境
 npm install -g hexo-cli
 mkdir hexo
 cd hexo
@@ -101,22 +107,27 @@ npm install
 rm -rf source/_posts
 mkdir -p source/_posts
 
-# 安装主题(你们可以改成自己喜欢的主题)
-npm i hexo-theme-yun@latest 
-# 或者git clone
+#安装主题(你们可以改成自己喜欢的主题)
+npm i hexo-theme-yun@latest
 
+#安装algolia实现网页搜索功能(看你的主题是否支持algolia)(可选)
+npm install --save hexo-algolia
 
-# 使用新的渲染器(根据自己的主题要求进行调整)
+#安装Hexo-tag-player(可选)
+npm install --save hexo-tag-aplayer
+
+#使用新的渲染器(我使用的主题要求)
 npm install hexo-render-pug hexo-renderer-stylus --save
 
-# 复制文章到指定目录
+#复制文章到指定目录
 cd ../
 cp -r `ls | grep -v hexo | grep -v config.yml | xargs` hexo/source/_posts
-# 复制配置文件
+#复制配置文件
 cp config.yml hexo
 
-# 开始构建
+#开始构建
 cd hexo && hexo g --config config.yml
+
 ```
 
 吼，编辑完文件后我们打开`git bash here`
