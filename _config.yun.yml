@@ -191,6 +191,9 @@ algolia_search:
 engine_search:
   enable: false
 
+# Medium Zoom 放大预览图片
+medium_zoom: true
+
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi:
@@ -208,6 +211,16 @@ wordcount:
   enable: true
   count: true
   time: false
+
+# 一言
+say:
+  enable: true
+  api: /sentences/sentences.json
+  # https://developer.hitokoto.cn/sentence/
+  hitokoto:
+    enable: false
+    api: https://v1.hitokoto.cn
+
 
 # Analysis
 # ---------------
