@@ -105,6 +105,10 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: yun
 
+# pandoc
+pandoc:
+  pandoc_path: C:/Users/week/AppData/Local/Pandoc/pandoc.exe
+
 # Search
 algolia:
   applicationID: 'U0X8IYJMCP'

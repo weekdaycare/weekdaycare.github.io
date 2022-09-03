@@ -250,3 +250,9 @@ mermaid:
   options: # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     startOnload: true # default true
   global: false # default true
+  
+# 数学公式Latex
+katex:
+  copy_tex: true
+  global: false
+  options: {}
