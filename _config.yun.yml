@@ -224,7 +224,7 @@ say:
 # 公告
 notice:
   enable: true
-  content: vercel.app被DNS污染了，新域名<a>https://weekdaycare.tk</a>&<a>https://weekdaycare.cf</a>
+  content: vercel.app被DNS污染了，新域名<a>https://weekdaycare.tk</a> & <a>https://weekdaycare.cf</a>
 
 
 # Analysis
@@ -251,8 +251,4 @@ mermaid:
     startOnload: true # default true
   global: false # default true
   
-# 数学公式Latex
-katex:
-  copy_tex: true
-  global: false
-  options: {}
+
