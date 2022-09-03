@@ -24,6 +24,9 @@ npm install hexo-generator-feed --save
 # 使用新的渲染器(我使用的主题要求)
 npm install hexo-render-pug hexo-renderer-stylus --save
 
+# 安装Katex
+npm install hexo-renderer-pandoc --save
+
 # 复制文章到指定目录
 cd ../
 cp -r `ls | grep -v hexo | grep -v config.yml | xargs` hexo/source/_posts
