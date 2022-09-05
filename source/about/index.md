@@ -5,6 +5,10 @@ date: 2022-08-28 01:40:36
 
 # 站点变更记录
 
+## 2022/9/5
+
+由于启用`katex`编辑数学公式导致cloudflare pages无法正常构建，我决定关闭cloudflare站点，现在只能通过 https://weekdaycare.tk 来访问我的站点了
+
 ## 2022/8/29
 
 更换网页图片为webp，减小图片大小，提高图片加载速度，webp似乎iOS14以下不支持

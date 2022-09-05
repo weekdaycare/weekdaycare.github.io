@@ -2,7 +2,8 @@
 title: 部署 Hexo 于 Cloudflare Pages
 date: 2022-08-28 15:53:27
 tags: 
-  - 技术
+  - 整活
+  - 白嫖
   - hexo
 categories: 捣鼓
 abbrlink: cloudflare-pages
@@ -37,13 +38,16 @@ abbrlink: cloudflare-pages
 使用`hexo -v`命令查看`hexo`版本
 
 - 如果你的hexo版本是2.x.x，你应该使用以下代码
-    ```shell
-    $ npm install hexo-git-backup@0.0.91 --save
-    ```
+  
+  ```shell
+  $ npm install hexo-git-backup@0.0.91 --save
+  ```
+
 - 如果你的hexo版本是3.x.x，你应该使用以下代码
-    ```shell
-    $ npm install hexo-git-backup --save
-    ```
+  
+  ```shell
+  $ npm install hexo-git-backup --save
+  ```
 
 # 配置插件
 
@@ -67,10 +71,12 @@ backup:
 
 <details>
 <summary>这里给出我的文件配置</summary>
-```yml
 
+```yml
 # Deployment
+
 ## Docs: https://hexo.io/docs/one-command-deployment
+
 deploy:
   type: git
   repository: git@github.com:weekdaycare/weekdaycare.github.io.git
@@ -81,7 +87,6 @@ backup:
     type: git
     repository:
        github: git@github.com:weekdaycare/weekdaycare.github.io.git,source
-
 ```
 
 </details>
@@ -95,7 +100,6 @@ backup:
 如果你和我一样用的是[Yun](https://yun.yunyoujun.cn/)主题的话，那你可以照抄我的配置，否则请自行修改，要不然到时候站点缺少啥依赖不跑了
 
 ```sh
-
 #!/bin/bash
 
 #配置环境
@@ -127,7 +131,6 @@ cp config.yml hexo
 
 #开始构建
 cd hexo && hexo g --config config.yml
-
 ```
 
 吼，编辑完文件后我们打开`git bash here`
@@ -135,7 +138,9 @@ cd hexo && hexo g --config config.yml
 ```bash
 hexo b
 ```
+
 或者
+
 ```bash
 hexo backup
 ```
@@ -149,7 +154,6 @@ hexo backup
 > 注意：如果你的配置文件中存在密匙等隐私的内容，记住把你的仓库设为隐私！（不会影响站点访问）
 
 </div>
-
 
 # 创建Cloudflare Pages
 
@@ -182,7 +186,7 @@ hexo backup
 <div class="info">
 
 > 如果要部署到顶级域，则需要将站点添加到Cloudflare区域并配置名称服务器。example.com
->
+> 
 > 如果要部署到子域，则站点不必添加至Cloudflare区域。您需要添加自定义CNAME记录以将域指向Cloudflare Pages站点。
 
 </div>
@@ -227,23 +231,21 @@ hexo backup
 
 ![配置预览部署](https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/20-41-43.webp)
 
-
-
 # 优缺点
 
-1.  速度快：相对于单独购买VPS或使用GitHub Pages，Cloudflare Pages的全球相应速度挺不错的。
+1. 速度快：相对于单独购买VPS或使用GitHub Pages，Cloudflare Pages的全球相应速度挺不错的。
 
-2.  免费：每个月有一定的免费配额（500次构建），不折腾的话够用了（除非你非常高产）。
+2. 免费：每个月有一定的免费配额（500次构建），不折腾的话够用了（除非你非常高产）。
 
-3.  迁移方便：这不是超简单的吗（指抄教程的情况下）。
+3. 迁移方便：这不是超简单的吗（指抄教程的情况下）。
 
-4.  慢（？）：由于众所周知的原因，国内速度可能会不咋地。
+4. 慢（？）：由于众所周知的原因，国内速度可能会不咋地。
 
-5.  自定义程度低：其实是由于我的部署方案导致的，如果要自定义主题之类的话就需要自己fork一份回来修改了。
+5. 自定义程度低：其实是由于我的部署方案导致的，如果要自定义主题之类的话就需要自己fork一份回来修改了。
 
-6.  部署时间长：由于每次部署都要安装一次环境，服务器队列繁忙时还需要排队，因此从推送更新到部署完成，大概需要花费3~5分钟才能看见网站内容有更新。
+6. 部署时间长：由于每次部署都要安装一次环境，服务器队列繁忙时还需要排队，因此从推送更新到部署完成，大概需要花费3~5分钟才能看见网站内容有更新。
 
-7.  折腾麻烦：虽然每月有500次免费构建，但没有教程的话可能会一直踩坑（我今天配置完就跑了22次），导致消耗了太多的构建次数，而且每次修改还要等一段时间才能看得见效果。
+7. 折腾麻烦：虽然每月有500次免费构建，但没有教程的话可能会一直踩坑（我今天配置完就跑了22次），导致消耗了太多的构建次数，而且每次修改还要等一段时间才能看得见效果。
 
 参考文章：
 

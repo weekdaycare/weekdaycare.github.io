@@ -91,16 +91,19 @@ wordcloud:
 # You can set color for every tag or category.
 tags:
   生活: "#9ADDB3"
-  技术: "#4980C2"
+  整活: "#4980C2"
+  代码: "#61dafb"
   作业: "#227D51"
-  编程: "#61dafb"
   hexo: "#FACAC0"
+  白嫖: "#FF00FF"
+  教程: "#66CDAA"
+  技术: "#708090"
 
 categories:
   其他: "#854836"
   学习: "#F14E32"
   捣鼓: "#877F6C"
-  
+  随笔: "#7B68EE"
 
 codeblock:
   copy_btn: true
@@ -224,7 +227,7 @@ say:
 # 公告
 notice:
   enable: true
-  content: vercel.app被DNS污染了，新域名<a>https://weekdaycare.tk</a> & <a>https://weekdaycare.cf</a>
+  content: vercel.app被DNS污染了，新域名<a href="https://weekdaycare.tk">https://weekdaycare.tk </a>
 
 
 # Analysis
