@@ -5,13 +5,17 @@ date: 2022-08-28 01:40:36
 
 # 站点变更记录
 
+## 2022/9/27
+
+本来打算继续白嫖一把 [BBtalk](https://bb.js.org/) 但是在关注黑石公众号绑定账号的时候被告知公众号服务异常，没办法，等吧，感觉 [Artitalk](https://artitalk.js.org/)没有 [BBtalk](https://bb.js.org/) 好看
+
 ## 2022/9/5
 
-由于启用`katex`编辑数学公式导致cloudflare pages无法正常构建，我决定关闭cloudflare站点，现在只能通过 https://weekdaycare.tk 来访问我的站点了
+由于启用`katex`编辑数学公式导致cloudflare pages无法正常构建（主要是我用的`katex`插件是在本地渲染成HTML，这个插件需要借助另外一个本地的软件，这个路径问题导致cloudflare构建失败），我决定关闭cloudflare站点（减速CDN不嫖也罢），现在 https://weekdaycare.tk 仍然是托管在vercel， https://weekdaycare.cf 是直接解析到GitHub Page的来访问我的站点了
 
 ## 2022/8/29
 
-更换网页图片为webp，减小图片大小，提高图片加载速度，webp似乎iOS14以下不支持
+picgo装了压缩图片的插件，更换网页图片为webp，减小图片大小，提高图片加载速度，webp似乎iOS14以下不支持
 
 ## 2022/8/28
 
@@ -19,15 +23,13 @@ date: 2022-08-28 01:40:36
 
 <img src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/15-02-17.webp" alt="找不到表情包来描述我的心情惹" style="zoom: 67%;" />
 
-vercel.app 确认DNS被污染，我焯，看来我把站点部署在cf上是个正确的选择
-
-[`vercel.app` Blocked by SNI and DNS Pollution in China · Discussion #803 · vercel/community (github.com)](https://github.com/vercel/community/discussions/803)
+vercel.app 确认DNS被污染[`vercel.app` Blocked by SNI and DNS Pollution in China · Discussion #803 · vercel/community (github.com)](https://github.com/vercel/community/discussions/803)
 
 焯，vercel直连不上去了，那我那些~~白嫖~~的东西岂不是全寄了，怪不得我说怎么Waline评论总是加载不出来
 
 然后我发现换一个域名就又能访问了，把域名的nameservers换成vercel的，然后就成了，我的vercel又活过来里，就是这样，现在的网站域名是 https://weekdaycare.tk 和 https://weekdaycare.cf 
 
-呜呜呜Cloudflare的速度是真的不敢恭维，而且cloudflare搭建的网站不知道为啥algolia搜索用不了ヽ（≧□≦）ノ
+呜呜呜Cloudflare的速度是真的不敢恭维（不愧被称为减速CDN），而且cloudflare搭建的网站不知道为啥algolia搜索用不了ヽ（≧□≦）ノ
 
 ## 2022/8/27
 

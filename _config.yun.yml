@@ -226,7 +226,7 @@ say:
 
 # 公告
 notice:
-  enable: true
+  enable: false
   content: vercel.app被DNS污染了，新域名<a href="https://weekdaycare.tk">https://weekdaycare.tk </a>
 
 
