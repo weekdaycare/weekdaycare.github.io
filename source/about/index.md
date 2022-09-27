@@ -9,6 +9,8 @@ date: 2022-08-28 01:40:36
 
 本来打算继续白嫖一把 [BBtalk](https://bb.js.org/) 但是在关注黑石公众号绑定账号的时候被告知公众号服务异常，没办法，等吧，感觉 [Artitalk](https://artitalk.js.org/)没有 [BBtalk](https://bb.js.org/) 好看
 
+~~罢了罢里，直接上Artitalk好吧，不纠结，反正都是白嫖。把侧边栏上原来的评论区换成了Artitalk~~。我tm不干了，不用了，整了一下午累死累活国内直连就是上不去，Artitalk直接参考官方文档会暴露Leancloud的Appid以及Appkey，使用中间代理cloudflare worker替换中间层避免泄露结果我构建完worker之后访问站点404？`(╯‵□′)╯︵┻━┻` 好好好，worker.dev被墙了是吧，我懂我懂，换域名就好了嘛。然后当我准备跑去freenom再嫖一个域名的时候，我用的机场他挂了(⊙ˍ⊙)freenom又会检测域名，域名不对你是注册不到的，麻了，等呗。好，注册完了解析到worker.dev之后还是进不去（报错`Error 1003`），人麻了。得，不整了，BBtalk寄掉了，Artitalk又没整好（其实翻出去是可以正常访问的，但是不翻就一直加载不出来）。天意啊，我不搞了！`(σ｀д′)σ`
+
 ## 2022/9/5
 
 由于启用`katex`编辑数学公式导致cloudflare pages无法正常构建（主要是我用的`katex`插件是在本地渲染成HTML，这个插件需要借助另外一个本地的软件，这个路径问题导致cloudflare构建失败），我决定关闭cloudflare站点（减速CDN不嫖也罢），现在 https://weekdaycare.tk 仍然是托管在vercel， https://weekdaycare.cf 是直接解析到GitHub Page的来访问我的站点了

@@ -80,7 +80,7 @@ avatar:
 # main menu navigation
 menu:
   custom:
-    title: 留言板
+    title: 评论
     path: /about/#comment
     icon: bx:message-alt-detail
 
