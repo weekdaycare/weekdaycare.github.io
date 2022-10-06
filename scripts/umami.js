@@ -1,0 +1,1 @@
+hexo.extend.injector.register('head_end', '<script async defer data-website-id="63a83938-6fa2-4c68-adf2-5225b979fb69" src="https://weekum.netlify.app/ummasts.js"></script>');

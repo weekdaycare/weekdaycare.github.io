@@ -11,6 +11,7 @@ colors:
   # tag_start_color:
   # tag_end_color:
 
+
 # Fonts
 font:
   cdn:
@@ -20,7 +21,7 @@ font:
   serif:
     family: '''Songti SC'', STZhongsong, STKaiti, KaiTi, Georgia, serif'
   sans_serif:
-    family: '微软雅黑, ''PingFang SC'', Arial, sans-serif'
+    family: '''霞鹜文楷'', 微软雅黑, ''PingFang SC'', Arial, sans-serif'
   monospace:
     family: '''Comic Sans MS'', ''Cascade Code PL'', ''Microsoft YaHei'', Monaco, monospace'
 
