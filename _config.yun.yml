@@ -81,8 +81,8 @@ avatar:
 # main menu navigation
 menu:
   custom:
-    title: 评论
-    path: /about/#comment
+    title: ispeak
+    path: /ispeak
     icon: bx:message-alt-detail
 
 wordcloud:
