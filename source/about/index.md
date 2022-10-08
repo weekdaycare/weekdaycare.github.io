@@ -3,7 +3,13 @@ title: about
 date: 2022-08-28 01:40:36
 ---
 
-# 站点变更记录
+## 站点变更记录
+
+### 2022/10/8
+
+整了一个国庆算是把iSpeak部署好了，虽然bbtalk挂掉了，Artitalk的外观又没有bbtalk好看（主要是Aritalk部署后国内死活访问不上去），于是在四处翻博客的时候发现了一个好东西 [iSpeak](https://www.antmoe.com/speak/) 一顿折腾和作者提issue好不容易才部署完了，现在你可以在侧边栏里访问我的iSpeak页面啦。纯小白，看之后能不能改改css让iSpeak更契合我的主题。
+
+![哎呀妈呀真香](https://pic1.imgdb.cn/item/634108e116f2c2beb1396805.jpg)
 
 ## 2022/9/27
 

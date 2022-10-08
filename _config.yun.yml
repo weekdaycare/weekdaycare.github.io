@@ -244,6 +244,8 @@ waline:
   serverURL: https://weekcomment.tk/
   # visitor: true
   comment: true
+  tips:
+    - 填写邮箱可以收到回复哦(～￣▽￣)～
   emoji:
     - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
     - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/

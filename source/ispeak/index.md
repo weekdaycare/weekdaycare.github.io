@@ -1,12 +1,12 @@
 ---
-title: Speak
+title: iSpeak
 date: 2022-10-08 00:50:11
 comments: false
 ---
 
-<center>🍭欢迎你的来访</center>
-
 <center>🍭这里是我的speak页面</center>
+
+<center>🍭欢迎你的来访</center>
 
 <div id="tip" style="text-align:center;">ipseak加载中</div>
 <div id="ispeak"></div>
@@ -28,6 +28,7 @@ comments: false
 <!-- CSS -->
 
 <!-- JS -->
+
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -41,7 +42,7 @@ comments: false
         api: 'https://weetalk.tk/',
         author: '633d47f5ba160b6b32db2e2b',
         pageSize: 15,
-        loading_img: 'https://bu.dusays.com/2021/03/04/d2d5e983e2961.gif'
+        loading_img: 'https://pic1.imgdb.cn/item/6341062616f2c2beb134afc6.gif'
       })
       .then(function () {
         console.log('ispeak 加载完成')
