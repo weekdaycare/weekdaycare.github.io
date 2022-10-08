@@ -137,4 +137,4 @@ backup:
     type: git
     message: Back up my site
     repository:
-       github: git@github.com:weekdaycare/weekdaycare.github.io.git,source
+       github: git@github.com:weekdaycare/hexo-backup.git,main
