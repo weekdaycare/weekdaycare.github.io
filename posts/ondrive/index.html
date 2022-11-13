@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>OneDrive</title>
+
+  
+    <meta name="description" content="续订成功通知   Office 365 E5 是微软 免费 提供给开发者的 Office 临时管理号，任何人均可申请。该账号的最大权益便是可分配 25 个子账号，每个账号都拥有 OneDrive 5T 存储 和完整的 Office 客户端 使用权。 首次申请，可免费使用 90 天。到期后，根据微软机制，借助 Github Action 或 Tencent Servless 等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OneDrive">
+<meta property="og:url" content="http://weekdaycare.cn/posts/ondrive/">
+<meta property="og:site_name" content="星日语">
+<meta property="og:description" content="续订成功通知   Office 365 E5 是微软 免费 提供给开发者的 Office 临时管理号，任何人均可申请。该账号的最大权益便是可分配 25 个子账号，每个账号都拥有 OneDrive 5T 存储 和完整的 Office 客户端 使用权。 首次申请，可免费使用 90 天。到期后，根据微软机制，借助 Github Action 或 Tencent Servless 等">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-18T16:44:37.000Z">
+<meta property="article:modified_time" content="2022-10-19T08:54:03.815Z">
+<meta property="article:author" content="涛声依旧">
+<meta property="article:tag" content="整活">
+<meta property="article:tag" content="白嫖">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/asset/favicon.svg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    
+      
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">OneDrive</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#office-e5%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%AD%A5%E9%AA%A4"><span class="toc-text">Office E5开发者账号申请步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="toc-text">开始使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E7%A9%BA%E9%97%B4"><span class="toc-text">扩展空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E5%8F%B7%E5%88%86%E9%85%8D"><span class="toc-text">子号分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github-action"><span class="toc-text">Github Action</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8A%A1"><span class="toc-text">添加任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%B3%A8%E5%86%8C%E6%88%90%E5%8A%9F"><span class="toc-text">应用注册成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#api-%E8%B0%83%E7%94%A8%E6%88%90%E5%8A%9F"><span class="toc-text">API 调用成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#e5-renew-plus"><span class="toc-text">E5 Renew
+Plus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#onedrive-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98"><span class="toc-text">OneDrive 搭建个人网盘</span></a></li></ol></div></div></div>
+
+
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/comments.svg"/></a><a class="social" href="https://y.music.163.com/m/user?id=1387091413" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/netease.svg"/></a><a class="social" href="https://weekpan.cf" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/cloud.svg"/></a><a class="social" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/rss.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-18T16:44:37.000Z">2022-05-19</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>OneDrive</span></h1>
+<blockquote>
+<p>续订成功通知</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://tva2.sinaimg.cn/large/006DZngIgy1gzj01pww7oj30gj0bldih.jpg" /></p>
+</blockquote>
+<p><code>Office 365 E5</code> 是微软 <strong>免费</strong>
+提供给开发者的 Office
+临时管理号，任何人均可申请。该账号的最大权益便是可分配 25
+个子账号，每个账号都拥有 <code>OneDrive 5T 存储</code> 和完整的
+<code>Office 客户端</code> 使用权。</p>
+<p>首次申请，可免费使用 90 天。到期后，根据微软机制，借助 Github Action
+或 Tencent Servless 等平台的虚拟环境和定时任务功能，可实现
+永久自动续期。</p>
+<h2 id="office-e5开发者账号申请步骤">Office E5开发者账号申请步骤</h2>
+<p>打开 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9kZXZlbG9wZXIubWljcm9zb2Z0LmNvbS9vZmZpY2UvcHJvZmlsZQ==">申请链接</a>，<code>登录</code>
+你的微软账户。如未注册过，点击图中的创建一个，在此不再赘述。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096694967/0" /></p>
+<p>登录成功进入信息填写页面后，选择 <code>国家</code>，随意填写
+<code>公司</code> 名称，勾选 <code>接受条款</code> 后，点击
+<code>下一步</code>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12099533891/0" /></p>
+<p>进入个性化体验页面后，<code>随意勾选</code> 几个必选项，点击
+<code>加入</code>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/14241020505/0.png" /></p>
+<p>进入下个页面后，点击 <code>设置 E5 订阅</code>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096775126/0" /></p>
+<p>在弹出的对话框中填写
+<code>国家</code>、<code>用户名</code>、<code>域</code> 和
+<code>密码</code> 后，点击 <code>继续</code>，注意在记事本
+<code>保存你的密码</code>。</p>
+<p>域即 <code>网址前缀</code>，填写后可能提示
+<code>已被使用</code>，改用 <code>其他字母</code> 即可。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096799759/0" /></p>
+<p>接着会要求绑定 <code>手机号</code>，由于网站使用了 <code>谷歌</code>
+人机验证，因此需要<strong>科学上网</strong>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/14241026089/0.png" /></p>
+<p>收到 <code>验证码</code> 后，填入对话框，点击 <code>设置</code>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096853407/0" /></p>
+<p><code>等待一分钟</code> 左右，页面将显示订阅成功。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096869353/0" /></p>
+<h2 id="开始使用">开始使用</h2>
+<p>打开 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly93d3cub2ZmaWNlLmNvbS8%7CYXV0aD0y">Office
+官网</a>，使用上图中的 <code>管理员账号</code> 和第五张图设置的
+<code>密码</code> 登录。关闭向导后，点击页面中的 OneDrive 和 Word
+图标等，即可使用 <code>网页端</code> 服务。如需使用
+<code>客户端</code>，点击右上角的
+<code>安装 Office - Office 365 应用</code>，使用下载的安装器，跟随步骤安装即可。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096924747/0" /></p>
+<h2 id="扩展空间">扩展空间</h2>
+<p>订阅号默认的 OneDrive 空间是 1T，可在管理页扩展为 5T。打开 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9hZG1pbi5vbmVkcml2ZS5jb20vP3Y9U3RvcmFnZVNldHRpbmdz">OneDrive
+存储管理页</a>，<code>登录</code> 申请的管理号，将空间设置为
+<code>5120</code> 后点击 <code>保存</code>。如页面
+<code>无法加载</code>，则系统尚未完成初始化，<code>等待 24 小时</code>
+后重新打开。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/14241029283/0.png" /></p>
+<h2 id="子号分配">子号分配</h2>
+<p>管理员可分配 25 个子号，每个账号都可使用 Office 365 并拥有 5T
+OneDrive 空间。点击页面中的 <code>管理</code> 按钮，进入管理员中心。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/12096959440/0" /></p>
+<p>点击左侧菜单栏的 <code>用户 - 活跃用户</code>，点击右侧的
+<code>添加用户</code>，</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/14241032659/0.png" /></p>
+<p>在弹出的选项卡中，填写 <code>必要信息</code> 后，点击
+<code>下一步</code>。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://inews.gtimg.com/newsapp_ls/0/14241032660/0.png" /></p>
+<p>在接下来的三个步骤中，全部 <code>保持默认选项</code>，直接点击
+<code>下一步</code>，最后 <code>关闭</code> 选项卡。</p>
+<h2 id="github-action">Github Action</h2>
+<blockquote>
+<p>微软的账号续订策略也算是一种玄学了，只能说要保持活跃就大概率能续上，一般微软会在账号到期前30天和你发封邮件告诉你续订成功，要是没有收到邮件就有点危险了</p>
+</blockquote>
+<p>订阅的有效期是 <code>90</code>
+天。到期前，如果微软检测到账号被用于开发，即
+<code>API 被频繁且无规律调用</code>，将自动续期。因此，只需编写几行代码，定时高频调用其
+API 即可。</p>
+<p><code>Github Action</code> 是 Github 提供给开发者使用的
+<code>虚拟 Linux 环境</code>，可
+<code>根据条件</code>，例如指定时间，<code>执行指定代码</code>。</p>
+<h3 id="添加任务">添加任务</h3>
+<p>首先 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9naXRodWIuY29tLw==">登录或注册</a>
+一个 Github 账号，在此不再赘述。~随后打开 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9naXRodWIuY29tL3ZjaGVja3plbi9BdXRvQXBpU2VjcmV0">该仓库</a>，点击右上角的
+<code>Fork</code>~（会遭到攻击，想收藏可以 Star，禁止 Fork）。随后<a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZ2l0aHViL2ltcG9ydGluZy15b3VyLXByb2plY3RzLXRvLWdpdGh1Yi9pbXBvcnRpbmctYS1yZXBvc2l0b3J5LXdpdGgtZ2l0aHViLWltcG9ydGVy">导入私有仓库</a>，在
+<code>Your old repository’s clone URL</code> 里填写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   https://github.com/vcheckzen/KeepAliveE5.git </span><br></pre></td></tr></table></figure>
+<p>Privacy 务必选择 <code>Private</code>。</p>
+<p>点击
+<code>Begin Import</code>，稍等片刻，你的账号下便会复制一份该项目。</p>
+<p>现在，创建一个具有 <code>workflow</code>
+权限的个人访问密钥，用于同步上流代码。首先访问 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL3Rva2Vucy9uZXc=">密钥创建页面</a>，按照下图填写信息，随后将页面拉到最下方，点击绿色的
+<code>Generate token</code> 按钮。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://img30.360buyimg.com/pop/jfs/t1/206051/13/12358/57553/6175299eEfe259c2b/a508c13c89a05d96.png" /></p>
+<p>接着，页面会跳转到创建成功页面，点击图中的 <code>复制</code>
+图标，复制生成的 PAT 密钥备用。</p>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://img30.360buyimg.com/pop/jfs/t1/214960/8/1710/21605/61752a54E0ea98893/1a7b13a656fe0f75.png" /></p>
+<p>现在只需为仓库添加下表中的三个密钥，具体过程请查看上方视频（视频中未添加
+PAT，你要自己加上）</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">PAT</td>
+<td style="text-align: center;">Github 个人访问密钥，需要具有 workflow
+权限</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">USER</td>
+<td style="text-align: center;">E5
+管理员邮箱（支持多个，每行一个，不要填写子号）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PASSWD</td>
+<td style="text-align: center;">E5
+管理员密码（支持多个，每行一个，顺序必须和邮箱一致）</td>
+</tr>
+</tbody>
+</table>
+<p>现在按照 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vYXp1cmUvYWN0aXZlLWRpcmVjdG9yeS9mdW5kYW1lbnRhbHMvY29uY2VwdC1mdW5kYW1lbnRhbHMtc2VjdXJpdHktZGVmYXVsdHMjZGlzYWJsaW5nLXNlY3VyaXR5LWRlZmF1bHRz">链接</a>
+说明，关闭 E5 管理员账号的
+<code>两步验证（多因素认证、安全默认值）</code>。</p>
+<p>一定要按照链接里的 1-5
+步<strong>关闭两步验证</strong>（多因素认证、安全默认值），否则无法注册成功，进而无法调用
+API。</p>
+<p>现在转到 <code>Action</code> 面板，在 <code>All workflows</code>
+下找到 <code>Register APP</code>，手动触发它完成注册流程，2
+分钟左右。如果确认一切操作正确仍然 <code>Register</code> 失败，可等待
+10-30min
+后再操作，因为关闭安全默认值后，微软系统要过一段时间才会刷新。</p>
+<p>如果 <code>Action</code> 面板找不到 <code>Register APP</code>，则修改
+<code>.github/workflows</code>
+目录下的两个文件，随便添加一行注释保存，详细过程见上方视频。如果
+<code>Action</code> 面板不显示，则到仓库的
+<code>Settings -&gt; Actions -&gt; Actions permissions</code> 勾选
+<code>Allow all actions</code> 后保存，具体参考 <a
+target="_blank" rel="noopener" href="https://logi.im/go/aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vcmVwb3NpdG9yaWVzL21hbmFnaW5nLXlvdXItcmVwb3NpdG9yeXMtc2V0dGluZ3MtYW5kLWZlYXR1cmVzL2VuYWJsaW5nLWZlYXR1cmVzLWZvci15b3VyLXJlcG9zaXRvcnkvbWFuYWdpbmctZ2l0aHViLWFjdGlvbnMtc2V0dGluZ3MtZm9yLWEtcmVwb3NpdG9yeSNtYW5hZ2luZy1naXRodWItYWN0aW9ucy1wZXJtaXNzaW9ucy1mb3IteW91ci1yZXBvc2l0b3J5">该链接</a>。部分用户账号由于之前跑其它违规项目被封禁
+Action 功能的，自行注册新账号。</p>
+<p>务必确保运行日志如下图一样包含成功字样，否则必须按照提示解决问题后再重新启动注册动作，直到注册成功。</p>
+<h3 id="应用注册成功">应用注册成功</h3>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://p3-tt.byteimg.com/origin/pgc-image/452212730e3e4661b318c968c8db2f10.png" /></p>
+<h3 id="api-调用成功">API 调用成功</h3>
+<p><img
+src="https://image.baidu.com/search/down?tn=download&amp;url=https://p3-tt.byteimg.com/origin/pgc-image/75f67d9a19214550aeb2e0f0e9c255af.png" /></p>
+<p>再找到 <code>Invoke API</code> 手动触发它看能否成功调用
+API。如无错误，任务会定时执行，基本可保证续订成功。</p>
+<h2 id="e5-renew-plus"><a target="_blank" rel="noopener" href="https://e5renew.com/">E5 Renew
+Plus</a></h2>
+<p>除了以上用Github Action续订的方法之外，还有一种 E5
+调用API续订服务，即<a target="_blank" rel="noopener" href="https://e5renew.com/">E5 Renew
+Plus</a>，你可以在其官方网站找到Windows版本，按照官方的步骤来，就没有问题</p>
+<p>但是，我就是想续订一下，还得每天打开这个软件放后台挂着，那多麻烦呐。别急，现在我们介绍<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33212020/article/details/119747634">Microsoft
+365 E5 Renew X</a></p>
+<p>Microsoft 365 E5 Renew
+X是一款网页版的E5续订服务，其依赖网页浏览器呈现支持用户多端操作，完全将E5账户<a
+target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=API&amp;spm=1001.2101.3001.7020">API</a>调用托管在了服务器端因此用户无需电脑也可使用。</p>
+<p>直接看文章：<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33212020/article/details/119747634">E5
+调用API续订服务：Microsoft 365 E5 Renew X</a></p>
+<h2 id="onedrive-搭建个人网盘">OneDrive 搭建个人网盘</h2>
+<p>这是一个简短的构建你自己的 onedrive-vercel-index 的指导。</p>
+<ol type="1">
+<li>Fork <a
+target="_blank" rel="noopener" href="https://github.com/spencerwooo/onedrive-vercel-index">此项目</a>。</li>
+<li>将 <code>site.config.js</code> 里的 <code>userPrincipleName</code>
+改为你的微软账户邮箱。</li>
+<li>将 <code>site.config.js</code> 里的 <code>baseDirectory</code>
+修改为你要分享的文件夹路径。</li>
+<li>根据你的 OneDrive 版本示情况修改 <code>api.config.js</code>。</li>
+<li>将你的项目导入到 Vercel 并 <a
+target="_blank" rel="noopener" href="https://vercel.com/integrations/upstash">添加 Upstash 插件</a>
+以更方便地设置 <code>REDIS_URL</code> 环境变量。</li>
+<li>部署，并享受！ 🎉</li>
+</ol>
+<p>部署完成后的项目会引导你进行 OAuth 步骤，并自动将所需的凭证存储到
+Redis 数据库里。这就是我们要做的全部事情！</p>
+<p>更加详细的步骤在官方文档中<a
+target="_blank" rel="noopener" href="https://github.com/spencerwooo/onedrive-vercel-index">onedrive-vercel-index</a>:
+&gt; <a target="_blank" rel="noopener" href="https://ovi.swo.moe/docs/getting-started">Getting
+started</a></p>
+<p>不仅仅是可以搭建onedrive-vercel-index</p>
+<p>也有很多优秀的项目可以白嫖（不是</p>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://github.com/qkqpttgf/OneManager-php">OneManager-php</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/alist-org/alist">alist</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/libsgh/PanIndex">PanIndex</a></li>
+</ul>
+<p>以及其他等等优秀的项目都能够挂载Onedrive、阿里云盘、天翼云盘......</p>
+<blockquote>
+<p>文章出处： <a
+target="_blank" rel="noopener" href="https://logi.im/script/permanently-keeping-an-office-e5-account.html">Office
+365 E5 账号申请及永久续期教程 - LOGI</a> <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33212020/article/details/119747634">E5
+调用API续订服务：Microsoft 365 E5 Renew X</a> <a
+target="_blank" rel="noopener" href="https://github.com/spencerwooo/onedrive-vercel-index">onedrive-vercel-index</a>:
+&gt; <a target="_blank" rel="noopener" href="https://ovi.swo.moe/docs/getting-started">Getting
+started</a></p>
+</blockquote>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+BY-NC-ND 4.0</a> 转载请注明出处</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/rss/">RSS</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/c-study/">C语言学习</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
+<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd9.png" width="11" heigth="10"></a><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd0.png" width="32" heigth="10"></a>
+<br><span id="span"></span>
+<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "已定居"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.15.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css","js":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":false,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"4px","duration":400,"interval":100,"scale":0.9});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".vcontent img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://www.weekbark.cf/heti/umd/heti.min.css","js":"https://www.weekbark.cf/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://www.weekcomment.tk/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://www.weekcomment.tk/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.js","css":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":5}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
+  
+    <script src="//code.tidio.co/mrnzgtl00kiuvdoyfbgma1igagciatje.js" async defer></script>
+  
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>RSS</title>
+
+  
+    <meta name="description" content="RSS 啥是RSS？RSS（来源：WiKi）（英文全称：RDFSite Summary 或 Really SimpleSyndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用RSS 后，网站订阅者便无需再手动查看网站是否有新的内容，同时 RSS可将多个网站更新的内容进行整合，以摘要的形式呈现，有助于订阅者快">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RSS">
+<meta property="og:url" content="http://weekdaycare.cn/posts/rss/">
+<meta property="og:site_name" content="星日语">
+<meta property="og:description" content="RSS 啥是RSS？RSS（来源：WiKi）（英文全称：RDFSite Summary 或 Really SimpleSyndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用RSS 后，网站订阅者便无需再手动查看网站是否有新的内容，同时 RSS可将多个网站更新的内容进行整合，以摘要的形式呈现，有助于订阅者快">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467bd186348.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/634680a704e05.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467ca78f6a3.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467d1b06a7b.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467dbc29c38.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467e61d90a3.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467e9d394ac.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467eec0ef4b.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467f25e1a0e.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/12/63467f75b12cd.webp">
+<meta property="article:published_time" content="2022-06-11T04:38:31.000Z">
+<meta property="article:modified_time" content="2022-06-12T05:11:31.000Z">
+<meta property="article:author" content="涛声依旧">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="rss">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bu.dusays.com/2022/10/12/63467bd186348.webp">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/asset/favicon.svg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    
+      
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">RSS</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rss"><span class="toc-text">RSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rss%E8%AE%A2%E9%98%85%E6%BA%90"><span class="toc-text">RSS订阅源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8B%93%E5%B1%95"><span class="toc-text">安装拓展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AErsshub-radar"><span class="toc-text">配置RSSHub Radar</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rss-%E9%98%85%E8%AF%BB%E5%99%A8"><span class="toc-text">RSS 阅读器</span></a></li></ol></div></div></div>
+
+
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/comments.svg"/></a><a class="social" href="https://y.music.163.com/m/user?id=1387091413" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/netease.svg"/></a><a class="social" href="https://weekpan.cf" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/cloud.svg"/></a><a class="social" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/rss.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-06-11T04:38:31.000Z">2022-06-11</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>RSS</span></h1>
+<h2 id="rss">RSS</h2>
+<details class="tag-plugin folding" color="light"><summary><span>啥是RSS？</span></summary><div class="body"><p><strong>RSS</strong>（来源：<atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSS">WiKi</a>）（英文全称：<atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Resource_Description_Framework">RDF</a>Site Summary 或 Really SimpleSyndication），中文译作<strong>简易信息聚合</strong>，也称<strong>聚合内容</strong>，是一种<atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/消息來源">消息来源</a>格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用RSS 后，网站订阅者便无需再手动查看网站是否有新的内容，同时 RSS可将多个网站更新的内容进行整合，以摘要的形式呈现，有助于订阅者快速获取重要信息，并选择性地点阅查看。</p><p>“资源描述框架站点摘要”（RDF Site Summary）即 RSS的英文原意，后来通过<atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逆向首字母缩略词">逆向首字母缩略词</a>变更为“ReallySimpleSyndication”（简易信息聚合）。将新闻标题、摘要（Feed）、内容按照用户的要求，推送至用户的桌面便是RSS 的目的。有时 RSS 一词大体上意为“社会性书签”，包括各种 RSS的不同格式；例如，<atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=Blogspace&amp;action=edit&amp;redlink=1">Blogspace</a>对使用网摘于一集成器内之动作标为 RSS info 和 RSSreader，虽然它的第一个句子就包含明确的 <atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Atom_(標準)">Atom</a> 格式：“RSS 和Atom 文件能够用简单的格式从网站更新消息至你的电脑！”</p><p>RSS 摘要可以借由 RSS 阅读器、feed reader 或 aggregator等网页或以桌面为架构的软件来阅读。标准的 <atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/XML">XML</a>档式可允许信息在一次发布后通过不同的程序阅览。用户借由将网摘输入 RSS阅读器，或是用鼠标点取浏览器上指向订阅程序的 RSS 小图标 <atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/URI">URI</a>（非通常所称的 <atarget="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/URL">URL</a>）来订阅网摘。RSS阅读器会定期检阅网站是否有更新，然后下载至监看用户界面。</p></div></details>
+<p>巴拉巴拉了这么一大堆，实际上上手起来并不难</p>
+<p>你可以看到我的网站上侧边栏中有个</p>
+<div class="tag-plugin image"><div class="image-bg" style="background:var(--card);padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467bd186348.webp" alt="RSS" fancybox="true" style="width:20px;"/></div><div class="image-meta"><span class="image-caption center">RSS</span></div></div>
+<p>标志，你点一下，会进入类似这样的页面</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/634680a704e05.webp" alt="XML文件" fancybox="true" style="width:600px;"/></div><div class="image-meta"><span class="image-caption center">XML文件</span></div></div>
+<p>我们不用管网页内容，直接复制地址栏的地址<code>https://weekdaycare.cn/atom.xml</code></p>
+<p>这就是我们需要的RSS源</p>
+<p>然后我们找一个RSS阅读器，这里我用的是<code>Fluent Reader</code>，把刚刚拿到的链接复制进去</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467ca78f6a3.webp" alt="FluentReader" fancybox="true" style="width:800px;"/></div><div class="image-meta"><span class="image-caption center">FluentReader</span></div></div>
+<p>就可以开始愉快的玩耍啦</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467d1b06a7b.webp" alt="界面" fancybox="true" style="width:800px;"/></div><div class="image-meta"><span class="image-caption center">界面</span></div></div>
+<p>RSS 源 + RSS 阅读器</p>
+<p>这便是 RSS 最简单的用法</p>
+<hr />
+<h2 id="rss订阅源">RSS订阅源</h2>
+<p>那么，我们如何获取自己想看信息的RSS订阅呢？</p>
+<p>在这里，我介绍一个<a
+target="_blank" rel="noopener" href="https://diygod.me/">DIYgod</a>开发的神器——<a
+target="_blank" rel="noopener" href="https://docs.rsshub.app/">RSSHub</a></p>
+<details class="tag-plugin folding" color="light"><summary><span>RSSHub介绍</span></summary><div class="body"><p>RSSHub 是一个开源、简单易用、易于扩展的 RSS生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。RSSHub借助于开源社区的力量快速发展中，目前已适配数百家网站的上千项内容</p></div></details>
+<p>可以配合浏览器扩展 <a
+target="_blank" rel="noopener" href="https://github.com/DIYgod/RSSHub-Radar">RSSHub Radar</a> 和
+移动端辅助 App <a target="_blank" rel="noopener" href="https://github.com/Cay-Zhang/RSSBud">RSSBud</a>
+(iOS) 与 <a target="_blank" rel="noopener" href="https://github.com/LeetaoGoooo/RSSAid">RSSAid</a>
+(Android) 食用</p>
+<p>下面我以浏览器拓展RSSHub Radar为例</p>
+<h3 id="安装拓展">安装拓展</h3>
+<ul>
+<li><p><a
+target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/rsshub-radar/kefjpfngnndepjbopdmoebkipbgkggaa?hl=zh-CN">RSSHub
+Radar - Chrome 应用商店 (google.com)</a>（自备魔法）</p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/rsshub-radar/gangkeiaobmjcjokiofpkfpcobpbmnln?hl=zh-CN">RSSHub
+Radar - Microsoft Edge Addons</a></p></li>
+<li><p>Firefox上的RSSHub Radar似乎由于Firefox的政策无法正常运行</p></li>
+</ul>
+<p>RSSHub Radar 会自动检测当前页面有没有 RSS 和 RSSHub
+支持，检测到则会在右下角显示一个角标，点击就能复制 RSS 源了</p>
+<details class="tag-plugin folding" color="light"><summary><span>以少数派为例</span></summary><div class="body"><p>进入少数派官网</p><p>我们单击拓展</p><div class="tag-plugin image"><div class="image-bg" style="padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467dbc29c38.webp" fancybox="true" style="width:500px;"/></div></div><p>网站内的RSS订阅源就显示出来了</p></div></details>
+<p>那么一些网站并不具备RSS订阅源该怎么办？这个时候就需要借助我们的RSSHub</p>
+<details class="tag-plugin folding" ><summary><span>拿B站举例</span></summary><div class="body"><p>比如说我要订阅稚晖君大佬的B站投稿</p><p>进入稚晖君的主页，单击浏览器拓展</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467e61d90a3.webp" fancybox="true" style="width:800px;"/></div></div><p>然后直接复制RSS链接到RSS阅读器就可以食用了</p><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467e9d394ac.webp" fancybox="true" style="width:800px;"/></div></div><p><imgsrc="https://weekdaycare.coding.net/p/pic/d/pic/git/raw/main/2022/08/29/16-34-52.webp" /></p></div></details>
+<p>然而遗憾的是，官方提供的 RSSHub 域名（rsshub.app）已经被墙了，因为
+RSSHub 官方域名已经被不少网站做了反爬限制，就算你能利用国外在线 RSS
+服务做中转来使用，也是不推荐你去用官方域名的</p>
+<p>解决方法也很简单，找一个没被墙的域名，替换掉官方域名即可</p>
+<h3 id="配置rsshub-radar">配置RSSHub Radar</h3>
+<p>上面的例子，我们可以观察到一个 RSSHub
+生成的订阅源可以简单分为两部分：域名 + 路由</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">https://rsshub.app/bilibili/user/video/20259914</span><br><span class="line">|&lt;-----域名------&gt;|&lt;-----------路由------------&gt;|</span><br></pre></td></tr></table></figure>
+<p>单击浏览器拓展，点击右上角的小齿轮图标</p>
+<div class="tag-plugin image"><div class="image-bg" style="padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467eec0ef4b.webp" fancybox="true" style="width:400px;"/></div></div>
+<p>进入这个页面</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467f25e1a0e.webp" fancybox="true" style="width:600px;"/></div></div>
+<p>这个时候你点立即更新是没有用的，因为RSSHub官方域名是被墙了的</p>
+<p>你可以用我的RSSHub域名 <psw>https://weekrsshub.vercel.app</psw></p>
+<blockquote>
+<p>目前vercel.app域名已被DNS污染，请使用新的RSSHub域名
+https://weekrss.cf</p>
+</blockquote>
+<p>或者你也可以自己0成本在Vercel/Heroku上搭建RSSHub，官方教程在这里https://docs.rsshub.app/install/</p>
+<p>不论如何，填好RSSHub的域名后再次点击立即更新就应该可以了</p>
+<h2 id="rss-阅读器">RSS 阅读器</h2>
+<div class="tag-plugin image"><div class="image-bg" style="background:var(--card);padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63467f75b12cd.webp" alt="RSS阅读器" fancybox="true"/><a class="image-download blur" style="opacity:0" target="_blank" rel="noopener" href="https://bu.dusays.com/2022/10/12/63467f75b12cd.webp"><svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734"><path d="M561.00682908 685.55838913a111.03077546 111.03077546 0 0 1-106.8895062 0L256.23182837 487.72885783a55.96309219 55.96309219 0 0 1 79.13181253-79.18777574L450.70357448 523.88101491V181.55477937a55.96309219 55.96309219 0 0 1 111.92618438 0v344.06109173l117.07478902-117.07478901a55.96309219 55.96309219 0 0 1 79.13181252 79.18777574zM282.81429711 797.1487951h447.70473912a55.96309219 55.96309219 0 0 1 0 111.92618438H282.81429711a55.96309219 55.96309219 0 0 1 0-111.92618438z" p-id="3735"></path></svg></a></div><div class="image-meta"><span class="image-caption center">RSS阅读器</span></div></div>
+<p>一些在线 RSS 服务提供了过滤文章的功能，它们在能够自动抓取 RSS
+订阅源中的更新内容的同时，根据你的设置筛选文章</p>
+<p>还有，如果你需要多端进行RSS阅读，同步电脑与手机的文章阅读、收藏状态，也需要靠在线
+RSS 服务来解决</p>
+<p>但不幸的是，目前知名的在线 RSS 服务均存在被墙的问题，比如
+Feedly、NewsBlur、Feedio...</p>
+
+
+<div class="article-footer reveal fs14"><section id="references"><div class="header"><span>参考资料</span></div><div class="body"><ul><li class="post-title"><a href="https://zh.wikipedia.org/wiki/消息來源" target="_blank" rel="external nofollow noopener noreferrer">消息来源</a></li><li class="post-title"><a href="https://sspai.com/post/43998" target="_blank" rel="external nofollow noopener noreferrer">论 RSS 的「复兴」</a></li><li class="post-title"><a href="https://zh.wikipedia.org/wiki/Atom_(標準)" target="_blank" rel="external nofollow noopener noreferrer">Atom (标准)</a></li><li class="post-title"><a href="https://zhuanlan.zhihu.com/p/349349861" target="_blank" rel="external nofollow noopener noreferrer">知道RSS的人越少，我就越希望它能被人知道!</a></li></ul></div></section><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+BY-NC-ND 4.0</a> 转载请注明出处</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/onedrive+rclone/">轻量云服务期搭建Ondrive离线下载</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/ondrive/">OneDrive</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
+<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd9.png" width="11" heigth="10"></a><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd0.png" width="32" heigth="10"></a>
+<br><span id="span"></span>
+<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "已定居"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.15.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css","js":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":false,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"4px","duration":400,"interval":100,"scale":0.9});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".vcontent img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://www.weekbark.cf/heti/umd/heti.min.css","js":"https://www.weekbark.cf/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://www.weekcomment.tk/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://www.weekcomment.tk/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.js","css":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":5}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
+  
+    <script src="//code.tidio.co/mrnzgtl00kiuvdoyfbgma1igagciatje.js" async defer></script>
+  
+
+
+  </div>
+</body>
+</html>

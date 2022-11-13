@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>便笺：hexo-tag-chart - 星日语</title>
+
+  
+    <meta name="description" content="介绍 Chartjs是一款简单优雅的数据可视化工具，对比其他图表库如echarts、highcharts、c3、flot、amchart等，它的画面效果、动态效果都更精致，它的 文档首页 就透出一股小清新，基于 HTML5 Canvas，它拥有更好的性能且响应式，基本满足了一般数据展示的需要，包括折线图，条形图，饼图，散点图，雷达图，极地图，甜甜圈图等。 官方文档 hexo-tag-c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="hexo-tag-chart">
+<meta property="og:url" content="http://weekdaycare.cn/notes/hexo-tag-chart/">
+<meta property="og:site_name" content="星日语">
+<meta property="og:description" content="介绍 Chartjs是一款简单优雅的数据可视化工具，对比其他图表库如echarts、highcharts、c3、flot、amchart等，它的画面效果、动态效果都更精致，它的 文档首页 就透出一股小清新，基于 HTML5 Canvas，它拥有更好的性能且响应式，基本满足了一般数据展示的需要，包括折线图，条形图，饼图，散点图，雷达图，极地图，甜甜圈图等。 官方文档 hexo-tag-c">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7cabb545a.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7ccf1003f.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7d0b1ab28.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7d3296d89.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7d594366e.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7d747bbe4.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/10/28/635b7d8f00be4.webp">
+<meta property="article:published_time" content="2022-11-13T03:55:35.951Z">
+<meta property="article:modified_time" content="2022-11-01T07:33:53.142Z">
+<meta property="article:author" content="涛声依旧">
+<meta property="article:tag" content="日志">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bu.dusays.com/2022/10/28/635b7cabb545a.webp">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/asset/favicon.svg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    
+      
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+  
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item active" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">笔记</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/"><span class="toc-text">俺白嫖的项目</span></a></div></div><div class="widget-header cap dis-select"><span class="name">番剧</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/%E7%95%AA%E5%89%A7/"><span class="toc-text">番剧推荐</span></a></div></div><div class="widget-header cap dis-select"><span class="name">Hexo插件</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-abbrlink/"><span class="toc-text">hexo-abbrlink</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-bangumis/"><span class="toc-text">hexo-bangumis</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-bilibili-card/"><span class="toc-text">hexo-bilibili-card</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/hexo-tag-chart/"><span class="toc-text">hexo-tag-chart</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-text">柱状&#x2F;条形图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E9%A5%BC%E5%9B%BE"><span class="toc-text">环形&amp;饼图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B7%E8%BE%BE%E5%9B%BE"><span class="toc-text">雷达图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%94%E6%B3%A1%E5%9B%BE"><span class="toc-text">气泡图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9B%BE"><span class="toc-text">离散图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E5%9B%BE"><span class="toc-text">混合图</span></a></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-git-backup/"><span class="toc-text">hexo-git-backup</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-tag-aplayer/"><span class="toc-text">hexo-tag-aplayer</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-filter-mathjax/"><span class="toc-text">hexo-filter-mathjax</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/hexo-blog-encrypt/"><span class="toc-text">hexo-blog-encrypt</span></a></div></div></div>
+
+
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/notes/">便笺</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-01T07:33:53.142Z">2022-11-01</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>hexo-tag-chart</span></h1>
+  <h2 id="介绍">介绍</h2>
+<p><code>Chartjs</code>是一款简单优雅的数据可视化工具，对比其他图表库如echarts、highcharts、c3、flot、amchart等，它的画面效果、动态效果都更精致，它的
+<a target="_blank" rel="noopener" href="https://chartjs.bootcss.com/">文档首页</a>
+就透出一股小清新，基于 HTML5
+Canvas，它拥有更好的性能且响应式，基本满足了一般数据展示的需要，包括折线图，条形图，饼图，散点图，雷达图，极地图，甜甜圈图等。</p>
+<h2 id="官方文档">官方文档</h2>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="hexo-tag-chart" href="https://github.com/shen-yu/hexo-tag-chart" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">hexo-tag-chart</span><span class="cap link fs12">https://github.com/shen-yu/hexo-tag-chart</span></div><div class="right"><div class="lazy img" data-bg="https://github.githubassets.com/favicons/favicon.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="在Hexo中插入Chart动态图表" href="https://shen-yu.gitee.io/2020/chartjs/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">在Hexo中插入Chart动态图表</span><span class="cap link fs12">https://shen-yu.gitee.io/2020/chartjs/</span></div><div class="right"><div class="lazy img" data-bg="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<h2 id="安装">安装</h2>
+<p>为了方便在 Hexo 中使用这么漂亮的图表库，我自己写了一个 Hexo 的 <a
+target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-tag-chart">Chartjs
+插件</a>。插件的安装和使用非常的简单，只需要进入博客目录，然后打开命令行，用npm安装一下：</p>
+<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_30" value="npm install hexo-tag-chart --save"><button class="copy-btn" onclick="util.copy(&quot;copy_30&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<h2 id="使用">使用</h2>
+<p>之后在文章内使用 chart 的 tag 就可以了</p>
+<figure class="highlight md"><figcaption><span>blog/source/_posts/xxx.md</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% chart [width] [height] %&#125;</span><br><span class="line">\\Chartjs options goes here</span><br><span class="line">&#123;% endchart %&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>chart</code> 是标签名，<code>endchart</code>
+是结束标签，不需要更改，<code>width</code>
+是图表容器的相对宽度，默认是<code>100%</code>，<code>height</code>
+是图表容器的高度，默认是按正常比例缩放的，你可以通过设置
+<code>options</code> 里面的 <code>aspectRatio</code>
+属性来调整宽高比例，另外还有许多属性可以自定义，你可以查看 <a
+target="_blank" rel="noopener" href="https://www.chartjs.org/docs/latest/general/responsive.html">官方文档</a>。在标签之间的部分，都是需要自己填充的图表数据和属性。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7cabb545a.webp" fancybox="true" style="width:800px;"/></div></div>
+<p>上面这个样例可以通过以下代码来实现：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% chart 90% 300 %&#125;</span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">    type: &#x27;line&#x27;,</span></span><br><span class="line"><span class="code">    data: &#123;</span></span><br><span class="line"><span class="code">    labels: [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;],</span></span><br><span class="line"><span class="code">    datasets: [&#123;</span></span><br><span class="line"><span class="code">        label: &#x27;My First dataset&#x27;,</span></span><br><span class="line"><span class="code">        backgroundColor: &#x27;rgb(255, 99, 132)&#x27;,</span></span><br><span class="line"><span class="code">        borderColor: &#x27;rgb(255, 99, 132)&#x27;,</span></span><br><span class="line"><span class="code">        data: [0, 10, 5, 2, 20, 30, 45]</span></span><br><span class="line"><span class="code">        &#125;]</span></span><br><span class="line"><span class="code">    &#125;,</span></span><br><span class="line"><span class="code">    options: &#123;</span></span><br><span class="line"><span class="code">        responsive: true,</span></span><br><span class="line"><span class="code">        title: &#123;</span></span><br><span class="line"><span class="code">        display: true,</span></span><br><span class="line"><span class="code">        text: &#x27;Chart.js Line Chart&#x27;</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">&#123;% endchart %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>现在你已经基本学会了在Hexo中插入图表了，我再展示一些更炫酷的图表吧，你可以自己去尝试一下。</p>
+<h3 id="柱状条形图">柱状/条形图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7ccf1003f.webp" fancybox="true" style="width:800px;"/></div></div>
+<h3 id="环形饼图">环形&amp;饼图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7d0b1ab28.webp" fancybox="true" style="width:700px;"/></div></div>
+<h3 id="雷达图">雷达图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7d3296d89.webp" fancybox="true" style="width:500px;"/></div></div>
+<h3 id="气泡图">气泡图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7d594366e.webp" fancybox="true" style="width:800px;"/></div></div>
+<h3 id="离散图">离散图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7d747bbe4.webp" fancybox="true" style="width:800px;"/></div></div>
+<h3 id="混合图">混合图</h3>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/28/635b7d8f00be4.webp" fancybox="true" style="width:800px;"/></div></div>
+<p>如果你想了解更多，<a target="_blank" rel="noopener" href="https://www.chartjs.org/">官方文档</a>
+是不二之选。如果你英语不好，那么可以看看 <a
+target="_blank" rel="noopener" href="https://chartjs.bootcss.com/">中文文档</a>，所有的例子和属性都能在里面找到，祝你玩得开心。如果你觉得这个插件不错，可以去
+<a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-tag-chart">github仓库</a>
+点个star~</p>
+
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/notes/hexo-bilibili-card/">hexo-bilibili-card</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/notes/hexo-git-backup/">hexo-git-backup</a></div></section></div>
+
+  
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread" comment_id="便笺"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
+<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd9.png" width="11" heigth="10"></a><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd0.png" width="32" heigth="10"></a>
+<br><span id="span"></span>
+<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "已定居"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.15.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css","js":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":false,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"4px","duration":400,"interval":100,"scale":0.9});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".vcontent img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://www.weekbark.cf/heti/umd/heti.min.css","js":"https://www.weekbark.cf/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://www.weekcomment.tk/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://www.weekcomment.tk/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.js","css":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":5}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
+  
+    <script src="//code.tidio.co/mrnzgtl00kiuvdoyfbgma1igagciatje.js" async defer></script>
+  
+
+
+  </div>
+</body>
+</html>

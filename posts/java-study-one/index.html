@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Java学习</title>
+
+  
+    <meta name="description" content="安装 第一步就踩坑，配置完环境变量之后报错，无法运行JVM C:\Users\weekdaycare&gt;java &lt;JAVA_HOME&gt;&#x2F;lib&#x2F;ext exists, extensions mechanism no longer supported; Use -classpath instead..Error: Could not create the Java Virtua">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习">
+<meta property="og:url" content="http://weekdaycare.cn/posts/java-study-one/">
+<meta property="og:site_name" content="星日语">
+<meta property="og:description" content="安装 第一步就踩坑，配置完环境变量之后报错，无法运行JVM C:\Users\weekdaycare&gt;java &lt;JAVA_HOME&gt;&#x2F;lib&#x2F;ext exists, extensions mechanism no longer supported; Use -classpath instead..Error: Could not create the Java Virtua">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-04T05:49:05.000Z">
+<meta property="article:modified_time" content="2022-11-04T17:04:30.384Z">
+<meta property="article:author" content="涛声依旧">
+<meta property="article:tag" content="代码">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/asset/favicon.svg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    
+      
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">Java学习</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hello-world"><span class="toc-text">Hello World！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%88%86%E7%B1%BB"><span class="toc-text">常量分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">变量&amp;数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%A4%AA%E5%A4%A7"><span class="toc-text">整数太大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8Edouble%E8%BD%AC%E6%8D%A2%E5%88%B0float%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E6%8D%9F%E5%A4%B1"><span class="toc-text">从double转换到float可能会有损失</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A"><span class="toc-text">标识符&amp;命名约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95%E6%96%B9%E6%B3%95%E5%8F%98%E9%87%8F"><span class="toc-text">小驼峰命名法：方法、变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95%E7%B1%BB"><span class="toc-text">大驼峰命名法：类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-text">类型转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-text">自动类型转化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="toc-text">强制类型转化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">短路逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">三元运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5"><span class="toc-text">数据输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5"><span class="toc-text">Switch语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-text">循环</span></a></li></ol></div></div></div>
+
+
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/comments.svg"/></a><a class="social" href="https://y.music.163.com/m/user?id=1387091413" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/netease.svg"/></a><a class="social" href="https://weekpan.cf" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/cloud.svg"/></a><a class="social" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/rss.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/">学习感悟</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-07-04T05:49:05.000Z">2022-07-04</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Java学习</span></h1>
+<h2 id="安装">安装</h2>
+<p>第一步就踩坑，配置完环境变量之后报错，无法运行<code>JVM</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\weekdaycare&gt;java </span><br><span class="line">&lt;JAVA_HOME&gt;/lib/ext exists, extensions mechanism no longer supported; Use -classpath instead.</span><br><span class="line">.Error: Could not create the Java Virtual Machine.</span><br><span class="line">Error: A fatal exception has occurred. Program will <span class="built_in">exit</span>.</span><br></pre></td></tr></table></figure>
+<p>一开始我以为是环境变量配置错了，结果实际上就是和报错说的一样，<code>&lt;JAVA_HOME&gt;/lib/ext exists</code>这个文件夹存在，去<code>java</code>安装目录中把<code>lib</code>文件夹中的<code>ext</code>文件夹删除即可</p>
+<p>再次执行<code>java -version</code>没有报错了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\weekdaycare&gt;java -version</span><br><span class="line">java version <span class="string">&quot;17.0.3.1&quot;</span> 2022-04-22 LTS</span><br><span class="line">Java(TM) SE Runtime Environment (build 17.0.3.1+2-LTS-6)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
+<h2 id="hello-world">Hello World！</h2>
+<p>编辑好初个<code>helloworld.java</code>文件后调用<code>javac</code>报错</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">                System. out. println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>报错（请把类名和文件名统一一下）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">helloworld.java:<span class="number">1</span>: 错误: 类 HelloWorld 是公共的, 应在名为 HelloWorld.java 的文件中声明</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">       ^</span><br><span class="line"><span class="number">1</span> 个错误</span><br></pre></td></tr></table></figure>
+<p>把文件名改为<code>HelloWorld.java</code>再次运行就没有报错了</p>
+<h2 id="注释">注释</h2>
+<p>编译<code>java</code>源程序时出现的错误： 编码 <code>GBK</code>
+的不可映射字符
+(0x80)的主要原因是，在编写<code>java</code>源程序代码时代码中添加了中文注释，且<code>java</code>文件的编码格式不是<code>ANSI</code>编码格式，导致在编译<code>java</code>源程序时报错，无法成功编译。</p>
+<p>解决方案</p>
+<p>编译的时候加上<code>-encoding utf-8</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">javac -encoding utf-8 HelloWorld.java</span><br></pre></td></tr></table></figure>
+<p>或者直接把文件编码改为<code>ANSI</code>格式即可</p>
+<h2 id="常量分类">常量分类</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">常量类型</th>
+<th style="text-align: center;">说明</th>
+<th style="text-align: center;">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">字符串常量</td>
+<td style="text-align: center;">用双引号括起来的内容</td>
+<td style="text-align: center;">"HelloWorld" "你好"</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">整数常量</td>
+<td style="text-align: center;">不带小数的数字</td>
+<td style="text-align: center;">666 -88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">小数常量</td>
+<td style="text-align: center;">带小数的数字</td>
+<td style="text-align: center;">13.14 -5.21</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">字符常量</td>
+<td style="text-align: center;">用单引号括起来的内容</td>
+<td style="text-align: center;">'A' '0' '我'</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">布尔常量</td>
+<td style="text-align: center;">布尔值，表示真假</td>
+<td style="text-align: center;">只有两个值true false</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">空常量</td>
+<td style="text-align: center;">一个特殊的值，空值</td>
+<td style="text-align: center;">值为null</td>
+</tr>
+</tbody>
+</table>
+<h2 id="变量数据类型">变量&amp;数据类型</h2>
+<p>变量使用的注意事项：</p>
+<ol type="1">
+<li>名字不能重复</li>
+<li>变量未赋值，不能使用</li>
+<li><code>long</code>类型的变量定义的时候，为了防止整数过大，后面要加<code>l</code>或<code>L</code></li>
+<li><code>float</code>类型的变量定义的时候，为了防止类型不兼容，后面要加<code>f</code>或<code>F</code></li>
+</ol>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-39-54.webp"
+title="和C有点像" alt="数据类型.png" />
+<figcaption aria-hidden="true">数据类型.png</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/wefoox/pic/2022/08/29/16-40-00.webp"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<blockquote>
+<p>注：<code>java</code>中默认整数为<code>int</code>型，浮点数默认为<code>double</code>型，见如下两个报错</p>
+</blockquote>
+<h3 id="整数太大">整数太大</h3>
+<p><code>long</code>定义变量后<code>javac</code>编译时遇到以下错误</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">HelloWorld.java:3: 错误: 整数太大</span><br><span class="line">                long a = 999999999999;</span><br><span class="line">                         ^</span><br><span class="line">1 个错误</span><br></pre></td></tr></table></figure>
+<p>报错原因：在<code>java</code>中给出整数默认是<code>int</code>类型，导致数据越界</p>
+<p>解决方案：定义<code>long</code>类型变量是要在数据之后加<code>l(L)</code>，例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">999999999999l</span>;</span><br></pre></td></tr></table></figure>
+<p>再次编译没有报错越界。</p>
+<h3
+id="从double转换到float可能会有损失">从double转换到float可能会有损失</h3>
+<p><code>float</code>定义变量后编译报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">HelloWorld.java:4: 错误: 不兼容的类型: 从double转换到<span class="built_in">float</span>可能会有损失</span><br><span class="line">                <span class="built_in">float</span> a = 13.14;</span><br><span class="line">                          ^</span><br><span class="line">1 个错误</span><br></pre></td></tr></table></figure>
+<p>报错原因：<code>java</code>中给出浮点数默认为<code>double</code>类型</p>
+<p>解决方案：定义<code>double</code>类型变量要在数据后加<code>f(F)</code>，例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">13.14f</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="标识符命名约定">标识符&amp;命名约定</h2>
+<ol type="1">
+<li>由数字、字母、下划线(_)和美元符($)组成</li>
+<li>不能以数字开头</li>
+<li>不能是关键字(比如<code>class</code>)</li>
+<li>区分大小写</li>
+</ol>
+<h3 id="小驼峰命名法方法变量">小驼峰命名法：方法、变量</h3>
+<ol type="1">
+<li><p>标识符是一个单词的时候，首字母小写</p>
+<p><code>name</code></p></li>
+<li><p>约定2：标识符由多个单词组成的时候，第一个单词首字母小写，其他单词首字母大写</p>
+<p><code>firstName</code></p></li>
+</ol>
+<h3 id="大驼峰命名法类">大驼峰命名法：类</h3>
+<ol type="1">
+<li><p>标识符是一个单词的时候， 首字母大写</p>
+<p>范例1：<code>Student</code></p></li>
+<li><p>约定2：标识符由多个单词组成的时候，每个单词的首字母大写</p>
+<p>范例2：<code>GoodStudent</code></p></li>
+</ol>
+<h2 id="类型转化">类型转化</h2>
+<h3 id="自动类型转化">自动类型转化</h3>
+<p>把一个表示<strong>数据范围小的数值</strong>或者变量赋值给另一个表示<strong>数据范围大的变量</strong></p>
+<h3 id="强制类型转化">强制类型转化</h3>
+<p>把一个表示数据<strong>范围大的数值</strong>或者变量赋值给另一个表示<strong>数据范围小的变量</strong></p>
+<p>格式：目标数据类型变量名=(目标数据类型)值或者变量；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="comment">//自动类型转化</span></span><br><span class="line">    <span class="type">double</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    System. out. println(a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义byte类型变量</span></span><br><span class="line">    <span class="type">byte</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> b;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> b;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//这是不行的，类型不兼容</span></span><br><span class="line">    <span class="comment">//char c = b;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//强制类型转化</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> (<span class="type">int</span>)<span class="number">88.88</span>;<span class="comment">//数据丢失</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运算符">运算符</h2>
+<h3 id="算数运算符">算数运算符</h3>
+<ul>
+<li>运算符：对常量或者变量进行操作的<strong>符号</strong></li>
+<li>表达式：用<strong>运算符</strong>把常量或者变量连接起来<strong>符合java语法的式子</strong>就可以称为表达式。不同运算符连接的表达式体现的是不同类型的表达式</li>
+</ul>
+<blockquote>
+<p>整数相除只能得到整数，要想得到小数，必须有浮点数参与</p>
+</blockquote>
+<p>字符的 <code>+</code>
+操作：拿字符在计算机底层<strong>对应的数值</strong>来计算的</p>
+<blockquote>
+<p>在<code>java</code>与<code>C语言</code>中都是将字符转化为<code>ASCII</code>编码</p>
+</blockquote>
+<details>
+<summary>
+常见的几种字符对应的ASCII编码
+</summary>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">字符</th>
+<th style="text-align: center;">编码</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">'A'(A~Z是连续的)</td>
+<td style="text-align: center;">65</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">'a'(a~z是连续的)</td>
+<td style="text-align: center;">97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">'0'(0~9是连续的)</td>
+<td style="text-align: center;">48</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>算术表达式中包含多个基本数据类型的值的时候，整个算术表达式的类型会自动进行提升。</strong></p>
+<p>提升规则：<code>byte</code>类型，
+<code>short</code>类型和<code>char</code>类型将被提升到<code>int</code>类型
+整个表达式的类型自动提升到表达式中最高等级操作数同样的类型</p>
+<blockquote>
+<p>等级顺序: <code>byte</code>,<code>short</code>,<code>char</code>
+→<code>int</code>→<code>long</code>→<code>float</code> →
+<code>double</code></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="comment">//定义两个变量</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> <span class="string">&#x27;A&#x27;</span>;<span class="comment">//&#x27;A&#x27;的值是65</span></span><br><span class="line">    c = <span class="string">&#x27;a&#x27;</span>;<span class="comment">//&#x27;a&#x27;的值是97</span></span><br><span class="line">    c = <span class="string">&#x27;0&#x27;</span>;<span class="comment">//&#x27;0&#x27;的值是48</span></span><br><span class="line">    System. out. println(i + c);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//char ch = i + c;</span></span><br><span class="line">    <span class="comment">//char类型会被自动提升为int类型</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + c;</span><br><span class="line">    System. out. println(j);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//int k = 10 + 13.14;</span></span><br><span class="line">    <span class="type">double</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">10</span> + <span class="number">13.14</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当 "+" 操作中出现字符串时，这个 "+"
+是<strong>字符串连接符</strong>，而不是算术运算</p>
+<details>
+<summary>
+示例代码
+</summary>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    System. out. println(<span class="string">&quot;hei&quot;</span>+<span class="string">&quot;tui&quot;</span>);</span><br><span class="line">    System. out. println(<span class="string">&quot;heitui&quot;</span>+<span class="number">666</span>);</span><br><span class="line">    System. out. println(<span class="number">666</span>+<span class="string">&quot;heitui&quot;</span>);</span><br><span class="line">    System. out. println(<span class="string">&quot;heitui&quot;</span>+<span class="number">6</span>+<span class="number">66</span>);</span><br><span class="line">    System. out. println(<span class="number">6</span>+<span class="number">66</span>+<span class="string">&quot;heitui&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上运行结果为</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">heitui</span><br><span class="line">heitui666</span><br><span class="line">666heitui</span><br><span class="line">heitui666</span><br><span class="line">72heitui</span><br></pre></td></tr></table></figure>
+</details>
+<h3 id="赋值运算符">赋值运算符</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="comment">//把10赋值给int类型的变量i</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    System. out. println(<span class="string">&quot;i:&quot;</span> + i);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// += 把左边和右边的数据做加法操作，结果赋值给左边</span></span><br><span class="line">    i += <span class="number">20</span>;</span><br><span class="line">    System. out. println(<span class="string">&quot;i:&quot;</span> + i);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注意：拓展的赋值运算符底层隐含了强制类型转化</span></span><br><span class="line">    <span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="comment">//s += 20;( += 操作默认强制类型转化)</span></span><br><span class="line">    s = (<span class="type">short</span>)(s + <span class="number">20</span>);</span><br><span class="line">    System. out. println(<span class="string">&quot;s:&quot;</span> + s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">符号</th>
+<th style="text-align: center;">作用</th>
+<th style="text-align: center;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">赋值</td>
+<td style="text-align: center;">a=10，将10赋值给变量a</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">+=</td>
+<td style="text-align: center;">加后赋值</td>
+<td style="text-align: center;">a+=b，将a + b的值给a</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-=</td>
+<td style="text-align: center;">减后赋值</td>
+<td style="text-align: center;">a-=b，将a - b的值给a</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">*=</td>
+<td style="text-align: center;">乘后赋值</td>
+<td style="text-align: center;">a*=b，将a × b的值给a</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">/=</td>
+<td style="text-align: center;">除后赋值</td>
+<td style="text-align: center;">a/=b，将a ÷ b的商给a</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">%=</td>
+<td style="text-align: center;">取余后赋值</td>
+<td style="text-align: center;">a%=b，将a ÷ b的余数给a</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：拓展的赋值运算符底层<strong>隐含</strong>了强制类型转化</p>
+</blockquote>
+<h3 id="逻辑运算符">逻辑运算符</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">符号</th>
+<th style="text-align: center;">作用</th>
+<th style="text-align: center;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: center;">逻辑与</td>
+<td
+style="text-align: center;">a&amp;b，a和b都是true，结果为true，否则为false（有false则false）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">|</td>
+<td style="text-align: center;">逻辑或</td>
+<td
+style="text-align: center;">a|b，a和b都是false，结果为false，否则为true（有true则true）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">逻辑异或</td>
+<td
+style="text-align: center;">a^b，a和b结果相异为true，相同为false（相异为一）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">!</td>
+<td style="text-align: center;">逻辑非</td>
+<td style="text-align: center;">!a，结果和a的结果正好相反</td>
+</tr>
+</tbody>
+</table>
+<h3 id="短路逻辑运算符">短路逻辑运算符</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">符号</th>
+<th style="text-align: center;">作用</th>
+<th style="text-align: center;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&amp;&amp;</td>
+<td style="text-align: center;">短路与</td>
+<td style="text-align: center;">作用和&amp;相同，但是有短路效果</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">||</td>
+<td style="text-align: center;">短路或</td>
+<td style="text-align: center;">作用和|相同，但是有短路效果</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>逻辑与<strong>&amp;</strong>，无论左边真假，右边都要执行
+短路与<strong>&amp;&amp;</strong>，如果左边为真，右边执行；如果<strong>左边为假，右边不执行</strong></li>
+<li>逻辑或<strong>|</strong>，无论左边真假，右边都要执行
+短路或<strong>|</strong>，如果左边为假，右边执行；如果<strong>左边为真，右边不执行</strong></li>
+</ul>
+<details>
+<summary>
+示例代码
+</summary>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">20</span>; </span><br><span class="line">    <span class="comment">//&amp;&amp;和&amp;</span></span><br><span class="line">    <span class="comment">//System.out.println((i++&gt;50)&amp;(j++&gt;50));//false &amp; false</span></span><br><span class="line">    System.out.println((i++&gt;<span class="number">50</span>)&amp;&amp;(j++&gt;<span class="number">50</span>));<span class="comment">//false &amp;&amp; false</span></span><br><span class="line">    System.out.println(<span class="string">&quot;i:&quot;</span> + i);</span><br><span class="line">    System.out.println(<span class="string">&quot;j:&quot;</span> + j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="literal">false</span></span><br><span class="line">i:11</span><br><span class="line">j:20</span><br></pre></td></tr></table></figure>
+<p>可以发现<code>j++</code>没有执行，故为短路</p>
+</details>
+<h3 id="三元运算符">三元运算符</h3>
+<ul>
+<li>格式：<code>关系表达式？表达式1：表达式2;</code></li>
+<li>范例：<code>a &gt; b ? a : b;</code>（两个数据中的较大值）</li>
+<li>计算规则： 首先计算<strong>关系表达式的值</strong>
+如果值为<strong>true，表达式1的值</strong>就是运算结果
+如果值为<strong>false，表达式2的值</strong>就是运算结果</li>
+</ul>
+<details>
+<summary>
+示例：三个和尚
+</summary>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//输出三个中的最大值</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">160</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">210</span>; </span><br><span class="line">    <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">180</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">MaxHeight</span> <span class="operator">=</span> (a&gt;b?a:b)&gt;c?(a&gt;b?a:b):c;</span><br><span class="line">    System.out.println(MaxHeight);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2 id="数据输入">数据输入</h2>
+<p>我一开始还天真的以为它跟C一样用<code>scanf</code>，但其实<code>Java</code>里根本没有<code>scanf</code>，倒是有个<code>Scanner</code>，<code>Scanner</code>类位于<code>java.util.Scanner</code>包中，因此在程序前面要加上此包</p>
+<ol type="1">
+<li><p>导包</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.until.Scanner;</span><br><span class="line"><span class="comment">//导包的动作必须出现在类定义的上边(扔最上边)</span></span><br></pre></td></tr></table></figure></li>
+<li><p>创建对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="comment">//上面这个格式里面，只有sc是变量名，可以变，其他的都不允许变</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>Scanner sc = new Scanner(System.in);</code>这一句是关键。这一句的意思是：通过<code>new Scanner(System.in)</code>创建一个<code>Scanner</code>，控制台会一直等待输入，直到敲回车键结束，把所输入的内容传给<code>Scanner</code>，作为扫描对象</p></li>
+<li><p>接受数据
+然后如果想要获取输入的内容，就需要调用<code>Scanner</code>的<code>nextLine()</code>方法，因此就用到了<code>String name = in.nextLine()</code>，<code>int age = in.nextInt()</code>，<code>double height = in.nextDouble()</code>这三句来获取输入的内容</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> sc.nextLine();<span class="comment">//输入一整行，中间可以有空格</span></span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> sc.nextInt();<span class="comment">//整形</span></span><br><span class="line"><span class="type">double</span> <span class="variable">height</span> <span class="operator">=</span> sc.nextDouble();<span class="comment">//浮点型</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<details>
+<summary>
+具体代码示例：
+</summary>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//定义scanner，等待输入</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的姓名:&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> in.nextLine();<span class="comment">//字符(串)类型的输入方式</span></span><br><span class="line">    System.out.println(name);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的年龄：&quot;</span>);</span><br><span class="line">    <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> in.nextInt();<span class="comment">//整数类型的输入方式</span></span><br><span class="line">    System.out.println(age);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的身高：&quot;</span>);</span><br><span class="line">    <span class="type">double</span> <span class="variable">height</span> <span class="operator">=</span> in.nextDouble();<span class="comment">//浮点类型的输入方式</span></span><br><span class="line">    System.out.println(height);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<blockquote>
+<p>但是这里面有一点需要注意一下，就是<code>nextLine()</code>方法会<strong>吃回车符</strong>，比如以下代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//定义scanner，等待输入</span></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的姓名:&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> in.nextLine();<span class="comment">//字符类型的输入方式</span></span><br><span class="line">    System.out.println(name);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的年龄：&quot;</span>);</span><br><span class="line">    <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> in.nextInt();<span class="comment">//整数类型的输入方式</span></span><br><span class="line">    System.out.println(age);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入苹果的英文：&quot;</span>);</span><br><span class="line">    <span class="comment">//String s = in.next();</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">    System.out.println(s);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的身高：&quot;</span>);</span><br><span class="line">    <span class="type">double</span> <span class="variable">height</span> <span class="operator">=</span> in.nextDouble();<span class="comment">//小数类型的输入方式</span></span><br><span class="line">    System.out.println(height);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行一下就会发现程序并没有让你输入苹果的英文，而是直接回车了，那是因为你输入完年龄之后的那个回车被<code>nextLine()</code>吃掉了，因此它并没有输出什么，但如果你用<code>in.next()</code>的话，它是可以输入的</p>
+<details>
+<summary>
+两种运行结果
+</summary>
+<ol type="1">
+<li><p><code>in.nextLine()</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">请输入你的姓名:</span><br><span class="line">WO</span><br><span class="line">WO</span><br><span class="line">请输入你的年龄:</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">请输入苹果的英文:</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>请输入你的身高: 134 134.0</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. `in.next()`</span><br><span class="line">```bash</span><br><span class="line">请输入你的姓名:</span><br><span class="line">WO</span><br><span class="line">WO</span><br><span class="line">请输入你的年龄:</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">请输入苹果的英文:</span><br><span class="line">apple</span><br><span class="line">apple</span><br><span class="line">请输入你的身高:</span><br><span class="line">134</span><br><span class="line">134.0</span><br></pre></td></tr></table></figure>
+</details>
+<p>如果要输入带空格的字符串的话，可以添加<code>in.nextLine();</code>语句吃掉回车符，如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//定义scanner，等待输入</span></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的姓名:&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> in.nextLine();<span class="comment">//字符类型的输入方式</span></span><br><span class="line">    System.out.println(name);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的年龄：&quot;</span>);</span><br><span class="line">    <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> in.nextInt();<span class="comment">//整数类型的输入方式</span></span><br><span class="line">    System.out.println(age);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入苹果的英文：&quot;</span>);</span><br><span class="line">    <span class="comment">//String s = in.next();</span></span><br><span class="line">    in.nextLine(); <span class="comment">//吃掉回车符</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">    System.out.println(s);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请输入你的身高：&quot;</span>);</span><br><span class="line">    <span class="type">double</span> <span class="variable">height</span> <span class="operator">=</span> in.nextDouble();<span class="comment">//小数类型的输入方式</span></span><br><span class="line">    System.out.println(height);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>补充一下<code>nextLine()</code>和<code>next()</code>的区别：
+<code>nextLine()</code>方法返回的是<code>Enter</code>键之前的所有字符，它是可以得到带空格的字符串的
+<code>next()</code>会自动消去有效字符前的空格，只返回输入的字符，不能得到带空格的字符串</p>
+</blockquote>
+<h2 id="switch语句">Switch语句</h2>
+<blockquote>
+<p><strong>注</strong>：在<code>switch</code>语句中，如果<code>case</code>控制的语句体后面不写<code>break</code>，将出现<strong>穿透现象</strong>，在不判断下一个<code>case</code>值的情况下，向下运行，直到遇到<code>break</code>，或者整体<code>switch</code>语句结束（这点与C语言相同）</p>
+</blockquote>
+<h2 id="循环">循环</h2>
+<p><strong>三种循环的区别：</strong></p>
+<ul>
+<li><code>for</code>循环和<code>while</code>循环先判断条件是否成立，然后决定是否执行循环体(先判断后执行)</li>
+<li><code>do...while</code>循环先执行一次循环体，然后判断条件是否成立，是否继续执行循环体(先执行后判断)</li>
+</ul>
+<p><strong><code>for</code>和<code>while</code>的区别：</strong></p>
+<ul>
+<li>条件控制语句所控制的自增变量，因为归属<code>for</code>循环的语法结构中，在<code>for</code>循环结束后，就不能再次被访问到了</li>
+<li>条件控制语句所控制的自增变量，对于<code>while</code>循环来说不归属其语法结构中，在<code>while</code>循环结束后，该变量还可以继续使用</li>
+</ul>
+<p><strong>死循环格式：</strong> <code>for(;;) &#123; &#125;</code>
+<code>while(true) &#123; &#125;</code> <code>do&#123; &#125;while(true);</code></p>
+<p><code>while</code>的死循环格式是最常用的
+命令提示符窗口中<code>CtrI + C</code>可以结束死循环</p>
+<hr />
+<p>目前开学了，转学<code>Python</code>，<code>JAVA</code>暂时搁置一段时间</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+BY-NC-ND 4.0</a> 转载请注明出处</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/python-study-one/">Python学习</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/onedrive+rclone/">轻量云服务期搭建Ondrive离线下载</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
+<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd9.png" width="11" heigth="10"></a><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/63452db416f2c2beb1381bd0.png" width="32" heigth="10"></a>
+<br><span id="span"></span>
+<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "已定居"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.15.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css","js":"https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":false,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"4px","duration":400,"interval":100,"scale":0.9});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".vcontent img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://www.weekbark.cf/heti/umd/heti.min.css","js":"https://www.weekbark.cf/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://www.weekcomment.tk/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://www.weekcomment.tk/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.js","css":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":5}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
+  
+    <script src="//code.tidio.co/mrnzgtl00kiuvdoyfbgma1igagciatje.js" async defer></script>
+  
+
+
+  </div>
+</body>
+</html>
