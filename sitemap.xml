@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://weekdaycare.cn/posts/finger-scarf/</loc>
+    
+    <lastmod>2022-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/posts/inkrss/</loc>
+    
+    <lastmod>2022-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://weekdaycare.cn/posts/emoji-blob/</loc>
     
     <lastmod>2022-11-11</lastmod>
@@ -185,15 +203,6 @@
     <loc>http://weekdaycare.cn/notes/</loc>
     
     <lastmod>2022-10-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://weekdaycare.cn/posts/inkrss/</loc>
-    
-    <lastmod>2022-10-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -415,6 +424,20 @@
   
   <url>
     <loc>http://weekdaycare.cn/tags/Stellar/</loc>
+    <lastmod>2022-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/</loc>
+    <lastmod>2022-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/</loc>
     <lastmod>2022-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
