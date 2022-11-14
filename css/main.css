@@ -131,6 +131,16 @@ table:not([class]) tr:hover {
 *[ff=title] {
   font-family: STZhongsong, "Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
 }
+blockquote {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 0.75rem;
+  background: var(--block);
+  border-left: 4px solid var(--text-meta);
+  border-radius: 4px 8px 8px 4px;
+  color: var(--text-p2);
+}
 :root {
   --blur-px: 12px;
   --blur-bg: rgba(255,255,255,0.5);
@@ -3106,11 +3116,9 @@ article.md.content h1.quot[type=text]:after {
   border-color: var(--block);
 }
 .tag-plugin.timeline .body blockquote {
-  padding: 0 0.5rem;
-  box-shadow: none;
-  border-left: 4px solid var(--block-border);
+  background: none;
   border-radius: 0;
-  display: block;
+  padding: 0 0.5rem;
   margin: 0.75rem 0;
 }
 .tag-plugin.timeline .body blockquote p {
@@ -4445,15 +4453,6 @@ article.md .center {
 }
 article.md>div {
   margin: var(--gap-p) 0;
-}
-article.md blockquote {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0.75rem;
-  background: var(--block);
-  border-left: 4px solid var(--text-meta);
-  border-radius: 4px 8px 8px 4px;
-  color: var(--text-p2);
 }
 article.md img {
   border-radius: 6px;

@@ -31,8 +31,8 @@
 <meta property="og:description" content="介绍 为 Hexo 添加 Bangumi 追番页面，参考自 HCLonely&#x2F;hexo-bilibili-bangumi. 特色功能  使用 bgm.tv 的官方 API 来进行爬取，番剧更多，可用性更高 支持数据缓存及番剧封面图本地化，防止因上游服务挂掉导致连锁效应，爬取好番剧后可纯离线场景下部署 极端条件下可通过编辑文件来自定义番剧列表，可自定义添加 bgm.tv 没有的番剧">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/mmdjiji/hexo-bangumis/raw/main/img/preview.png">
-<meta property="article:published_time" content="2022-11-13T03:55:35.949Z">
-<meta property="article:modified_time" content="2022-10-28T06:43:48.987Z">
+<meta property="article:published_time" content="2022-11-14T01:42:12.522Z">
+<meta property="article:modified_time" content="2022-11-14T01:42:12.522Z">
 <meta property="article:author" content="涛声依旧">
 <meta property="article:tag" content="日志">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@ uid</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" hre
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/notes/">便笺</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-10-28T06:43:48.987Z">2022-10-28</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/notes/">便笺</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-14T01:42:12.522Z">2022-11-14</time></div></div>
 
   <article class='content md wiki'>
   <h1 class="article-title"><span>hexo-bangumis</span></h1>
@@ -135,16 +135,16 @@ target="_blank" rel="noopener" href="https://bgm.tv">bgm.tv</a>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://github.com/mmdjiji/hexo-bangumis/raw/main/img/preview.png" alt="width=800px" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">width=800px</span></div></div>
 <h2 id="安装">安装</h2>
 <p>在 Hexo 文件夹下执行:</p>
-<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_15" value="npm install hexo-bangumis --save"><button class="copy-btn" onclick="util.copy(&quot;copy_15&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_20" value="npm install hexo-bangumis --save"><button class="copy-btn" onclick="util.copy(&quot;copy_20&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h2 id="配置">配置</h2>
 <p>将下面的配置写入 <strong>站点</strong> 的配置文件
 <code>_config.yml</code> 中:</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">bangumis:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>              <span class="comment"># 是否启用</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">bangumis/index.html</span> <span class="comment"># 生成追番页面的路径</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span>                   <span class="comment"># 想看，在看，看完</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;追番列表&#x27;</span>          <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，追番不止&#x27;</span> <span class="comment"># 格言</span></span><br><span class="line">  <span class="attr">color_meta:</span> <span class="string">&quot;#555&quot;</span>        <span class="comment"># 追番项元数据的颜色</span></span><br><span class="line">  <span class="attr">color_summary:</span> <span class="string">&quot;#555&quot;</span>     <span class="comment"># 追番项简介的颜色</span></span><br><span class="line">  <span class="attr">bgmtv_uid:</span> <span class="string">mmdjiji</span>        <span class="comment"># bgm.tv的uid</span></span><br><span class="line">  <span class="attr">download_image:</span> <span class="literal">true</span>      <span class="comment"># 下载图片并使用本地图片，否则使用bgm.tv提供的网络图源</span></span><br><span class="line">  <span class="attr">image_level:</span> <span class="string">c</span>            <span class="comment"># 图片高清等级 (l, c, m, s, g)</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span>            <span class="comment"># 是否开启懒加载</span></span><br><span class="line">  <span class="attr">margin:</span> <span class="string">20px</span>              <span class="comment"># 封面图的偏移量微调</span></span><br></pre></td></tr></table></figure>
 <h2 id="使用">使用</h2>
 <p>更新追番数据:</p>
-<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_16" value="hexo bangumis -u"><button class="copy-btn" onclick="util.copy(&quot;copy_16&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_21" value="hexo bangumis -u"><button class="copy-btn" onclick="util.copy(&quot;copy_21&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <p>删除追番数据:</p>
-<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_17" value="hexo bangumis -d"><button class="copy-btn" onclick="util.copy(&quot;copy_17&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_22" value="hexo bangumis -d"><button class="copy-btn" onclick="util.copy(&quot;copy_22&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h2 id="获取-bgm.tv-的-uid">获取 <a target="_blank" rel="noopener" href="https://bgm.tv">bgm.tv</a> 的
 uid</h2>
 <p>登录 <a target="_blank" rel="noopener" href="https://bgm.tv">bgm.tv</a> 后打开控制台（快捷键
@@ -165,10 +165,12 @@ uid</h2>
     <div class='cmt-title cap theme'>
       快来参与讨论吧
     </div>
-    <div class='cmt-body waline'>
+    <div class='cmt-body beaudar'>
       
 
-<div id="waline_container" class="waline_thread" comment_id="便笺"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="weekdaycare/blog-comments" issue-term="Q & A" issue-number="10" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="true" branch="main"></div>
 
     </div>
   </div>
@@ -340,26 +342,30 @@ uid</h2>
 <!-- optional -->
 
   <script>
-  function load_comment(){
-    if(!document.getElementById("waline_container"))return;
-    stellar.loadCSS('https://www.weekcomment.tk/@waline/client@v2/dist/waline.css');
-    stellar.loadScript('https://www.weekcomment.tk/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
-      const el = document.getElementById("waline_container");
-      var path = el.getAttribute('comment_id');
-      if (!path) {
-        path = decodeURI(window.location.pathname);
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
       }
-      Waline.init(Object.assign({"js":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.js","css":"https://www.weekcomment.tk/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":5}, {
-        el: '#waline_container',
-        path: path,
-      }));
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
     });
   }
   window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    load_comment();
+      loadBeaudar();
   });
-
 </script>
 
 
