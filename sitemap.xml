@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://weekdaycare.cn/posts/singular-value-decomposition/</loc>
+    <loc>http://weekdaycare.cn/posts/singular-value/</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -404,6 +404,13 @@
   </url>
   
   <url>
+    <loc>http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2022-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -412,13 +419,6 @@
   
   <url>
     <loc>http://weekdaycare.cn/tags/rss/</loc>
-    <lastmod>2022-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

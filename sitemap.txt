@@ -1,4 +1,4 @@
-http://weekdaycare.cn/posts/singular-value-decomposition/
+http://weekdaycare.cn/posts/singular-value/
 http://weekdaycare.cn/notes/hexo-tag-chart/
 http://weekdaycare.cn/notes/hexo-tag-aplayer/
 http://weekdaycare.cn/notes/hexo-git-backup/
@@ -44,9 +44,9 @@ http://weekdaycare.cn/tags/%E4%BD%9C%E4%B8%9A/
 http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/
 http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/
 http://weekdaycare.cn/tags/%E7%99%BD%E5%AB%96/
+http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/
 http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/
 http://weekdaycare.cn/tags/rss/
-http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/
 http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/
 http://weekdaycare.cn/tags/Stellar/
 http://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/
