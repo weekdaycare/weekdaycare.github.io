@@ -30,9 +30,9 @@
 :root {
   --site-bg: #f8f8f8;
   --card: #fff;
-  --block: #f2f2f2;
-  --block-border: #e5e5e5;
-  --block-hover: #ededed;
+  --block: #f0f1f2;
+  --block-border: #e2e4e6;
+  --block-hover: #ebeced;
   --text-p0: #000;
   --text-p1: #333;
   --text-p2: #5a5a5a;
@@ -1720,9 +1720,9 @@ nav.cap a+a {
     --text-p3: #555;
     --text-code: #fff;
     --card: #fff;
-    --block: #f2f2f2;
-    --block-border: #e5e5e5;
-    --block-hover: #ededed;
+    --block: #f0f1f2;
+    --block-border: #e2e4e6;
+    --block-hover: #ebeced;
   }
 }
 .md .tag-plugin.copy {
@@ -4077,10 +4077,10 @@ article.md.error-page a#back {
   margin: 1rem 0;
   border-radius: 12px;
   box-shadow: 0 2px 8px 0px rgba(0,0,0,0.02);
-  transition: box-shadow 0.2s ease-out;
-  -moz-transition: box-shadow 0.2s ease-out;
-  -webkit-transition: box-shadow 0.2s ease-out;
-  -o-transition: box-shadow 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
   overflow: hidden;
   z-index: 0;
   background: var(--card);
@@ -4122,6 +4122,7 @@ article.md.error-page a#back {
 }
 .post-list .post-card:hover {
   box-shadow: 0 1px 4px 0px rgba(0,0,0,0.1), 0 4px 16px 0px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
 }
 .post-list .post-card:hover img {
   transform: scale(1.02);
