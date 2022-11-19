@@ -1248,7 +1248,7 @@ nav.cap a+a {
   color: var(--text-p1);
 }
 .related-posts {
-  width: 100%;
+  max-width: 100%;
   margin: 1rem 0;
 }
 .related-posts .item {
@@ -3841,7 +3841,6 @@ nav.menu a.nav-item:hover {
 .l_left .widgets .widget-wrap#related .widget-body a {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  max-width: calc(100% - var(--gap-l) * 2);
 }
 .l_left .widgets .widget-wrap#related .widget-body a .title {
   font-weight: 700;
