@@ -20,15 +20,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>用奇异值压缩图像</title>
+  <title>用奇异值压缩图像 - 星日语</title>
 
   
-    <meta name="description" content="特征值&amp;奇异值 如果说一个向量  是方阵  的特征向量，将一定可以表示成下面的形式：  这时候  就被称为特征向量  对应的特征值，一个矩阵的一组特征向量是一组正交向量。特征值分解是将一个矩阵分解成下面的形式：  总结一下，特征值分解可以得到特征值与特征向量，特征值表示的是这个特征到底有多重要，而特征向量表示这个特征是什么。但是特征值分解也有很多的局限，比如说变换的矩阵必须是">
+    <meta name="description" content="奇异值分解在压缩图像中的应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用奇异值压缩图像">
 <meta property="og:url" content="http://weekdaycare.cn/posts/singular-value/">
 <meta property="og:site_name" content="星日语">
-<meta property="og:description" content="特征值&amp;奇异值 如果说一个向量  是方阵  的特征向量，将一定可以表示成下面的形式：  这时候  就被称为特征向量  对应的特征值，一个矩阵的一组特征向量是一组正交向量。特征值分解是将一个矩阵分解成下面的形式：  总结一下，特征值分解可以得到特征值与特征向量，特征值表示的是这个特征到底有多重要，而特征向量表示这个特征是什么。但是特征值分解也有很多的局限，比如说变换的矩阵必须是">
+<meta property="og:description" content="奇异值分解在压缩图像中的应用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bu.dusays.com/2022/11/14/63723928c1c70.gif">
 <meta property="og:image" content="https://bu.dusays.com/2022/11/14/637241eb5da43.webp">
@@ -36,12 +36,12 @@
 <meta property="og:image" content="https://bu.dusays.com/2022/11/14/6372443634853.jpg">
 <meta property="og:image" content="https://bu.dusays.com/2022/11/14/6372443be20e2.jpg">
 <meta property="article:published_time" content="2022-11-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-17T11:38:43.278Z">
+<meta property="article:modified_time" content="2022-11-19T12:09:16.577Z">
 <meta property="article:author" content="涛声依旧">
 <meta property="article:tag" content="作业">
 <meta property="article:tag" content="整活">
-<meta property="article:tag" content="代码">
 <meta property="article:tag" content="编程">
+<meta property="article:tag" content="代码">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://bu.dusays.com/2022/11/14/63723928c1c70.gif">
   
@@ -200,10 +200,7 @@ mjx-container[display="true"] + br {
 
   
 
-<header class="header">
-
-<div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
-
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
 
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
 </header>

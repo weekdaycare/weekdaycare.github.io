@@ -1,11 +1,11 @@
+http://weekdaycare.cn/posts/singular-value/
+http://weekdaycare.cn/friends/
 http://weekdaycare.cn/posts/emoji-blob/
 http://weekdaycare.cn/posts/python-study-one/
 http://weekdaycare.cn/posts/big-orange/
 http://weekdaycare.cn/posts/finger-scarf/
-http://weekdaycare.cn/posts/singular-value/
 http://weekdaycare.cn/notes/
 http://weekdaycare.cn/posts/inkrss/
-http://weekdaycare.cn/friends/
 http://weekdaycare.cn/about/
 http://weekdaycare.cn/notes/%E7%95%AA%E5%89%A7/
 http://weekdaycare.cn/posts/ten-years/
@@ -37,8 +37,8 @@ http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/
 http://weekdaycare.cn/tags/%E7%99%BD%E5%AB%96/
 http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/
 http://weekdaycare.cn/tags/rss/
-http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/
 http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/
+http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/
 http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/
 http://weekdaycare.cn/tags/Stellar/
 http://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/
