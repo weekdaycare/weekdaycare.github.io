@@ -1653,13 +1653,13 @@ nav.cap a+a {
   --block-border: #393e44;
   --block-hover: #222528;
 }
-.tag-plugin.note[color='warning'] {
+.tag-plugin[color='warning'] {
   --theme: #ffbd2b;
   --theme-border: #ffe659;
   --theme-bg: #ffe659;
   --theme-link: #ff453a;
 }
-.tag-plugin.note[color='error'] {
+.tag-plugin[color='error'] {
   --theme: #ffbd2b;
   --theme-border: #ff453a;
   --theme-bg: #ff453a;

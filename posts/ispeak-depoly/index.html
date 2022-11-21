@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.16.1">
   <meta charset="utf-8">
   
 
@@ -83,7 +83,7 @@
 
   
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">SteinsGate:1.048596％</div></a></div>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">等风来，不如追风去</div></a></div>
 
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
 </header>
@@ -136,7 +136,7 @@ target="_blank" rel="noopener" href="https://github.com/kkfive/kkadmin-open">kka
 <p>官方文档还是有一点问题的</p>
 <h3 id="配置数据库">配置数据库</h3>
 <p>在<a
-target="_blank" rel="noopener" href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a>创建好项目后，点击<mark class="tag-plugin mark" >Connect</mark>，选择<mark class="tag-plugin mark" >Connect&nbsp;your&nbsp;application</mark>，下方会出现代码链接，直接复制并用自己设置的<code>password</code>代入</p>
+target="_blank" rel="noopener" href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a>创建好项目后，点击<mark class="tag-plugin mark" color="dark">Connect</mark>，选择<mark class="tag-plugin mark" color="dark">Connect&nbsp;your&nbsp;application</mark>，下方会出现代码链接，直接复制并用自己设置的<code>password</code>代入</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/12/63459b9cad3ff.webp" fancybox="true" style="width:80%;"/></div></div>
 <h3 id="部署kkapi-open">部署kkapi-open</h3>
 <p>注意vercel的环境变量，官方文档这里有一点问题，如果你使用的是<a
@@ -154,7 +154,7 @@ target="_blank" rel="noopener" href="https://github.com/kkfive/kkadmin-open/issu
 <ol type="1">
 <li><p>进入<a
 target="_blank" rel="noopener" href="https://github.com/kkfive/kkadmin-open/">kkadmin-open</a>项目，点击
-<code>fork</code>，仅fork <mark class="tag-plugin mark" >master</mark>分支即可</p></li>
+<code>fork</code>，仅fork <mark class="tag-plugin mark" color="dark">master</mark>分支即可</p></li>
 <li><p>在 vercel 中导入项目</p></li>
 <li><p>添加环境变量</p>
 <details class="tag-plugin folding" color="light" open><summary><span>环境变量请填以下这些</span></summary><div class="body"><table><colgroup><col style="width: 25%" /><col style="width: 25%" /><col style="width: 25%" /><col style="width: 25%" /></colgroup><thead><tr class="header"><th style="text-align: center;">是否必填</th><th style="text-align: center;">名称</th><th style="text-align: center;">说明</th><th style="text-align: center;">示例</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">✔</td><td style="text-align: center;">VITE_GLOB_API_URL</td><td style="text-align: center;">vercel或者服务器部署的接口地址</td><tdstyle="text-align: center;"><code>https://kkapi-open.vercel.app</code></td></tr><tr class="even"><td style="text-align: center;">✔</td><td style="text-align: center;">VITE_GLOB_UPLOAD_URL</td><td style="text-align: center;">lsky文件上传地址</td><tdstyle="text-align: center;"><code>https://7bu.top/api/upload</code></td></tr><tr class="odd"><td style="text-align: center;">✔</td><td style="text-align: center;">VITE_GLOB_UPLOAD_TOKEN</td><td style="text-align: center;">lsky上传所需要token</td><td style="text-align: center;"><code>xxxxxx</code></td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">VITE_GLOB_LSKY_VERSION</td><td style="text-align: center;">lsky版本号，默认V1</td><td style="text-align: center;"><code>V2</code></td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">VITE_GLOB_LSKY_STRATEGY_ID</td><td style="text-align: center;">strategy_id</td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">VITE_GLOB_APP_TITLE</td><td style="text-align: center;">网站名称</td><td style="text-align: center;">kk-admin</td></tr><tr class="odd"><td style="text-align: center;">✔</td><td style="text-align: center;">NODE_VERSION</td><tdstyle="text-align: center;">使用cloudflarePages构建时<strong>必填</strong>（16及以上）</td><td style="text-align: center;">16</td></tr></tbody></table></div></details>
@@ -310,8 +310,8 @@ BY-NC-ND 4.0</a> 转载请注明出处</p>
       }
     }
   };
-  stellar.version = '1.15.1';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.15.1';
+  stellar.version = '1.16.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.16.1';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
