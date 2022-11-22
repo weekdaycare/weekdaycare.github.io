@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: Notes
-robots: noindex,nofollow
+robots: noindex](nofollow
 menu_id: notes
 title: 番剧推荐
 order: 101
@@ -9,4 +9,65 @@ order: 101
 
 > 诸君，你们好呀，作为入宅年龄超过5年以上了的阿宅，看过的番至少也是有个几百部的，本来是想用插件从bangumi扒我看过的番放到这里的。不过还是放弃了，想来根本没人看，所以我这里仅仅记录一些我认为好康的番吧😆
 >
-> 当然如果你想看完整的追番记录的话可以看看我的 [bangumi](https://bangumi.tv/anime/list/weekdaycare) 哦
+> 当然如果你想看完整的追番记录的话可以看看我的 - [bangumi](https://bangumi.tv/anime/list/weekdaycare) 哦
+
+- [3月的狮子 第二季](https://bgm.tv/subject/211567)
+- [3月的狮子](https://bgm.tv/subject/147068)
+- [猫和老鼠](https://bgm.tv/subject/25961)
+- [冰菓](https://bgm.tv/subject/27364)
+- [无职转生 ～在异世界认真地活下去～](https://bgm.tv/subject/277554)
+- [辉夜大小姐想让我告白～天才们的恋爱头脑战～](https://bgm.tv/subject/248175)
+- [月色真美](https://bgm.tv/subject/207573)
+- [奇巧计程车](https://bgm.tv/subject/325285)
+- [辉夜大小姐想让我告白-超级浪漫-](https://bgm.tv/subject/317613)
+- [辉夜大小姐想让我告白？～天才们的恋爱头脑战～](https://bgm.tv/subject/293049)
+- [秒速5厘米](https://bgm.tv/subject/927)
+- [电影 声之形](https://bgm.tv/subject/117777)
+- [碧蓝之海](https://bgm.tv/subject/235130)
+- [我想吃掉你的胰脏](https://bgm.tv/subject/221736)
+- [致不灭的你](https://bgm.tv/subject/297954)
+- [鬼灭之刃 游郭篇](https://bgm.tv/subject/328195)
+- [86 -不存在的战区- 第二季](https://bgm.tv/subject/331887)
+- [Re：从零开始的异世界生活 第二季 后半部分](https://bgm.tv/subject/316247)
+- [多罗罗](https://bgm.tv/subject/240838)
+- [文豪野犬 第三季](https://bgm.tv/subject/254762)
+- [新石纪](https://bgm.tv/subject/266794)
+- [擅长捉弄的高木同学 第二季](https://bgm.tv/subject/271151)
+- [恋如雨止](https://bgm.tv/subject/210458)
+- [齐木楠雄的灾难 第二季](https://bgm.tv/subject/204027)
+- [MEGALO BOX](https://bgm.tv/subject/227718)
+- [间谍过家家 第二部分](https://bgm.tv/subject/373267)
+- [链锯人](https://bgm.tv/subject/321885)
+- [来自多彩世界的明天](https://bgm.tv/subject/240562)
+- [0号宿舍](https://bgm.tv/subject/262543)
+- [徒然Children](https://bgm.tv/subject/208754)
+- [无限滑板](https://bgm.tv/subject/315456)
+- [新石纪 STONE WARS](https://bgm.tv/subject/296261)
+- [擅长捉弄的高木同学 第三季](https://bgm.tv/subject/347887)
+- [间谍过家家](https://bgm.tv/subject/329906)
+- [86 -不存在的战区-](https://bgm.tv/subject/302189)
+- [鬼灭之刃](https://bgm.tv/subject/245665)
+- [灵笼 中章](https://bgm.tv/subject/311724)
+- [冰菓](https://bgm.tv/subject/27902)
+- [一周的朋友。](https://bgm.tv/subject/88493)
+- [人形电脑天使心](https://bgm.tv/subject/12)
+- [文豪野犬](https://bgm.tv/subject/144357)
+- [我的妹妹哪有这么可爱！](https://bgm.tv/subject/5436)
+- [你好 世界](https://bgm.tv/subject/269090)
+- [路人女主的养成方法](https://bgm.tv/subject/100403)
+- [我的青春恋爱物语果然有问题 续](https://bgm.tv/subject/102134)
+- [灵能百分百 第二季](https://bgm.tv/subject/240760)
+- [NO GAME NO LIFE 游戏人生 ZERO](https://bgm.tv/subject/187276)
+- [天降之物f](https://bgm.tv/subject/7150)
+- [只要贝尔哲布布大小姐喜欢就好。](https://bgm.tv/subject/242633)
+- [散华礼弥](https://bgm.tv/subject/28230)
+- [这个美术社大有问题！](https://bgm.tv/subject/150746)
+- [干物妹！小埋](https://bgm.tv/subject/120187)
+- [情色漫画老师](https://bgm.tv/subject/172498)
+- [罪恶王冠](https://bgm.tv/subject/18635)
+- [擅长捉弄的高木同学](https://bgm.tv/subject/219200)
+- [天降之物](https://bgm.tv/subject/2617)
+- [青春笨蛋少年不做怀梦美少女的梦](https://bgm.tv/subject/260680)
+- [青春笨蛋少年不做兔女郎学姐的梦](https://bgm.tv/subject/240038)
+- [月刊少女野崎君](https://bgm.tv/subject/100449)
+- [末日时在做什么？有没有空？可以来拯救吗？](https://bgm.tv/subject/185943)
