@@ -72,3 +72,12 @@ jobs:
       - name: Deploy hexo
         run: |
           npm run deploy
+
+      - name: setup aliyun oss
+        uses: manyuanrong/setup-ossutil@master
+        with:
+            endpoint: oss-cn-chengdu.aliyuncs.com
+            access-key-id: ${{ secrets.KEY }} # 刚刚配置过的AccessKeyId
+            access-key-secret: ${{ secrets.SECRET }} # 刚刚配置过的AccessKeySecret
+      - name: cp files to aliyun
+        run: ossutil cp -rf public oss://weekblog/ # 将xxxxx改为创建的Bucket名称，-rf表示覆盖
