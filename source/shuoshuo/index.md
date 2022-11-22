@@ -1,0 +1,14 @@
+---
+title: 说说
+comments: false
+sidebar: [welcome,recent]
+menu_id: post
+post_list: true
+---
+
+> 欢迎来到我的说说页面🍬
+> 
+> 这里会写一些琐碎的事情，大多是俺的哔哔赖赖😶‍🌫️
+
+{% timeline user:weekdaycare api:https://api.github.com/repos/weekdaycare/weekdaycare.github.io/issues?direction=desc %}
+{% endtimeline %}

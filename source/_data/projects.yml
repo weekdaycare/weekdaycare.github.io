@@ -1,0 +1,17 @@
+Notes:
+  name: 便笺
+  title: 便笺
+  subtitle: 杂七杂八的收藏
+  description: 
+  index: false # 不在wiki列表中索引这个项目
+  tags: 
+  sections:
+    '笔记': [0, 99]
+    '番剧': [100, 199]
+    'Hexo插件': [200, 299]
+  comment_title: '有问题欢迎交流反馈'
+  comments:
+    service: beaudar
+    beaudar:
+      repo: weekdaycare/blog-comments
+      'issue-term': 'Q & A'

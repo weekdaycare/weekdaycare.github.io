@@ -1,0 +1,376 @@
+######## Stellar info ########
+stellar:
+  version: '1.16.1'
+  homepage: 'https://xaoxuu.com/wiki/stellar/'
+  repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
+  cdn_css: # Use cdn links instead of /css/main.css
+  cdn_js: # Use cdn links instead of /js/main.js
+
+
+######## head tags ########
+open_graph:
+  enable: true
+  twitter_id: # for open_graph meta
+
+
+######## Sidebar ########
+sidebar:
+  logo:
+    avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  menu:
+    post: '[btn.blog](/)'
+    notes: '[便笺](/notes/)'
+    # shuoshuo: '[说说](/shuoshuo/)'
+    friends: '[友人](/friends/)'
+    # about: '[更多](/about/)'
+  # Sidebar widgets
+  widgets:
+    index: welcome, recent, timeline # for home/wiki/categories/tags/archives/404 pages
+    page: welcome, timeline # for pages using 'layout:page'
+    post: toc, ghrepo, ghissues # for pages using 'layout:post'
+    wiki: ghrepo, toc, ghissues, related # for pages using 'layout:wiki'
+
+######## Index ########
+post-index: # 近期发布 分类 标签 归档 and ...
+  # '虫洞': https://www.foreverblog.cn/go.html
+  '说说': /shuoshuo/
+  # '朋友圈': /friends/
+
+######## Main ########
+breadcrumb:
+  home: home # config.title / config.author / home or custom content
+
+
+######## Article ########
+article:
+  # 如果没有指定封面，是否根据 tags 作为关键词搜索封面图片？
+  auto_cover: false # search from https://source.unsplash.com/
+  # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
+  auto_banner: false # search from https://source.unsplash.com/
+  # 如果没有指定 excerpt 和 description，将自动取多长的内容作为文章摘要？
+  auto_excerpt: 100
+  # 分类颜色
+  category_color:
+    '杂七杂八': "#854836"
+    '学习感悟': "#F14E32"
+    '奇技淫巧': "#E2A5AD"
+    '日常随笔': "#7B68EE"
+  # 文章许可协议
+  license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 转载请注明出处'
+  # 分享
+  share: # [wechat, weibo, email, link]
+  # 相关文章，需要安装插件 (for layout: post)
+  # npm i hexo-related-popular-posts
+  related_posts:
+    enable: false
+    max_count: 5
+
+
+######## Comments ########
+comments:
+  service: waline # beaudar, utterances, valine, twikoo, waline
+  # beaudar
+  # https://beaudar.lipk.org/
+  beaudar:
+    repo: weekdaycare/blog-comments
+    issue-term: url
+    issue-number: 10
+    theme: preferred-color-scheme
+    label: 
+    input-position: top # top/bottom 评论框位置
+    comment-order: desc # desc 排序
+    keep-theme: # true/false
+    loading: true
+    branch: main
+  # utterances
+  # https://utteranc.es/
+  utterances:
+    repo: xxx/xxx
+    issue-term: pathname
+    issue-number:
+    theme: preferred-color-scheme
+    label:
+  # giscus
+  # https://giscus.app/zh-CN
+  giscus:
+    data-repo: xxx/xxx # [在此输入仓库]
+    data-repo-id: # [在此输入仓库 ID]
+    data-category: # [在此输入分类名]
+    data-category-id:
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: top # top, bottom
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    data-loading: lazy
+    crossorigin: anonymous
+
+  # Twikoo
+  # https://twikoo.js.org/
+  twikoo:
+    js: https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
+    envId: https://xxx # vercel函数
+  waline:
+    js: https://www.weekcomment.tk/@waline/client@v2/dist/waline.js
+    css: https://www.weekcomment.tk/@waline/client@v2/dist/waline.css
+    # Waline server address url, you should set this to your own link
+    serverURL: https://comment.weekdaycare.cn
+
+    # If false, comment count will only be displayed in post page, not in home page
+    commentCount: true
+
+    # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+    pageview: false
+
+    # Custom locales
+    locale:
+      placeholder: 来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦） # Comment box placeholder
+
+    # Custom emoji
+    emoji: 
+        - https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs
+    #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
+    #   - https://unpkg.com/@waline/emojis@1.1.0/alus
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
+    #   - https://unpkg.com/@waline/emojis@1.1.0/qq
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tieba
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bmoji
+
+    # Comment infomation, valid meta are nick, mail and link
+    # meta:
+    #   - 昵称
+    #   - 邮箱
+    #   - 链接
+
+    # Set required meta field, e.g.: [nick] | [nick, mail]
+    # requiredMeta:
+    #   - nick
+
+    # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: zh-CN
+
+    # Word limit, no limit when setting to 0
+    wordLimit: 500
+
+    # Whether enable login, can choose from 'enable', 'disable' and 'force'
+    # login: enable
+
+    # comment per page
+    pageSize: 5
+
+######## Footer ########
+footer:
+  social:
+    # github:
+    #   icon: '<img src="https://api.iconify.design/ri:github-line.svg"/>'
+    #   url: https://github.com/weekdaycare
+    # music:
+    #   icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
+    #   url: /
+    # unsplash:
+    #   icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
+    #   url: /
+    comments:
+      icon: '<img src="/asset/comments.svg"/>'
+      url: /about/#comments
+    netease:
+      icon: '<img src="/asset/netease.svg"/>'
+      url: https://y.music.163.com/m/user?id=1387091413
+    panindex:
+      icon: '<img src="/asset/cloud.svg"/>'
+      url: https://weekpan.cf
+    rss:
+      icon: '<img src="/asset/rss.svg"/>'
+      url: /atom.xml
+    
+  # sitemap:
+  # '博客':
+  #   - '[近期](/)'
+  #   - '[分类](/)'
+  #   - '[标签](/)'
+  #   - '[归档](/)'
+  # '项目':
+  #   - '[开源库](/)'
+  # '社交':
+  #   - '[友链](/)'
+  #   - '[留言板](/)'
+  # '更多':
+  #   - '[关于本站](/)'
+  #   - '[GitHub](/)'
+  content: | # 支持 Markdown 格式
+    <center><a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
+    <br><span id="span"></span><script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);span.innerHTML = "勉强运行"+A+"天"+B+"小时"+C+"分"}setInterval(runtime, 1000);</script>
+    <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a></center>
+
+    
+######## Tag Plugins ########
+tag_plugins:
+  # {% note text %}
+  note:
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple
+  # {% checkbox %}
+  checkbox:
+    interactive: false # enable interactive for user
+  # {% quot %}
+  quot:
+    default: # 可以自行配置多种图标方案
+      prefix: https://s2.loli.net/2022/01/04/vsTB5pGrIHfPxSj.png
+      suffix: https://s2.loli.net/2022/01/04/NORdtjlAhifZSns.png
+    hashtag:
+      prefix: https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png
+  # {% emoji %}
+  emoji:
+    default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/%s.png
+    bbpng: https://emoj.ml/blob%s.png
+    bbgif: https://emoj.ml/ablob%s.gif
+  #  twemoji: https://fastly.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
+  #  qq: https://fastly.jsdelivr.net/gh/cdn-x/emoji/qq/%s.gif
+  #  aru: https://fastly.jsdelivr.net/gh/cdn-x/emoji/aru-l/%s.gif
+  #  tieba: https://fastly.jsdelivr.net/gh/cdn-x/emoji/tieba/%s.png
+  # {% image %}
+  image:
+    fancybox: true # true, false
+  # {% timeline %}
+  timeline:
+    max-height: 80vh
+
+
+######## JS Plugins ########
+plugins:
+  ## required plugins ##
+  # jquery
+  jquery: https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+
+  # stellar api
+  stellar:
+    sites: /js/plugins/sites.js
+    friends: /js/plugins/friends.js
+    ghinfo: /js/plugins/ghinfo.js
+    timeline: /js/plugins/timeline.js
+    linkcard: /js/plugins/linkcard.js
+    fcircle: /js/plugins/fcircle.js
+
+  marked: https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js
+
+  ## optional plugins ##
+  # preload
+  preload:
+    enable: true
+    service: flying_pages # instant_page, flying_pages
+    instant_page: https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
+    flying_pages: https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
+
+  # image lazyload
+  # https://www.npmjs.com/package/vanilla-lazyload
+  lazyload:
+    enable: true # [hexo clean && hexo s] is required after changing this value.
+    js: https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
+    transition: blur # blur, fade
+
+  # https://scrollrevealjs.org/api/reveal.html
+  scrollreveal:
+    enable: false
+    js: https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    distance: 4px
+    duration: 400 # ms
+    interval: 100 # ms
+    scale: 0.9 # 0.1~1
+
+  # https://fancyapps.com/docs/ui/fancybox/
+  # available for {% image xxx %}
+  fancybox:
+    enable: true
+    js: https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
+    css: https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
+    # 使用valine评论可以写: .vcontent img:not(.vemoji)
+    # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
+    # 使用waline评论可以写: #waline_container .vcontent img
+    selector: .vcontent img # 多个选择器用英文逗号隔开
+
+  # swiper
+  swiper:
+    enable: true
+    css: https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css
+    js: https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js
+
+
+  # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
+  # https://github.com/sivan/heti
+  heti:
+    enable: false  # 此插件会和代码块冲突，仅适用于纯中文博主。
+    css: https://www.weekbark.cf/heti/umd/heti.min.css
+    js: https://www.weekbark.cf/heti/umd/heti-addon.min.js
+
+  # MathJax
+  # 需在Markdown文件开头加入mathjax: true
+  # 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save & npm install hexo-renderer-pandoc --save
+  mathjax:
+    enable: false
+    cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+  # Katex - The fastest math typesetting library for the web
+  # https://katex.org/docs/autorender.html
+  # https://github.com/KaTeX/KaTeX
+  # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
+  katex:
+    enable: false
+    min_css: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    min_js: <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    auto_render_min_js: <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+    
+style:
+  darkmode: auto # auto / always / false
+  smooth_scroll: true # true / false
+  font-size: 17px
+  font-family:
+    logo: 'STZhongsong, "Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif'
+    body: '"Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif'
+    code: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, Courier New, monospace, sans-serif'
+  text-align: left
+  color:
+    common:
+      theme: '#F4511E' # 主题色
+      accent: '#D50000' # 强调色
+      link: '#F4511E' # 超链接颜色
+      button: '#1BCDFC' # 按钮颜色
+      hover: '#7E57C2' # 按钮高亮颜色
+    light:
+      background: '#f8f8f8' # 浅色背景颜色
+      block: '#F0F1F2' # 块背景颜色
+      card: white # 卡片背景颜色
+      title: '#000' # 标题文本颜色
+      text: '#333' # 正文文本颜色
+      code: '#111' # 行内代码颜色
+    dark:
+      background: '#313438' # 深色背景颜色
+      background-mobile: black # 移动端深色背景（OLED调成纯黑可以省电）
+      block: '#2B2F33' # 块背景颜色
+      card: '#464D57' # 卡片背景颜色
+      title: '#fff' # 标题文本颜色
+      text: '#eee' # 正文文本颜色
+      code: '#ff7043' # 行内代码颜色
+  animated_avatar:
+    animate: # auto, always
+    background: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
+  codeblock:
+    scrollbar: 4px
+    highlightjs_theme: https://fastly.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
+  loading:
+    loading: ∠( ᐛ 」∠)＿
+    error: Σ(っ °Д °;)っ
+
+default:
+  avatar: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
+  link: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg
+  cover: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg
+  image: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
+
+api_host:
+  ghapi: https://api.github.com
+  ghraw: https://raw.weekdaycare.cn/raw
+  gist: https://gist.github.com
