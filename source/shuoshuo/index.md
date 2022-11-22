@@ -1,5 +1,6 @@
 ---
 title: 说说
+robots: noindex,nofollow
 comments: false
 sidebar: [welcome,recent]
 menu_id: post

@@ -2,6 +2,7 @@
 menu_id: notes
 layout: wiki
 wiki: Notes
+robots: noindex,nofollow
 title: 俺白嫖的项目
 order: 0
 ---
