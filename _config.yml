@@ -135,7 +135,16 @@ mathjax:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  message: 🎉Update my site
-  repository: git@github.com:weekdaycare/weekdaycare.github.io.git
-  branch: main
+  - type: git
+    message: 🎉Update my site
+    repository: git@github.com:weekdaycare/weekdaycare.github.io.git
+    branch: main
+  - type: ali-oss
+    region: oss-cn-chengdu
+    accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
+    accessKeySecret: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7
+    bucket: weeblog
+  - type: upyun
+    serviceName: weekdaycare-blog
+    operatorName: hexo
+    operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK

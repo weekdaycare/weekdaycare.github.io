@@ -27,9 +27,19 @@ menu_id: about
 {% endfolding %}
 
 {% timeline %}
+<!-- node 2022 年 11 月 23 日 -->
+
+欸嘿我又回来啦！没有买服务器弄了个阿里云储存 oss 套的又拍云的 cdn ，我备案又回来啦ヾ(≧▽≦*)o
+
+> 哎呀真香
+
+{% image https://bu.dusays.com/2022/11/23/637e188ae973f.webp width:300px %}
+
 <!-- node 2022 年 11 月 22 日 -->
 
 由于没有使用服务器，导致阿里云今天和我发邮件说我的域名没有解析到他的云服务器，但是接入备案是要绑定阿里云的ip的，我又不想买服务器（穷）哎，难受，懒得搞了，还是乖乖用我的vercel吧，备案也不要了，又拍云要say goodbye了
+
+{% image https://bu.dusays.com/2022/11/23/637e18e1c1edb.webp width:600px %}
 
 <!-- node 2022 年 11 月 7 日 -->
 
@@ -39,7 +49,7 @@ menu_id: about
 
 域名通过啦，欢迎访问我的新域名 weekdaycare.cn 
 
-~~同时给我的网站套一层又拍云的CDN~~
+同时给我的网站套一层又拍云的CDN
 
 <!-- node 2022 年 10 月 10 日 -->
 
