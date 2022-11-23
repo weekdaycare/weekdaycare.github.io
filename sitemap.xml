@@ -290,13 +290,6 @@
 
   
   <url>
-    <loc>http://weekdaycare.cn/tags/%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2022-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://weekdaycare.cn/tags/hexo/</loc>
     <lastmod>2022-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -305,6 +298,27 @@
   
   <url>
     <loc>http://weekdaycare.cn/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E4%BD%9C%E4%B8%9A/</loc>
+    <lastmod>2022-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2022-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2022-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -333,20 +347,6 @@
   
   <url>
     <loc>http://weekdaycare.cn/tags/rss/</loc>
-    <lastmod>2022-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2022-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2022-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -383,14 +383,14 @@
 
   
   <url>
-    <loc>http://weekdaycare.cn/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/</loc>
+    <loc>http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</loc>
     <lastmod>2022-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</loc>
+    <loc>http://weekdaycare.cn/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/</loc>
     <lastmod>2022-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
