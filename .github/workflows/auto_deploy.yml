@@ -47,10 +47,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
-      - name: Install dependencies
-        run: |
-          npm install
-
       - name: Install pandoc
         run: |
           cd /tmp
