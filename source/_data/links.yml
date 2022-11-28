@@ -50,6 +50,9 @@
   - title: 去不图床
     avatar: https://7bu.top/favicon.ico
     url: https://7bu.top
+  - title: 得到主义
+    url: https://www.gotist.com
+    avatar: https://getsth.obs.cn-north-1.myhwclouds.com/wp-content/uploads/2020/07/smiling-face-with-smiling-eyes_1f60a.png
 
 '单向链接':
   - title: 云游君
@@ -80,6 +83,12 @@
     url: https://www.thyuu.com
     avatar: https://cravatar.cn/avatar/8546cf1694037de5905abc62aeadf5e9?s=80&r=g
     description: 我是一名来自盛京的大叔！投入在振兴共和国长子的老工业城市事业中。
+  - title: 莫比乌斯
+    url: https://onojyun.com
+    avatar: https://onojyun.com/wp-content/uploads/2022/05/mobius_icon_black-300x300.jpg
+  - title: 考拉咖啡馆
+    url: https://blog.guhub.cn
+    avatar: https://blog.guhub.cn/favicon.webp
 
 'Hexo插件': 
   - title: abbrlink

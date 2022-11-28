@@ -1,5 +1,11 @@
 ---
 menu_id: about
+sidebar:
+  - override: welcome
+    title: '欢迎光临寒舍'
+    content: |
+      很高兴认识你，来了就随便逛逛，要是喜欢哪篇文章的话可以和我留言互动哦，欸嘿 ヾ(≧▽≦*)o
+  - recent
 ---
 {% quot 关于 %}
 
