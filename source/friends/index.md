@@ -20,17 +20,17 @@ sidebar: [朋友圈]
 
 ## 自助友链
 
-速速与我互换友链🎉
+先友后链，在我们之间有一定的交流后再申请链接会更好哦，希望你我能成为真正的朋友而非仅仅挂个链接在这里捏🥰
 
-大佬不受以下限制，俺小博主没啥大的要求：
 {% checkbox checked:true color:green 大陆内能够正常访问 %}
-{% checkbox checked:true color:green 近三个月至少发布过一篇原创文章（不经常维护更新的话站点很快就会挂掉的捏） %}
+{% checkbox checked:true color:green 近三个月至少发布过一篇原创文章 %}
 {% checkbox checked:true color:green 合法、非营利性、无商业广告（有广告的会酌情考虑） %}
+{% checkbox checked:true color:green 至少与我有过三次次互动，来回往返站点算一次 %}
 {% checkbox symbol:times color:red checked:true 不接受纯搬运站 %}
 
 我会不定时访问您的站点，若您的站点出现404等情况，我会暂时下架您的网站链接并通过Github提醒，当您的站点恢复时于github下留言即可
 
-{% folding 俺已经满足所有条件了，快告诉我怎么加友链！✨ %}
+{% folding 俺已经满足所有条件了 %}
 
 {% timeline %}
 
@@ -38,12 +38,9 @@ sidebar: [朋友圈]
 
 在 [GitHub Issue](https://github.com/weekdaycare/friends/issues/) 中按照模板格式填写并提交。
 
-为了提高图片加载速度，建议优化头像：
-
-1.  打开 [压缩图](https://www.yasuotu.com/) 上传自己的头像，将图片尺寸调整到 `96px` 后下载。
-2.  将压缩后的图片上传到 [去不图床](https://7bu.top/) 并使用此图片链接作为头像。
-
 若您不方便使用 Github Issue，也可以直接在本贴下留言
+
+为了提高加载速度，推荐使用webp格式，or 我会压缩您的头像并上传至我的网盘中。
 
 <!-- node 第二步：添加友链并等待管理员审核 -->
 
@@ -51,7 +48,7 @@ sidebar: [朋友圈]
 
 {% codeblock lang:yaml %}
 title: 星日语
-avatar: https://api.iconify.design/line-md:sunny-outline-twotone-loop.svg?color=%23eb4600
+avatar: https://weekdaycare.cn/asset/avatar.svg
 url: https://weekdaycare.cn/
 description: 星语日点灯
 {% endcodeblock %}

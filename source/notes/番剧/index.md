@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: Notes
-robots: noindex](nofollow
+robots: [noindex, nofollow]
 menu_id: notes
 title: 番剧推荐
 order: 101

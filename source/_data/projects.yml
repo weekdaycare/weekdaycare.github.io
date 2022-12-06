@@ -15,3 +15,49 @@ Notes:
     beaudar:
       repo: weekdaycare/blog-comments
       'issue-term': 'Q & A'
+
+Python:
+  name: Python学习
+  title: Python学习
+  description: 这里记录着我学习Python的笔记...  
+  subtitle: 人生苦短，我学python
+  index: true
+  tags: Coding
+  sections:
+    '笔记': [0, 99]
+    '实战': [100, 199]
+  sidebar: [search, toc]
+  cover: false
+  logo:
+    src: https://bu.dusays.com/2022/11/17/637621001f348.webp
+    small: 120px
+    large: 240px
+  comment_title: '欢迎交流反馈'
+  comments:
+    service: beaudar
+    beaudar:
+      repo: weekdaycare/blog-comments
+      'issue-term': 'Python-Study'
+
+Java:
+  name: Java学习
+  title: Java学习
+  description: 这里记录着我学习Java的笔记...  
+  subtitle: 一杯茶一包烟一个bug改一天
+  index: true
+  tags: Coding
+  cover: false
+  logo:
+    src: https://bu.dusays.com/2022/12/06/638f152b20793.webp
+    small: 120px
+    large: 240px
+  sections:
+    '笔记': [0, 99]
+    '实战': [100, 199]
+  sidebar: [search, toc]
+  comment_title: '欢迎交流反馈'
+  comments:
+    service: beaudar
+    beaudar:
+      repo: weekdaycare/blog-comments
+      'issue-term': 'Java-Study'

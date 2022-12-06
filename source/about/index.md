@@ -14,7 +14,7 @@ sidebar:
 
 <!-- tab 关于我 -->
 
-{% about avatar:https://pic1.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg height:60px %}
+{% about avatar:https://pic.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg height:60px %}
 
 <center><b>苦难不值得追求，磨练意志是因为苦难无法躲开</b></br>一个平平无奇的带学生，Kono白嫖怪哒！</center>
 
