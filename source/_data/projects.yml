@@ -26,7 +26,7 @@ Python:
   sections:
     '笔记': [0, 99]
     '实战': [100, 199]
-  sidebar: [search, toc]
+  sidebar: [search, toc, recent]
   cover: false
   logo:
     src: https://bu.dusays.com/2022/11/17/637621001f348.webp
@@ -54,7 +54,7 @@ Java:
   sections:
     '笔记': [0, 99]
     '实战': [100, 199]
-  sidebar: [search, toc]
+  sidebar: [search, toc, recent]
   comment_title: '欢迎交流反馈'
   comments:
     service: beaudar

@@ -50,14 +50,14 @@ list[-1]
 
 可以使用 `append()`，功能是在列表的**末尾**来添加一个指定的元素，但是单次**只能增加一个元素**
 
-```py
+```python
 heros = ["钢铁侠","绿巨人"]
 heros.append("黑寡妇")
 ```
 
 当需要单次增加多个元素时，可以考虑使用 `extend()` ，允许你直接添加一个可迭代对象
 
-```py
+```python
 heros.extend(["雷神","灭霸"])
 heros[len(heros):] = ["雷神","灭霸"]
 ```
@@ -72,7 +72,7 @@ heros[len(heros):] = ["雷神","灭霸"]
 
 我们使用 `insert(a,b)` 插入，有两个参数，`a` 是待插入的位置，`b` 是待插入的元素
 
-```py
+```python
 s = [1,3,4,5]
 s.insert(1,2) # 在索引下标为1的位置插入2
 s.insert(len(s),6) # 在列表末尾插入6，相当于append()
@@ -82,7 +82,7 @@ s.insert(len(s),6) # 在列表末尾插入6，相当于append()
 
 使用 `remove()` 实现删除
 
-```py
+```python
 heros.remove("灭霸")
 ```
 
@@ -94,7 +94,7 @@ heros.remove("灭霸")
 
    {% folding child:codeblock 报错：x not in list %}
 
-   ```py
+   ```python
    Traceback (most recent call last):
        File "<pyshe11#19>"，line 1，in <module>
        	heros.remove("金莲")
@@ -108,14 +108,14 @@ heros.remove("灭霸")
 
 若我们需要删除某一位置的元素，可以使用 `pop()` ，它的输入参数即为元素的下标值
 
-```py
+```python
 heros.pop(2)
 # 删除下标为2的元素
 ```
 
 那要是说我整个列表都不想要了怎么办？`clear()` 出来救场
 
-```py
+```python
 heros.clear()
 # 清空列表中所有元素
 ```
@@ -124,7 +124,7 @@ heros.clear()
 
 列表和字符串最大的区别是列表是可变的，而字符串是不变的。我们使用下标索引法来进行列表元素的替换，用赋值运算符就可以将新的值给替换进去
 
-```py
+```python
 numbs = [1,2,3,4,5]
 numbs[2] = 0
 
@@ -150,7 +150,7 @@ IndexError: list assignment index out of range
 
 这种方法也仅仅能进行单元素替换，那如何替换多个连续的元素？那当然是列表切片啦
 
-```py
+```python
 numbs[2:] = [100,200,300] # 将第二个元素后的值统统替换掉
 ```
 
@@ -158,7 +158,7 @@ numbs[2:] = [100,200,300] # 将第二个元素后的值统统替换掉
 
 比如说我们现在有一个由数字组成的列表，我们想从小到大排序，可以使用 `sort()`（太方便了，让我想起了学C的时候排序都要自己冒泡排序，哭死）
 
-```py
+```python
 nums = [3,1,2,5,5,32,5,2,8,9,7]
 # 从小到大排序
 nums.sort()
@@ -174,13 +174,13 @@ nums = [32, 9, 8, 7, 5, 5, 5, 3, 2, 2, 1]
 
 现在我们又想知道一个列表中一个元素重复了多少次，又可以用 `count()` ，还是上面的 `nums`
 
-```py
+```python
 nums.count(5)
 ```
 
 除了查找的元素出现的次数外，我们还可以查找某个元素的索引值，用 `index()`
 
-```py
+```python
 nums.index(5) # 查找元素5的下标
 
 nums[nums.index(32)] = 0 # 将数值32替换为0
@@ -194,7 +194,7 @@ nums[nums.index(32)] = 0 # 将数值32替换为0
 
 `index()` 还可以传入其他两个参数，分别为`start` `end`
 
-```py
+```python
 nums.index(3, 1, 4) # 从下标为1的元素开始查找到下标为4的元素
 ```
 
@@ -202,13 +202,13 @@ nums.index(3, 1, 4) # 从下标为1的元素开始查找到下标为4的元素
 
 `copy()` 被用来复制列表
 
-```py
+```python
 nums_copy = nums.copy()
 ```
 
 啊对对对，切片还可以用（切片：没想到吧爷又来了）
 
-```py
+```python
 nums_copy = nums[:]
 ```
 
@@ -216,7 +216,7 @@ nums_copy = nums[:]
 
 ## 列表的加法与乘法
 
-```py
+```python
 s = [1,2,3]
 t = [4,5,6]
 s + t = [1,2,3,4,5,6]
@@ -227,13 +227,13 @@ s * 3 = [1,2,3,1,2,3,1,2,3] # 将s列表的元素重复3次
 
 俗称：套娃，又名二维列表
 
-```py
+```python
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
 ```
 
 吼，我们现在有一个嵌套列表，那我们怎么访问嵌套列表捏？
 
-```py
+```python
 # 打印出列表中所有的元素值
 for i in matrix:
     for each in i:
@@ -244,7 +244,7 @@ matrix[0][1] # 第一行第二列
 
 通过循环语句来创建初始化二维列表
 
-```py
+```python
 A = [0] * 3
 for i in range(3):
     A[i] = [0] * 3
@@ -261,7 +261,7 @@ B = [[0] * 3] * 3
 
 这里需要提到的一点是，我们平时使用的赋值运算符并不是拷贝，只是重复的去引用它，python并不会为y单独开辟一份储存空间
 
-```py
+```python
 x = [1,2,3]
 y = x
 ```
@@ -274,7 +274,7 @@ y = x
 
 ### 浅拷贝
 
-```py
+```python
 y = x.copy()
 ```
 
@@ -282,13 +282,13 @@ y = x.copy()
 
 当然也可以使用万能的切片语法
 
-```py
+```python
 y = x[:] # 没有开始也没有结束示意切整个列表
 ```
 
 以上两种方法处理一维列表是没有问题的，**但是在处理嵌套列表的时候仍会有干扰**
 
-```py
+```python
 x = [[1,2,3],[4,5,6],[7,8,9]] # 初始化一个二维列表
 y = x.copy() # 复制给y
 x[1][1] = 0 # 置0
@@ -307,7 +307,7 @@ y = [[1,2,3],[4,0,6],[7,8,9]]
 
 实现深拷贝我们要借助到 `copy` 模块，这个模块有两个函数，一个是 `copy` 实现的是浅拷贝，一个是 `deepcopy` 实现的是深拷贝，要使用这个模块我们要先 `import` 导入
 
-```py
+```python
 import copy
 x = [[1,2,3],[4,5,6],[7,8,9]]
 y = copy.deepcopy(x) # copy模块中的copy函数，x作为拷贝对象传入
@@ -319,9 +319,9 @@ y = copy.deepcopy(x) # copy模块中的copy函数，x作为拷贝对象传入
 
 ## 列表推导式
 
-列表推导式的基本语法是
+### 基本语法
 
-```py
+```python
 [expression for target in iterable]
 ```
 
@@ -329,7 +329,7 @@ y = copy.deepcopy(x) # copy模块中的copy函数，x作为拷贝对象传入
 
 举个例子，现在我们知道一个列表，它里面的数据都是数值，现在我们需要把列表中的数据都乘以2，一般我们都会使用循环，利用下标索引来更新每一个元素的值
 
-```py
+```python
 a = [1,2,3]
 for i in range(len(a)):
     a[i] = a[i] * 2
@@ -337,13 +337,13 @@ for i in range(len(a)):
 
 如果使用列表推导式就是
 
-```py
+```python
 a = [i * 2 for i in a]
 ```
 
 处理字符串也不在话下
 
-```py
+```python
 x = [i * 2 for i in "FBI"]
 # 输出
 x = ['FF', 'BB', 'II']
@@ -353,7 +353,7 @@ code = [ord(i) for i in "FBI"] # ord()函数的作用是将单个字符转化为
 
 也可以处理二维列表
 
-```py
+```python
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
 # 通过for语句获取矩阵的每一行，然后我们取每一行的row[1]
 a = [row[1] for row in matrix] 
@@ -371,6 +371,92 @@ cidiag = [matrix[i][len(matrix)-i-1] for i in range(len(matrix))]
 cidiag = [3,5,7]
 ```
 
+亦或是用来生成列表
+
+```python
+a = [[0] * 3 for i in range(3)]
+```
+
+你以为列表推导式就仅仅如此吗？NoNoNo，你太天真啦，我们还可以添加一个用于筛选的if语句。
+
+### 进阶语法
+
+```python
+# 进阶语法
+[expression for target in iterable if condition]
+```
+```python
+# 比如说我想输出10以内的偶数，就可以这样写
+even = [i for i in range(10) if i%2==0]
+# 输出
+even = [0,2,4,6,8]
+
+# 给出字符开头为S的单词
+words = ["Great","Smile","Sister","Mouse"]
+Swords = [w for w in words if w[0]=="F"]
+```
+
+{% border 列表推导式中语句运行顺序 color:orange %}
+
+先执行 `for` 循环，其次执行 `if` 条件判断语句，最后执行表达式
+
+{% endborder %}
+
+列表推导式还支持嵌套
+
+```python
+[expression for target1 in iterable1
+			for target2 in iterable2
+ 			...
+			for targetN in iterableN]
+```
+
+比如说将二维列表转化为一维列表
+
+```python
+matrix=[[1,2,3],[4,5,6],[7,8,9]]
+flatten = [col for row in matrix for col in row]
+
+# 输出
+flatten = [1,2,3,4,5,6,7,8,9]
+```
+
+如何理解呢？我们把它等效化为普通的 `for` 语句就好理解啦
+
+```python
+flatten = []
+for row in matrix:
+    for col in row:
+        flatten.append(col)
+```
+
+可以发现这里外层循环是放在列表推导式前面的，嵌套循环是在后面的
+
+### 终极语法
+
+```python
+[expression for target1 in iterable1 if condition1
+			for target2 in iterable2 if condition2
+			...
+			for targetN in iterableN if conditioN]
+```
+
+随便举个栗子
+
+```python
+[[x,y] for x in range(10) if x%2==0 for y in range(10) if y%3==0]
+
+# 等效成for语句
+point = []
+for x in range(10):
+    if x%2 == 0:
+        for y in range(10):
+            if y%2==0:
+                point.append([x,y])
+```
+
+
+
 {% border Notice %}
 
 需要知道的是，循环和列表推导式并不完全相同。
@@ -381,4 +467,4 @@ cidiag = [3,5,7]
 
 {% endborder %}
 
-同时列表推导式在Python解释器中是以更快的C语言的速度来运行的，比使用Python中的pvm虚拟机以步进的速度运行 `for` 循环要快很多。
+同时列表推导式在Python解释器中是以更快的C语言的速度来运行的，比使用Python中的pvm虚拟机以步进的速度运行 `for` 循环要快很多。尽管列表推导式十分的简洁并且运行速度十分的快，**但是因为比较复杂导致其可读性不高，在写列表推导式的时候还需要考虑到后续的代码维护&你自己能不能看得懂**。
