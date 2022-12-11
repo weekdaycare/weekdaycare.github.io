@@ -3,6 +3,8 @@ layout: wiki
 wiki: Java
 order: 25
 title: 数据输入
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 
 我一开始还天真的以为它跟C一样用`scanf`，但其实`Java`里根本没有`scanf`，倒是有个`Scanner`，`Scanner`类位于`java.util.Scanner`包中，因此在程序前面要加上此包
@@ -140,9 +142,9 @@ public static void main(String[] args) {
 }
 ```
 
-{% border 补充一下`nextLine()`和`next()`的区别： %}
+{% ablock 补充一下`nextLine()`和`next()`的区别： %}
 
 1. `nextLine()`方法返回的是`Enter`键之前的所有字符，它是可以得到带空格的字符串的
 2. `next()`会自动消去有效字符前的空格，只返回输入的字符，不能得到带空格的字符串
 
-{% endborder %}
+{% endablock %}

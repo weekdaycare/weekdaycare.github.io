@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.17.2'
+  version: '1.18.0'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -28,11 +28,11 @@ sidebar:
   widgets:
     #### 自动生成的页面 ####
     # 主页
-    home: welcome, search, timeline # for home
+    home: welcome, timeline, search # for home
     # 博客索引页
     blog_index: search, recent, timeline # for categories/tags/archives
     # 文档索引页
-    wiki_index: welcome, recent # for wiki
+    wiki_index: search, welcome, recent # for wiki
     # 其它（404）
     others: search, recent # for 404 and ...
     #### 手动创建的页面 ####
@@ -181,6 +181,14 @@ comments:
 
     # comment per page
     pageSize: 5
+  # Artalk
+  # https://artalk.js.org/
+  artalk:
+    css: https://unpkg.com/artalk@2.4.3/dist/Artalk.css
+    js: https://unpkg.com/artalk@2.4.3/dist/Artalk.js 
+    server: # 后端服务地址
+    placeholder: ''
+    darkMode: auto
 
 ######## Footer ########
 footer:
@@ -231,17 +239,17 @@ footer:
 tag_plugins:
   # {% note text %}
   note:
-    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
   # {% quot %}
   quot:
     default: # 可以自行配置多种图标方案
-      prefix: https://s2.loli.net/2022/01/04/vsTB5pGrIHfPxSj.png
-      suffix: https://s2.loli.net/2022/01/04/NORdtjlAhifZSns.png
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e092ff.png
+      suffix: https://bu.dusays.com/2022/10/24/63567d3e0ab55.png
     hashtag:
-      prefix: https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e07da3.png
   # {% emoji %}
   emoji:
     default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/%s.png
@@ -257,6 +265,9 @@ tag_plugins:
   # {% timeline %}
   timeline:
     max-height: 80vh
+  # {% mark %}
+  mark:
+    default_color: orange # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
 
 
 ######## JS Plugins ########
@@ -273,6 +284,7 @@ plugins:
     timeline: /js/plugins/timeline.js
     linkcard: /js/plugins/linkcard.js
     fcircle: /js/plugins/fcircle.js
+    weibo: /js/plugins/weibo.js
 
   marked: https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js
 
@@ -310,13 +322,13 @@ plugins:
     # 使用valine评论可以写: .vcontent img:not(.vemoji)
     # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
     # 使用waline评论可以写: #waline_container .vcontent img
-    selector: .vcontent img # 多个选择器用英文逗号隔开
+    selector: waline_container .vcontent img # 多个选择器用英文逗号隔开
 
   # swiper
   swiper:
     enable: true
-    css: https://www.weekcomment.tk/swiper@6/swiper-bundle.min.css
-    js: https://www.weekcomment.tk/swiper@6/swiper-bundle.min.js
+    css: https://www.weekcomment.tk/swiper@8/swiper-bundle.min.css
+    js: https://www.weekcomment.tk/swiper@8/swiper-bundle.min.js
 
 
   # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
@@ -353,27 +365,17 @@ style:
     code: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, Courier New, monospace, sans-serif'
   text-align: left
   color:
-    common:
-      theme: '#F4511E' # 主题色
-      accent: '#D50000' # 强调色
-      link: '#F4511E' # 超链接颜色
-      button: '#1BCDFC' # 按钮颜色
-      hover: '#7E57C2' # 按钮高亮颜色
-    light:
-      background: '#f8f8f8' # 浅色背景颜色
-      block: '#F0F1F2' # 块背景颜色
-      card: white # 卡片背景颜色
-      title: '#000' # 标题文本颜色
-      text: '#333' # 正文文本颜色
-      code: '#111' # 行内代码颜色
-    dark:
-      background: '#313438' # 深色背景颜色
-      background-mobile: black # 移动端深色背景（OLED调成纯黑可以省电）
-      block: '#2B2F33' # 块背景颜色
-      card: '#464D57' # 卡片背景颜色
-      title: '#fff' # 标题文本颜色
-      text: '#eee' # 正文文本颜色
-      code: '#ff7043' # 行内代码颜色
+    # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
+    theme: '#F4511E' # 主题色
+    accent: '#D50000' # 强调色
+    link: '#F4511E' # 超链接颜色
+    button: '#1BCDFC' # 按钮颜色
+    hover: '#7E57C2' # 按钮高亮颜色
+    # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
+    background: 'hsl(212 16% 98%)' # 浅色背景颜色
+    block: 'hsl(212 8% 95%)' # 块背景颜色
+    code: 'hsl(14 100% 48%)' # 行内代码颜色
+    text: 'hsl(0 0% 20%)' # 文本颜色
   animated_avatar:
     animate: # auto, always
     background: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp

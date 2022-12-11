@@ -3,6 +3,8 @@ layout: wiki
 wiki: Python
 order: 25
 title: 列表
+date: 2022-12-02 15:54:07
+updated: 2022-12-10 17:54:07
 ---
 
 列表可以容纳不同类型的数据
@@ -62,11 +64,11 @@ heros.extend(["雷神","灭霸"])
 heros[len(heros):] = ["雷神","灭霸"]
 ```
 
-{% border 注意 %}
+{% ablock 注意 %}
 
 `extend()` 方法的参数必须是一个可迭代对象，新的内容是追加到原列表最后一个元素的后面。
 
-{% endborder %}
+{% endablock %}
 
 ## 插
 
@@ -86,7 +88,7 @@ s.insert(len(s),6) # 在列表末尾插入6，相当于append()
 heros.remove("灭霸")
 ```
 
-{% border 注意 %}
+{% ablock 注意 %}
 
 1. 如果列表中存在多个匹配的元素，那么它只会删除第一个（下标最小的那个）
 
@@ -103,7 +105,7 @@ heros.remove("灭霸")
 
    {% endfolding %}
 
-{% endborder %}
+{% endablock %}
 
 
 若我们需要删除某一位置的元素，可以使用 `pop()` ，它的输入参数即为元素的下标值
@@ -136,7 +138,7 @@ numbs = [1,2,0,4,5]
 1. 将赋值号(=) 左边指定的内容删除
 2. 将包含在赋值号(=)右边的可迭代对象中的片段插入左边被删除的位置
 
-{% border 注意 %}
+{% ablock 注意 %}
 
 若你的下标值超过了列表的长度会报错
 
@@ -146,7 +148,7 @@ Traceback (most recent call last):
 IndexError: list assignment index out of range
 ```
 
-{% endborder %}
+{% endablock %}
 
 这种方法也仅仅能进行单元素替换，那如何替换多个连续的元素？那当然是列表切片啦
 
@@ -186,11 +188,11 @@ nums.index(5) # 查找元素5的下标
 nums[nums.index(32)] = 0 # 将数值32替换为0
 ```
 
-{% border 注意 %}
+{% ablock 注意 %}
 
 当列表中存在多个相同的值时，`index()` 只会输出第一个值的下标，同样，若列表中不存在该索引值也会报错
 
-{% endborder %}
+{% endablock %}
 
 `index()` 还可以传入其他两个参数，分别为`start` `end`
 
@@ -396,11 +398,11 @@ words = ["Great","Smile","Sister","Mouse"]
 Swords = [w for w in words if w[0]=="F"]
 ```
 
-{% border 列表推导式中语句运行顺序 color:orange %}
+{% ablock 列表推导式中语句运行顺序 color:orange %}
 
 先执行 `for` 循环，其次执行 `if` 条件判断语句，最后执行表达式
 
-{% endborder %}
+{% endablock %}
 
 列表推导式还支持嵌套
 
@@ -457,7 +459,7 @@ for x in range(10):
 
 
 
-{% border Notice %}
+{% ablock Notice %}
 
 需要知道的是，循环和列表推导式并不完全相同。
 
@@ -465,6 +467,6 @@ for x in range(10):
 
 从根本上来说这两种操作是不一样的，但是从效果上来说，两种方法都能够满足我们的需求。
 
-{% endborder %}
+{% endablock %}
 
 同时列表推导式在Python解释器中是以更快的C语言的速度来运行的，比使用Python中的pvm虚拟机以步进的速度运行 `for` 循环要快很多。尽管列表推导式十分的简洁并且运行速度十分的快，**但是因为比较复杂导致其可读性不高，在写列表推导式的时候还需要考虑到后续的代码维护&你自己能不能看得懂**。

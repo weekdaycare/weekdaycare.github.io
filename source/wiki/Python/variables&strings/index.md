@@ -3,6 +3,8 @@ layout: wiki
 wiki: Python
 order: 1
 title: 变量与字符串
+date: 2022-11-11 15:54:07
+updated: 2022-11-11 17:54:07
 ---
 ## 变量
 

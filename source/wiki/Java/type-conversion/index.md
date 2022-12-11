@@ -1,8 +1,10 @@
 ---
 layout: wiki
-wiki: Python
+wiki: Java
 order: 15
 title: 类型转化
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 
 ## 自动类型转化

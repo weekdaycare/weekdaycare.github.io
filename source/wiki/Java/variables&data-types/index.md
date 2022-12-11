@@ -3,6 +3,8 @@ layout: wiki
 wiki: Java
 order: 10
 title: 变量&数据类型
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 ## 变量
 

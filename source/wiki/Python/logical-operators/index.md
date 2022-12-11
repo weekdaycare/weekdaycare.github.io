@@ -3,6 +3,8 @@ layout: wiki
 wiki: Python
 order: 15
 title: 逻辑运算符
+date: 2022-11-11 15:54:07
+updated: 2022-11-11 17:54:07
 ---
 
 Python总共有三个逻辑运算符`and`，`or`，`not`，逻辑运算也叫布尔运算，它的运算对象是**布尔类型**的对象

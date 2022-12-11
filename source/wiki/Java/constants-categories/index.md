@@ -3,6 +3,8 @@ layout: wiki
 wiki: Java
 order: 5
 title: 常量分类
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 
 | 常量类型  | 说明         | 举例                |

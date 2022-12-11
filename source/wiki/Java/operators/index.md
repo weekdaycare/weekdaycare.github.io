@@ -3,6 +3,8 @@ layout: wiki
 wiki: Java
 order: 20
 title: 运算符
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 
 ## 算数运算符
@@ -31,9 +33,9 @@ title: 运算符
 提升规则：`byte`类型， `short`类型和`char`类型将被提升到`int`类型
 整个表达式的类型自动提升到表达式中最高等级操作数同样的类型
 
-{% border 等级顺序 %}
+{% ablock 等级顺序 %}
 `byte`,`short`,`char` → `int` → `long` → `float` → `double`
-{% endborder %}
+{% endablock %}
 
 ```java
 public static void main(String[] args){

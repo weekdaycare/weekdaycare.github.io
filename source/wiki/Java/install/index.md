@@ -3,6 +3,8 @@ layout: wiki
 wiki: Java
 order: 1
 title: 初上手
+date: 2022-09-11 15:54:07
+updated: 2022-09-11 17:54:07
 ---
 
 ## 安装

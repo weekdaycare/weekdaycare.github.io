@@ -3,6 +3,8 @@ layout: wiki
 wiki: Python
 order: 30
 title: 元组
+date: 2022-12-10 15:54:07
+updated: 2022-12-10 17:54:07
 ---
 
 ## 差异
@@ -13,7 +15,7 @@ title: 元组
 rhyme = (1, 2, 3, 4, 5)
 ```
 
-{% border 由于元组是不可变的，所以任何修改元组的操作都是不可取的 %}
+{% ablock 由于元组是不可变的，所以任何修改元组的操作都是不可取的 %}
 
 {% folding rhyme[1]=1 child:codeblock %}
 
@@ -26,7 +28,7 @@ TypeError: 'tuple' object does not support item assignment
 
 {% endfolding %}
 
-{% endborder %}
+{% endablock %}
 
 元组也支持切片操作，因为切片的含义是将目标对象中的元素以某种特定的组合导出而非修改对象本身
 
@@ -107,7 +109,7 @@ s = (1, 2, 3, 4, 5)
 [2,4,6,8,10]
 ```
 
-{% border 不存在元组推导式！ color:orange %}
+{% ablock 不存在元组推导式！ color:orange %}
 
 `(each*2 for each in s)` 这种写法是错误的，我们所指的是元组可以作为可迭代对象转化成列表，这个写法生成的并不是元组推导式，叫做生成器。
 
@@ -119,7 +121,7 @@ s = (1, 2, 3, 4, 5)
 
 {% endfolding %}
 
-{% endborder %}
+{% endablock %}
 
 ## 只有一个元素
 
@@ -167,7 +169,7 @@ y = "啊巴巴"
 z = 3.14
 ```
 
-{% border %}
+{% ablock %}
 
 这种行为不仅适用于元组，也适用于任何的序列类型，比如列表，字符串
 
@@ -175,7 +177,7 @@ z = 3.14
 a, b, c, d = "cook"
 ```
 
-{% endborder %}
+{% endablock %}
 
 但无论使用哪一种序列解包，都需要注意一点：**赋值号左边的变量名数量必须跟右侧序列的元素数量一致，有一种情况除外**
 
