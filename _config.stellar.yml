@@ -152,6 +152,7 @@ comments:
     # Custom emoji
     emoji: 
         - https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs
+        - https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets
     #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
     #   - https://unpkg.com/@waline/emojis@1.1.0/alus
     #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
@@ -253,6 +254,7 @@ tag_plugins:
   # {% emoji %}
   emoji:
     default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/%s.png
+    fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets/%s.svg
     bbpng: https://emoj.ml/blob%s.png
     bbgif: https://emoj.ml/ablob%s.gif
   #  twemoji: https://fastly.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
