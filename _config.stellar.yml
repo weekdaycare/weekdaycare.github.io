@@ -360,11 +360,16 @@ plugins:
 style:
   darkmode: auto # auto / always / false
   smooth_scroll: true # true / false
-  font-size: 17px
+  font-size:
+    root: 17px
+    body: .9375rem # 15px
+    code: 85% # 14px
+    codeblock: 0.8125rem # 13px
   font-family:
     logo: 'STZhongsong, "Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif'
     body: '"Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif'
     code: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, Courier New, monospace, sans-serif'
+    codeblock: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   text-align: left
   color:
     # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
@@ -387,6 +392,9 @@ style:
   loading:
     loading: ∠( ᐛ 」∠)＿
     error: Σ(っ °Д °;)っ
+  gradient: # https://webgradients.com/
+    start: 'linear-gradient(to right, #fa709a 0%, #fee140 100%)'
+    search: '#E0E0E0'
 
 default:
   avatar: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
