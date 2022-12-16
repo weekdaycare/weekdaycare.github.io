@@ -238,9 +238,10 @@ footer:
     
 ######## Tag Plugins ########
 tag_plugins:
-  # {% note text %}
+  # {% ablock %} / {% note %}
   note:
     default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+    border: false # true / false
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
@@ -371,6 +372,11 @@ style:
     code: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, Courier New, monospace, sans-serif'
     codeblock: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   text-align: left
+  border-radius:
+    card: 12px
+    block: 12px
+    bar: 6px
+    image: 6px
   color:
     # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
     theme: '#F4511E' # 主题色
