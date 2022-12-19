@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.18.1'
+  version: '1.18.4'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -131,11 +131,11 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
+    js: https://gcore.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
     envId: https://xxx # vercel函数
   waline:
-    js: https://www.weekcomment.tk/@waline/client@v2/dist/waline.js
-    css: https://www.weekcomment.tk/@waline/client@v2/dist/waline.css
+    js: https://www.weekcomment.tk/@waline/client@2.14.1/dist/waline.js
+    css: https://www.weekcomment.tk/@waline/client@2.14.1/dist/waline.css
     # Waline server address url, you should set this to your own link
     serverURL: https://comment.weekdaycare.cn
 
@@ -254,14 +254,14 @@ tag_plugins:
       prefix: https://bu.dusays.com/2022/10/24/63567d3e07da3.png
   # {% emoji %}
   emoji:
-    default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/%s.png
-    fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets/%s.svg
-    bbpng: https://emoj.ml/blob%s.png
-    bbgif: https://emoj.ml/ablob%s.gif
-  #  twemoji: https://fastly.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
-  #  qq: https://fastly.jsdelivr.net/gh/cdn-x/emoji/qq/%s.gif
-  #  aru: https://fastly.jsdelivr.net/gh/cdn-x/emoji/aru-l/%s.gif
-  #  tieba: https://fastly.jsdelivr.net/gh/cdn-x/emoji/tieba/%s.png
+    default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/${name}.png
+    fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets/${name}.svg
+    bbpng: https://emoj.ml/blob${name}.png
+    bbgif: https://emoj.ml/ablob${name}.gif
+  #  twemoji: https://fastly.jsdelivr.net/gh/twitter/twemoji/assets/svg/${name}.svg
+  #  qq: https://fastly.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+  #  aru: https://fastly.jsdelivr.net/gh/cdn-x/emoji/aru-l/${name}.gif
+  #  tieba: https://fastly.jsdelivr.net/gh/cdn-x/emoji/tieba/${name}.png
   # {% image %}
   image:
     fancybox: true # true, false
@@ -277,7 +277,7 @@ tag_plugins:
 plugins:
   ## required plugins ##
   # jquery
-  jquery: https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  jquery: https://gcore.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
 
   # stellar api
   stellar:
@@ -296,8 +296,8 @@ plugins:
   preload:
     enable: true
     service: flying_pages # instant_page, flying_pages
-    instant_page: https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
-    flying_pages: https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
+    instant_page: https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
+    flying_pages: https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
 
   # image lazyload
   # https://www.npmjs.com/package/vanilla-lazyload
@@ -319,8 +319,8 @@ plugins:
   # available for {% image xxx %}
   fancybox:
     enable: true
-    js: https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
-    css: https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    js: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
+    css: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
     # 使用valine评论可以写: .vcontent img:not(.vemoji)
     # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
@@ -330,16 +330,16 @@ plugins:
   # swiper
   swiper:
     enable: true
-    css: https://www.weekcomment.tk/swiper@8/swiper-bundle.min.css
-    js: https://www.weekcomment.tk/swiper@8/swiper-bundle.min.js
+    css: https://www.weekcomment.tk/swiper@8.4.5/swiper-bundle.min.css
+    js: https://www.weekcomment.tk/swiper@8.4.5/swiper-bundle.min.js
 
 
   # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
   # https://github.com/sivan/heti
   heti:
     enable: false  # 此插件会和代码块冲突，仅适用于纯中文博主。
-    css: https://www.weekbark.cf/heti/umd/heti.min.css
-    js: https://www.weekbark.cf/heti/umd/heti-addon.min.js
+    css: https://www.weekbark.cf/heti@0.9.2/umd/heti.min.css
+    js: https://www.weekbark.cf/heti@0.9.2/umd/heti-addon.min.js
 
   # MathJax
   # 需在Markdown文件开头加入mathjax: true
@@ -354,9 +354,9 @@ plugins:
   # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
   katex:
     enable: false
-    min_css: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
-    min_js: <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-    auto_render_min_js: <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+    min_css: <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    auto_render_min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
     
 style:
   darkmode: auto # auto / always / false
@@ -394,7 +394,7 @@ style:
     background: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
   codeblock:
     scrollbar: 4px
-    highlightjs_theme: https://fastly.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
+    highlightjs_theme: https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
   loading:
     loading: ∠( ᐛ 」∠)＿
     error: Σ(っ °Д °;)っ
