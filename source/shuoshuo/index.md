@@ -13,3 +13,5 @@ post_list: true
 
 {% timeline user:weekdaycare api:https://api.github.com/repos/weekdaycare/weekdaycare.github.io/issues?direction=desc %}
 {% endtimeline %}
+
+{% navbar [查看更多](https://github.com/weekdaycare/weekdaycare.github.io/issues) %}
