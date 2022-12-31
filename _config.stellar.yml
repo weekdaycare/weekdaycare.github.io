@@ -131,11 +131,11 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://gcore.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
+    js: https://jsd.onmicrosoft.cn/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
     envId: https://xxx # vercel函数
   waline:
-    js: https://www.weekcomment.tk/@waline/client@2.14.1/dist/waline.js
-    css: https://www.weekcomment.tk/@waline/client@2.14.1/dist/waline.css
+    js: https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.js
+    css: https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css
     # Waline server address url, you should set this to your own link
     serverURL: https://comment.weekdaycare.cn
 
@@ -185,8 +185,8 @@ comments:
   # Artalk
   # https://artalk.js.org/
   artalk:
-    css: https://unpkg.com/artalk@2.4.3/dist/Artalk.css
-    js: https://unpkg.com/artalk@2.4.3/dist/Artalk.js 
+    css: https://npm.onmicrosoft.cn/artalk@2.4.3/dist/Artalk.css
+    js: hhttps://npm.onmicrosoft.cn/artalk@2.4.3/dist/Artalk.js 
     server: # 后端服务地址
     placeholder: ''
     darkMode: auto
@@ -277,7 +277,7 @@ tag_plugins:
 plugins:
   ## required plugins ##
   # jquery
-  jquery: https://gcore.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  jquery: https://jsd.onmicrosoft.cn/npm/jquery@3.5.1/dist/jquery.min.js
 
   # stellar api
   stellar:
@@ -296,20 +296,20 @@ plugins:
   preload:
     enable: true
     service: flying_pages # instant_page, flying_pages
-    instant_page: https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
-    flying_pages: https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
+    instant_page: https://jsd.onmicrosoft.cn/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
+    flying_pages: https://jsd.onmicrosoft.cn/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
 
   # image lazyload
   # https://www.npmjs.com/package/vanilla-lazyload
   lazyload:
     enable: true # [hexo clean && hexo s] is required after changing this value.
-    js: https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
+    js: https://jsd.onmicrosoft.cn/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
     transition: blur # blur, fade
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
     enable: false
-    js: https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    js: https://jsd.onmicrosoft.cn/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 4px
     duration: 400 # ms
     interval: 100 # ms
@@ -319,8 +319,8 @@ plugins:
   # available for {% image xxx %}
   fancybox:
     enable: true
-    js: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
-    css: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    js: https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
+    css: https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.css
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
     # 使用valine评论可以写: .vcontent img:not(.vemoji)
     # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
@@ -330,16 +330,16 @@ plugins:
   # swiper
   swiper:
     enable: true
-    css: https://www.weekcomment.tk/swiper@8.4.5/swiper-bundle.min.css
-    js: https://www.weekcomment.tk/swiper@8.4.5/swiper-bundle.min.js
+    css: https://npm.onmicrosoft.cn/swiper@8.4.5/swiper-bundle.min.css
+    js: https://npm.onmicrosoft.cn/swiper@8.4.5/swiper-bundle.min.js
 
 
   # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
   # https://github.com/sivan/heti
   heti:
     enable: false  # 此插件会和代码块冲突，仅适用于纯中文博主。
-    css: https://www.weekbark.cf/heti@0.9.2/umd/heti.min.css
-    js: https://www.weekbark.cf/heti@0.9.2/umd/heti-addon.min.js
+    css: https://npm.onmicrosoft.cn/heti@0.9.2/umd/heti.min.css
+    js: https://npm.onmicrosoft.cn/heti@0.9.2/umd/heti-addon.min.js
 
   # MathJax
   # 需在Markdown文件开头加入mathjax: true
@@ -391,10 +391,10 @@ style:
     text: 'hsl(0 0% 20%)' # 文本颜色
   animated_avatar:
     animate: # auto, always
-    background: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
+    background: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
   codeblock:
     scrollbar: 4px
-    highlightjs_theme: https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
+    highlightjs_theme: https://jsd.onmicrosoft.cn/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
   loading:
     loading: ∠( ᐛ 」∠)＿
     error: Σ(っ °Д °;)っ
@@ -403,12 +403,12 @@ style:
     search: '#E0E0E0'
 
 default:
-  avatar: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
-  link: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg
-  cover: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg
-  image: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
+  avatar: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
+  link: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg
+  cover: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg
+  image: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
 
 api_host:
   ghapi: https://api.github.com
-  ghraw: https://raw.weekdaycare.cn/raw
+  ghraw: https://jsd.onmicrosoft.cn
   gist: https://gist.github.com
