@@ -1,8 +1,3 @@
 {
-	"defaultCommentOrder": "newest",
-	"origins": [
-	  "https://weekdaycare.cn",
-	  "https://www.weekdaycare.cn",
-	  "http://localhost:4000"
-	]
+	"defaultCommentOrder": "newest"
 }
