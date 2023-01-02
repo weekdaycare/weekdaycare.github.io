@@ -9,12 +9,23 @@ Notes:
     '笔记': [0, 99]
     '番剧': [100, 199]
     'Hexo插件': [200, 299]
-  comment_title: '有问题欢迎交流反馈'
+  comment_title: '欢迎交流反馈'
   comments:
-    service: beaudar
-    beaudar:
-      repo: weekdaycare/blog-comments
-      'issue-term': 'Q & A'
+    service: giscus
+    giscus:
+      data-repo: weekdaycare/weekdaycare.github.io
+      data-repo-id: R_kgDOGZiRHw
+      data-category: "便笺"
+      data-category-id: DIC_kwDOGZiRH84CTXKE
+      data-mapping: title
+      data-strict: 0
+      data-reactions-enabled: 0
+      data-emit-metadata: 0
+      data-input-position: top
+      data-theme: preferred_color_scheme
+      data-lang: zh-CN
+      data-loading: lazy
+      crossorigin: anonymous
 
 Python:
   name: Python学习
@@ -34,10 +45,21 @@ Python:
     large: 240px
   comment_title: '欢迎交流反馈'
   comments:
-    service: beaudar
-    beaudar:
-      repo: weekdaycare/blog-comments
-      'issue-term': 'Python-Study'
+    service: giscus
+    giscus:
+      data-repo: weekdaycare/weekdaycare.github.io
+      data-repo-id: R_kgDOGZiRHw
+      data-category: "Python学习"
+      data-category-id: DIC_kwDOGZiRH84CTXKE
+      data-mapping: title
+      data-strict: 0
+      data-reactions-enabled: 0
+      data-emit-metadata: 0
+      data-input-position: top
+      data-theme: preferred_color_scheme
+      data-lang: zh-CN
+      data-loading: lazy
+      crossorigin: anonymous
 
 Java:
   name: Java学习
@@ -57,7 +79,18 @@ Java:
   sidebar: [search, toc, recent]
   comment_title: '欢迎交流反馈'
   comments:
-    service: beaudar
-    beaudar:
-      repo: weekdaycare/blog-comments
-      'issue-term': 'Java-Study'
+    service: giscus
+    giscus:
+      data-repo: weekdaycare/weekdaycare.github.io
+      data-repo-id: R_kgDOGZiRHw
+      data-category: "Java学习"
+      data-category-id: DIC_kwDOGZiRH84CTXKE
+      data-mapping: title
+      data-strict: 0
+      data-reactions-enabled: 0
+      data-emit-metadata: 0
+      data-input-position: top
+      data-theme: preferred_color_scheme
+      data-lang: zh-CN
+      data-loading: lazy
+      crossorigin: anonymous
