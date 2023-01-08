@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.18.4'
+  version: '1.18.5'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -409,6 +409,6 @@ default:
   image: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
 
 api_host:
-  ghapi: https://api.github.com
+  ghapi: https://raw.weekdaycare.cn/api
   ghraw: https://jsd.onmicrosoft.cn
-  gist: https://gist.github.com
+  gist: https://raw.weekdaycare.cn/gist

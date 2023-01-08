@@ -11,4 +11,4 @@ updated: 2022-11-11 17:54:07
 
 {% link https://b23.tv/BV1c4411e77t %}
 
-{% note 打`Python`代码一定一定要注意**缩进**!  color:warning %}
+{% note 打`Python`代码一定一定要注意**缩进**!  color:orange %}

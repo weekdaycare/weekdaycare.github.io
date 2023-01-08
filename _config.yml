@@ -8,7 +8,7 @@ avatar: /asset/avatar.svg
 favicon: /asset/favicon.svg
 subtitle: '星语日点灯|等风来，不如追风去'
 description: '苦难不值得追求，磨练意志是因为苦难无法躲开'
-keywords: 日志
+keywords: 博客
 author: 涛声依旧
 language: zh-CN
 timezone: ''
@@ -110,10 +110,10 @@ ignore:
 inject:
   head:
     - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - 
+    - <link rel="stylesheet" href="/asset/css/pace.css">
   script:
     - <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
-
+    - <script defer src="/asset/js/pace.min.js"></script>
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
