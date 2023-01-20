@@ -54,42 +54,6 @@
     url: https://www.gotist.com
     avatar: https://getsth.obs.cn-north-1.myhwclouds.com/wp-content/uploads/2020/07/smiling-face-with-smiling-eyes_1f60a.png
 
-'单向链接':
-  - title: 云游君
-    avatar: https://www.yunyoujun.cn/images/avatar.jpg
-    url: https://www.yunyoujun.cn
-    description: 希望能成为一个有趣的人。
-  - title: 小冰博客
-    url: https://zfe.one
-    avatar: https://zfe.space/images/headimage.png
-    description: 做个有梦想的人！
-  - url: https://irithys.com
-    title: 山茶花舍
-    description: 吕楪在记录自己的生活
-    avatar: https://file.irithys.com/src/avatar/avatar.webp
-  - title: DIYgod
-    avatar: https://pic1.imgdb.cn/item/635a917b16f2c2beb1a888d1.png
-    url: https://diygod.me
-    description: 写代码是热爱，写到世界充满爱！
-  - title: Spencer Woo
-    avatar: https://avatars.githubusercontent.com/u/32114380?v=4
-    url: https://spencerwoo.com
-    description: I study basic computer stuff.
-  - title: 枋柚梓
-    avatar: https://inkss.cn/img/avatar.png
-    url: https://inkss.cn
-    desription: 言语道断，非物所拘。
-  - title: 风记星辰
-    url: https://www.thyuu.com
-    avatar: https://cravatar.cn/avatar/8546cf1694037de5905abc62aeadf5e9?s=80&r=g
-    description: 我是一名来自盛京的大叔！投入在振兴共和国长子的老工业城市事业中。
-  - title: 莫比乌斯
-    url: https://onojyun.com
-    avatar: https://onojyun.com/wp-content/uploads/2022/05/mobius_icon_black-300x300.jpg
-  - title: 考拉咖啡馆
-    url: https://blog.guhub.cn
-    avatar: https://blog.guhub.cn/favicon.webp
-
 'Hexo插件': 
   - title: abbrlink
     url: https://github.com/rozbo/hexo-abbrlink

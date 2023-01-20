@@ -69,7 +69,7 @@ article:
     '奇技淫巧': "#E2A5AD"
     '日常随笔': "#7B68EE"
   # 文章许可协议
-  license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 转载请注明出处'
+  license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 若你喜欢我的文章欢迎互动，玩的愉快！'
   # 分享
   share: # [wechat, weibo, email, link]
   # 相关文章，需要安装插件 (for layout: post)
@@ -182,6 +182,28 @@ comments:
 
     # comment per page
     pageSize: 5
+
+    # 设置自己的图床服务，替换默认的 Base 64 编码嵌入（有体积大小限制），在评论中上传图片更加方便
+    # imageUploader:
+      # 适配了兰空图床V1、V2版本
+      # 以兰空图床V1为例，下列填写内容为：
+      # fileName: file
+      # tokenName: Authorization
+      # url: https://xxxxxx/api/v1/upload
+      # token: Bearer xxxxxxxxxxxxxx
+      # resp: data.links.url
+      # 以兰空图床V2为例，下列填写内容为：
+      # fileName: image
+      # tokenName: token
+      # url: https://xxxxxx/api/upload
+      # token: xxxxxxxxxxxxxx
+      # resp: data.url
+    #   fileName: # 根据版本二选一
+    #   tokenName: # 根据版本二选一
+    #   api: # 图床 api 地址
+    #   token: # 图床验证
+    #   resp: # 图片地址返回值的字段
+
   # Artalk
   # https://artalk.js.org/
   artalk:
