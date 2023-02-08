@@ -17,7 +17,7 @@
     "hexo-abbrlink": "^2.2.1",
     "hexo-cli": "^4.3.0",
     "hexo-deployer-ali-oss": "^1.0.0",
-    "hexo-deployer-git": "^3.0.0",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-deployer-upyundeploy": "^1.0.1",
     "hexo-filter-mathjax": "^0.9.0",
     "hexo-generator-archive": "^2.0.0",
