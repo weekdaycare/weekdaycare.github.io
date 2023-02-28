@@ -114,7 +114,7 @@ inject:
   script:
     - <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
     - <script defer src="/asset/js/pace.min.js"></script>
-    - <script defer src="/asset/js/lantern.min.js"></script>
+#    - <script defer src="/asset/js/lantern.min.js"></script>
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
