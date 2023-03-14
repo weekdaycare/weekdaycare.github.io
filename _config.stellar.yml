@@ -152,7 +152,7 @@ comments:
     # Custom emoji
     emoji: 
         - https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs
-        - https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets
+    #    - https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets
     #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
     #   - https://unpkg.com/@waline/emojis@1.1.0/alus
     #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
@@ -181,7 +181,7 @@ comments:
     # login: enable
 
     # comment per page
-    pageSize: 5
+    pageSize: 6
 
     # 设置自己的图床服务，替换默认的 Base 64 编码嵌入（有体积大小限制），在评论中上传图片更加方便
     # imageUploader:
