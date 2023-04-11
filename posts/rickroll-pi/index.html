@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>你被骗了，但是树莓派 - 星日语</title>
+
+  
+    <meta name="description" content="前言 又是摸鱼划水的一天，我打开了 Rss 阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。 “罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？” 少年再次动了动手指，准备退出阅读器。却又忘记了 iOS 反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你被骗了，但是树莓派">
+<meta property="og:url" content="http://weekdaycare.cn/posts/rickroll-pi/">
+<meta property="og:site_name" content="星日语">
+<meta property="og:description" content="前言 又是摸鱼划水的一天，我打开了 Rss 阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。 “罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？” 少年再次动了动手指，准备退出阅读器。却又忘记了 iOS 反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/29/63ad5cad90aa2.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/29/63ad5ce542262.webp">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/29/63ad6bdea28f4.webp">
+<meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcat0_0.png">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/30/63aed3b4e53f8.webp">
+<meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/30/63aedd03099fc.webp">
+<meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatsipsweat.png">
+<meta property="og:image" content="https://bu.dusays.com/2022/12/30/63aed7c2022ca.webp">
+<meta property="article:published_time" content="2022-12-30T12:40:11.000Z">
+<meta property="article:modified_time" content="2022-12-30T13:00:00.000Z">
+<meta property="article:author" content="涛声依旧">
+<meta property="article:tag" content="整活">
+<meta property="article:tag" content="树莓派">
+<meta property="article:tag" content="RickRoll">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bu.dusays.com/2022/12/29/63ad5cad90aa2.webp">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/asset/favicon.svg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    
+      <link rel="stylesheet" href="/asset/css/pace.css">
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">星语日点灯</div><div class="sub hover cap" style="opacity:0">等风来，不如追风去</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">智库</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/friends/">友人</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="搜点啥？"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">你被骗了，但是树莓派</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E4%BC%99%E8%AE%A1"><span class="toc-text">老伙计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%B4%BB"><span class="toc-text">整活</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rickroll-fm"><span class="toc-text">rickroll-fm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker"><span class="toc-text">Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kale5rickroll"><span class="toc-text">kale5&#x2F;rickroll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A9%E6%88%91%E5%BA%B7%E5%BA%B7"><span class="toc-text">让我康康</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-text">后记</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper markdown"><div class="widget-header cap theme dis-select"><span class="name">Rick Roll</span></div><div class="widget-body fs14"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="260" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1844917640&amp;auto=0&amp;height=66">
+</iframe>
+</div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/comments.svg"/></a><a class="social" href="https://alist.weekdaycare.cn" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/cloud.svg"/></a><a class="social" href="https://uptool.cf/status/0" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/status.svg"/></a><a class="social" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/asset/rss.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-30T12:40:11.000Z">2022-12-30</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>你被骗了，但是树莓派</span></h1>
+<h2 id="前言">前言</h2>
+<p>又是摸鱼划水的一天，我打开了 Rss
+阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。</p>
+<p>“罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？”</p>
+<p>少年再次动了动手指，准备退出阅读器。却又忘记了 iOS
+反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌上赫然写着
+<strong>Starred</strong>，少年略微抬了抬头，眼神中闪过些许兴趣，毕竟他早就忘记了上一次
+Star 的文章是什么了。</p>
+<p>“一切都是命运石之门的选择！”</p>
+<p>少年推门而入，那神秘的大门霎然打开。说时迟那时快，一篇文章纠准了时机跳出来，紧紧抓住了少年的目光。</p>
+<p>“好！既然你诚心诚意地跳出来了，那我就勉为其难地点进去吧！”</p>
+<p>至于为什么少年会被这篇文章吸引住，就不得不提一嘴这篇文章地标题了——<a
+target="_blank" rel="noopener" href="https://sspai.com/post/70302">balena：你的树莓派的强力后援</a>聪明如你相信就不需要我多说了吧。</p>
+<p>说来惭愧，少年的确是有一个树莓派3B，只是少年的购买动机并没有研究学习
+Linux 那么高大上，甚至有一些难以启齿。</p>
+<p>少年当初是在高一的时候在学校门口的淘宝店里瞒着家长购入的这块板子，在这个特殊的时期，瞒着家长相信大家都懂了吧。对，我当初买这块板子是为了玩。“动机不纯”对吧哈哈。只是愧于囊中羞涩+看走眼了，本来是打算买3B+的，不知为何到手就成了3B。“行吧，也不是不能用。”少年默念道，当时还被同学嘲笑了一番……</p>
+<p>说是玩，其实也只是刷了个
+debain，然后在夜里偷偷打开浏览器看看新番罢了。尽管它能干的事情非常有限，但是在少年枯燥乏味的高中生活中无疑添加了一抹亮色。</p>
+<p>为什么不买二手手机而是开发板啊？少年如今想到了这个问题，我只能说<del>不觉得这很酷么……</del>他真的很酷。哪个少年没有年少的时期呢？</p>
+<p>于是，在少年没有任何电子设备的时期，这块板子陪着少年度过了三个春秋，然后结束了它的使命，开始<del>吃灰</del>养老了。</p>
+<p>所以，当少年瞅到这篇文章的时候，心中甚是激动啊。终于能让老伙计见见太阳了。</p>
+<h2 id="老伙计">老伙计</h2>
+<p>当然得先介绍一下少年的老伙计啦。</p>
+<div class="tag-plugin gallery swiper" id="swiper-api" width="max"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5cad90aa2.webp" / onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5ce542262.webp" / onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h2 id="整活">整活</h2>
+<p>整什么活好呢？少年看着 <a target="_blank" rel="noopener" href="https://hub.balena.io/">balena
+Hub</a>
+中眼花缭乱的项目陷入了沉思。滚轮一次次的下滑，突然一个项目映入眼帘，少年眼中闪起了光！就决定是它了！</p>
+<h3 id="rickroll-fm">rickroll-fm</h3>
+<p>少年看着简介，觉得很有意思。顾名思义，这个项目是能把树莓派变成一个小小的电台发射基站然后
+7x24 小时播放 <a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GJ411x7h7/">Never Gonna Give you
+up</a> 。少年随即动手下载镜像文件。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/12/29/63ad6bdea28f4.webp" alt="balena项目" fancybox="true" style="width:600px;"/></div><div class="image-meta"><span class="image-caption center">balena项目</span></div></div>
+<div class="tag-plugin quot"><p class="content" type="text">A few hours later...</p></div>
+<p>烧录到 SD 卡插入 pi ，通电开机！几分钟后，屏幕上出现了 balena 的 logo
+。</p>
+<p>少年直呼轻松暗自窃喜，而正当少年掏出手机打算测试一下收音效果的时候，他发现手机上没有任何能够收音的东西……<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcat0_0.png"/></span></p>
+<p>“屮！”
+少年傻眼了，成功就在眼前却没有设备能够接受成功的喜悦。少年并没有就此放弃，他翻箱倒柜，把家中所有的电子设备甚至他的电子词典都翻了出来。然而，现实又总是这么的残酷。</p>
+<p>“好吧，这也是命运石之门的选择吗？” 少年瘫坐在床上，叹了口气。</p>
+<p>看来 fm 这条路是行不通了。</p>
+<h3 id="docker">Docker</h3>
+<p>很可惜的是，少年并没有在 balena Hub
+找到能够让他眼前一亮的项目了<psw>项目实在是太少了</psw>。但是他转念一想，既然 balena
+不行的话，干脆直接上 Docker 吧！</p>
+<p>说干就干，幸运的是，在少年查阅资料的时候，找到了一个开源的树莓派系统包——<a
+target="_blank" rel="noopener" href="https://github.com/openfans-community-offical/Debian-Pi-Aarch64">Debian-Pi-Aarch64</a>。这个包中已经配置好了
+Docker 。Lucky！</p>
+<p>又是一次烧录，少年选择的是无桌面环境的 plus++
+版本。直接插卡开机，啪！的一下很快啊，屏幕就亮了，芜湖起飞！</p>
+<p>这个系统十分方便，即使树莓派没有接屏幕，和他在同一局域网下的电脑也是可以直接直接通过浏览器监控操作的。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/12/30/63aed3b4e53f8.webp" fancybox="true" style="width:700px;"/></div></div>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspbian:~$ docker -v</span><br><span class="line">Docker version 20.10.7, build f0df350</span><br></pre></td></tr></table></figure>
+<h3 id="kale5rickroll">kale5/rickroll</h3>
+<p>有了 Docker
+，事情就简单许多了。对于小白中的无人机的少年来说，简单地用一下还是不成问题地。</p>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://hub.docker.com/[object Object]rickroll" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://hub.docker.com/[object Object]rickroll</span><span class="cap link fs12">https://hub.docker.com/[object Object]rickroll</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<p>只是少年似乎对 RickRoll 有什么执念，他很快就找到了图一乐的项目。</p>
+<p>新建 <code>docker-compose.yml</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> docker-compose.yml</span><br></pre></td></tr></table></figure>
+<p>然后 vim 编辑（吐槽一下它的 Tab
+键怎么是八个空格，导致我复制过去格式乱了，还是自己手打的）</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rickroll:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">rickroll</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;kale5/rickroll:arm64&#x27;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8080:80&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>然后退出来运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+<p>等进度条ing……</p>
+<figure class="highlight bash"><figcaption><span>启动8080端口</span></figcaption><table><tr><td class="code"><pre><span class="line">docker run -dit -p 8080:80 --name rickroll --restart unless-stopped kale5/rickroll:arm64</span><br></pre></td></tr></table></figure>
+<p>over之后看看状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspbian:~$ docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS       PORTS                                   NAMES</span><br><span class="line">246f7e07bc53   kale5/rickroll:arm64   <span class="string">&quot;/docker-entrypoint.…&quot;</span>   3 hours ago   Up 3 hours   0.0.0.0:8080-&gt;80/tcp, :::8080-&gt;80/tcp   rickroll</span><br></pre></td></tr></table></figure>
+<h3 id="让我康康">让我康康</h3>
+<p><code>ipconfig</code> 看一看 ip 地址</p>
+<p>少年打开了浏览器，输入了 <code>192.168.1.10:8080</code>
+，满怀着期待按下了 <kbd>Enter</kbd></p>
+<p>然后，见证奇迹的时刻！<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png"/></span></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/12/30/63aedd03099fc.webp" fancybox="true" style="width:700px;"/></div></div>
+<p>当然，少年只是在整活图一乐，要真想实用的话部署个 <a
+target="_blank" rel="noopener" href="https://nextcloud.com/">Nextcloud</a>
+做家庭云盘，挂个青龙自动签到脚本也是可以的，毕竟有了 docker
+可以整的东西就比较多了。</p>
+<h2 id="后记">后记</h2>
+<p>少年摸了摸钱包，“嗯，放弃内网穿透吧。”<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatsipsweat.png"/></span></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/12/30/63aed7c2022ca.webp" fancybox="true" style="width:200px;"/></div></div>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/hometown/">回老家</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/mail-massacre/">改个邮箱引发的惨案</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
+由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
+<br><span id="span"></span>
+<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);span.innerHTML = "勉强运行"+A+"天"+B+"小时"+C+"分"}setInterval(runtime, 1000);</script>
+<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://jsd.onmicrosoft.cn/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":false,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://jsd.onmicrosoft.cn/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://npm.onmicrosoft.cn/swiper@8.4.5/swiper-bundle.min.css","js":"https://npm.onmicrosoft.cn/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":false,"js":"https://jsd.onmicrosoft.cn/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"4px","duration":400,"interval":100,"scale":0.9});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://jsd.onmicrosoft.cn/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://jsd.onmicrosoft.cn/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":"waline_container .vcontent img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://npm.onmicrosoft.cn/heti@0.9.2/umd/heti.min.css","js":"https://npm.onmicrosoft.cn/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.js","css":"https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css","serverURL":"https://comment.weekdaycare.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"来都来了，不说点啥嘛？（填写邮箱可以在博主回复时收到通知哦）"},"emoji":["https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs"],"lang":"zh-CN","wordLimit":500,"pageSize":6}, {
+        el: '#waline_container',
+        path: path,
+        
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
+  
+    <script defer src="/asset/js/pace.min.js"></script>
+  
+
+
+  </div>
+</body>
+</html>
