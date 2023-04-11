@@ -16,7 +16,7 @@ sidebar:
 
 {% about avatar:https://pic.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg height:60px %}
 
-<center><b>苦难不值得追求，磨练意志是因为苦难无法躲开</b></br>一个平平无奇的带学生，Kono白嫖怪哒！</center>
+<center><b>苦难不值得追求，磨练意志是因为苦难无法躲开</b></br>事一个破学生，没事喜欢瞎捣鼓，Kono白嫖怪哒！</center>
 
 <div align="center"><img src="https://raw.weekdaycare.cn/raw/weekdaycare/main/assets/github-contribution-grid-snake.svg"/></div>
 
@@ -29,7 +29,7 @@ sidebar:
 {% folding 目前建站总花费 %}
 |类别|￥|
 |:-:|:-:|
-|.cn域名（三年）|99|
+|域名（三年）|99|
 |去不图床（两年）|20|
 {% endfolding %}
 
