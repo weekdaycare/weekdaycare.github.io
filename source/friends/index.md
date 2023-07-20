@@ -10,7 +10,7 @@ sidebar: [朋友圈]
 
 形形的人，色色达咩
 
-{% friends 五湖四海的友人 %}
+{% friends api:https://raw.weekdaycare.cn/raw/friends/output/v2/data.json %}
 
 ## 申请友链
 

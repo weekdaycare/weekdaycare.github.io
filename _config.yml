@@ -112,9 +112,8 @@ inject:
     - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
     - <link rel="stylesheet" href="/asset/css/pace.css">
   script:
-    - <script async defer data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664" src="https://www.heihei.gq/ummasts.js"></script>
     - <script defer src="/asset/js/pace.min.js"></script>
-#    - <script defer src="/asset/js/lantern.min.js"></script>
+    - <script async src="https://www.heihei.gq/ummasts" data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664"></script>
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -134,6 +133,21 @@ mathjax:
     # you can put your extension options here
     # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
 
+# rss
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 6
+  hub:
+  content: true
+  content_limit: 
+  content_limit_delim: ' '
+  order_by: -date
+  icon: /asset/avatar.svg
+  autodiscovery: true
+  template:
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
@@ -141,12 +155,12 @@ deploy:
     message: 🎉Update my site
     repository: git@github.com:weekdaycare/weekdaycare.github.io.git
     branch: main
-  - type: ali-oss
-    region: oss-cn-chengdu
-    accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
-    accessKeySecret: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7
-    bucket: weeblog
   - type: upyun
     serviceName: weekdaycare-blog
     operatorName: hexo
     operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK
+  - type: aliyun
+    region: oss-cn-chengdu
+    accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
+    accessKeySecret: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7
+    bucket: weeblog

@@ -19,11 +19,9 @@ sidebar:
     avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
-    post: '[btn.blog](/)'
-    wiki: '[智库](/wiki/)'
-    notes: '[便笺](/notes/)'
-    friends: '[友人](/friends/)'
-    # about: '[更多](/about/)'
+    post: '[文章📝](/)'
+    friends: '[友人🔗](/friends/)'
+    about: '[更多🎈](/about/)'
   # Sidebar widgets
   widgets:
     #### 自动生成的页面 ####
@@ -32,14 +30,14 @@ sidebar:
     # 博客索引页
     blog_index: search, recent, timeline # for categories/tags/archives
     # 文档索引页
-    wiki_index: search, welcome, recent # for wiki
+    # wiki_index: search, welcome, recent # for wiki
     # 其它（404）
     others: search, recent # for 404 and ...
     #### 手动创建的页面 ####
     # 文章内页
     post: search, toc, ghrepo, ghissues # for pages using 'layout:post'
     # 文档内页
-    wiki: search, ghrepo, toc, ghissues, related # for pages using 'layout:wiki'
+    # wiki: search, ghrepo, toc, ghissues, related # for pages using 'layout:wiki'
     # 其它 layout:page 的页面
     page: welcome, toc, search # for custom pages using 'layout:page'
 
@@ -78,18 +76,24 @@ article:
     enable: false
     max_count: 5
 
+# AI 摘要
+TianliGpt:
+  post: false
+  wiki: false
+  api: RcqNI1MwOG4jG4mXrH4k
+
 # 文章搜索
 search:
   service: local_search # local_search, todo...
   local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
-    field: all # post, page, all
+    field: post # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
     codeblock: false # 是否搜索代码块（需要content: true)
 
 ######## Comments ########
 comments:
-  service: waline # beaudar, utterances, valine, twikoo, waline
+  service: twikoo # beaudar, utterances, valine, twikoo, waline
   # beaudar
   # https://beaudar.lipk.org/
   beaudar:
@@ -131,8 +135,8 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://jsd.onmicrosoft.cn/npm/twikoo@1.4.0/dist/twikoo.all.min.js # 建议锁定版本
-    envId: https://xxx # vercel函数
+    js: https://cdn.staticaly.com/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js # 建议锁定版本
+    envId: https://comment.weekdaycare.cn # vercel函数
   waline:
     js: https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.js
     css: https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css
@@ -228,12 +232,9 @@ footer:
     comments:
       icon: '<img src="/asset/comments.svg"/>'
       url: /about/#comments
-    alist:
-      icon: '<img src="/asset/cloud.svg"/>'
-      url: https://alist.weekdaycare.cn
-    status:
-      icon: '<img src="/asset/status.svg"/>'
-      url: https://uptool.cf/status/0
+#    alist:
+#      icon: '<img src="/asset/cloud.svg"/>'
+#      url: https://alist.weekdaycare.cn
     rss:
       icon: '<img src="/asset/rss.svg"/>'
       url: /atom.xml  
