@@ -65,7 +65,119 @@
       <link rel="stylesheet" href="/asset/css/pace.css">
     
   
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body>
   
@@ -109,8 +221,9 @@
   
 
 <div class="nav-wrap"><nav class="sub post cap"><a class="active" href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a><a href="/shuoshuo/">说说</a></nav></div>
-
-  <div class="post-list post"><a class="post-card post photo " href="/posts/finger-scarf/">
+  <div class="post-list post"><a class="post-card post photo " href="/posts/singular-value/">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/17/63761c1e7f2cb.webp"/></div><h2 class="post-title">用奇异值压缩图像</h2><div class="excerpt"><p>奇异值分解在压缩图像中的应用</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-11-15T16:00:00.000Z">2022-11-16</time></span><span class="cap breadcrumb" style="color:#F14E32">学习感悟</span></div></article>
+</a><a class="post-card post photo " href="/posts/finger-scarf/">
 <div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/17/63761989180fd.webp"/><div class="cover-info"style="color:black"position="bottom"><div class="title">围巾？瑞士卷？</div></div></div>
 </a><a class="post-card post " href="/posts/ten-years/">
 <article class="md-text"><h2 class="post-title">十年之约</h2><div class="excerpt"><p>一个人的寂寞，一群人的狂欢</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-11-07T08:05:18.000Z">2022-11-07</time></span><span class="cap breadcrumb" style="color:#854836">杂七杂八</span></div></article>
@@ -133,10 +246,6 @@
 <article class="md-text"><h2 class="post-title">引体向上：从0到1</h2><div class="excerpt"><p>引体向上，一个让人挥之不去的噩梦，困扰了我初高中直到大学。以至每次体测之时，引体向上那一栏总是会给上大大的鸭蛋😿在5个开始给分20个满分的情况下，我决定开始整活了ጿ ኈ ቼ ዽ ጿ（非正规动作教学:D）</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-10-18T15:31:17.000Z">2022-10-18</time></span><span class="cap breadcrumb" style="color:#854836">杂七杂八</span></div></article>
 </a><a class="post-card post photo " href="/posts/big-orange/">
 <div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/17/63761f8627647.webp"/><div class="cover-info"position="bottom"><div class="title">大橘为重</div><div class="cap">快让我rua！</div></div></div>
-</a><a class="post-card post " href="/posts/ispeak-depoly/">
-<article class="md-text"><h2 class="post-title">说说</h2><div class="excerpt"><p>对于我来说，平时也会记录一点点琐碎的事情，一般不会长，都是一两句话或者吐槽，而为此专门发一篇博文又未免太过于麻烦（指每次都要hexo g
-hexo d而且只能在电脑上完成），我想要一个类似于朋友圈 or
-QQ空间的地方可以放一些我的吐槽&amp;一些不正经的东西😎。</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-10-11T15:54:42.000Z">2022-10-11</time></span><span class="cap breadcrumb" style="color:#E2A5AD">奇技淫巧</span></div></article>
 </a></div>
   
   <div class='paginator-wrap dis-select'>

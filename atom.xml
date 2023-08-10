@@ -6,7 +6,7 @@
   <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="http://weekdaycare.cn/"/>
-  <updated>2023-07-18T22:40:11.178Z</updated>
+  <updated>2023-08-10T10:09:59.170Z</updated>
   <id>http://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>🪣提桶跑路🏃</title>
+    <link href="http://weekdaycare.cn/posts/work-run/"/>
+    <id>http://weekdaycare.cn/posts/work-run/</id>
+    <published>2023-08-10T03:22:33.000Z</published>
+    <updated>2023-08-10T10:09:59.170Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="海边">海边</h2>]]></content>
+    
+    
+    <summary type="html">我不做社畜啦，JOJO！</summary>
+    
+    
+    
+    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="夏天" scheme="http://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
+    
+    <category term="工作" scheme="http://weekdaycare.cn/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>进厂打工</title>
@@ -68,9 +95,9 @@
     
     <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
-    
     <category term="女朋友" scheme="http://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
+    
+    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
   </entry>
   
@@ -93,9 +120,9 @@
     
     <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
-    
     <category term="女朋友" scheme="http://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
+    
+    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
   </entry>
   
@@ -118,9 +145,9 @@
     
     <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
-    
     <category term="女朋友" scheme="http://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
+    
+    <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
   </entry>
   
@@ -144,39 +171,6 @@
     <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
     <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你被骗了，但是树莓派</title>
-    <link href="http://weekdaycare.cn/posts/rickroll-pi/"/>
-    <id>http://weekdaycare.cn/posts/rickroll-pi/</id>
-    <published>2022-12-30T12:40:11.000Z</published>
-    <updated>2022-12-30T13:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言">前言</h2><p>又是摸鱼划水的一天，我打开了 Rss阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。</p><p>“罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？”</p><p>少年再次动了动手指，准备退出阅读器。却又忘记了 iOS反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌上赫然写着<strong>Starred</strong>，少年略微抬了抬头，眼神中闪过些许兴趣，毕竟他早就忘记了上一次Star 的文章是什么了。</p><p>“一切都是命运石之门的选择！”</p><p>少年推门而入，那神秘的大门霎然打开。说时迟那时快，一篇文章纠准了时机跳出来，紧紧抓住了少年的目光。</p><p>“好！既然你诚心诚意地跳出来了，那我就勉为其难地点进去吧！”</p><p>至于为什么少年会被这篇文章吸引住，就不得不提一嘴这篇文章地标题了——<ahref="https://sspai.com/post/70302">balena：你的树莓派的强力后援</a>聪明如你相信就不需要我多说了吧。</p><p>说来惭愧，少年的确是有一个树莓派3B，只是少年的购买动机并没有研究学习Linux 那么高大上，甚至有一些难以启齿。</p><p>少年当初是在高一的时候在学校门口的淘宝店里瞒着家长购入的这块板子，在这个特殊的时期，瞒着家长相信大家都懂了吧。对，我当初买这块板子是为了玩。“动机不纯”对吧哈哈。只是愧于囊中羞涩+看走眼了，本来是打算买3B+的，不知为何到手就成了3B。“行吧，也不是不能用。”少年默念道，当时还被同学嘲笑了一番……</p><p>说是玩，其实也只是刷了个debain，然后在夜里偷偷打开浏览器看看新番罢了。尽管它能干的事情非常有限，但是在少年枯燥乏味的高中生活中无疑添加了一抹亮色。</p><p>为什么不买二手手机而是开发板啊？少年如今想到了这个问题，我只能说<del>不觉得这很酷么……</del>他真的很酷。哪个少年没有年少的时期呢？</p><p>于是，在少年没有任何电子设备的时期，这块板子陪着少年度过了三个春秋，然后结束了它的使命，开始<del>吃灰</del>养老了。</p><p>所以，当少年瞅到这篇文章的时候，心中甚是激动啊。终于能让老伙计见见太阳了。</p><h2 id="老伙计">老伙计</h2><p>当然得先介绍一下少年的老伙计啦。</p><div class="tag-plugin gallery swiper" id="swiper-api" width="max"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5cad90aa2.webp" fancybox="true"/></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5ce542262.webp" fancybox="true"/></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5cbf06e96.webp" fancybox="true"/></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5cc9c339b.webp" fancybox="true"/></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad5cdcb0f4c.webp" fancybox="true"/></div><div class="swiper-slide"><img no-lazy src="https://bu.dusays.com/2022/12/29/63ad746812878.webp" fancybox="true"/></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div><h2 id="整活">整活</h2><p>整什么活好呢？少年看着 <a href="https://hub.balena.io/">balenaHub</a>中眼花缭乱的项目陷入了沉思。滚轮一次次的下滑，突然一个项目映入眼帘，少年眼中闪起了光！就决定是它了！</p><h3 id="rickroll-fm">rickroll-fm</h3><p>少年看着简介，觉得很有意思。顾名思义，这个项目是能把树莓派变成一个小小的电台发射基站然后7x24 小时播放 <ahref="https://www.bilibili.com/video/BV1GJ411x7h7/">Never Gonna Give youup</a> 。少年随即动手下载镜像文件。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2022/12/29/63ad6bdea28f4.webp" alt="balena项目" fancybox="true" style="width:600px;"/></div><div class="image-meta"><span class="image-caption center">balena项目</span></div></div><div class="tag-plugin quot"><p class="content" type="text">A few hours later...</p></div><p>烧录到 SD 卡插入 pi ，通电开机！几分钟后，屏幕上出现了 balena 的 logo。</p><p>少年直呼轻松暗自窃喜，而正当少年掏出手机打算测试一下收音效果的时候，他发现手机上没有任何能够收音的东西……<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcat0_0.png"/></span></p><p>“屮！”少年傻眼了，成功就在眼前却没有设备能够接受成功的喜悦。少年并没有就此放弃，他翻箱倒柜，把家中所有的电子设备甚至他的电子词典都翻了出来。然而，现实又总是这么的残酷。</p><p>“好吧，这也是命运石之门的选择吗？” 少年瘫坐在床上，叹了口气。</p><p>看来 fm 这条路是行不通了。</p><h3 id="docker">Docker</h3><p>很可惜的是，少年并没有在 balena Hub找到能够让他眼前一亮的项目了<psw>项目实在是太少了</psw>。但是他转念一想，既然 balena不行的话，干脆直接上 Docker 吧！</p><p>说干就干，幸运的是，在少年查阅资料的时候，找到了一个开源的树莓派系统包——<ahref="https://github.com/openfans-community-offical/Debian-Pi-Aarch64">Debian-Pi-Aarch64</a>。这个包中已经配置好了Docker 。Lucky！</p><p>又是一次烧录，少年选择的是无桌面环境的 plus++版本。直接插卡开机，啪！的一下很快啊，屏幕就亮了，芜湖起飞！</p><p>这个系统十分方便，即使树莓派没有接屏幕，和他在同一局域网下的电脑也是可以直接直接通过浏览器监控操作的。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2022/12/30/63aed3b4e53f8.webp" fancybox="true" style="width:700px;"/></div></div><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspbian:~$ docker -v</span><br><span class="line">Docker version 20.10.7, build f0df350</span><br></pre></td></tr></table></figure><h3 id="kale5rickroll">kale5/rickroll</h3><p>有了 Docker，事情就简单许多了。对于小白中的无人机的少年来说，简单地用一下还是不成问题地。</p><div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://hub.docker.com/[object Object]rickroll" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://hub.docker.com/[object Object]rickroll</span><span class="cap link fs12">https://hub.docker.com/[object Object]rickroll</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div><p>只是少年似乎对 RickRoll 有什么执念，他很快就找到了图一乐的项目。</p><p>新建 <code>docker-compose.yml</code> 文件</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> docker-compose.yml</span><br></pre></td></tr></table></figure><p>然后 vim 编辑（吐槽一下它的 Tab键怎么是八个空格，导致我复制过去格式乱了，还是自己手打的）</p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rickroll:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">rickroll</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;kale5/rickroll:arm64&#x27;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8080:80&#x27;</span></span><br></pre></td></tr></table></figure><p>然后退出来运行</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure><p>等进度条ing……</p><figure class="highlight bash"><figcaption><span>启动8080端口</span></figcaption><table><tr><td class="code"><pre><span class="line">docker run -dit -p 8080:80 --name rickroll --restart unless-stopped kale5/rickroll:arm64</span><br></pre></td></tr></table></figure><p>over之后看看状态</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspbian:~$ docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS       PORTS                                   NAMES</span><br><span class="line">246f7e07bc53   kale5/rickroll:arm64   <span class="string">&quot;/docker-entrypoint.…&quot;</span>   3 hours ago   Up 3 hours   0.0.0.0:8080-&gt;80/tcp, :::8080-&gt;80/tcp   rickroll</span><br></pre></td></tr></table></figure><h3 id="让我康康">让我康康</h3><p><code>ipconfig</code> 看一看 ip 地址</p><p>少年打开了浏览器，输入了 <code>192.168.1.10:8080</code>，满怀着期待按下了 <kbd>Enter</kbd></p><p>然后，见证奇迹的时刻！<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png"/></span></p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2022/12/30/63aedd03099fc.webp" fancybox="true" style="width:700px;"/></div></div><p>当然，少年只是在整活图一乐，要真想实用的话部署个 <ahref="https://nextcloud.com/">Nextcloud</a>做家庭云盘，挂个青龙自动签到脚本也是可以的，毕竟有了 docker可以整的东西就比较多了。</p><h2 id="后记">后记</h2><p>少年摸了摸钱包，“嗯，放弃内网穿透吧。”<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatsipsweat.png"/></span></p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2022/12/30/63aed7c2022ca.webp" fancybox="true" style="width:200px;"/></div></div>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="奇技淫巧" scheme="http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
-    
-    
-    <category term="整活" scheme="http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/"/>
-    
-    <category term="树莓派" scheme="http://weekdaycare.cn/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-    <category term="RickRoll" scheme="http://weekdaycare.cn/tags/RickRoll/"/>
-    
-    <category term="Linux" scheme="http://weekdaycare.cn/tags/Linux/"/>
     
   </entry>
   
