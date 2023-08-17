@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.18.5'
+  version: '1.19.0'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -75,12 +75,6 @@ article:
   related_posts:
     enable: false
     max_count: 5
-
-# AI 摘要
-TianliGpt:
-  post: false
-  wiki: false
-  api: RcqNI1MwOG4jG4mXrH4k
 
 # 文章搜索
 search:
@@ -288,8 +282,7 @@ tag_plugins:
   # {% image %}
   image:
     fancybox: true # true, false
-    replace_original:  #把markdown格式的图片解析成图片标签
-      enable: false
+    parse_markdown: true # 把 markdown 格式的图片解析成图片标签
   # {% timeline %}
   timeline:
     max-height: 80vh
@@ -397,9 +390,23 @@ plugins:
     # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
     js: https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js
     # Available themes: default | dark | forest | neutral
-    # 推荐使用 dark 主题 在夜间模式下显示效果更好
-    theme: dark
+    theme: neutral
     
+  # AI 摘要
+  # https://github.com/zhheo/Post-Abstract-AI
+  tianli_gpt:
+    enable: false
+    field: post # all, post, wiki
+    api: RcqNI1MwOG4jG4mXrH4k
+    typingAnimate: true # 打字机动画 
+
+  # 代码块复制按钮
+  copycode:
+    enable: true
+    js: /js/plugins/copycode.js
+    default_text: 'Copy'
+    success_text: '复制成功'
+
 style:
   darkmode: auto # auto / always / false
   smooth_scroll: true # true / false
@@ -431,6 +438,8 @@ style:
     block: 'hsl(212 8% 95%)' # 块背景颜色
     code: 'hsl(14 100% 48%)' # 行内代码颜色
     text: 'hsl(0 0% 20%)' # 文本颜色
+  link:
+    underline: true # true / false
   animated_avatar:
     animate: # auto, always
     background: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp

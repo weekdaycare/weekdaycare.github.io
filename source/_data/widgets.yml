@@ -74,4 +74,4 @@ timeline:
   title: 朋友圈
   api: https://raw.weekdaycare.cn/raw/hexo-friends-rss/main/data.json # 你的朋友圈数据文件地址
   type: fcircle
-  limit: 30 # 可通过这个限制数量
+  limit: 40 # 可通过这个限制数量
