@@ -129,7 +129,7 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://cdn.jsdelivr.net/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js # 建议锁定版本
+    js:  https://unpkg.com/twikoo@latest # 建议锁定版本
     envId: https://comment.weekdaycare.cn # vercel函数
   waline:
     js: https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.js
