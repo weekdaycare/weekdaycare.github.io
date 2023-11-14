@@ -14,6 +14,8 @@ sidebar: [朋友圈]
 
 ## 申请友链
 
+网站支持 `issue` [动态友链](https://github.com/weekdaycare/friends/issues)，直接填写 issue 即可申请友链。
+
 先友后链，使用自助友链的本意是便于管理与通知，方便自己同时方便他人。但是带来的问题即是申请友链的成本降低，导致友链的数量变得庞大，而此时友链的性质就发生了改变，不是“友”而成“链”了。我认为 `friend` 远比 `link` 来的重要，况且即使我们没有互加友链，只要你与我有过互动，我也会时不时访问你的站点的🥰
 
 {% checkbox checked:true color:green 大陆内能够正常访问 %}
@@ -22,7 +24,7 @@ sidebar: [朋友圈]
 {% checkbox checked:true color:green 至少与我有过三次次互动，来回往返站点算一次 %}
 {% checkbox symbol:times color:red checked:true 不接受纯搬运站 %}
 
-我会不定时访问您的站点，若您的站点出现404等情况，我会暂时下架您的网站链接，当您的站点恢复时留言即可
+我会不定时访问您的站点，若您的站点出现 404 等情况，我会暂时下架您的网站链接，当您的站点恢复时留言即可
 
 {% codeblock lang:yaml %}
 title: 星日语
