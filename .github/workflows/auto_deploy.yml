@@ -10,7 +10,7 @@ on:
 env:
   GIT_USER: weekdaycare
   GIT_EMAIL: weekdaycare@qq.com
-  THEME_REPO: xaoxuu/hexo-theme-stellar
+  THEME_REPO: weekdaycare/hexo-theme-stellar
   THEME_BRANCH: main
   DEPLOY_REPO: weekdaycare/weekdaycare.github.io
   DEPLOY_BRANCH: main
