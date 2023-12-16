@@ -226,6 +226,9 @@ footer:
     comments:
       icon: '<img src="/asset/comments.svg"/>'
       url: /about/#comments
+    home:
+      icon: '<img src="/asset/home.svg"/>'
+      url: /
 #    alist:
 #      icon: '<img src="/asset/cloud.svg"/>'
 #      url: https://alist.weekdaycare.cn
