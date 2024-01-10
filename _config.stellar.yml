@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.20.0'
+  version: '1.23.0'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   cdn_css: # Use cdn links instead of /css/main.css
@@ -285,7 +285,6 @@ tag_plugins:
   # {% image %}
   image:
     fancybox: true # true, false
-    parse_markdown: true # 把 markdown 格式的图片解析成图片标签
   # {% timeline %}
   timeline:
     max-height: 80vh
@@ -414,7 +413,7 @@ style:
   darkmode: auto # auto / always / false
   smooth_scroll: true # true / false
   font-size:
-    root: 17px
+    root: 16px
     body: .9375rem # 15px
     code: 85% # 14px
     codeblock: 0.8125rem # 13px
@@ -466,3 +465,11 @@ api_host:
   ghapi: https://raw.weekdaycare.cn/api
   ghraw: https://jsd.onmicrosoft.cn
   gist: https://raw.weekdaycare.cn/gist
+  
+inject:
+  head:
+    - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    - <link rel="stylesheet" href="/asset/css/pace.css">
+  script:
+    - <script defer src="/asset/js/pace.min.js"></script>
+    - <script async src="https://uptool.cf/ummasts" data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664"></script>

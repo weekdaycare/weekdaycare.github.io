@@ -107,14 +107,6 @@ include:
 exclude:
 ignore:
 
-inject:
-  head:
-    - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - <link rel="stylesheet" href="/asset/css/pace.css">
-  script:
-    - <script defer src="/asset/js/pace.min.js"></script>
-    - <script async src="https://uptool.cf/ummasts" data-website-id="70d68fdc-0ae9-47c9-a958-50fd9ae89664"></script>
-
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
