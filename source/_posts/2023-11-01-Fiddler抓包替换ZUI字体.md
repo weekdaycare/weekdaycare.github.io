@@ -81,22 +81,22 @@ TXJLSS.zf
 由于蓝奏云不支持我直接上传zf格式文件，所以各位下载完记得把后缀`.zip`删掉
 
 {% grid %}
-<!-- cell left -->
+<!-- cell -->
 {% image https://bu.dusays.com/2023/11/14/6553592a5f6ad.webp %}
-<!-- cell right -->
+<!-- cell -->
 {% link https://wwlv.lanzout.com/i16uC1eueeaj MiSans %}
 {% endgrid %}
 
 {% grid %}
-<!-- cell left -->
+<!-- cell -->
 {% image https://bu.dusays.com/2023/11/14/65535a7b65860.webp %}
-<!-- cell right -->
+<!-- cell -->
 {% link https://wwlv.lanzout.com/iPX021euf29c 假手书未来臻版 %}
 {% endgrid %}
 
 {% grid %}
-<!-- cell left -->
+<!-- cell -->
 {% image https://bu.dusays.com/2023/11/14/65535a95bffe1.webp %}
-<!-- cell right -->
+<!-- cell -->
 {% link https://wwlv.lanzout.com/i4uiD1eufswb 霞鹜文楷 %}
 {% endgrid %}
