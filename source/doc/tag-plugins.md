@@ -64,12 +64,12 @@ autoplay: 1/0 # 自动播放/手动播放 # 不设置默认0手动播放
 ### 用于独立页面顶部
 
 {% banner 随记 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg %}
-{% navbar active:/notes/ [随记](/notes/) [收藏](/bookmark/) %}
+{% navbar active:/doc/ [随记](/doc/) [关于](/about/) %}
 {% endbanner %}
 
 ```md 写法如下：
 {% banner 随记 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg %}
-{% navbar active:/notes/ [随记](/notes/) [收藏](/bookmark/) %}
+{% navbar active:/doc/ [随记](/doc/) [关于](/about/) %}
 {% endbanner %}
 ```
 
@@ -118,6 +118,33 @@ noteblock -> grid -> border -> ablock -> box
 详情见：[#172](https://github.com/volantis-x/hexo-theme-volantis/issues/712)
 {% endbox %}
 ```
+
+## checkbox 复选
+
+{% tabs %}
+
+<!-- tab 示例 -->
+{% checkbox 普通的没有勾选的复选框 %}
+{% checkbox checked:true 普通的已勾选的复选框 %}
+{% checkbox symbol:plus color:green checked:true 显示为加号的绿色的已勾选的复选框 %}
+{% checkbox symbol:minus color:yellow checked:true 显示为减号的黄色的已勾选的复选框 %}
+{% checkbox symbol:times color:red checked:true 显示为乘号的红色的已勾选的复选框 %}
+<!-- tab 写法 -->
+```md
+{% checkbox 普通的没有勾选的复选框 %}
+{% checkbox checked:true 普通的已勾选的复选框 %}
+{% checkbox symbol:plus color:green checked:true 显示为加号的绿色的已勾选的复选框 %}
+{% checkbox symbol:minus color:yellow checked:true 显示为减号的黄色的已勾选的复选框 %}
+{% checkbox symbol:times color:red checked:true 显示为乘号的红色的已勾选的复选框 %}
+```
+
+```yaml 支持的参数
+checked: true/false
+color: red/orange/yellow/green/cyan/blue/purple
+symbol: plus/minus/times
+```
+
+{% endtabs %}
 
 ## copy 复制行
 

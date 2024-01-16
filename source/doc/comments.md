@@ -74,6 +74,8 @@ comments:
     crossorigin: anonymous
 ```
 
+{% link https://giscus.app/zh-CN %}
+
 ## Twikoo
 
 ```yaml blog/_config.stellar.yml
