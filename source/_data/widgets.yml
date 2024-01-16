@@ -33,7 +33,7 @@ toc:
   min_depth: 2
   max_depth: 5
   fallback: recent # Use a backup widget when toc does not exist.
-  collapse: auto # true / false / auto (始终折叠/不折叠/自动折叠)
+  collapse: false # true / false / auto (始终折叠/不折叠/自动折叠)
 # github user info
 ghuser:
   layout: ghuser

@@ -14,32 +14,55 @@ open_graph:
 
 
 ######## Sidebar ########
-sidebar:
-  logo:
-    avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
-    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
-  menu:
-    post: '[文章](/)'
-    friends: '[友人](/friends/)'
-    about: '[更多](/about/)'
-  # Sidebar widgets
-  widgets:
-    #### 自动生成的页面 ####
+logo:
+  avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  subtitle: '星语日点灯|等风来，不如追风去' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
+menu:
+  post: '[文章](/)'
+  doc: '[文档](/doc/)'
+  friends: '[友人](/friends/)'
+  about: '[更多](/about/)'
+
+# 目录树
+site_tree:
     # 主页
-    home: welcome, timeline, search # for home
-    # 博客索引页
-    blog_index: search, recent, timeline # for categories/tags/archives
-    # 文档索引页
-    # wiki_index: search, welcome, recent # for wiki
-    # 其它（404）
-    others: search, recent # for 404 and ...
-    #### 手动创建的页面 ####
-    # 文章内页
-    post: search, toc, ghrepo, ghissues # for pages using 'layout:post'
-    # 文档内页
-    # wiki: search, ghrepo, toc, ghissues, related # for pages using 'layout:wiki'
-    # 其它 layout:page 的页面
-    page: welcome, toc, search # for custom pages using 'layout:page'
+  home: 
+    sidebar: welcome, timeline, search # for home
+  blog:
+    base_dir: blog # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: search, recent, timeline # for categories/tags/archives
+    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      # '朋友文章': /friends/rss/
+  # 博客文章配置
+  post:
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: search, toc, ghrepo, ghissues # for pages using 'layout:post'
+  # 博客专栏配置
+  topic:
+    base_dir: topic # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+    sidebar: search, toc, related # for topic
+  # wiki配置
+  wiki:
+    base_dir: wiki # 只影响自动生成的页面路径
+    menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
+    sidebar: search_docs, toc, ghissues, related # for wiki
+  # 作者信息配置
+  author: 
+    base_dir: author # 只影响自动生成的页面路径
+    menu_id: post
+    sidebar: search, recent, timeline
+  # 错误页配置
+  error_page:
+    menu_id: post
+    '404': '/404.html'
+    sidebar: search, recent
+  # 其它自定义页面配置 layout: page
+  page:
+    sidebar: welcome, toc, search
+
 
 ######## Index ########
 post-index: # 近期发布 分类 标签 归档 and ...
@@ -80,7 +103,7 @@ article:
 search:
   service: local_search # local_search, todo...
   local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
-    field: post # post, page, all
+    field: all # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
     codeblock: false # 是否搜索代码块（需要content: true)
@@ -114,9 +137,10 @@ comments:
   giscus:
     data-repo: weekdaycare/weekdaycare.github.io # [在此输入仓库]
     data-repo-id: R_kgDOGZiRHw # [在此输入仓库 ID]
-    data-category: Announcements # [在此输入分类名]
+    data-category: Stellar # [在此输入分类名]
     data-category-id: DIC_kwDOGZiRH84CTXJN
-    data-mapping: title
+    data-term: 80
+    data-mapping: number
     data-strict: 0
     data-reactions-enabled: 0
     data-emit-metadata: 0
@@ -258,7 +282,7 @@ footer:
     
 ######## Tag Plugins ########
 tag_plugins:
-  # {% ablock %} / {% note %}
+  # {% box %} / {% note %}
   note:
     default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
     border: false # true / false
@@ -285,12 +309,40 @@ tag_plugins:
   # {% image %}
   image:
     fancybox: true # true, false
+  copy:
+    toast: 复制成功( •̀ ω •́ )✧
   # {% timeline %}
   timeline:
     max-height: 80vh
   # {% mark %}
   mark:
     default_color: orange # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+  okr:
+    border: true # 是否显示边框
+    status: # 可以自行增加
+      # 进行中状态
+      in_track:
+        color: blue # red, orange, yellow, green, cyan, blue, purple
+        label: 正常
+      at_risk: 
+        color: yellow
+        label: 风险
+      off_track:
+        color: orange
+        label: 延期
+      # 结果状态
+      finished:
+        color: green
+        label: 已完成
+      unfinished:
+        color: red
+        label: 未完成
+  # {% gallery %}
+  gallery:
+    layout: grid # grid / flow
+    size: mix # s / m / l / xl / mix
+    ratio: square # origin / square
+
 
 
 ######## JS Plugins ########
@@ -308,6 +360,8 @@ plugins:
     linkcard: /js/plugins/linkcard.js
     fcircle: /js/plugins/fcircle.js
     weibo: /js/plugins/weibo.js
+    memos: /js/plugins/memos.js
+    marked: /js/plugins/marked.js
 
   marked: https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js
 
@@ -328,7 +382,7 @@ plugins:
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
-    enable: false
+    enable: 
     js: https://jsd.onmicrosoft.cn/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 4px
     duration: 400 # ms
@@ -345,7 +399,7 @@ plugins:
     # 使用valine评论可以写: .vcontent img:not(.vemoji)
     # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
     # 使用waline评论可以写: #waline_container .vcontent img
-    selector: waline_container .vcontent img # 多个选择器用英文逗号隔开
+    selector: .tk-content img:not([class*="emo"]) # 多个选择器用英文逗号隔开
 
   # swiper
   swiper:
@@ -407,11 +461,12 @@ plugins:
     enable: true
     js: /js/plugins/copycode.js
     default_text: 'Copy'
-    success_text: '复制成功'
+    success_text: 'Copied'
+    toast: 复制成功
 
 style:
   darkmode: auto # auto / always / false
-  smooth_scroll: true # true / false
+  smooth_scroll: false # true / false
   font-size:
     root: 16px
     body: .9375rem # 15px
