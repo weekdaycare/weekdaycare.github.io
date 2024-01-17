@@ -4004,7 +4004,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .nav-area .menu .nav-item svg {
   height: 28px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.75);
+  filter: grayscale(100%) brightness(0.8) opacity(0.8);
   transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
@@ -4612,7 +4612,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .doc-tree+.doc-tree {
   margin-top: 2px;
 }
-.widget-wrapper.toc.multi .widget-body+.widget-header.cap {
+.widget-wrapper.toc.multi .widget-body+.widget-header {
   margin-top: 28px;
 }
 .widget-wrapper.toc.multi .doc-tree {
@@ -4728,7 +4728,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   -o-transition: color 0.2s ease-out, background 0.2s ease-out;
   border-radius: 4px;
   padding: 6px;
-  margin-right: -4px;
+  margin-right: -5px;
 }
 .widgets .widget-wrapper .widget-header .cap-action .icon {
   fill: var(--text-p2);
