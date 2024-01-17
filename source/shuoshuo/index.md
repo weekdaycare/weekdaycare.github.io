@@ -11,7 +11,7 @@ post_list: true
 > 
 > 这里会写一些琐碎的事情，大多是俺的哔哔赖赖😶‍🌫️
 
-{% timeline user:weekdaycare api:https://api.github.com/repos/weekdaycare/weekdaycare.github.io/issues?direction=desc %}
+{% timeline user:weekdaycare api:https://raw.weekdaycare.cn/api/repos/weekdaycare/weekdaycare.github.io/issues?direction=desc %}
 {% endtimeline %}
 
 {% navbar [查看更多](https://github.com/weekdaycare/weekdaycare.github.io/issues) %}

@@ -58,26 +58,32 @@ site_tree:
 
 #### menu 导航栏
 
-配置写法变更，现在可以在 menu 使用 icon 代替文字
+配置写法变更，由 `menu` 变为 `menubar` 现在可以在 menu 使用 icon 代替文字
 
 ```yaml 新的写法为
-menu:
-  post: 
-    title: 'btn.blog'
-    icon: 
-    url: /
-  doc:
-    title: '文档'
-    icon: 
-    url: /doc/
-  friends:
-    title: '友人'
-    icon: 
-    url: /friends/
-  about: 
-    title: '更多'
-    icon: 
-    url: /about/
+menubar:
+  columns: 4 # 一行多少个
+  items: # 可按照自己需求增加，符合以下格式即可
+    - id: post
+      theme: '' # 填写主题色如 '#FA6400' 会在 menu 高亮时显示颜色
+      icon: '' # 填写 svg 标签如 '<svg ... ></svg>'
+      title: 主页
+      url: /
+    - id: doc
+      theme: ''
+      icon: ''
+      title: 文档
+      url: /doc/
+    - id: friends
+      theme: ''
+      icon: ''
+      title: 友人
+      url: /friends/
+    - id: about
+      theme: ''
+      icon: ''
+      title: 更多
+      url: /about/
 ```
 
 {% folding 旧的写法 child:codeblock %}

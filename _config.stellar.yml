@@ -18,23 +18,24 @@ logo:
   avatar: '[${config.avatar}](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
   title: '[${config.title}](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   subtitle: '星语日点灯|等风来，不如追风去' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
-menu:
-  post: 
-    title: 'btn.blog'
-    icon: 
-    url: /
-  doc:
-    title: '文档'
-    icon: 
-    url: /doc/
-  friends:
-    title: '友人'
-    icon: 
-    url: /friends/
-  about: 
-    title: '更多'
-    icon: 
-    url: /about/
+  
+# 侧边栏主功能导航菜单
+menubar:
+  columns: 4 # 一行多少个
+  items: # 可按照自己需求增加，符合以下格式即可
+    - id: post
+      title: 主页
+      url: /
+    - id: doc
+      title: 文档
+      url: /doc/
+    - id: friends
+      title: 友人
+      url: /friends/
+    - id: about
+      title: 更多
+      url: /about/
+
 
 # 目录树
 site_tree:
@@ -253,18 +254,18 @@ footer:
     # unsplash:
     #   icon: '<img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
     #   url: /
-    comments:
-      icon: '<img src="/asset/comments.svg"/>'
-      url: /about/#comments
-    home:
-      icon: '<img src="/asset/home.svg"/>'
-      url: /
+    # comments:
+    #   icon: '<img src="/asset/comments.svg"/>'
+    #   url: /about/#comments
+    # home:
+    #   icon: '<img src="/asset/home.svg"/>'
+    #   url: /
 #    alist:
 #      icon: '<img src="/asset/cloud.svg"/>'
 #      url: https://alist.weekdaycare.cn
-    rss:
-      icon: '<img src="/asset/rss.svg"/>'
-      url: /atom.xml  
+    # rss:
+    #   icon: '<img src="/asset/rss.svg"/>'
+    #   url: /atom.xml  
 
   # sitemap:
   # '博客':
@@ -329,13 +330,13 @@ tag_plugins:
       # 进行中状态
       in_track:
         color: blue # red, orange, yellow, green, cyan, blue, purple
-        label: 正常
+        label: 进行中
       at_risk: 
         color: yellow
         label: 风险
       off_track:
         color: orange
-        label: 延期
+        label: 搁置
       # 结果状态
       finished:
         color: green
