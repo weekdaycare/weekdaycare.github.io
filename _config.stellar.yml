@@ -19,10 +19,22 @@ logo:
   title: '[${config.title}](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   subtitle: '星语日点灯|等风来，不如追风去' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
 menu:
-  post: '[文章](/)'
-  doc: '[文档](/doc/)'
-  friends: '[友人](/friends/)'
-  about: '[更多](/about/)'
+  post: 
+    title: 'btn.blog'
+    icon: 
+    url: /
+  doc:
+    title: '文档'
+    icon: 
+    url: /doc/
+  friends:
+    title: '友人'
+    icon: 
+    url: /friends/
+  about: 
+    title: '更多'
+    icon: 
+    url: /about/
 
 # 目录树
 site_tree:
@@ -473,8 +485,8 @@ style:
     codeblock: '"Cascadia Code", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   text-align: left
   border-radius:
-    card: 12px
-    block: 12px
+    card: 6px
+    block: 6px
     bar: 6px
     image: 6px
   color:

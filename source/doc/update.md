@@ -9,6 +9,8 @@ title: 跟随更新
 
 ### ⚠️ 主题配置变更
 
+#### search 组件
+
 search 组件大改，现在请将 `/_data/widget.yml` 中的 `search` 组件删除，默认会配置好 wiki 和 post 的 `search` 组件，可以看到新的配置文件中均没有 search 组件 [# widgets.yml](https://github.com/xaoxuu/hexo-theme-stellar/blob/main/_data/widgets.yml)
 
 ```yaml blog/_config.stellar.yml
@@ -53,6 +55,40 @@ site_tree:
   page:
     sidebar: toc, timeline
 ```
+
+#### menu 导航栏
+
+配置写法变更，现在可以在 menu 使用 icon 代替文字
+
+```yaml 新的写法为
+menu:
+  post: 
+    title: 'btn.blog'
+    icon: 
+    url: /
+  doc:
+    title: '文档'
+    icon: 
+    url: /doc/
+  friends:
+    title: '友人'
+    icon: 
+    url: /friends/
+  about: 
+    title: '更多'
+    icon: 
+    url: /about/
+```
+
+{% folding 旧的写法 child:codeblock %}
+```yaml _config.stellar.yml
+menu:
+  # post: '[btn.blog](/)'
+  # wiki: '[btn.wiki](/wiki/)'
+  # friends: '[友链](/friends/)'
+  # about: '[关于](/about/)'
+```
+{% endfolding %}
 
 ## 1.25.0
 
