@@ -9,21 +9,37 @@ title: 标签组件
 
 {% note color:warning 这个功能即将废弃 在 1.21.0 版本后请使用 banner 组件代替。 %}
 
+{% tabs active:1 align:center %}
+
+<!-- tab 示例 -->
+
 方便在关于页面显示一段图文信息，比普通块容器稍微有一点点不一样：
 
+{% about avatar: height:60px %}
+
+<center><b>苦难不值得追求，磨练意志是因为苦难无法躲开</b></br>事一个破学生，没事喜欢瞎捣鼓，Kono白嫖怪哒！</center>
+
+<div align="center"><img src="https://raw.weekdaycare.cn/raw/weekdaycare/main/assets/github-contribution-grid-snake.svg"/></div>
+
+{% navbar [📑文章](/) [📢说说](/shuoshuo/) [📌友链](/friends/) [📺追番](https://bangumi.tv/user/weekdaycare) %}
+
+{% endabout %}
+
+<!-- tab 写法 -->
+
 ```
-{% about avatar:/assets/xaoxuu/avatar/rect-256@2x.png height:80px %}
+{% about avatar:/asset/avatar.svg height:60px %}
 
-<img height="32px" alt="XAOXUU" src="/assets/xaoxuu/logo/180x30@2x.png">
+<center><b>苦难不值得追求，磨练意志是因为苦难无法躲开</b></br>事一个破学生，没事喜欢瞎捣鼓，Kono白嫖怪哒！</center>
 
-**如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
+<div align="center"><img src="https://raw.weekdaycare.cn/raw/weekdaycare/main/assets/github-contribution-grid-snake.svg"/></div>
 
-XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。在业余时间也开发了 Stellar 博客主题，更多的作品可以去项目主页查看，希望大家喜欢～
-
-{% navbar [文章](/) [项目](/wiki/) [留言](#comments) [GitHub](https://github.com/xaoxuu/) %}
+{% navbar [📑文章](/) [📢说说](/shuoshuo/) [📌友链](/friends/) [📺追番](https://bangumi.tv/user/weekdaycare) %}
 
 {% endabout %}
 ```
+
+{% endtabs %}
 
 ## albums 专辑容器
 
@@ -289,7 +305,7 @@ func test() {
 
 {% tabs %}
 <!-- tab 示例 -->
-{% frame iphone11 img:/assets/wiki/prohud/toast/demo-loading.png video:/assets/wiki/prohud/toast/demo-loading.mp4 focus:top %}
+{% frame iphone11 img:/asset/avatar.svg video:/assets/wiki/prohud/toast/demo-loading.mp4 focus:top %}
 <!-- tab 写法 -->
 ```md
 {% frame iphone11 img:/assets/wiki/prohud/toast/demo-loading.png video:/assets/wiki/prohud/toast/demo-loading.mp4 focus:top %}

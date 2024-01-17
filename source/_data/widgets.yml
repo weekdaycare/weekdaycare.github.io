@@ -3,11 +3,6 @@
 # - markdown: 渲染 md 文本
 #
 
-search:
-  layout: search
-  filter: auto # auto or 'path'
-  placeholder: 搜点啥？
-
 # ---- 内置组件，暂时不支持覆盖 ----
 ghrepo:
   layout: ghrepo

@@ -15,8 +15,8 @@ open_graph:
 
 ######## Sidebar ########
 logo:
-  avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
-  title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  avatar: '[${config.avatar}](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  title: '[${config.title}](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   subtitle: '星语日点灯|等风来，不如追风去' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
 menu:
   post: '[文章](/)'
@@ -28,47 +28,41 @@ menu:
 site_tree:
     # 主页
   home: 
-    sidebar: welcome, timeline, search # for home
+    sidebar: welcome, timeline # for home
   blog:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    sidebar: search, recent, timeline # for categories/tags/archives
+    sidebar: recent, timeline # for categories/tags/archives
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
-      # '朋友文章': /friends/rss/
+      '说说': /shuoshuo/
   # 博客文章配置
   post:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    sidebar: search, toc, ghrepo, ghissues # for pages using 'layout:post'
+    sidebar: toc, ghrepo, ghissues # for pages using 'layout:post'
   # 博客专栏配置
   topic:
     base_dir: topic # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
-    sidebar: search, toc, related # for topic
+    sidebar: toc, related # for topic
   # wiki配置
   wiki:
     base_dir: wiki # 只影响自动生成的页面路径
     menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
-    sidebar: search_docs, toc, ghissues, related # for wiki
+    sidebar: toc, ghissues, related # for wiki
   # 作者信息配置
   author: 
     base_dir: author # 只影响自动生成的页面路径
     menu_id: post
-    sidebar: search, recent, timeline
+    sidebar: recent, timeline
   # 错误页配置
   error_page:
     menu_id: post
     '404': '/404.html'
-    sidebar: search, recent
+    sidebar: recent
   # 其它自定义页面配置 layout: page
   page:
-    sidebar: welcome, toc, search
+    sidebar: welcome, toc
 
-
-######## Index ########
-post-index: # 近期发布 分类 标签 归档 and ...
-  # '虫洞': https://www.foreverblog.cn/go.html
-  '说说': /shuoshuo/
-  # '朋友圈': /friends/
 
 ######## Main ########
 breadcrumb:
