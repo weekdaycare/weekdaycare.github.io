@@ -522,7 +522,10 @@ default:
   link: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg
   cover: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg
   image: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
-
+  project: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2779789.png
+  banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
+  topic: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png
+  sidebar: https://bu.dusays.com/2024/01/18/65a807631d058.webp
 api_host:
   ghapi: https://raw.weekdaycare.cn/api
   ghraw: https://jsd.onmicrosoft.cn
