@@ -5,11 +5,120 @@ menu_id: doc
 title: 跟随更新
 ---
 
+## 1.26.0
+
+### ⚠️ 主题配置变更
+
+search 组件大改，现在请将 `/_data/widget.yml` 中的 `search` 组件删除，默认会配置好 wiki 和 post 的 `search` 组件，可以看到新的配置文件中均没有 search 组件 [# widgets.yml](https://github.com/xaoxuu/hexo-theme-stellar/blob/main/_data/widgets.yml)
+
+```yaml blog/_config.stellar.yml
+######## Main ########
+# 站点主结构树
+site_tree:
+  # 主页配置
+  home:
+    sidebar: recent, timeline
+  # 博客列表配置
+  blog:
+    base_dir: blog # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: recent, timeline # for categories/tags/archives
+    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      # '朋友文章': /friends/rss/
+  # 博客文章配置
+  post:
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: toc, related, ghrepo, ghissues, recent # for pages using 'layout:post'
+  # 博客专栏配置
+  topic:
+    base_dir: topic # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+    sidebar: toc, related # for topic
+  # wiki配置
+  wiki:
+    base_dir: wiki # 只影响自动生成的页面路径
+    menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
+    sidebar: toc, ghissues, related, recent # for wiki
+  # 作者信息配置
+  author: 
+    base_dir: author # 只影响自动生成的页面路径
+    menu_id: post
+    sidebar: recent, timeline
+  # 错误页配置
+  error_page:
+    menu_id: post
+    '404': '/404.html'
+    sidebar: recent, timeline
+  # 其它自定义页面配置 layout: page
+  page:
+    sidebar: toc, timeline
+```
+
 ## 1.25.0
 
 ### ⚠️ 主题配置变更
 
-Sidebar 配置大改，比起看文字说明，对照新配置文件改更快 [#_config.stellar.yml](https://github.com/xaoxuu/hexo-theme-stellar/blob/e77bfecf1f59785192bff1cc3ab8b68b1b064899/_config.yml#L20-L77)
+Sidebar 配置大改，比起看文字说明，对照新配置文件改更快
+
+```yaml blog/_config.stellar.yml
+######## Sidebar ########
+# 左上角显示的 logo 区域，包含图标、大标题、副标题
+logo:
+  avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  subtitle: '' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
+
+# 侧边栏主功能导航菜单
+# 自己可以增加任意的键值对
+# 键：就是 menu_id，后面需要用到
+# 值：就是显示的 md 链接，方括号内支持文字和图片标签
+menu:
+  # post: '[btn.blog](/)'
+  # wiki: '[btn.wiki](/wiki/)'
+  # friends: '[友链](/friends/)'
+  # about: '[关于](/about/)'
+
+######## Main ########
+# 站点主结构树
+site_tree:
+  # 主页配置
+  home:
+    sidebar: search, recent, timeline
+  # 博客配置
+  blog:
+    base_dir: blog # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: search_blog, recent, timeline # for categories/tags/archives
+    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      # '朋友文章': /friends/rss/
+  # 博客文章配置
+  post:
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: search_blog, toc, related, ghrepo, ghissues # for pages using 'layout:post'
+  # 博客专栏配置
+  topic:
+    base_dir: topic # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+    sidebar: search_blog, toc, related # for topic
+  # wiki配置
+  wiki:
+    base_dir: wiki # 只影响自动生成的页面路径
+    menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
+    sidebar: search_docs, toc, ghissues, related # for wiki
+  # 作者信息配置
+  author: 
+    base_dir: author # 只影响自动生成的页面路径
+    menu_id: post
+    sidebar: search_blog, recent, timeline
+  # 错误页配置
+  error_page:
+    menu_id: post
+    '404': '/404.html'
+    sidebar: search, recent, timeline
+  # 其它自定义页面配置 layout: page
+  page:
+    sidebar: toc, search
+```
 
 ### 功能新增
 

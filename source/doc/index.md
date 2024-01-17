@@ -11,7 +11,7 @@ title: stellar 文档重构
 
 很混乱，众多功能以及众多的bug {% emoji tieba 滑稽 %}
 
-<!-- okr kr1 percent:0.8 -->
+<!-- okr kr1 percent:1 -->
 
 标签组件按首字母排序
 
@@ -19,7 +19,7 @@ title: stellar 文档重构
 
 <!-- okr kr2 percent:0 status:off_track -->
 
-文档详细化引导
+文档完善格式统一
 
 目前部分功能十分复杂，像是 wiki、备忘录、专栏等，熟悉的人看文档都需要配置半天，那对于初学者上手就会是三分不解七分疑惑，合起来是十分懵逼
 
