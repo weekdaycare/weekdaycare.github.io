@@ -4458,7 +4458,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   margin-top: 0.5rem;
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .header {
-  margin: 0.5rem 0px;
+  margin: 0.5rem 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4699,6 +4699,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   background: var(--text-p3);
 }
 .widgets .widget-wrapper .widget-header {
+  padding-left: var(--gap-l);
   padding-right: var(--gap-l);
   display: flex;
   justify-content: space-between;
