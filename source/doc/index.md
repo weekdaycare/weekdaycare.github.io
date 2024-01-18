@@ -2,14 +2,14 @@
 layout: wiki
 wiki: doc 
 menu_id: doc 
-title: stellar 文档重构
+title: 说在前头
 ---
 
 个人瞎改改，大家看个乐子。大佬年终赶 kpi，我年终赶期末考试😭。
 
 {% okr O %}
 
-很混乱，众多功能以及众多的bug {% emoji tieba 滑稽 %}
+现在还是很混乱，还有众多问题，慢慢改吧 {% emoji blobcat0_0 %}
 
 <!-- okr kr1 percent:1 -->
 
@@ -17,7 +17,7 @@ title: stellar 文档重构
 
 对我这种基本上熟悉了每个标签功能的人来说，每次想起某个标签的名字却不记得用法，然后去翻文档，结果在表达标签数据容器标签之间反复横跳，最后还是用的搜索 {% emoji blobcatgooglycry %}
 
-<!-- okr kr2 percent:0 status:off_track -->
+<!-- okr kr2 percent:0 -->
 
 文档完善格式统一
 
@@ -25,10 +25,24 @@ title: stellar 文档重构
 
 不过现在忙着期末考试，后面有时间慢慢搞吧。
 
-<!-- okr kr3 percent:0.2 -->
+<!-- okr kr3 percent:0.4 -->
 
 跟随版本更新
 
 众所周知目前佬正在向 VS6 开发，所以每次更新完都会有很多的配置改动和功能增加，文档这么长，不可能每次更新都去看一遍文档或者翻每次更新的 commit ，所以致力于跟随版本更新记录每次更新的配置改动。
+
+<!-- okr kr4 percent:0.8 -->
+
+结构目录树
+
+完整的主题目录结构
+
+<!-- okr kr4 percent:0 -->
+
+完整主题站点配置文件详解
+
+<!-- okr kr5 percent:0.5 -->
+
+front-matter 可配置参数详解
 
 {% endokr %}

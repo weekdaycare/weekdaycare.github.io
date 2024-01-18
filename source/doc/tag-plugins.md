@@ -55,9 +55,9 @@ title: 标签组件
 
 支持音乐外链以及网易云音乐，网易云支持设置 `type` 以及 `autoplay` 参数。
 
-{% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}
+<center>{% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}</center>
 
-{% audio type:2 netease:1856385686 autoplay:0 %}
+<center>{% audio type:2 netease:1856385686 autoplay:0 %}</center>
 
 ```md 写法如下
 {% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}

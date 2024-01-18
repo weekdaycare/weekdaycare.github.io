@@ -1,14 +1,12 @@
-name: Stellar 文档
+name: 文档重构
 title: Stellar 文档
 icon: https://xaoxuu.com/assets/wiki/stellar/icon.svg # 列表页图标
 cover: # 封面页大图
 coverpage: # [cover, title, description] # 封面页显示的内容
-
+search:
+  filter: /doc/
+  placeholder: 要找点什么？
 sidebar: 
-  - layout: search
-    override: search
-    filter: /doc/
-    placeholder: 搜索文档...
   - toc
 
 comments:
@@ -22,10 +20,15 @@ toc:
   '简介':
     - index
     - update
-  '文档重构':
+    - structure
+  '文章写法':
     - tag-plugins
     - express
-    - doc
+    - front-matter
+  '配置文件':
+    - widgets
+    - site-config
+    - theme-config
     - comments
 
 

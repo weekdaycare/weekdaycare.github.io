@@ -1,0 +1,518 @@
+---
+layout: wiki
+wiki: doc 
+menu_id: doc 
+title: _config.stellar.yml
+h1: 主题配置文件
+---
+
+```yaml blog/_config.stellar/yml
+######## Stellar info ########
+stellar:
+  version: '1.25.0'
+  homepage: 'https://xaoxuu.com/wiki/stellar/'
+  repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
+  cdn_css: # Use cdn links instead of /css/main.css
+  cdn_js: # Use cdn links instead of /js/main.js
+
+
+######## head tags ########
+preconnect:
+  # - https://gcore.jsdelivr.net
+  # - https://unpkg.com
+
+open_graph:
+  enable: true
+  twitter_id: # for open_graph meta
+
+
+######## Sidebar ########
+# 左上角显示的 logo 区域，包含图标、大标题、副标题
+logo:
+  avatar: '[${config.avatar}](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  title: '[${config.title}](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  subtitle: '' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
+
+# 侧边栏主功能导航菜单
+menubar:
+  columns: 4 # 一行多少个
+  items: # 可按照自己需求增加，符合以下格式即可
+    # - id: post
+    #   theme: '#1BCDFC'
+    #   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg>'
+    #   title: 博客
+    #   url: /
+    # - id: wiki
+    #   theme: '#3DC550'
+    #   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg>'
+    #   title: 项目
+    #   url: /wiki/
+    # - id: notes
+    #   theme: '#FA6400'
+    #   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg>'
+    #   title: 探索
+    #   url: /notes/
+    # - id: social
+    #   theme: '#F44336'
+    #   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg>'
+    #   title: 社交
+    #   url: /friends/
+
+
+######## Main ########
+# 站点主结构树
+site_tree:
+  # 主页配置
+  home:
+    sidebar: recent, timeline
+  # 博客列表配置
+  blog:
+    base_dir: blog # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: recent, timeline # for categories/tags/archives
+    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      # '朋友文章': /friends/rss/
+  # 博客文章配置
+  post:
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    sidebar: toc, related, ghrepo, ghissues, recent # for pages using 'layout:post'
+  # 博客专栏配置
+  topic:
+    base_dir: topic # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+    sidebar: toc, related # for topic
+  # wiki配置
+  wiki:
+    base_dir: wiki # 只影响自动生成的页面路径
+    menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
+    sidebar: toc, ghissues, related, recent # for wiki
+  # 作者信息配置
+  author: 
+    base_dir: author # 只影响自动生成的页面路径
+    menu_id: post
+    sidebar: recent, timeline
+  # 错误页配置
+  error_page:
+    menu_id: post
+    '404': '/404.html'
+    sidebar: recent, timeline
+  # 其它自定义页面配置 layout: page
+  page:
+    sidebar: toc, timeline
+
+
+
+######## Article ########
+article:
+  # 如果没有指定封面，是否根据 tags 作为关键词搜索封面图片？
+  auto_cover: false # search from https://source.unsplash.com/
+  # 封面图宽高比
+  cover_ratio: 2.4
+  # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
+  auto_banner: false # search from https://source.unsplash.com/
+  # 如果没有指定 excerpt 和 description，将自动取多长的内容作为文章摘要？
+  auto_excerpt: 200
+  # 分类颜色
+  category_color:
+    '探索号': '#f44336'
+  # 文章许可协议
+  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  # 分享
+  share: # [wechat, weibo, email, link]
+  # 相关文章，需要安装插件 (for layout: post)
+  # npm i hexo-related-popular-posts
+  related_posts:
+    enable: false
+    max_count: 5
+
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: all # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+
+
+######## Comments ########
+comments:
+  service: # beaudar, utterances, giscus, twikoo, waline, artalk
+  # beaudar
+  # https://beaudar.lipk.org/
+  beaudar:
+    repo: xxx/xxx
+    issue-term: pathname
+    issue-number:
+    theme: preferred-color-scheme
+    label:
+    input-position: top # top/bottom 评论框位置
+    comment-order: desc # desc 排序
+    keep-theme: # true/false
+    loading: false
+    branch: main
+  # utterances
+  # https://utteranc.es/
+  utterances:
+    repo: xxx/xxx
+    issue-term: pathname
+    issue-number:
+    theme: preferred-color-scheme
+    label:
+  # giscus
+  # https://giscus.app/zh-CN
+  giscus:
+    src: https://giscus.app/client.js
+    data-repo: xxx/xxx # [在此输入仓库]
+    data-repo-id: # [在此输入仓库 ID]
+    data-category: # [在此输入分类名]
+    data-category-id:
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: top # top, bottom
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    data-loading: lazy
+    crossorigin: anonymous
+
+  # Twikoo
+  # https://twikoo.js.org/
+  twikoo:
+    js: https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js # 建议锁定版本
+    envId: https://xxx # vercel函数
+
+  # Waline
+  # https://waline.js.org/
+  waline:
+    js: https://unpkg.com/@waline/client@2.14.1/dist/waline.js
+    css: https://unpkg.com/@waline/client@2.14.1/dist/waline.css
+    # Waline server address url, you should set this to your own link
+    serverURL:
+    # If false, comment count will only be displayed in post page, not in home page
+    commentCount: true
+    # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+    pageview: false
+    # Custom emoji
+    # emoji:
+    #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
+    #   - https://unpkg.com/@waline/emojis@1.1.0/alus
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
+    #   - https://unpkg.com/@waline/emojis@1.1.0/qq
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tieba
+    #   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
+    #   - https://unpkg.com/@waline/emojis@1.1.0/bmoji
+    # 设置自己的图床服务，替换默认的 Base 64 编码嵌入（有体积大小限制），在评论中上传图片更加方便
+    # imageUploader:
+      # 适配了兰空图床V1、V2版本
+      # 以兰空图床V1为例，下列填写内容为：
+      # fileName: file
+      # tokenName: Authorization
+      # api: https://xxxxxx/api/v1/upload
+      # token: Bearer xxxxxxxxxxxxxx
+      # resp: data.links.url
+      # 以兰空图床V2为例，下列填写内容为：
+      # fileName: image
+      # tokenName: token
+      # api: https://xxxxxx/api/upload
+      # token: xxxxxxxxxxxxxx
+      # resp: data.url
+    #   fileName: # 根据版本二选一
+    #   tokenName: # 根据版本二选一
+    #   api: # 图床 api 地址
+    #   token: # 图床验证
+    #   resp: # 图片地址返回值的字段
+
+  # Artalk
+  # https://artalk.js.org/
+  artalk:
+    css: https://unpkg.com/artalk@2.7/dist/Artalk.css
+    js: https://unpkg.com/artalk@2.7/dist/Artalk.js
+    server: # 后端服务地址
+    placeholder: ''
+    darkMode: auto
+
+
+######## Footer ########
+footer:
+  social:
+    # github:
+    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/>'
+    #   url: /
+    # music:
+    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/>'
+    #   url: /
+    # unsplash:
+    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/>'
+    #   url: /
+    # comments:
+    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
+    #   url: /about/#comments
+  sitemap:
+    # '博客':
+    #   - '[近期](/)'
+    #   - '[分类](/)'
+    #   - '[标签](/)'
+    #   - '[归档](/)'
+    # '项目':
+    #   - '[开源库](/)'
+    # '社交':
+    #   - '[友链](/)'
+    #   - '[留言板](/)'
+    # '更多':
+    #   - '[关于本站](/)'
+    #   - '[GitHub](/)'
+  content: | # 支持 Markdown 格式
+    本站由 [${author.name}](/) 使用 [${theme.name} ${theme.version}](${theme.tree}) 主题创建。
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+  # 主题用户越多，开发者维护和更新的积极性就越高，如果您喜欢本主题，请在适当的位置显示主题信息和仓库链接以表支持。
+
+
+######## Tag Plugins ########
+tag_plugins:
+  # {% box %} / {% note %}
+  note:
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+    border: true # true / false
+  # {% checkbox %}
+  checkbox:
+    interactive: false # enable interactive for user
+  # {% quot %}
+  quot:
+    default: # 可以自行配置多种图标方案
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e092ff.png
+      suffix: https://bu.dusays.com/2022/10/24/63567d3e0ab55.png
+    hashtag:
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e07da3.png
+  # {% emoji %}
+  emoji:
+    default: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    twemoji: https://gcore.jsdelivr.net/gh/twitter/twemoji/assets/svg/${name}.svg
+    qq: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    aru: https://gcore.jsdelivr.net/gh/cdn-x/emoji/aru-l/${name}.gif
+    tieba: https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/${name}.png
+    blobcat: https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/${name}.png
+  # {% image %}
+  image:
+    fancybox: false # true, false
+  # {% copy xxx %}
+  copy:
+    toast: 复制成功
+  # {% timeline %}
+  timeline:
+    max-height: 80vh
+  # {% mark %}
+  mark:
+    default_color: dark # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+  # {% hashtag %}
+  hashtag:
+    default_color: # red, orange, yellow, green, cyan, blue, purple
+  # {% okr o1 percent:0.5 status:normal %}
+  okr:
+    border: true # 是否显示边框
+    status: # 可以自行增加
+      # 进行中状态
+      in_track:
+        color: blue # red, orange, yellow, green, cyan, blue, purple
+        label: 正常
+      at_risk: 
+        color: yellow
+        label: 风险
+      off_track:
+        color: orange
+        label: 延期
+      # 结果状态
+      finished:
+        color: green
+        label: 已完成
+      unfinished:
+        color: red
+        label: 未完成
+  # {% gallery %}
+  gallery:
+    layout: grid # grid / flow
+    size: mix # s / m / l / xl / mix
+    ratio: square # origin / square
+
+      
+
+
+######## JS Plugins ########
+plugins:
+  ## required plugins ##
+  # jquery
+  jquery: https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js
+
+  # stellar api
+  stellar:
+    sites: /js/plugins/sites.js
+    friends: /js/plugins/friends.js
+    ghinfo: /js/plugins/ghinfo.js
+    timeline: /js/plugins/timeline.js
+    linkcard: /js/plugins/linkcard.js
+    fcircle: /js/plugins/fcircle.js
+    weibo: /js/plugins/weibo.js
+    memos: /js/plugins/memos.js
+    marked: /js/plugins/marked.js
+
+  marked: https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js
+
+  ## optional plugins ##
+  # preload
+  preload:
+    enable: true
+    service: flying_pages # instant_page, flying_pages
+    instant_page: https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
+    flying_pages: https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
+
+  # image lazyload
+  # https://www.npmjs.com/package/vanilla-lazyload
+  lazyload:
+    enable: true # [hexo clean && hexo s] is required after changing this value.
+    js: https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js
+    transition: blur # blur, fade
+
+  # https://scrollrevealjs.org/api/reveal.html
+  scrollreveal:
+    enable: #true
+    js: https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    distance: 8px
+    duration: 500 # ms
+    interval: 100 # ms
+    scale: 1 # 0.1~1
+
+  # https://fancyapps.com/docs/ui/fancybox/
+  # available for {% image xxx %}
+  fancybox:
+    enable: true
+    js: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
+    css: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
+    # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
+    # 使用waline评论可以写: #waline_container .vcontent img
+    selector: .fancybox img # 多个选择器用英文逗号隔开
+
+  # swiper
+  swiper:
+    enable: true
+    css: https://unpkg.com/swiper@10.3/swiper-bundle.min.css
+    js: https://unpkg.com/swiper@10.3/swiper-bundle.min.js
+
+
+  # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
+  # https://github.com/sivan/heti
+  heti:
+    enable: false # 此插件会和代码块冲突，仅适用于纯中文博主。
+    css: https://unpkg.com/heti@0.9.2/umd/heti.min.css
+    js: https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js
+
+  # MathJax
+  # 需在Markdown文件开头加入mathjax: true
+  # 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save & npm install hexo-renderer-pandoc --save
+  mathjax:
+    # set <mathjax: true> to enable in page's front-matter
+    js: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+  # Katex - The fastest math typesetting library for the web
+  # https://katex.org/docs/autorender.html
+  # https://github.com/KaTeX/KaTeX
+  # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
+  katex:
+    # set <katex: true> to enable in page's front-matter
+    min_css: <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    auto_render_min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+
+  # Mermaid - markdwon to flow chart, seq chart, class chart ...
+  # 需要安装 npm install --save hexo-filter-mermaid-diagrams
+  # 使用时 需要在Markdown文件开头加入 mermaid: true
+  # 使用示例：
+  # ```mermaid
+  # graph LR
+  #   A(Section A) -->|option 1| B(Section A)
+  #   B -->|option 2| C(Section C)
+  # ```
+  mermaid:
+    # set <mermaid: true> to enable in page's front-matter
+    style_optimization: false # use custom style in stellar
+    # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
+    js: https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js
+    # Available themes: default | dark | forest | neutral
+    theme: neutral
+
+  # 代码块复制按钮
+  copycode:
+    enable: true
+    js: /js/plugins/copycode.js
+    default_text: 'Copy'
+    success_text: 'Copied'
+    toast: 复制成功
+  
+  # AI 摘要
+  # https://github.com/zhheo/Post-Abstract-AI
+  tianli_gpt:
+    enable: false
+    field: post # all, post, wiki
+    api: 5Q5mpqRK5DkwT1X9Gi5e # tianli_gpt key
+    typingAnimate: true # 打字机动画 
+
+style:
+  darkmode: auto # auto / always / false
+  smooth_scroll: false # true / false 开启时如果目录过长可能无法准确定位
+  font-size:
+    root: 16px
+    body: .9375rem # 15px
+    code: 85% # 14px
+    codeblock: 0.8125rem # 13px
+  font-family:
+    logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+  text-align: left
+  border-radius:
+    card: 12px
+    block: 12px
+    bar: 12px
+    image: 6px
+  color:
+    # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
+    background: 'hsl(212 16% 98%)' # 浅色背景颜色
+    block: 'hsl(212 8% 95%)' # 块背景颜色
+    code: 'hsl(220 20% 10%)' # 'hsl(14 100% 48%)' # 行内代码颜色
+    text: 'hsl(0 0% 20%)' # 文本颜色
+    # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
+    theme: 'hsl(192 98% 55%)' # 主题色
+    accent: 'hsl(14 100% 57%)' # 强调色
+    link: 'hsl(207 90% 54%)' # 超链接颜色
+    button: 'hsl(192 98% 55%)' # 按钮颜色
+    hover: 'hsl(14 100% 57%)' # 按钮高亮颜色
+  link:
+    underline: true # true / false
+  animated_avatar:
+    animate: auto # auto, always
+    background: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp
+  codeblock:
+    scrollbar: 4px
+    highlightjs_theme: https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css
+  loading:
+    loading: 正在加载
+    error: 加载失败，请稍后重试。
+  gradient: # https://webgradients.com/
+    start: 'linear-gradient(to right, hsl(215, 95%, 64%), hsl(195, 95%, 60%), hsl(165, 95%, 56%), hsl(165, 95%, 56%), hsl(195 95% 60%), hsl(215, 95%, 64%))'
+    search: 'linear-gradient(to right, #04F3FF, #08FFC6, #DDF730, #FFBD19, #FF1FE0, #C418FF, #04F3FF)'
+
+default:
+  avatar: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg
+  link: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg
+  cover: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg
+  image: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg
+  project: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2779789.png
+  banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
+  topic: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png
+  sidebar: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.13/image/sidebar-bg1@small.jpg
+
+api_host:
+  ghapi: https://api.github.com
+  ghraw: https://raw.githubusercontent.com
+  gist: https://gist.github.com
+```
