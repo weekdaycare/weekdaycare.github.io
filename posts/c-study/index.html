@@ -87,11 +87,10 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/">学习感悟</a></div><div id="post-meta"><span class="author">发布于</span>
-    <span class="created"><time datetime="2021-12-04T02:13:45.000Z">2021-12-04</time></span>
-    
-    <span class="updated">，更新于&nbsp;<time datetime="2021-12-04T03:00:00.000Z">2021-12-04</time></span>
-    </div></div></div>
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/">学习感悟</a></div>
+<div id="post-meta"><span class="author">发布于：</span><span class="created"><time datetime="2021-12-04T02:13:45.000Z">2021-12-04</time></span><span class="updated">，更新于：<time datetime="2021-12-04T03:00:00.000Z">2021-12-04</time></span></div></div>
+</div>
 <article class="md-text content "><h1 class="article-title"><span>C语言学习</span></h1><h2 id="消除类游戏">消除类游戏</h2>
 <h3 id="问题描述">问题描述</h3>
 <p>消除类游戏是深受大众欢迎的一种游戏，游戏在一个包含有n行m列的游戏棋盘上进行，棋盘的每一行每一列的方格上放着一个有颜色的棋子，当一行或一列上有连续三个或更多的相同颜色的棋子时，这些棋子都被消除。当有多处可以被消除时，这些地方的棋子将同时被消除。现在给你一个n行m列的棋盘，棋盘中的每一个方格上有一个棋子，请给出经过一次消除后的棋盘。</p>
@@ -294,7 +293,7 @@ function(int a, int b)，计算区间[a，b]或区间[b，a]上水仙花数的�
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;输入人数：\n&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">        <span class="type">int</span> a[<span class="number">1000</span>];</span><br><span class="line">        <span class="type">int</span> i,temp;</span><br><span class="line">        <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">        temp = n; </span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">              a[i] = i+<span class="number">1</span>;   </span><br><span class="line">        &#125;</span><br><span class="line">        i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (n&gt;<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">                <span class="keyword">if</span>(a[i] != <span class="number">0</span>)   <span class="comment">//不改变第一次报数值，只是让数字3的人为0</span></span><br><span class="line">                &#123;</span><br><span class="line">                        count++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(count == <span class="number">3</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                        a[i] = <span class="number">0</span>;  <span class="comment">//让数到3的人为0</span></span><br><span class="line">                        count = <span class="number">0</span>;</span><br><span class="line">                        n--;  <span class="comment">//人数－1</span></span><br><span class="line">                &#125;</span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">if</span>(i == temp)</span><br><span class="line">                &#123;</span><br><span class="line">                        i = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; temp;i++)</span><br><span class="line">        &#123;</span><br><span class="line">                <span class="keyword">if</span>(a[i] != <span class="number">0</span>)  <span class="comment">//此时所有数到3的人都清零了，只有剩下的那一个不为0</span></span><br><span class="line">                &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;余下的为：%d号\n&quot;</span>,a[i]);</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   <script>
-    let tianliGPT_postSelector = '.md-text.content ';
+    let tianliGPT_postSelector = 'article.content';
     let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
     let tianliGPT_typingAnimate = 'true';
     let tianliGPT_wordLimit = 2000;
@@ -312,6 +311,15 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/ondrive/">OneDrive</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/cad-draw/">CAD画图</a></div></section></div>
+
+  <script>
+    let tianliGPT_postSelector = 'article.content';
+    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
+    let tianliGPT_typingAnimate = 'true';
+    let tianliGPT_wordLimit = 2000;
+  </script>
+<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
+
 
 
 
