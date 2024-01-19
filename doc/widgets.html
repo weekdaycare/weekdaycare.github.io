@@ -60,7 +60,7 @@
 
 
 
-<div class="l_body content" id="start" layout="page.layout"><aside class="l_left"><img no-lazy class="sidebar-bg" src="https://bu.dusays.com/2024/01/18/65a807631d058.webp" onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"><div class="sidebar-container">
+<div class="l_body content tech" id="start" layout="wiki" ><aside class="l_left"><div class="sidebar-container sidebar-blur">
 
 
 <header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://xaoxuu.com/assets/wiki/stellar/icon.svg" onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></div><a class="title" href="/doc/"><div class="main" ff="title">文档重构</div></a></div></header>
@@ -69,7 +69,7 @@
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" class="icon search-icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" data-filter="/doc/" placeholder="要找点什么？"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
 
-<nav class="menu dis-select"><a class="nav-item" title="主页" href="/"><span>主页</span></a><a class="nav-item active" title="文档" href="/doc/"><span>文档</span></a><a class="nav-item" title="友人" href="/friends/"><span>友人</span></a><a class="nav-item" title="更多" href="/about/"><span>更多</span></a></nav>
+<nav class="menu dis-select"><a class="nav-item" title="主页" href="/"><span>主页</span></a><a class="nav-item active" title="文档" href="/doc/"><span>文档</span></a><a class="nav-item" title="更多" href="/about/"><span>更多</span></a></nav>
 </div>
 <div class="widgets">
 
@@ -78,38 +78,28 @@
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://xaoxuu.com/assets/wiki/stellar/icon.svg" onerror="javascript:this.classList.add('error');this.src='https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></div><a class="title" href="/doc/"><div class="main" ff="title">文档重构</div></a></div></header>
+
 
 
 
 <div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/doc/">文档重构</a></div><div id="post-meta">
     <span>更新于&nbsp;<time datetime="2024-01-18T04:25:19.428Z">2024-01-18</time></span>
     </div></div></div>
-
-<article class='md-text content wiki'>
-<h1 class="article-title"><span>小组件配置</span></h1>
-<p>您可以在这里创建属于自己的侧边栏组件库，在主题配置的相应位置放置自己的组件，<code>layout</code>
+<article class="md-text content"><h1 class="article-title"><span>小组件配置</span></h1><p>您可以在这里创建属于自己的侧边栏组件库，在主题配置的相应位置放置自己的组件，<code>layout</code>
 即组件布局模板，支持自定义的有： - markdown: 渲染 md 文本</p>
 <figure class="highlight yaml"><figcaption><span>blog/source/_data/widgets.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># welcome 为组件名，可自由设置，在主题配置中会引用到，其他组件同理</span></span><br><span class="line"><span class="attr">welcome:</span> </span><br><span class="line">  <span class="attr">layout:</span> <span class="string">markdown</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">你好，旅人：</span></span><br><span class="line">  <span class="attr">content:</span> <span class="string">| </span></span><br><span class="line"><span class="string">    &lt;script src=&quot;https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto&quot; defer&gt;&lt;/script&gt;&lt;span id=&quot;hitokoto&quot;&gt;一言ing……&lt;/span&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="comment"># --------- 内置组件请不要改动 ----------</span></span><br><span class="line"><span class="comment"># github 仓库，在 wiki 或者其他页面设置显示 ghrepo 时会用到</span></span><br><span class="line"><span class="attr">ghrepo:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">ghrepo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 相关 wiki，在主题配置文件中设置该项会在侧边栏中展示相关的 wiki</span></span><br><span class="line"><span class="attr">related:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">related</span></span><br><span class="line"><span class="comment"># ----------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 展示 github 仓库</span></span><br><span class="line"><span class="attr">ghissues:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">ghissues</span></span><br><span class="line">  <span class="attr">title:</span> <span class="comment"># Recent Issues</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">3</span> <span class="comment"># 显示的issues最大数量</span></span><br><span class="line">  <span class="attr">labels:</span> <span class="comment"># 过滤只显示具有某些标签的issues</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将其覆盖设置为空，可删除一个默认组件，例如 welcome:</span></span><br><span class="line"><span class="comment"># Recent update</span></span><br><span class="line"><span class="attr">recent:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">recent</span></span><br><span class="line">  <span class="attr">rss:</span> <span class="comment"># /atom.xml # npm i hexo-generator-feed</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10</span> <span class="comment"># Count of posts</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TOC (valid only in layout:post/wiki)</span></span><br><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">toc</span></span><br><span class="line">  <span class="attr">list_number:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">min_depth:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">fallback:</span> <span class="comment"># recent # Use a backup widget when toc does not exist.</span></span><br><span class="line">  <span class="attr">collapse:</span> <span class="literal">false</span> <span class="comment"># true / false / auto</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github user info</span></span><br><span class="line"><span class="attr">ghuser:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">ghuser</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">github</span> <span class="comment"># your github login username</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="literal">true</span> <span class="comment"># show avatar or not</span></span><br><span class="line">  <span class="attr">menu:</span> <span class="literal">true</span> <span class="comment"># show menu or not</span></span><br><span class="line"></span><br><span class="line"><span class="attr">tagcloud:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">tagcloud</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">标签云</span></span><br><span class="line">  <span class="comment"># 标签云配置</span></span><br><span class="line">  <span class="attr">min_font:</span> <span class="number">12</span></span><br><span class="line">  <span class="attr">max_font:</span> <span class="number">24</span></span><br><span class="line">  <span class="attr">amount:</span> <span class="number">100</span></span><br><span class="line">  <span class="attr">orderby:</span> <span class="string">name</span></span><br><span class="line">  <span class="attr">order:</span> <span class="number">1</span> <span class="comment"># 1, sac 升序；-1, desc 降序</span></span><br><span class="line">  <span class="attr">color:</span> <span class="literal">false</span> <span class="comment"># 使用颜色</span></span><br><span class="line">  <span class="attr">start_color:</span> <span class="comment"># 开始的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。</span></span><br><span class="line">  <span class="attr">end_color:</span> <span class="comment"># 结束的颜色，设置同上</span></span><br><span class="line">  <span class="attr">show_count:</span> <span class="literal">false</span> <span class="comment"># 显示每个标签的文章总数</span></span><br><span class="line"></span><br><span class="line"><span class="attr">timeline:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">timeline</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">近期动态</span></span><br><span class="line">  <span class="attr">api:</span> <span class="comment"># https://api.github.com/repos/xaoxuu/hexo-theme-stellar/issues?per_page=3 # 通过 api 上增加 per_page 来限制获取的数量</span></span><br><span class="line">  <span class="attr">user:</span> <span class="comment"># 默认显示所有人的数据，设置名称可过滤为仅显示某人的数据，多个名称用英文逗号隔开，不要加空格</span></span><br><span class="line">  <span class="attr">type:</span> <span class="comment"># 默认不写，如果是友链朋友圈数据请写 fcircle</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="comment"># 默认不写，如果是友链朋友圈，可通过这个设置数量</span></span><br></pre></td></tr></table></figure>
-
-
-
-<div class="article-footer reveal fs14"></div>
-
 </article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/front-matter.html">front-matter</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/site-config.html">_config.yml</a></div></section></div>
-
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/front-matter.html">front-matter</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/site-config.html">_config.yml</a></div></section></div>
 
 
-  <div class='related-wrap md-text reveal' id="comments">
+  <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
       快来参与讨论吧
     </section>
     <section class='body cmt-body giscus'>
       
 
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
 
 <div id="giscus" src="https://giscus.app/client.js" data-repo="weekdaycare/weekdaycare.github.io" data-repo-id="R_kgDOGZiRHw" data-category="Stellar" data-category-id="DIC_kwDOGZiRH84CTXJN" data-mapping="number" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" data-term="80"></div>
 
@@ -117,7 +107,8 @@
   </div>
 
 
-<footer class="page-footer reveal fs12"><hr><div class="text"><center>
+
+<footer class="page-footer fs12"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
 <br><span id="span"></span>

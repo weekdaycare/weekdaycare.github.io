@@ -1,6 +1,7 @@
 :root {
   --width-left: 288px;
   --width-main: 720px;
+  --fs-p: 0.9375rem;
   --gap-l: 16px;
   --gap-p: 1rem;
   --gap-p-compact: 0.75rem;
@@ -27,6 +28,15 @@
   :root {
     --width-left: 288px;
   }
+}
+.l_body.story {
+  --fs-p: calc(0.9375rem + 2px);
+  --gap-p: 1.5rem;
+}
+.l_body.story .tag-plugin,
+.l_body.story p>img {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
 }
 :root {
   --site-bg: #f9fafb;
@@ -371,8 +381,8 @@ pre:not([class]):has(>code) {
 .md-text .highlight figcaption span {
   padding: 4px 0.5rem;
   display: block;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   background: var(--block-hover);
 }
 .md-text .highlight >table {
@@ -3539,10 +3549,10 @@ details.folding[child=iframe] >div.body {
 .tag-plugin.tabs .tab-content:has(.grid-box) {
   width: 100%;
 }
-.md-text.indent .tag-plugin.tabs .tab-content p:not([class]) {
-  text-indent: calc(0.9375rem * 2);
+.l_body[text-indent] .md-text .tag-plugin.tabs .tab-content p:not([class]) {
+  text-indent: calc(var(--fs-p) * 2);
 }
-.md-text.indent .tag-plugin.tabs .tab-content p:not([class]) a {
+.l_body[text-indent] .md-text .tag-plugin.tabs .tab-content p:not([class]) a {
   text-indent: 0;
 }
 .md-text .tag-plugin.timeline {
@@ -3968,7 +3978,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: 100%;
   display: grid;
   margin: 8px 0;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
 }
 .nav-area .menu::-webkit-scrollbar {
@@ -4037,7 +4047,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   background: var(--text-p1);
 }
 .nav-area {
-  margin: 32px var(--gap-l) 8px;
+  margin: 32px var(--gap-l) 0;
 }
 .search-wrapper {
   width: 100%;
@@ -4149,7 +4159,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .search-wrapper #search-result .search-result-content {
   overflow: hidden;
   color: var(--text-p3);
-  margin: 0.4em auto;
+  margin: 4px 0 0;
   max-height: 13em;
   text-align: justify;
   font-size: 0.75rem;
@@ -4159,9 +4169,10 @@ details.toc[open] >div.body section .header+.doc_tree {
   -webkit-line-clamp: 2;
 }
 .search-wrapper #search-result .search-keyword {
-  color: var(--text-p1);
-  border-bottom: 1px dashed var(--text-p1);
+  color: #f44336;
+  border-bottom: 1px dashed #f44336;
   font-weight: bold;
+  filter: grayscale(25%);
 }
 .search-wrapper.noresult[searching='true'] .search-no-result {
   display: block;
@@ -4182,24 +4193,23 @@ details.toc[open] >div.body section .header+.doc_tree {
     margin-top: calc(2 * var(--gap-l));
   }
 }
-.l_left .sidebar-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: var(--text-meta);
+.l_left {
+  background-size: cover;
+  background-image: url("https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.13/image/sidebar-bg1@small.jpg");
 }
 .l_left .sidebar-container {
   height: 100%;
-  --blur-px: 100px;
-  --blur-bg: var(--sidebar-bg);
   display: flex;
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
 }
+.l_left .sidebar-blur {
+  --blur-px: 100px;
+  --blur-bg: var(--sidebar-bg);
+}
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
-  .l_left .sidebar-container {
+  .l_left .sidebar-blur {
     background: var(--blur-bg);
     backdrop-filter: saturate(240%) blur(var(--blur-px));
     -webkit-backdrop-filter: saturate(240%) blur(var(--blur-px));
@@ -4495,6 +4505,11 @@ details.toc[open] >div.body section .header+.doc_tree {
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body a:hover {
   color: #7e57c2;
   border-bottom: 1px solid #7e57c2;
+}
+.widget-wrapper.timeline .tag-plugin.timeline .timenode .body code {
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 .widget-wrapper.toc.single .doc-tree.active>.toc {
   border-left: 2px solid var(--alpha50);
@@ -4946,7 +4961,6 @@ details.toc[open] >div.body section .header+.doc_tree {
     transform: translateX(-320px);
     margin: 0;
     left: 8px;
-    background: var(--site-bg);
     box-shadow: 0 12px 16px -4px rgba(0,0,0,0.2);
     z-index: 10;
   }
@@ -5038,6 +5052,10 @@ details.toc[open] >div.body section .header+.doc_tree {
 .post-list .post-card .meta.cap span.pin img {
   object-fit: contain;
   height: 1.5em;
+}
+.post-list .post-card .meta.cap span.pin svg {
+  height: 1.5rem;
+  color: #f44336;
 }
 .post-list .post-card:hover img {
   transform: scale(1.02);
@@ -5244,24 +5262,6 @@ h1.article-title {
   padding-bottom: 2rem;
   overflow: hidden;
 }
-.md-text.content.indent >p:not([class]) {
-  text-indent: calc(0.9375rem * 2);
-  text-align: left;
-}
-.md-text.content.indent >p:not([class]) a {
-  text-indent: 0;
-}
-.md-text.content.indent h1,
-.md-text.content.indent h2,
-.md-text.content.indent h3,
-.md-text.content.indent h4,
-.md-text.content.indent h5,
-.md-text.content.indent h6 {
-  text-align: center;
-}
-.md-text.content.indent >h2:not([class]) {
-  border-bottom: none;
-}
 .md-text.content >:first-child:not(h1) {
   margin-top: 0;
 }
@@ -5306,6 +5306,24 @@ h1.article-title {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding-top: 0;
+}
+.l_body[text-indent] .md-text.content >p:not([class]) {
+  text-indent: calc(var(--fs-p) * 2);
+  text-align: left;
+}
+.l_body[text-indent] .md-text.content >p:not([class]) a {
+  text-indent: 0;
+}
+.l_body[text-indent] .md-text.content h1,
+.l_body[text-indent] .md-text.content h2,
+.l_body[text-indent] .md-text.content h3,
+.l_body[text-indent] .md-text.content h4,
+.l_body[text-indent] .md-text.content h5,
+.l_body[text-indent] .md-text.content h6 {
+  text-align: center;
+}
+.l_body[text-indent] .md-text.content >h2:not([class]) {
+  border-bottom: none;
 }
 .md-text.content:first-child {
   padding-top: 0;
@@ -5399,7 +5417,7 @@ h1.article-title {
   margin-top: -0.5rem;
 }
 .md-text p {
-  font-size: 0.9375rem;
+  font-size: var(--fs-p);
 }
 .md-text pre {
   -webkit-font-smoothing: auto;
