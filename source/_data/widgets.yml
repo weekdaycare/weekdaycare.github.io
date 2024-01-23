@@ -50,9 +50,23 @@ tagcloud:
   end_color: '#ffb700' # 结束的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
   show_count: false # 显示每个标签的文章总数
 
+linklist:
+  layout: linklist
+  columns: 1 # 1是列表，2是每两个按钮放一行，大于2则只显示icon
+  items:
+    - icon: ph:lightbulb-duotone
+      title: 留言板
+      url: /about/
+
 welcome:
   layout: markdown
   title: 你好，旅人：
+  linklist:
+    columns: 1
+    items:
+      - icon: ph:lightbulb-duotone
+        title: 留言板
+        url: /about/
   content: | # support markdown
     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script><span id="hitokoto">一言ing……</span>
 

@@ -1,5 +1,4 @@
 ---
-layout: wiki
 wiki: doc 
 menu_id: doc 
 title: 文本修饰标签集

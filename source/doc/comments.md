@@ -1,5 +1,4 @@
 ---
-layout: wiki
 wiki: doc 
 menu_id: doc 
 title: 评论组件

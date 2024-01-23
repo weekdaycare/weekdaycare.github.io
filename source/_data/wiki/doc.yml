@@ -1,8 +1,9 @@
 name: 文档重构
 title: Stellar 文档
+subtitle: '文档重构中 | 重构了但没有完全重构'
 icon: https://xaoxuu.com/assets/wiki/stellar/icon.svg # 列表页图标
 cover: # 封面页大图
-coverpage: # [cover, title, description] # 封面页显示的内容
+coverpage: false # [cover, title, description] # 封面页显示的内容
 search:
   filter: /doc/
   placeholder: 要找点什么？
@@ -15,7 +16,7 @@ comments:
     'data-term': '80'
     'data-mapping': number
 
-path: /doc/
+base_dir: /doc/
 toc:
   '简介':
     - index

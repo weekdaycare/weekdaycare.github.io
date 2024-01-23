@@ -1,10 +1,10 @@
 ######## Stellar info ########
 stellar:
-  version: '1.23.0'
+  version: '1.26.2'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
-  cdn_css: # Use cdn links instead of /css/main.css
-  cdn_js: # Use cdn links instead of /js/main.js
+  main_css: /css/main.css
+  main_js: /js/main.js
 
 
 ######## head tags ########
@@ -21,52 +21,66 @@ logo:
   
 # 侧边栏主功能导航菜单
 menubar:
-  columns: 4 # 一行多少个
+  columns: 3 # 一行多少个
   items: # 可按照自己需求增加，符合以下格式即可
     - id: post
-      title: 主页
+      icon: ph:signpost-duotone
+      theme: var(--text-p0)
+      title: 文章
       url: /
     - id: doc
+      icon: ph:books-duotone
+      theme: var(--text-p0)
       title: 文档
       url: /doc/
-    - id: friends
-      title: 友人
-      url: /friends/
     - id: about
+      icon: ph:planet-duotone
+      theme: var(--text-p0)
       title: 更多
       url: /about/
 
 
-# 目录树
+# 站点主结构树
 site_tree:
-    # 主页
-  home: 
-    sidebar: welcome, timeline # for home
-  blog:
+  # -- 列表类页面 -- #
+  # 主页配置
+  home:
+    sidebar: welcome, timeline, recent
+  # 博客列表页配置
+  index_blog:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    sidebar: recent, timeline # for categories/tags/archives
+    sidebar: recent # for categories/tags/archives
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
       '说说': /shuoshuo/
-  # 博客文章配置
+  # 博客专栏列表页配置
+  index_topic:
+    base_dir: topic # 只影响自动生成的页面路径
+    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+  # 文档列表页配置
+  index_wiki:
+    base_dir: wiki # 只影响自动生成的页面路径
+    menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
+    sidebar: toc, ghissues, related, recent # for wiki
+    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      # '说说': /shuoshuo/
+  # -- 内容类页面 -- #
+  # 博客文章内页配置
   post:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     sidebar: toc, ghrepo, ghissues # for pages using 'layout:post'
-  # 博客专栏配置
+  # 博客专栏文章内页配置
   topic:
-    base_dir: topic # 只影响自动生成的页面路径
-    menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
-    sidebar: toc, related # for topic
-  # wiki配置
+    menu_id: post
+  # 文档内页配置
   wiki:
-    base_dir: wiki # 只影响自动生成的页面路径
     menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
     sidebar: toc, ghissues, related # for wiki
   # 作者信息配置
   author: 
     base_dir: author # 只影响自动生成的页面路径
     menu_id: post
-    sidebar: recent, timeline
+    sidebar: recent
   # 错误页配置
   error_page:
     menu_id: post
@@ -74,7 +88,7 @@ site_tree:
     sidebar: recent
   # 其它自定义页面配置 layout: page
   page:
-    sidebar: welcome, toc
+    sidebar: welcome, recent
 
 
 ######## Main ########
@@ -84,6 +98,10 @@ breadcrumb:
 
 ######## Article ########
 article:
+  # 文章类型，决定布局风格，可以在 front-matter/topic/wiki 中覆盖此参数
+  type: tech # tech: 默认技术类文章, story: 图文类文章，文字和段落间增距大
+  # 缩进两个文字宽度，适合文字类博客，可以在 front-matter/topic/wiki 中覆盖此参数
+  indent: # true / false
   # 如果没有指定封面，是否根据 tags 作为关键词搜索封面图片？
   auto_cover: false # search from https://source.unsplash.com/
   # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
@@ -325,7 +343,7 @@ tag_plugins:
   mark:
     default_color: orange # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
   okr:
-    border: true # 是否显示边框
+    border: false # 是否显示边框
     status: # 可以自行增加
       # 进行中状态
       in_track:
@@ -356,7 +374,7 @@ tag_plugins:
 plugins:
   ## required plugins ##
   # jquery
-  jquery: https://jsd.onmicrosoft.cn/npm/jquery@3.5.1/dist/jquery.min.js
+  jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js
 
   # stellar api
   stellar:
@@ -376,16 +394,15 @@ plugins:
   # preload
   preload:
     enable: true
-    service: flying_pages # instant_page, flying_pages
-    instant_page: https://jsd.onmicrosoft.cn/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js
-    flying_pages: https://jsd.onmicrosoft.cn/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
+    service: flying_pages # flying_pages
+    flying_pages: https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js
 
   # image lazyload
   # https://www.npmjs.com/package/vanilla-lazyload
   lazyload:
     enable: true # [hexo clean && hexo s] is required after changing this value.
-    js: https://jsd.onmicrosoft.cn/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
-    transition: blur # blur, fade
+    js: https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js
+    transition: fade # blur, fade
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
@@ -400,8 +417,8 @@ plugins:
   # available for {% image xxx %}
   fancybox:
     enable: true
-    js: https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
-    css: https://jsd.onmicrosoft.cn/npm/@fancyapps/ui@4.0/dist/fancybox.css
+    js: https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js
+    css: https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
     # 使用valine评论可以写: .vcontent img:not(.vemoji)
     # 使用twikoo评论可以写: .tk-content img:not([class*="emo"])
@@ -426,15 +443,15 @@ plugins:
   # 需在Markdown文件开头加入mathjax: true
   # 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save & npm install hexo-renderer-pandoc --save
   mathjax:
-    enable: false
-    cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    enable: false # true # 可以在特定文章的 front-matter 中设置 mathjax: true 来开启，也可以在这里设置全局开启
+    js: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
   # Katex - The fastest math typesetting library for the web
   # https://katex.org/docs/autorender.html
   # https://github.com/KaTeX/KaTeX
   # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
   katex:
-    enable: false
+    enable: false # 可以在特定文章的 front-matter 中设置 katex: true 来开启，也可以在这里设置全局开启
     min_css: <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
     min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
     auto_render_min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
@@ -449,7 +466,8 @@ plugins:
   #   B -->|option 2| C(Section C)
   # ```
   mermaid:
-    enable: false
+    enable: # true # 可以在特定文章的 front-matter 中设置 mermaid: true 来开启，也可以在这里设置全局开启
+    style_optimization: false # use custom style in stellar
     # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
     js: https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js
     # Available themes: default | dark | forest | neutral
@@ -461,7 +479,7 @@ plugins:
     enable: true
     field: post # all, post, wiki
     api: RcqNI1MwOG4jG4mXrH4k
-    limit: # 设置提交的字数限制，默认为1000字，上限为5000，超过5000字符将被截断。
+    limit: 2000 # 设置提交的字数限制，默认为1000字，上限为5000，超过5000字符将被截断。
     typingAnimate: true # 打字机动画 
 
   # 代码块复制按钮
@@ -496,7 +514,7 @@ style:
     theme: '#F4511E' # 主题色
     accent: '#D50000' # 强调色
     link: '#F4511E' # 超链接颜色
-    button: '#1BCDFC' # 按钮颜色
+    button: '#F4511E' # 按钮颜色
     hover: '#7E57C2' # 按钮高亮颜色
     # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
     background: 'hsl(212 16% 98%)' # 浅色背景颜色
@@ -510,13 +528,25 @@ style:
     background: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp
   codeblock:
     scrollbar: 4px
-    highlightjs_theme: https://jsd.onmicrosoft.cn/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css
+    highlightjs_theme: https://jsd.onmicrosoft.cn/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css
   loading:
     loading: ∠( ᐛ 」∠)＿
     error: Σ(っ °Д °;)っ
   gradient: # https://webgradients.com/
     start: 'linear-gradient(to right, #fa709a 0%, #fee140 100%)'
     search: '#E0E0E0'
+  sidebar:
+    # 可以设置：纯色/渐变色/图片作为背景
+    # background: 'linear-gradient(to bottom, #abc3, #abc3)'
+    # background: 'linear-gradient(to bottom, #20E2D744, #F9FEA544)'
+    # 'url(https://bu.dusays.com/2024/01/18/65a807631d058.webp)'
+    # 在图片上层增加高斯模糊效果（同时附带饱和度增强效果）
+    background: # 'linear-gradient(30deg, #DAEAFA, #DFCDBE, #DAEAFA, #DFCDBE )'
+    blur: true
+  paginator:
+    prev: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.12/arrow/f049bbd4e88ec.svg
+    next: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.12/arrow/064b95430caf4.svg
+  error_page: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.12/404/1c830bfcd517d.svg
 
 default:
   avatar: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
@@ -526,7 +556,7 @@ default:
   project: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2779789.png
   banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
   topic: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png
-  sidebar: https://bu.dusays.com/2024/01/18/65a807631d058.webp
+
 api_host:
   ghapi: https://raw.weekdaycare.cn/api
   ghraw: https://jsd.onmicrosoft.cn

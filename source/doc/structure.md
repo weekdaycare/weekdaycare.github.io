@@ -1,5 +1,4 @@
 ---
-layout: wiki
 wiki: doc 
 menu_id: doc 
 title: 文件目录树
@@ -13,8 +12,8 @@ source
 │    ├─ wiki 
 │    |      ├─ notes.yml # 笔记页面配置文件
 │    │      └─ wiki.yml # wiki页面配置文件
-│    └─ topic # 专栏配置文件
-│           └─ blog.yml
+│    └─ topic 
+│           └─ blog.yml # 专栏配置文件
 │
 ├─ asset # 网站资源存放处，需要引用时可以使用相对路径 /asset/css/pace.css
 │    ├─ avatar.svg

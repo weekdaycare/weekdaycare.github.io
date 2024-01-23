@@ -1,5 +1,4 @@
 ---
-layout: wiki
 wiki: doc 
 menu_id: doc 
 title: 说在前头
@@ -9,7 +8,7 @@ title: 说在前头
 
 {% okr O %}
 
-现在还是很混乱，还有众多问题，慢慢改吧 {% emoji blobcat0_0 %}
+佬更新太快了，隔一天就是一个大变样，文档来不及跟进，这边的文档重构先放一放，先去完善佬那边的文档（水commit） {% emoji blobcat0_0 %}
 
 <!-- okr kr1 percent:1 -->
 
@@ -17,7 +16,7 @@ title: 说在前头
 
 对我这种基本上熟悉了每个标签功能的人来说，每次想起某个标签的名字却不记得用法，然后去翻文档，结果在表达标签数据容器标签之间反复横跳，最后还是用的搜索 {% emoji blobcatgooglycry %}
 
-<!-- okr kr2 percent:0 -->
+<!-- okr kr2 status:off_track -->
 
 文档完善格式统一
 
@@ -37,11 +36,11 @@ title: 说在前头
 
 完整的主题目录结构
 
-<!-- okr kr4 percent:0 -->
+<!-- okr kr4 status:off_track -->
 
 完整主题站点配置文件详解
 
-<!-- okr kr5 percent:0.5 -->
+<!-- okr kr5 status:off_track -->
 
 front-matter 可配置参数详解
 
