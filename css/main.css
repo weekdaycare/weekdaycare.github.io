@@ -44,8 +44,9 @@
   --alpha20: rgba(255,255,255,0.2);
   --alpha50: rgba(255,255,255,0.5);
   --alpha60: rgba(255,255,255,0.6);
+  --alpha75: rgba(255,255,255,0.75);
   --alpha100: #fff;
-  --sidebar-bg: rgba(255,255,255,0.5);
+  --sidebar-bg: #e3e5e8;
   --block: #f1f2f3;
   --block-border: #e3e5e8;
   --block-hover: #e9eaec;
@@ -68,8 +69,9 @@
     --alpha20: rgba(0,0,0,0.2);
     --alpha50: rgba(0,0,0,0.5);
     --alpha60: rgba(0,0,0,0.6);
+    --alpha75: rgba(0,0,0,0.75);
     --alpha100: #000;
-    --sidebar-bg: rgba(0,0,0,0.64);
+    --sidebar-bg: #383d42;
     --text-p0: #fff;
     --text-p1: #ccc;
     --text-p2: #b3b3b3;
@@ -126,12 +128,12 @@ table:not([class]) {
   font-size: 0.875rem;
 }
 table:not([class]) th {
-  background: var(--block);
+  background: var(--blur-bg);
 }
 table:not([class]) td,
 table:not([class]) th {
   padding: 0.5em 1em;
-  border: 1px solid var(--block-hover);
+  border: 1px solid var(--blur-bg);
   line-height: 1.5;
 }
 table:not([class]) tr {
@@ -139,7 +141,7 @@ table:not([class]) tr {
   white-space: nowrap;
 }
 table:not([class]) tr:hover {
-  background: var(--block);
+  background: var(--blur-bg);
 }
 *[ff=title] {
   font-family: STZhongsong, "Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
@@ -156,7 +158,7 @@ blockquote {
 }
 :root {
   --blur-px: 50px;
-  --blur-bg: var(--alpha50);
+  --blur-bg: var(--alpha20);
 }
 .blur {
   background: var(--blur-bg);
@@ -205,63 +207,68 @@ a[onclick]:hover {
   cursor: pointer;
 }
 a.button.start.gradient {
-  transition: 0.38s ease-out;
   position: relative;
-  z-index: 0;
-  background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-size: 1000%;
-  color: #fff;
-  text-shadow: 0 0 1px rgba(0,0,0,0.12);
-  animation: glow 60s linear infinite;
 }
-a.button.start.gradient:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 100px;
-  background: inherit;
-  z-index: -1;
-  filter: blur(36px);
-  transition: 0.38s ease-out;
-  opacity: 0;
-}
-a.button.start.gradient:hover:after {
-  opacity: 1;
-}
+@media (prefers-color-scheme: dark) {
+  a.button.start.gradient {
+    transition: 0.38s ease-out;
+    z-index: 0;
+    background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-size: 1000%;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,0.12);
+    animation: glow 60s linear infinite;
+  }
+  a.button.start.gradient:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 100px;
+    background: inherit;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.5;
+    transition: 0.38s ease-out;
+  }
+  a.button.start.gradient:hover:after {
+    filter: blur(36px);
+    opacity: 1;
+  }
 @-moz-keyframes glow {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 1000%;
-  }
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 1000%;
+    }
 }
 @-webkit-keyframes glow {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 1000%;
-  }
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 1000%;
+    }
 }
 @-o-keyframes glow {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 1000%;
-  }
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 1000%;
+    }
 }
 @keyframes glow {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 1000%;
-  }
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 1000%;
+    }
+}
 }
 .cap {
   font-weight: 500;
@@ -939,6 +946,7 @@ div.toast.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2s;
   animation: fadein 0.5s, fadeout 0.5s 2s;
+  animation-fill-mode: forwards;
 }
 @-webkit-keyframes fadein {
   from {
@@ -1169,10 +1177,6 @@ div.toast.show {
 .l_cover {
   height: 100vh;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 .l_cover.post {
@@ -1324,16 +1328,14 @@ div.toast.show {
   font-weight: 500;
 }
 .nav-wrap {
-  position: sticky;
-  position: -webkit-sticky;
-  margin-top: -0.5rem;
-  top: -2px;
-  border-radius: 6px;
-  background: var(--alpha20);
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   z-index: 8;
-  margin-bottom: 1px;
-  margin: 0.4rem 1rem 0 1rem;
+  top: 0;
+  background: var(--site-bg);
+  position: sticky;
+  background: var(--alpha20);
+  margin: 0 1rem;
+  border-radius: 6px;
 }
 nav.cap {
   display: flex;
@@ -1359,7 +1361,7 @@ nav.cap >p {
 }
 nav.cap a {
   padding: 0.25rem 0.75rem;
-  margin: 10px 0.25rem 8px 0.25rem;
+  margin: 10px 0.25rem 8px 0;
   line-height: 2;
   color: var(--text-p2);
   border-radius: 4px;
@@ -4203,15 +4205,20 @@ details.toc[open] >div.body section .header+.doc_tree {
     margin-top: calc(2 * var(--gap-l));
   }
 }
+.l_left {
+  background-size: cover;
+}
 .l_left .sidebar-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
+  --blur-px: 50px;
+  --blur-bg: var(--alpha20);
 }
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
-  .l_left .sidebar-blur {
+  .l_left .sidebar-container {
     background: var(--blur-bg);
     backdrop-filter: saturate(240%) blur(var(--blur-px));
     -webkit-backdrop-filter: saturate(240%) blur(var(--blur-px));
@@ -5049,7 +5056,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
   z-index: 9;
   opacity: 0;
   transition: opacity 0.2s ease-out;
@@ -5076,7 +5083,7 @@ details.toc[open] >div.body section .header+.doc_tree {
     max-width: 100%;
   }
   .l_body.mobile .l_left {
-    transition: transform 0.3s ease-out;
+    transition: transform 0.38s ease-out;
   }
   .l_body.mobile.sidebar .l_left {
     transform: translateX(0px);
@@ -5117,15 +5124,32 @@ details.toc[open] >div.body section .header+.doc_tree {
   display: block;
   margin: 1rem 0;
   border-radius: 6px;
-  box-shadow: 0 2px 8px 0px rgba(0,0,0,0.02);
+  background: var(--blur-bg);
   transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   overflow: hidden;
   z-index: 0;
-  background: var(--alpha20);
   position: relative;
+}
+@media (prefers-color-scheme: dark) {
+  .post-list .post-card:hover {
+    box-shadow: 0 0 4px -2px #f4511e, 0 0 24px -8px #f4511e;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .post-list .post-card {
+    box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    -webkit-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  .post-list .post-card:hover {
+    box-shadow: 0 12px 20px -4px rgba(0,0,0,0.15);
+    transform: translate3d(0, -2px, 0);
+  }
 }
 .post-list .post-card .excerpt {
   margin: 1rem 0;
@@ -5165,9 +5189,8 @@ details.toc[open] >div.body section .header+.doc_tree {
   height: 1.5rem;
   color: #f44336;
 }
-.post-list .post-card:hover img {
-  transform: scale(1.02);
-  filter: brightness(80%);
+.post-list.post .post-card:hover img {
+  filter: brightness(50%);
 }
 .post-list .md-text {
   padding: 1rem;
@@ -5344,6 +5367,32 @@ details.toc[open] >div.body section .header+.doc_tree {
   .l_body.index .l_main {
     padding-top: 0;
   }
+}
+body>.sitebg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-image: url("https://bu.dusays.com/2024/01/22/65ae69a356fd9.jpg");
+}
+body>.sitebg .siteblur {
+  width: 100%;
+  height: 100%;
+  background: var(--blur-bg);
+  --blur-px: 50px;
+  --blur-bg: var(--alpha20);
+}
+@supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
+  body>.sitebg .siteblur {
+    background: var(--blur-bg) !important;
+    backdrop-filter: saturate(200%) blur(var(--blur-px));
+    -webkit-backdrop-filter: saturate(200%) blur(var(--blur-px));
+  }
+}
+body>.sitebg .siteblur:hover {
+  background: var(--alpha50);
 }
 .md-text {
   max-width: 100%;
