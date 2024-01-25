@@ -155,7 +155,7 @@ blockquote {
   color: var(--text-p2);
 }
 :root {
-  --blur-px: 12px;
+  --blur-px: 50px;
   --blur-bg: var(--alpha50);
 }
 .blur {
@@ -169,7 +169,7 @@ blockquote {
   }
 }
 .blur:hover {
-  background: var(--card);
+  background: var(--alpha50);
 }
 button {
   border: none;
@@ -798,7 +798,7 @@ svg.loading {
 .loading-wrap {
   margin: 0;
   text-align: center;
-  background: var(--block);
+  background: var(--blur-bg);
   border-radius: 6px;
   position: relative;
   padding: 2rem;
@@ -1825,7 +1825,7 @@ article.md-text.content+.related-wrap {
   }
 }
 .tag-plugin.banner .navbar a.active:hover {
-  background: var(--card);
+  background: var(--alpha50);
 }
 @media screen and (min-width: 667px) {
   .tag-plugin.banner.author {
@@ -4209,10 +4209,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
-}
-.l_left .sidebar-blur {
-  --blur-px: 5px;
-  --blur-bg: var(--sidebar-bg);
 }
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
   .l_left .sidebar-blur {
