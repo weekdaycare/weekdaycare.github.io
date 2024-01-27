@@ -128,12 +128,12 @@ table:not([class]) {
   font-size: 0.875rem;
 }
 table:not([class]) th {
-  background: var(--blur-bg);
+  background: var(--alpha20);
 }
 table:not([class]) td,
 table:not([class]) th {
   padding: 0.5em 1em;
-  border: 1px solid var(--blur-bg);
+  border: 1px solid var(--alpha20);
   line-height: 1.5;
 }
 table:not([class]) tr {
@@ -141,7 +141,7 @@ table:not([class]) tr {
   white-space: nowrap;
 }
 table:not([class]) tr:hover {
-  background: var(--blur-bg);
+  background: var(--alpha20);
 }
 *[ff=title] {
   font-family: STZhongsong, "Noto Serif SC", "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
@@ -726,6 +726,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  scroll-padding-top: 20px;
 }
 body {
   background: var(--site-bg);
@@ -2521,7 +2522,7 @@ details.folding[child=iframe] >div.body {
   display: block;
   width: 48px;
   height: 48px;
-  background: var(--card);
+  background: var(--alpha20);
   border-radius: 64px;
   margin: 0 0 0.5rem;
 }
@@ -2532,7 +2533,7 @@ details.folding[child=iframe] >div.body {
   -o-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 .users-wrap .user-card .card-link:hover {
-  background: var(--block-hover);
+  background: var(--alpha50);
 }
 .users-wrap .user-card .card-link:hover img {
   transform: scale(1.2) rotate(8deg);
@@ -4214,7 +4215,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
-  --blur-px: 50px;
+  --blur-px: 60px;
   --blur-bg: var(--alpha20);
 }
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
@@ -4439,10 +4440,10 @@ details.toc[open] >div.body section .header+.doc_tree {
   -o-transition: background 0.2s ease-out;
 }
 .widget-wrapper.post-list .widget-body a.active {
-  background: var(--blur-bg);
+  background: var(--alpha20);
 }
 .widget-wrapper.post-list .widget-body a:hover {
-  background: var(--blur-bg);
+  background: var(--alpha50);
 }
 .widget-wrapper.post-list .widget-body a+a {
   margin-top: 2px;
@@ -4559,12 +4560,8 @@ details.toc[open] >div.body section .header+.doc_tree {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.widget-wrapper.timeline .tag-plugin.timeline .timenode .header .user-info {
-  background: var(--alpha20);
-}
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .header .user-info:hover {
-  background: #7e57c2;
-  color: var(--card);
+  background: var(--alpha60);
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .header:before {
   display: none;
@@ -4576,9 +4573,16 @@ details.toc[open] >div.body section .header+.doc_tree {
   color: var(--text-p2);
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body {
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
   border-radius: 6px;
   background: var(--alpha20);
   box-shadow: none;
+}
+.widget-wrapper.timeline .tag-plugin.timeline .timenode .body:hover {
+  background: var(--alpha50);
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body a {
   transition: all 0.2s ease-out;
@@ -5125,6 +5129,11 @@ details.toc[open] >div.body section .header+.doc_tree {
   margin: 1rem 0;
   border-radius: 6px;
   background: var(--blur-bg);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
@@ -5133,23 +5142,9 @@ details.toc[open] >div.body section .header+.doc_tree {
   z-index: 0;
   position: relative;
 }
-@media (prefers-color-scheme: dark) {
-  .post-list .post-card:hover {
-    box-shadow: 0 0 4px -2px #f4511e, 0 0 24px -8px #f4511e;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .post-list .post-card {
-    box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    -moz-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    -webkit-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    -o-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-  }
-  .post-list .post-card:hover {
-    box-shadow: 0 12px 20px -4px rgba(0,0,0,0.15);
-    transform: translate3d(0, -2px, 0);
-  }
+.post-list .post-card:hover {
+  box-shadow: 0 12px 20px -4px rgba(0,0,0,0.15);
+  transform: translate3d(0, -2px, 0);
 }
 .post-list .post-card .excerpt {
   margin: 1rem 0;
@@ -5381,7 +5376,7 @@ body>.sitebg .siteblur {
   width: 100%;
   height: 100%;
   background: var(--blur-bg);
-  --blur-px: 50px;
+  --blur-px: 60px;
   --blur-bg: var(--alpha20);
 }
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
