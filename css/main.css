@@ -1398,7 +1398,6 @@ div.toast.show {
   padding: 0 1rem;
   z-index: 8;
   top: 0;
-  background: var(--site-bg);
   position: sticky;
   background: var(--alpha20);
   border-radius: 6px;
@@ -1427,7 +1426,7 @@ nav.sub >p {
   margin: 0;
 }
 nav.sub a {
-  padding: 0.25rem 0.75rem;
+  padding: 2px 0.75rem;
   margin: 10px 0.25rem 8px 0;
   line-height: 2;
   color: var(--text-p2);
@@ -5032,6 +5031,16 @@ details.toc[open] >div.body section .header+.doc_tree {
 .post-list #cats a.cat.child {
   padding-left: 2rem;
 }
+.post-list #cats a.cat span {
+  display: flex;
+  align-items: center;
+}
+.post-list #cats a.cat svg {
+  height: 1em;
+  width: auto;
+  transform: scale(1.2);
+  margin-right: 8px;
+}
 .post-list #cats a.cat .badge {
   font-weight: 700;
   font-family: "Cascadia Code", Menlo, Monaco, Consolas, system-ui, Courier New, monospace, sans-serif;
@@ -5241,24 +5250,40 @@ details.toc[open] >div.body section .header+.doc_tree {
   }
 }
 .post-list .post-card .meta.cap {
-  display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  line-height: 2;
+  --fsp: var(--fsp1);
+  font-size: var(--fsp);
+}
+.post-list .post-card .meta.cap,
+.post-list .post-card .meta.cap span {
+  display: flex;
   align-items: center;
-  margin: 0.25rem 0;
-  line-height: 1.5;
 }
-.post-list .post-card .meta.cap span+span {
-  margin-left: 0.5rem;
-}
-.post-list .post-card .meta.cap span.pin {
+.post-list .post-card .meta.cap svg {
+  height: 1em;
+  width: auto;
   line-height: 0;
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+.post-list .post-card .meta.cap .cap.tags >span {
+  margin-right: 0.5rem;
+}
+.post-list .post-card .meta.cap .cap.tags svg {
+  margin-right: 0;
+}
+.post-list .post-card .meta.cap >span+span {
+  margin: 0 0.5rem;
+}
+.post-list .post-card .meta.cap >span:nth-child(3) {
+  margin-left: auto;
 }
 .post-list .post-card .meta.cap span.pin img {
   object-fit: contain;
-  height: 1.5em;
 }
 .post-list .post-card .meta.cap span.pin svg {
-  height: 1.5rem;
   color: #f44336;
 }
 .post-list.post .post-card:hover img {
