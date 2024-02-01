@@ -866,7 +866,7 @@ svg.icon {
   overflow: hidden;
 }
 svg.active-icon {
-  color: var(--text-p0);
+  color: var(--text);
 }
 h1,
 .h1 {
@@ -896,10 +896,6 @@ h5 {
 }
 h6 {
   font-size: 0.75rem;
-}
-.fs15 {
-  --fsp: 0.9375rem;
-  font-size: var(--fsp);
 }
 .fs14 {
   --fsp: 0.875rem;
@@ -1057,10 +1053,10 @@ div.toast.show {
 }
 .article.banner {
   --text-banner: var(--text);
-  margin: 0 0.5rem;
   height: unset;
   background: var(--blur-bg);
   border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
 .article.banner .bg+.content {
   min-height: 240px;
@@ -1405,7 +1401,6 @@ div.toast.show {
   background: var(--site-bg);
   position: sticky;
   background: var(--alpha20);
-  margin: 0 0.5rem;
   border-radius: 6px;
 }
 nav.sub {
@@ -1483,7 +1478,6 @@ nav.sub a+a {
   }
 }
 .paginator-wrap {
-  margin: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1545,7 +1539,7 @@ nav.sub a+a {
   filter: unset;
 }
 .related-wrap {
-  padding: 0 0.5rem;
+  padding: 0;
   margin: 4rem 0;
 }
 .related-wrap:empty {
@@ -1568,7 +1562,7 @@ nav.sub a+a {
   color: var(--text-p1);
 }
 article.md-text.content+.related-wrap {
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 .related-posts {
   max-width: 100%;
@@ -1646,7 +1640,7 @@ article.md-text.content+.related-wrap {
   color: var(--text-p2);
 }
 .related-wrap#comments {
-  padding: 0 0.5rem;
+  padding: 0;
 }
 .related-wrap#comments .cmt-title p {
   margin: 0;
@@ -1911,9 +1905,6 @@ article.md-text.content+.related-wrap {
   }
 }
 @media screen and (max-width: 667px) {
-  .banner.top {
-    border-radius: 0;
-  }
   .md-text.content:first-child .tag-plugin.banner:first-child {
     margin-top: 1rem;
   }
@@ -5140,6 +5131,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: 320px;
   max-width: var(--width-main);
   margin: 0.5rem;
+  padding: 0 0.5rem;
 }
 .main-mask {
   position: fixed;
@@ -5184,9 +5176,6 @@ details.toc[open] >div.body section .header+.doc_tree {
     opacity: 1;
     pointer-events: inherit;
   }
-}
-.l_main .post-list {
-  margin: 0.5rem;
 }
 .l_main .post-list .post-title:first-child {
   margin-top: 0.5rem;
@@ -5486,7 +5475,6 @@ body>.sitebg .siteblur:hover {
   overflow: hidden;
   background: var(--blur-bg);
   border-radius: 6px;
-  margin: 0.5rem;
 }
 .l_body[text-indent] .md-text.content >p {
   text-indent: calc(var(--fsp) * 2);
@@ -5625,7 +5613,7 @@ body>.sitebg .siteblur:hover {
   font-weight: 500;
 }
 .md-text.content:first-child .tag-plugin:first-child {
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 .md-text p {
   font-size: var(--fsp);
