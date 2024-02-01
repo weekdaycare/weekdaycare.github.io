@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.4" theme-name="Stellar" theme-version="1.26.4">
   
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -47,7 +47,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.4">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -59,8 +59,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/asset/css/pace.css">
 </head>
 <body><div class="sitebg"><div class="siteblur"></div></div>
-
-
 
 <div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
 
@@ -88,11 +86,23 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
-<div id="post-meta"><span class="author">发布于：</span><span class="created"><time datetime="2022-10-29T14:15:53.000Z">2022-10-29</time></span><span class="updated">，更新于：<time datetime="2022-10-30T12:20:20.000Z">2022-10-30</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created"><time datetime="2022-10-29T14:15:53.000Z">2022-10-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-10-30T12:20:20.000Z">2022-10-30</time></span></div></div>
 </div>
-<article class="md-text content "><h1 class="article-title"><span>Stellar滚动框美化</span></h1><h2 id="前言">前言</h2>
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>Stellar滚动框美化</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="前言">前言</h2>
 <blockquote>
 <p>好吧好吧，大大真勤快，我文章还没发出来2天捏大大就搞定了这个问题，不愧是大大🤣</p>
 </blockquote>
@@ -121,7 +131,7 @@
 </table>
 <p>等等等，firefox真的没救了么？条条大路通罗马，用不了css我还不能用js了？</p>
 <p>办法在这里捏</p>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://juejin.cn/post/6844904004879843336" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://juejin.cn/post/6844904004879843336</span><span class="cap link fs12">https://juejin.cn/post/6844904004879843336</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://juejin.cn/post/6844904004879843336" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://juejin.cn/post/6844904004879843336</span><span class="cap link footnote">https://juejin.cn/post/6844904004879843336</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="方法">方法</h2>
 <p>本着不改动主题源文件的原则，因为这样之后更新就有点麻烦，所以我决定，曲线救国，通过引用滚动条css文件来替换掉默认的滚动条</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://www.77shw.com/wp-content/uploads/2019/09/20190911150558.jpg" data-fancybox="true" style="width:100;"/></div></div>
@@ -139,15 +149,6 @@
 <p>还是css文件中，我们加一点点东西</p>
 <figure class="highlight css"><figcaption><span>blog/source/css/scrollbar.css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 滚动条整体部分 */</span></span><br><span class="line">::-webkit-scrollbar &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* 外层轨道 */</span></span><br><span class="line">  ::-webkit-scrollbar-track &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">200</span>,<span class="number">155</span>,<span class="number">155</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 滚动条可以拖动的那部分 */</span></span><br><span class="line">  ::-webkit-scrollbar-thumb &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ffc0cb</span> <span class="meta">!important</span>; //滚动条颜色设置</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">-webkit-linear-gradient</span>(</span><br><span class="line">	  <span class="number">45deg</span>,</span><br><span class="line">	  <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.4</span>) <span class="number">25%</span>,</span><br><span class="line">	  transparent <span class="number">25%</span>,</span><br><span class="line">	  transparent <span class="number">50%</span>,</span><br><span class="line">	  <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.4</span>) <span class="number">50%</span>,</span><br><span class="line">	  <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.4</span>) <span class="number">75%</span>,</span><br><span class="line">	  transparent <span class="number">75%</span>,</span><br><span class="line">	  transparent</span><br><span class="line">	) <span class="meta">!important</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
-
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -158,15 +159,6 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/emoji-blob/">Stellar内嵌blobcat小表情</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/inkrss/">inkrss：优雅的实现rss更新通知</a></div></section></div>
-
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
 
 
 
@@ -184,7 +176,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 
-<footer class="page-footer fs12"><hr><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
 <br><span id="span"></span>
@@ -350,7 +342,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.26.3" async></script>
+<script src="/js/main.js?v=1.26.4" async></script>
 
 <!-- optional -->
 

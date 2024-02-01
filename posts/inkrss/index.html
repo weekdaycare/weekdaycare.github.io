@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.4" theme-name="Stellar" theme-version="1.26.4">
   
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -29,20 +29,20 @@
 <meta property="article:published_time" content="2022-10-27T00:25:57.000Z">
 <meta property="article:modified_time" content="2022-10-27T00:27:00.000Z">
 <meta property="article:author" content="涛声依旧">
-<meta property="article:tag" content="rss">
 <meta property="article:tag" content="白嫖">
+<meta property="article:tag" content="rss">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="rss,白嫖">
+  <meta name="keywords" content="白嫖,rss">
 
   <!-- feed -->
   
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.4">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -54,8 +54,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/asset/css/pace.css">
 </head>
 <body><div class="sitebg"><div class="siteblur"></div></div>
-
-
 
 <div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
 
@@ -83,11 +81,23 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
-<div id="post-meta"><span class="author">发布于：</span><span class="created"><time datetime="2022-10-27T00:25:57.000Z">2022-10-27</time></span><span class="updated">，更新于：<time datetime="2022-10-27T00:27:00.000Z">2022-10-27</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created"><time datetime="2022-10-27T00:25:57.000Z">2022-10-27</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-10-27T00:27:00.000Z">2022-10-27</time></span></div></div>
 </div>
-<article class="md-text content "><h1 class="article-title"><span>inkrss：优雅的实现rss更新通知</span></h1><p><a
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>inkrss：优雅的实现rss更新通知</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p><a
 target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSS">RSS</a>是个好东西，然而市面上的大部分本地rss阅读器并不支持通知推送，因为这需要软件在后台定时抓取更新，这显然不够优雅。一些在线的RSS阅读器似乎支持邮件订阅，然而抓取频率感人，价格感人，遂不做考虑。那rss的折腾之旅就要止步于此了吗？当然不会，办法总比困难多，现在就来看看今天的主角——<a
 target="_blank" rel="noopener" href="https://github.com/pureink/inkrss">inkrss</a></p>
 <span id="more"></span>
@@ -99,7 +109,7 @@ target="_blank" rel="noopener" href="https://github.com/pureink/inkrss">inkrss</
 <li>🎨 定制 - 多种订阅和通知方式，包括不限于 telegram，bark，微信</li>
 </ul>
 <p>话不多说，直接上链接</p>
-<div class="tag-plugin link dis-select"><a class="link-card rich" title="" href="https://github.com/pureink/inkrss" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,desc"><div class="top"><div class="lazy img" data-bg="https://github.githubassets.com/favicons/favicon.svg"></div><span class="cap link fs12">https://github.com/pureink/inkrss</span></div><div class="bottom"><span class="title">https://github.com/pureink/inkrss</span><span class="cap desc fs12"></span></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card rich" title="" href="https://github.com/pureink/inkrss" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,desc"><div class="top"><div class="lazy img" data-bg="https://github.githubassets.com/favicons/favicon.svg"></div><span class="cap link footnote">https://github.com/pureink/inkrss</span></div><div class="bottom"><span class="title">https://github.com/pureink/inkrss</span><span class="cap desc footnote"></span></div></a></div>
 <h2 id="部署">部署</h2>
 <p>官网的文档其实已经很详细了，然而我部署的时候还是踩了一些坑</p>
 <h3 id="下载最新的releases并解压到本地">下载最新的<a
@@ -137,15 +147,6 @@ Workers的日志中查看Workers工作的状态（初次部署得等一段时间
 <p>然后你就可以去 https://your-domain/secret_path
 开启愉快得玩耍啦，更多进阶玩法可以自行去官网查看官方文档吼</p>
 
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
-
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -156,15 +157,6 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/stellar-beautify-one/">Stellar滚动框美化</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/yingti-0to1/">引体向上：从0到1</a></div></section></div>
-
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
 
 
 
@@ -182,7 +174,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 
-<footer class="page-footer fs12"><hr><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
 <br><span id="span"></span>
@@ -348,7 +340,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.26.3" async></script>
+<script src="/js/main.js?v=1.26.4" async></script>
 
 <!-- optional -->
 

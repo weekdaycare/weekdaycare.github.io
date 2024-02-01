@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.4" theme-name="Stellar" theme-version="1.26.4">
   
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -41,7 +41,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.4">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -78,13 +78,25 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/doc/">文档重构</a></div>
-<div id="post-meta"><span class="author">更新于：</span><time datetime="2024-01-21T16:12:21.214Z">2024-01-22</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-01-21T16:12:21.214Z">2024-01-22</time></span></div></div>
 </div>
-<article class="md-text content"><h1 class="article-title"><span>评论组件</span></h1><h2 id="artalk">Artalk</h2>
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>评论组件</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="artalk">Artalk</h2>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">artalk</span></span><br><span class="line">  <span class="comment"># Artalk</span></span><br><span class="line">  <span class="comment"># https://artalk.js.org/</span></span><br><span class="line">  <span class="attr">artalk:</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">https://unpkg.com/artalk@2.7/dist/Artalk.css</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">https://unpkg.com/artalk@2.7/dist/Artalk.js</span> </span><br><span class="line">    <span class="attr">server:</span> <span class="comment"># 后端服务地址</span></span><br><span class="line">    <span class="attr">placeholder:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="attr">darkMode:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://artalk.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://artalk.js.org</span><span class="cap link fs12">https://artalk.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://artalk.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://artalk.js.org</span><span class="cap link footnote">https://artalk.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="beaudar">Beaudar</h2>
 <p>Beaudar 是 Utterances 的中文版本，相比 Utterances
 有更多的体验优化，可以按时间倒序排序。</p>
@@ -106,10 +118,10 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 驱动的评论系统。让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目受
 utterances 强烈启发。</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">giscus</span></span><br><span class="line">  <span class="comment"># giscus</span></span><br><span class="line">  <span class="comment"># https://giscus.app/zh-CN</span></span><br><span class="line">  <span class="attr">giscus:</span></span><br><span class="line">    <span class="attr">src:</span> <span class="string">https://giscus.app/client.js</span></span><br><span class="line">    <span class="attr">data-repo:</span> <span class="string">xxx/xxx</span> <span class="comment"># [在此输入仓库]</span></span><br><span class="line">    <span class="attr">data-repo-id:</span> <span class="comment"># [在此输入仓库 ID]</span></span><br><span class="line">    <span class="attr">data-category:</span> <span class="comment"># [在此输入分类名]</span></span><br><span class="line">    <span class="attr">data-category-id:</span></span><br><span class="line">    <span class="attr">data-mapping:</span> <span class="string">pathname</span></span><br><span class="line">    <span class="attr">data-strict:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">data-reactions-enabled:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">data-emit-metadata:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">data-input-position:</span> <span class="string">top</span> <span class="comment"># top, bottom</span></span><br><span class="line">    <span class="attr">data-theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">    <span class="attr">data-lang:</span> <span class="string">zh-CN</span></span><br><span class="line">    <span class="attr">data-loading:</span> <span class="string">lazy</span></span><br><span class="line">    <span class="attr">crossorigin:</span> <span class="string">anonymous</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://giscus.app/zh-CN" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://giscus.app/zh-CN</span><span class="cap link fs12">https://giscus.app/zh-CN</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://giscus.app/zh-CN" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://giscus.app/zh-CN</span><span class="cap link footnote">https://giscus.app/zh-CN</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="twikoo">Twikoo</h2>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">twikoo</span></span><br><span class="line">  <span class="attr">twikoo:</span></span><br><span class="line">    <span class="attr">envId:</span> <span class="string">https://xxx</span> <span class="comment"># vercel函数</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://twikoo.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://twikoo.js.org</span><span class="cap link fs12">https://twikoo.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://twikoo.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://twikoo.js.org</span><span class="cap link footnote">https://twikoo.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="utterances-1">utterances</h2>
 <p>A lightweight comments widget built on GitHub issues. Use GitHub
 issues for blog comments, wiki pages and more!</p>
@@ -120,7 +132,7 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 <a target="_blank" rel="noopener" href="https://github.com/apps/utterances">此处</a> 授权安装即可。</p>
 <h2 id="waline">Waline</h2>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">waline</span></span><br><span class="line">  <span class="attr">waline:</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">https://unpkg.com/@waline/client@v2/dist/waline.js</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">https://unpkg.com/@waline/client@v2/dist/waline.css</span></span><br><span class="line">    <span class="comment"># Waline server address url, you should set this to your own link</span></span><br><span class="line">    <span class="attr">serverURL:</span> <span class="string">https://xxx</span> <span class="comment"># waline 地址</span></span><br><span class="line">    <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">    <span class="attr">commentCount:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Pageviews count, <span class="doctag">Note:</span> You should not enable both `waline.pageview` and `leancloud_visitors`.</span></span><br><span class="line">    <span class="attr">pageview:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Custom locales</span></span><br><span class="line">    <span class="attr">locale:</span></span><br><span class="line">      <span class="attr">placeholder:</span> <span class="comment"># 输入框内提示文字</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Custom emoji</span></span><br><span class="line">    <span class="attr">emoji:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/weibo</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/alus</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/bilibili</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/qq</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/tieba</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/bmoji</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://waline.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://waline.js.org</span><span class="cap link fs12">https://waline.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://waline.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://waline.js.org</span><span class="cap link footnote">https://waline.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="评论的灵活用法">评论的灵活用法</h2>
 <h3 id="共用评论数据">共用评论数据</h3>
 <p>如果您有多个页面需要共用评论数据，可以在 <code>front-matter</code>
@@ -151,7 +163,7 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 
 
 
-<footer class="page-footer fs12"><hr><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
 <br><span id="span"></span>
@@ -317,7 +329,7 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.26.3" async></script>
+<script src="/js/main.js?v=1.26.4" async></script>
 
 <!-- optional -->
 

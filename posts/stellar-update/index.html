@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.4" theme-name="Stellar" theme-version="1.26.4">
   
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -67,7 +67,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.4">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -79,8 +79,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/asset/css/pace.css">
 </head>
 <body><div class="sitebg"><div class="siteblur"></div></div>
-
-<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://bu.dusays.com/2022/11/01/6360d3d817d9c.webp"></div></div></div>
 
 <div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
 
@@ -108,11 +106,23 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<div class="article banner top"><img class="bg lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/01/6360d3d817d9c.webp">
+  <div class="content" style="--text-banner:black">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
-<div id="post-meta"><span class="author">发布于：</span><span class="created"><time datetime="2022-11-01T04:44:07.000Z">2022-11-01</time></span><span class="updated">，更新于：<time datetime="2022-11-03T04:44:07.000Z">2022-11-03</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created"><time datetime="2022-11-01T04:44:07.000Z">2022-11-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-11-03T04:44:07.000Z">2022-11-03</time></span></div></div>
 </div>
-<article class="md-text content "><h1 class="article-title"><span>Stellar更新&备份</span></h1><p>最近看到有不少朋友在问Stellar怎么更新版本，应该是刚刚接触hexo，那俺就浅浅讲一下吧<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatalt.png"/></span></p>
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>Stellar更新&备份</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>最近看到有不少朋友在问Stellar怎么更新版本，应该是刚刚接触hexo，那俺就浅浅讲一下吧<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatalt.png"/></span></p>
 <h2 id="git">Git</h2>
 <blockquote>
 <p>Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub</p>
@@ -120,7 +130,7 @@
 <p>首先我们需要对git的基本流程有个初步的概念，这里我推荐你花几分钟分钟去看
 <a target="_blank" rel="noopener" href="https://b23.tv/BV1r3411F7kn">Git工作流和核心原理</a>
 这个视频的前三分钟</p>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="Git工作流和核心原理" href="https://b23.tv/BV1r3411F7kn" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">Git工作流和核心原理</span><span class="cap link fs12">https://b23.tv/BV1r3411F7kn</span></div><div class="right"><div class="lazy img" data-bg="https://www.bilibili.com/favicon.ico"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="Git工作流和核心原理" href="https://b23.tv/BV1r3411F7kn" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">Git工作流和核心原理</span><span class="cap link footnote">https://b23.tv/BV1r3411F7kn</span></div><div class="right"><div class="lazy img" data-bg="https://www.bilibili.com/favicon.ico"></div></div></a></div>
 <p>好了，相信聪明的你看完了就已经对git的基本流程有一定的了解了</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/01/6360a6aa9e565.webp" alt="图源视频" data-fancybox="true" style="width:800px;"/></div><div class="image-meta"><span class="image-caption center">图源视频</span></div></div>
 <p>吼，那么git和我们的hexo有什么关系呢？</p>
@@ -143,10 +153,10 @@
 <div class="tag-plugin colorful note" ><div class="body"><p>稳定版由npm包发放，与github上的最新版比较可能会有延迟</p></div></div>
 <p>在 <code>package.json</code> 中修改 <code>stellar</code>
 的版本号为你想要的版本号，然后执行：</p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_11" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_11&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_8" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_8&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <div class="tag-plugin image"><div class="image-bg" style="background:white;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/01/6360b6fe92f43.webp" data-fancybox="true" style="width:500px;"/></div></div>
 <p>更新完记得对照更新日志进行迁移操作</p>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://xaoxuu.com/wiki/stellar/releases/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://xaoxuu.com/wiki/stellar/releases/</span><span class="cap link fs12">https://xaoxuu.com/wiki/stellar/releases/</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://xaoxuu.com/wiki/stellar/releases/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://xaoxuu.com/wiki/stellar/releases/</span><span class="cap link footnote">https://xaoxuu.com/wiki/stellar/releases/</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h3 id="最新版">最新版</h3>
 <p>前文提到了实际上你的hexo文件夹就是一个git本地仓库，而我们的主题文件在
 <code>blog/themes</code>
@@ -160,7 +170,7 @@
 <figure class="highlight shell"><figcaption><span>blog根目录下gitbash</span></figcaption><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure>
 <p>然后我们进入 <code>themes/stellar</code> 文件夹，在此目录下右键
 <code>git bash</code></p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_12" value="git pull"><button class="copy-btn" onclick="util.copy(&quot;copy_12&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_9" value="git pull"><button class="copy-btn" onclick="util.copy(&quot;copy_9&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h3 id="自定义">自定义</h3>
 <p>自定义主题源码的（你都会自定义了还需要我教你咋更新嘛🥹）</p>
 <p>与最新版不同的是，你需要先fork一下主题仓库，并将你fork的仓库作为子模块添加到
@@ -170,7 +180,7 @@
 <code>update branch</code> 一下</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/01/6360c0187e600.webp" alt="大致流程图" data-fancybox="true" style="width:600px;"/></div><div class="image-meta"><span class="image-caption center">大致流程图</span></div></div>
 <p>我这里做个示范，比如我想要为网站加上一个线条背景，参考</p>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html</span><span class="cap link fs12">http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html</span><span class="cap link footnote">http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <p>改 <code>blog/themes/stellar/layout/layout.ejs</code></p>
 <details class="tag-plugin colorful folding" child="codeblock"><summary><span>在直接改代码</span></summary><div class="body"><figure class="highlight js"><figcaption><span>blog/themes/stellar/layout/layout.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&#x27;&lt;%- page.lang %&gt;&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">&lt;%- partial(&#x27;_partial/head&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &lt;%- partial(&#x27;_partial/cover/index&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;l_body&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;start&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">&#x27;l_left&#x27;</span> <span class="attr">layout</span>=<span class="string">&#x27;&lt;%- page.layout %&gt;&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &lt;%- partial(&#x27;_partial/sidebar/index&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;l_main&lt;%- page.content ? &quot;&quot; : &quot; list&quot; %&gt;&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &lt;%- partial(&#x27;_partial/main/header/index&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">      &lt;%- body %&gt;</span></span><br><span class="line"><span class="language-xml">      &lt;%- partial(&#x27;_partial/main/footer&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">      &lt;%- partial(&#x27;_partial/menubtn&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;scripts&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &lt;%- partial(&#x27;_partial/scripts/index&#x27;) %&gt;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% if theme.canvas_nest %&#125;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></div></details>
 <p>并在主题配置文件 <code>_config.stellar.yml</code> 中增加一行</p>
@@ -212,20 +222,11 @@ target="_blank" rel="noopener" href="https://github.com/apps/pull">pull</a>机�
 即可</p>
 <p>恢复的时候把他们放到原来的位置，根目录下右键
 <code>git bash</code></p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_13" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_13&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_10" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_10&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h3 id="借助插件">借助插件</h3>
 <p>除了手动备份，你还可以借助 <code>hexo-git-backup</code> 插件</p>
 <p>链接在这里<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatopenmouth.png"/></span></p>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://github.com/coneycode/hexo-git-backup</span><span class="cap link fs12">https://github.com/coneycode/hexo-git-backup</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
-
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://github.com/coneycode/hexo-git-backup</span><span class="cap link footnote">https://github.com/coneycode/hexo-git-backup</span></div><div class="right"><div class="lazy img" data-bg="https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -237,15 +238,6 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/ten-years/">十年之约</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/stellar-friends/">Stellar动态友链教程</a></div></section></div>
-
-  <script>
-    let tianliGPT_postSelector = 'article.content';
-    let tianliGPT_key = 'RcqNI1MwOG4jG4mXrH4k';
-    let tianliGPT_typingAnimate = 'true';
-    let tianliGPT_wordLimit = 2000;
-  </script>
-<script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.min.js"></script>
-
 
 
 
@@ -263,7 +255,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 
-<footer class="page-footer fs12"><hr><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
 <br><span id="span"></span>
@@ -429,7 +421,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.26.3" async></script>
+<script src="/js/main.js?v=1.26.4" async></script>
 
 <!-- optional -->
 
