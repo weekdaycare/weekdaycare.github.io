@@ -33,10 +33,9 @@
   }
 }
 .l_body.story {
-  --fsp: calc(0.9375rem + 2px);
-  --gap-p: 1.5rem;
+  --gap-p: 2rem;
 }
-.l_body.story .tag-plugin,
+.l_body.story div.tag-plugin,
 .l_body.story p>img {
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
@@ -1927,6 +1926,51 @@ article.md-text.content+.related-wrap {
   .md-text.content:first-child .tag-plugin.banner:first-child {
     margin-top: 1rem;
   }
+}
+a.tag-plugin.button {
+  background: var(--theme);
+  color: var(--alpha100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+a.tag-plugin.button svg,
+a.tag-plugin.button img {
+  height: 24px;
+  width: auto;
+  margin: 0 -0.5em 0 1em;
+  flex-shrink: 0;
+}
+a.tag-plugin.button span {
+  text-indent: 0;
+  line-height: 24px;
+  margin: 8px 1em;
+}
+a.tag-plugin.button[size='xs'] {
+  margin: 0;
+  border-radius: 2px;
+}
+a.tag-plugin.button[size='xs'] svg,
+a.tag-plugin.button[size='xs'] img {
+  margin: 0 2px 0 0;
+  height: 1em;
+}
+a.tag-plugin.button[size='xs'] span {
+  margin: 0;
+}
+a.tag-plugin.button:hover {
+  --theme: #7e57c2;
+}
+.tag-plugin.grid a.tag-plugin.button {
+  width: 100%;
+  box-sizing: border-box;
 }
 .md-text .tag-plugin.checkbox {
   display: flex;
