@@ -6,7 +6,7 @@
   <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="http://weekdaycare.cn/"/>
-  <updated>2024-02-15T16:25:04.158Z</updated>
+  <updated>2024-03-04T13:39:36.163Z</updated>
   <id>http://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>展示 Twikoo 最新评论</title>
+    <link href="http://weekdaycare.cn/posts/twikoo-new/"/>
+    <id>http://weekdaycare.cn/posts/twikoo-new/</id>
+    <published>2024-03-04T13:11:39.000Z</published>
+    <updated>2024-03-04T13:39:36.163Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="新建-js-脚本">新建 js 脚本</h2><blockquote><p>基于 1.27.0 ，写的一坨，佬轻喷😭</p></blockquote><p>新建 <code>twikoo_new.js</code> 位于<code>theme/stellar/source/js/services/twikoo_new.js</code>，写入以下内容</p><figure class="highlight js"><figcaption><span>twikoo_new.js</span></figcaption><table><tr><td class="code"><pre><span class="line">utils.<span class="title function_">jq</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 加载 Twikoo 的 JavaScript 脚本</span></span><br><span class="line">    <span class="keyword">const</span> twikooScript = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">    twikooScript.<span class="property">src</span> = <span class="string">&#x27;https://npm.onmicrosoft.cn/twikoo@1.6.31&#x27;</span>;</span><br><span class="line">    twikooScript.<span class="property">async</span> = <span class="literal">true</span>;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">head</span>.<span class="title function_">appendChild</span>(twikooScript);</span><br><span class="line"></span><br><span class="line">    twikooScript.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 当 Twikoo 脚本加载完成后执行加载评论的函数</span></span><br><span class="line">        $(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">const</span> els = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;ds-commentnew&#x27;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; els.<span class="property">length</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">const</span> el = els[i];</span><br><span class="line">                <span class="keyword">const</span> api = el.<span class="title function_">getAttribute</span>(<span class="string">&#x27;api&#x27;</span>);</span><br><span class="line">                <span class="keyword">const</span> limit = <span class="built_in">parseInt</span>(el.<span class="title function_">getAttribute</span>(<span class="string">&#x27;limit&#x27;</span>)) || <span class="number">10</span>;</span><br><span class="line">                <span class="keyword">if</span> (api == <span class="literal">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                twikoo.<span class="title function_">getRecentComments</span>(&#123;</span><br><span class="line">                    <span class="attr">envId</span>: api,</span><br><span class="line">                    <span class="attr">pageSize</span>: limit,</span><br><span class="line">                    <span class="attr">includeReply</span>: <span class="literal">false</span></span><br><span class="line">                &#125;).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">res</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; res.<span class="property">length</span>; j++) &#123;</span><br><span class="line">                        <span class="keyword">var</span> cell = <span class="string">&#x27;&lt;div class=&quot;timenode&quot; index=&quot;&#x27;</span> + i + <span class="string">&#x27;&quot;&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;div class=&quot;header&quot;&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;div class=&quot;user-info&quot;&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;span&gt;&#x27;</span> + res[j].<span class="property">nick</span> + <span class="string">&#x27;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;span&gt;&#x27;</span> + res[j].<span class="property">relativeTime</span> + <span class="string">&#x27;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;a class=&quot;body&quot; href=&quot;&#x27;</span> + res[j].<span class="property">url</span> + <span class="string">&#x27;&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;&#x27;</span>;</span><br><span class="line">                        cell += res[j].<span class="property">commentText</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">                        cell += <span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">                        $(el).<span class="title function_">append</span>(cell);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).<span class="title function_">catch</span>(<span class="keyword">function</span> (<span class="params">err</span>) &#123;</span><br><span class="line">                    <span class="comment">// 发生错误</span></span><br><span class="line">                    <span class="variable language_">console</span>.<span class="title function_">error</span>(err);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="主题配置中引入">主题配置中引入</h2><p>Stellar <mark class="tag-plugin colorful mark" color="orange">1.27.0</mark> 版本，内置服务配置转移到<code>data_services</code> 中，在主题配置文件的<code>data_services</code> 下引入脚本</p><figure class="highlight yml"><figcaption><span>_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">data_services:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">commentnew:</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">/js/services/twikoo_new.js</span></span><br></pre></td></tr></table></figure><p>至此配置完成</p><h2 id="如何使用">如何使用</h2><p>在 <code>_data/widgets.yml</code> 中创建小组件，示例</p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">new_comment:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">timeline</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">最新评论</span></span><br><span class="line">  <span class="attr">api:</span> <span class="string">https://comment.weekdaycare.cn</span> <span class="comment"># 此处为 Twikoo 函数</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">commentnew</span> <span class="comment"># 不要改动这个</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">16</span> <span class="comment"># 限制获取数量，默认为 10</span></span><br></pre></td></tr></table></figure><p>然后就可以在主题配置文件中 <code>site_tree</code>里引入小组件了。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2022/12/20/63a095585da5c.webp" alt="这个时候就不得不拿出我的老图了" data-fancybox="true" style="width:300px;"/></div><div class="image-meta"><span class="image-caption center">这个时候就不得不拿出我的老图了</span></div></div>]]></content>
+    
+    
+    <summary type="html">使用 Stellar timeline 组件展示 twikoo 最新评论</summary>
+    
+    
+    
+    <category term="奇技淫巧" scheme="http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="教程" scheme="http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="代码" scheme="http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+    <category term="Stellar" scheme="http://weekdaycare.cn/tags/Stellar/"/>
+    
+  </entry>
   
   <entry>
     <title>你好2024</title>
@@ -62,9 +89,9 @@
     <category term="学习感悟" scheme="http://weekdaycare.cn/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/"/>
     
     
-    <category term="编程" scheme="http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/"/>
-    
     <category term="作业" scheme="http://weekdaycare.cn/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
+    <category term="编程" scheme="http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/"/>
     
     <category term="代码" scheme="http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
     
@@ -93,9 +120,9 @@
     <category term="学习感悟" scheme="http://weekdaycare.cn/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/"/>
     
     
-    <category term="编程" scheme="http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/"/>
-    
     <category term="作业" scheme="http://weekdaycare.cn/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
+    <category term="编程" scheme="http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/"/>
     
     <category term="整活" scheme="http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/"/>
     
@@ -156,33 +183,6 @@
     <category term="夏天" scheme="http://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
     <category term="旅游" scheme="http://weekdaycare.cn/tags/%E6%97%85%E6%B8%B8/"/>
-    
-    <category term="工作" scheme="http://weekdaycare.cn/tags/%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>进厂打工</title>
-    <link href="http://weekdaycare.cn/posts/summer-work/"/>
-    <id>http://weekdaycare.cn/posts/summer-work/</id>
-    <published>2023-07-18T21:37:37.000Z</published>
-    <updated>2023-07-18T22:35:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="进厂">进厂</h2><p>前些日子提到我的暑假计划，想在暑期找一份临时工做充裕充裕自己的钱包。本来被父母的决定干的稀碎，结果没想到的是来到了广州这边倒是有机会实现我的计划了，只是没想到我人生的第一份工作是进厂<del>拧螺丝</del>。</p><p>说实话，一进公司，看到来来往往的工人，就有一种莫名的压迫感，直到看到流水线上的工人，才稍稍找回了一点真实感，开始觉得，这就是成人的世界啊。每天上班打卡，迟到扣工资，每天都有KPI ，完不成就得加班，第一次体会到成人世界的残酷了。</p><p>不巧的是，临时工和刚入职的员工都是安排在生产线上的，所以我被安排到 W3产线上给产品滴胶。不得不提的是流水线工作是真的很恐怖，上午四个小时产线是根本不带停的，我初来乍到，对机器根本不熟悉，班长让我跟着老员工学习，我一看似乎不是很难，只需要把产线上的产品拿下来放到机器上然后踩下踏板，再放回产线上去就完成了，不断重复这个流程就是我的工作了。我看着不是很难，然而当我第一次上手的时候，手忙脚乱，要么是还没放产品就踩踏板了，要么是放了产品踩了两次踏板打了两遍胶，要么是放歪了它直接打歪了，再加上我是新手速度根本跟不上产品线的速度，突发情况与流水线上产品的堆积让我感到无助和恐惧。感谢我的班长和指导我的员工没有刁我人，尽管我打废了好几个产品。有时候不小心直接把打废了的产品放到产线上去了，下一个看到了，会直接不耐烦地说“这个不要了啦”，好吧这个还是让我感到窘迫和尴尬。最让人无语的是他们在说普通话的时候都是带着广东口音，导致我总是听不懂他们在说什么……</p><p>上午四个小时，产品线是不会停的，意思是基本上没有时间休息，你不能离岗，一旦离岗产品就会堆积在你的工位上导致前后的人都没法做了，产线上的产品基本上都放的很密集，加上传送带的速度又快，快到什么程度呢？听他们说W3 线一个小时的流量是 900多件产品，也就是说我一天基本上会摸将近一万件。就像我摇身一变成陀螺，一上岗就连轴转。入职培训时说的是一天工作八小时，但是流水线上的工作怎么可能不加班，“没通知就是加班”——这是我从老员工口中听到的话。产线上的工作，熟悉之后就不是很难，只是没法休息，一直不断的重复那些机械性的动作，时间久了就会腰酸背疼，不断地抬起放下，不知道结束这份工作之后我会不会练成麒麟臂呢？（笑</p><p>每天都得工作 11个小时以上，机械性的动作做久了之后就会成为反射性的了，脑袋就会闲下来想各种各样的事情，只是总是想到一半就会被响起的闹铃声给打断——是在提醒我过了二十分钟，我需要滴胶取样了。这些不需要动脑的体力活，只要重复性的动作，做起来是真的累人。我现在能够理解那些说用机器代替工人的人有多伟大了，只是——要是那一天真的来了，这些产品线上的工人，又该何去何从呢？</p>]]></content>
-    
-    
-    <summary type="html">现在胳膊还在酸着，还困</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
-    
-    <category term="夏天" scheme="http://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
     <category term="工作" scheme="http://weekdaycare.cn/tags/%E5%B7%A5%E4%BD%9C/"/>
     
