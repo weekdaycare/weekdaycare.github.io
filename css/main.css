@@ -3945,6 +3945,7 @@ p>strong>span.tag-plugin.icon {
 .tag-plugin.timeline .body {
   background: var(--card);
   border-radius: 6px;
+  border: 1px solid var(--block-border);
   border-top-left-radius: 2px;
   padding: 0.5rem 1rem;
   margin-top: 4px;
@@ -3971,11 +3972,14 @@ p>strong>span.tag-plugin.icon {
 }
 .tag-plugin.timeline[api] a.body {
   display: block;
-  color: var(--text-p1);
+  color: var(--text-p2);
   line-height: 1.25;
   padding: 0.75rem 1rem;
   --fsp: calc(17px - 1px);
   font-size: var(--fsp);
+}
+.tag-plugin.timeline[api] a.body:hover {
+  color: var(--text);
 }
 .tag-plugin.timeline[api] .body p.title {
   font-weight: 700;
@@ -6234,6 +6238,7 @@ img[data-fancybox] {
   padding: 1rem 1rem 0 1rem;
   border-radius: 6px;
   background: var(--block);
+  border: 1px dashed var(--block-border);
 }
 .twikoo .tk-tag {
   vertical-align: 0.1em !important;
