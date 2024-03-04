@@ -673,13 +673,13 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@latest', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.31', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@latest","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.31","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));
@@ -730,15 +730,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     }
     utils.js('/js/search/local-search.js', { defer: true });
   });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+</script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
