@@ -366,7 +366,7 @@ a.button.start.gradient {
 }
 .l_body[leftbar] .float-panel,
 .l_body[rightbar] .float-panel {
-  box-shadow: 0 0 4px -1px #f4511e, 0 0 16px -4px #f4511e, 0 0 32px -12px #f4511e, 0 0 128px -32px #f4511e;
+  box-shadow: 0 0 16px 2px rgba(0,0,0,0.2);
 }
 .l_body[leftbar] .float-panel button.leftbar-toggle {
   background: var(--alpha100);
@@ -4726,7 +4726,14 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-size: 0.875rem;
   padding: 8px 16px;
   display: block;
+  border-radius: 6px;
   color: var(--text-p1);
+}
+.widget-wrapper.post-list .widget-body a.active {
+  background: var(--block);
+}
+.widget-wrapper.post-list .widget-body a:hover {
+  background: var(--block);
 }
 .widget-wrapper.post-list .widget-body a+a {
   margin-top: 2px;
@@ -5223,6 +5230,10 @@ details.toc[open] >div.body section .header+.doc_tree {
 .l_right .widgets .widget-wrapper .widget-header {
   padding-left: var(--gap-padding);
   padding-right: var(--gap-padding);
+  background: var(--site-bg);
+  position: sticky;
+  z-index: 2;
+  top: 0;
 }
 @media screen and (max-width: 1180px) {
   .l_right .widgets .widget-wrapper {
@@ -5942,7 +5953,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .md-text img {
   border-radius: 6px;
   margin: auto;
-  display: inline-block;
+  display: block;
 }
 li:not([class]) a:not([class]),
 p:not([class]) a:not([class]),
@@ -5956,7 +5967,7 @@ table a:not([class]) {
   padding: 0 2px;
   border-radius: 0;
   color: inherit;
-  background: linear-gradient(0deg, var(--theme-link), var(--theme-link)) no-repeat left 100%/100% 1px;
+  border-bottom: 2px solid var(--theme-link);
 }
 li:not([class]) a:not([class]):hover,
 p:not([class]) a:not([class]):hover,
