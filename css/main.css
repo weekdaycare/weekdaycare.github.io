@@ -6162,13 +6162,82 @@ img[data-fancybox] {
 .twikoo .tk-preview-container {
   color: var(--text-p1) !important;
 }
+.twikoo .el-input__inner:focus,
+.twikoo .el-textarea__inner:focus {
+  border-color: var(--twikoo-theme) !important;
+}
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):active,
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):focus,
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
   color: var(--twikoo-theme) !important;
+  border-color: var(--theme-link-opa) !important;
+}
+.twikoo .el-button--primary.is-disabled:active,
+.twikoo .el-button--primary.is-disabled:focus,
+.twikoo .el-button--primary.is-disabled:hover {
+  background-color: var(--theme-link-opa) !important;
+}
+.twikoo .el-button:focus,
+.twikoo .el-button:hover {
+  border-color: var(--theme-link-opa) !important;
+}
+.twikoo .el-button:active {
+  color: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button.is-active,
+.twikoo .el-button.is-plain:active {
+  color: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button--primary {
+  background-color: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button--primary:focus,
+.twikoo .el-button--primary:hover {
+  background: #7e57c2 !important;
+  border-color: #7e57c2 !important;
+}
+.twikoo .el-button--primary:active {
+  background: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button--primary.is-active {
+  background: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button--primary.is-disabled,
+.twikoo .el-button--primary.is-disabled:active,
+.twikoo .el-button--primary.is-disabled:focus,
+.twikoo .el-button--primary.is-disabled:hover {
+  background-color: var(--theme-link-opa) !important;
+  border-color: var(--theme-link-opa) !important;
+}
+.twikoo .el-button--primary.is-plain {
+  color: var(--twikoo-theme) !important;
+  border-color: var(--theme-link-opa) !important;
+}
+.twikoo .el-button--primary.is-plain:focus,
+.twikoo .el-button--primary.is-plain:hover {
+  background: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
+}
+.twikoo .el-button--primary.is-plain:active {
+  background: var(--twikoo-theme) !important;
+  border-color: var(--twikoo-theme) !important;
 }
 .twikoo .tk-action-icon svg {
   color: var(--text-p1) !important;
+}
+.twikoo .tk-action-link {
+  color: var(--twikoo-theme) !important;
+}
+.twikoo .el-loading-spinner .path {
+  stroke: var(--twikoo-theme) !important;
+}
+.twikoo .tk-icon.__comments {
+  color: var(--twikoo-theme) !important;
 }
 .twikoo b,
 .twikoo strong {
