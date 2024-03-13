@@ -53,7 +53,8 @@ jobs:
 
       - name: Install pandoc
         uses: pandoc/actions/setup@{main}
-
+        with:
+          version: 3.1.12.2
 
       - name: Configuration environment
         env:
