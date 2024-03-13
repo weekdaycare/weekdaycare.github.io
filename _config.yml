@@ -7,6 +7,7 @@ title: 星日语
 avatar: /asset/avatar.svg
 favicon: /asset/favicon.svg
 description: '苦难不值得追求，磨练意志是因为苦难无法躲开'
+subtitle: '我随便写写|你随便看看'
 keywords: 博客
 author: 涛声依旧
 language: zh-CN
@@ -40,7 +41,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-wiki_dir: wiki
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -150,7 +150,7 @@ deploy:
     serviceName: weekdaycare-blog
     operatorName: hexo
     operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK
-  - type: aliyun
+  - type: ali-oss
     region: oss-cn-chengdu
     accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
     accessKeySecret: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7

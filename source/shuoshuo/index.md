@@ -3,8 +3,10 @@ title: 说说
 robots: noindex,nofollow
 comments: false
 sidebar: [welcome,recent]
-menu_id: post
-post_list: true
+menu_id: shuoshuo
+h1: ''
+header: true
+breadcrumb: false
 ---
 
 > 欢迎来到我的说说页面🍬

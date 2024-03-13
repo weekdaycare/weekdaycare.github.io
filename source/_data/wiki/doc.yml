@@ -7,7 +7,9 @@ coverpage: false # [cover, title, description] # 封面页显示的内容
 search:
   filter: /doc/
   placeholder: 要找点什么？
-sidebar: 
+leftbar: 
+  - tree
+rightbar:
   - toc
 
 comments:
@@ -17,7 +19,7 @@ comments:
     'data-mapping': number
 
 base_dir: /doc/
-toc:
+tree:
   '简介':
     - index
     - update
