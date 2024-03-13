@@ -51,6 +51,9 @@ jobs:
         run: |
           npm install
 
+      - name: Install pandoc
+        uses: docker://pandoc/core
+
       - name: Configuration environment
         env:
           HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
@@ -64,6 +67,5 @@ jobs:
           git config --global user.email $GIT_EMAIL
           
       - name: Deploy hexo
-        uses: docker://pandoc/core
         run: |
           npm run deploy
