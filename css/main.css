@@ -154,7 +154,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: "Noto Serif SC", STZhongsong, "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
+  font-family: "Source Han Serif CN for Display", STZhongsong, "Microsoft Yahei", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
 }
 blockquote {
   display: block;
@@ -777,7 +777,7 @@ table:not([class]) {
   outline: none;
 }
 html {
-  font-family: "Noto Serif SC", "华文中宋", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
+  font-family: "Source Han Serif CN for Display", "华文中宋", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4368,7 +4368,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .search-wrapper .search-input {
   width: 100%;
   box-sizing: border-box;
-  font-family: "Noto Serif SC", "华文中宋", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
+  font-family: "Source Han Serif CN for Display", "华文中宋", system-ui, Segoe UI, -apple-system, Roboto, Ubuntu, Helvetica Neue, Arial, WenQuanYi Micro Hei, sans-serif;
   font-size: 0.875rem;
   padding: 12px 0;
   color: var(--text);
@@ -4403,15 +4403,12 @@ details.toc[open] >div.body section .header+.doc_tree {
   padding: 2rem;
   background: var(--block);
   border-radius: 6px;
-  border: 1px solid var(--block-border);
 }
 .search-wrapper #search-result {
   max-height: 60vh;
   overflow: scroll;
   scrollbar-width: none;
   border-radius: 6px;
-  border: 1px solid var(--block-border);
-  background: var(--block);
 }
 .search-wrapper #search-result::-webkit-scrollbar {
   height: 0;
@@ -4442,6 +4439,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   line-height: 1.2;
   padding: 0.75rem 1rem;
   border-radius: 6px;
+  border: 1px solid var(--block-border);
   transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
   -webkit-transition: background 0.2s ease-out;
@@ -4472,13 +4470,13 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .search-wrapper #search-result .search-keyword {
   color: #f44336;
-  border-bottom: 1px dashed #f44336;
   font-weight: bold;
   filter: grayscale(25%);
 }
 .search-wrapper.noresult[searching='true'] .search-no-result {
   display: block;
   margin-bottom: 8px;
+  border: 1px solid var(--block-border);
 }
 .l_left {
   margin: 8px;
@@ -5955,7 +5953,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   margin: auto;
   display: block;
 }
-li:not([class]) a:not([class]),
 p:not([class]) a:not([class]),
 table a:not([class]) {
   position: relative;
@@ -5969,7 +5966,6 @@ table a:not([class]) {
   color: inherit;
   border-bottom: 2px solid var(--theme-link);
 }
-li:not([class]) a:not([class]):hover,
 p:not([class]) a:not([class]):hover,
 table a:not([class]):hover {
   text-decoration: none;
@@ -5977,13 +5973,11 @@ table a:not([class]):hover {
   border-radius: 4px;
   background: linear-gradient(0deg, var(--theme-link-opa), var(--theme-link-opa)) no-repeat left 100%/100% 100%;
 }
-li:not([class]) a:not([class]):has(img),
 p:not([class]) a:not([class]):has(img),
 table a:not([class]):has(img) {
   background: none;
   padding: 0;
 }
-li:not([class]) a:not([class]):has(img):hover,
 p:not([class]) a:not([class]):has(img):hover,
 table a:not([class]):has(img):hover {
   background: none;
@@ -6138,6 +6132,8 @@ img[data-fancybox] {
   border-radius: 6px;
   max-height: 24px;
   max-width: 100px;
+  display: inline;
+  margin: 0 0.25em;
 }
 .cmt-body.twikoo .tk-content img {
   max-width: 400px;
