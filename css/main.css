@@ -4786,7 +4786,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   margin: 1em 0;
 }
 .widget-wrapper.markdown .linklist .link {
-  background: var(--alpha50);
+  background: var(--block-hover);
 }
 .widget-wrapper.markdown .linklist .link:hover {
   background: var(--card);
@@ -5127,7 +5127,7 @@ details.toc[open] >div.body section .header+.doc_tree {
     color: var(--text-p2);
   }
   .widget-wrapper.toc .widget-footer a {
-    background: var(--alpha100);
+    background: var(--block);
   }
   .widget-wrapper.toc .widget-footer a+a {
     margin-top: 4px;
@@ -5894,6 +5894,16 @@ details.toc[open] >div.body section .header+.doc_tree {
   color: var(--text);
   line-height: 1.8;
 }
+.md-text.content h1:before,
+.md-text.content h2:before,
+.md-text.content h3:before,
+.md-text.content h4:before,
+.md-text.content h5:before,
+.md-text.content h6:before {
+  content: '#';
+  margin-right: 8px;
+  color: #f4511e;
+}
 .md-text.content blockquote h2,
 .md-text.content .tag-plugin h2,
 .md-text.content blockquote h3,
@@ -5906,31 +5916,6 @@ details.toc[open] >div.body section .header+.doc_tree {
 .md-text.content .tag-plugin h6 {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-}
-.md-text.content a.headerlink {
-  background: #f4511e;
-  border-radius: 2px;
-  margin-right: 8px;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
-}
-.md-text.content a.headerlink:hover {
-  background: #7e57c2;
-}
-.md-text.content a.headerlink:before {
-  content: '';
-  color: #fff;
-  font-weight: 700;
-  padding: 0 2px;
-  font-size: 0.75rem;
-}
-.md-text.content h2 {
-  font-weight: 500;
-}
-.md-text.content h2 a.headerlink:before {
-  content: ':';
 }
 .md-text.content:first-child .tag-plugin:first-child {
   margin-top: 0;
