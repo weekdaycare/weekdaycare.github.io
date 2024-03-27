@@ -2491,6 +2491,7 @@ a.tag-plugin.button:hover {
   display: block;
   object-fit: contain;
   height: 1.75em;
+  border-radius: 0;
 }
 .tag-plugin.folders {
   margin: var(--gap-p) 0;
@@ -4339,7 +4340,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   transform: translateX(-50%);
   border-radius: 2px;
   bottom: 2px;
-  background: var(--text-p1);
+  background: currentColor;
 }
 .nav-area {
   margin: 32px var(--gap-margin) 0;
@@ -4720,12 +4721,15 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-weight: 500;
 }
 .widget-wrapper.post-list .widget-body a {
-  line-height: 1;
   font-size: 0.875rem;
   padding: 8px 16px;
   display: block;
   border-radius: 6px;
   color: var(--text-p1);
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
 }
 .widget-wrapper.post-list .widget-body a.active {
   background: var(--block);
@@ -4745,15 +4749,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-bottom: 1px dashed var(--text-meta);
-  padding-bottom: 2px;
-  transition: border-bottom 0.2s ease-out;
-  -moz-transition: border-bottom 0.2s ease-out;
-  -webkit-transition: border-bottom 0.2s ease-out;
-  -o-transition: border-bottom 0.2s ease-out;
-}
-.widget-wrapper.post-list .widget-body a .title:hover {
-  border-bottom: 1px solid #f4511e;
 }
 .widget-wrapper.post-list .widget-body a svg {
   flex-shrink: 0;

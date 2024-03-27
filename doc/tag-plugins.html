@@ -58,8 +58,8 @@
 <meta property="og:image" content="https://bu.dusays.com/2022/10/24/63567d3e0ab55.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg">
 <meta property="og:image" content="https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg">
-<meta property="article:published_time" content="2024-01-21T16:12:59.591Z">
-<meta property="article:modified_time" content="2024-01-21T16:12:59.591Z">
+<meta property="article:published_time" content="2024-03-23T14:47:56.272Z">
+<meta property="article:modified_time" content="2024-03-23T14:47:56.272Z">
 <meta property="article:author" content="涛声依旧">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
@@ -82,7 +82,7 @@
 
   
 
-  <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' />
+  <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' /><script src="/asset/js/cw_install.js"></script>
 </head>
 <body>
 
@@ -114,7 +114,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/doc/">文档重构</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-01-21T16:12:59.591Z">2024-01-22</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-03-23T14:47:56.272Z">2024-03-23</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -126,8 +126,8 @@
     
   </div>
   </div><article class="md-text content"><h2 id="about-关于块容器">about 关于块容器</h2>
-<div class="tag-plugin colorful note" color="warning"><div class="title">这个功能即将废弃</div><div class="body"><p>在 1.21.0 版本后请使用 banner 组件代替。</p></div></div>
-<div class="tag-plugin tabs" align="center"id="tab_1"><div class="nav-tabs"><div class="tab active"><a href="#tab_1-1">示例</a></div><div class="tab"><a href="#tab_1-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p>方便在关于页面显示一段图文信息，比普通块容器稍微有一点点不一样：</p>
+<div class="tag-plugin colorful note" ><div class="title">这个功能即将废弃</div><div class="body"><p>在 1.21.0 版本后请使用 banner 组件代替。</p></div></div>
+<div class="tag-plugin tabs"id="tab_1"><div class="nav-tabs"><div class="tab active"><a href="#tab_1-1">示例</a></div><div class="tab"><a href="#tab_1-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p>方便在关于页面显示一段图文信息，比普通块容器稍微有一点点不一样：</p>
 <div class="tag-plugin about">
 <div class="about-body fs14">
 <center>
@@ -146,12 +146,15 @@
 <h2 id="albums-专辑容器">albums 专辑容器</h2>
 <p>类似于 gallery 但是支持点击跳转，数据来源于
 <code>blog/source/_data/links/group_id.yml</code></p>
-<figure class="highlight md"><figcaption><span>blog/source/_posts/xxx.md</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% albums group<span class="emphasis">_id %&#125;</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin albums-wrap"><div class="tag-plugin gallery grid-box" layout="grid" ratio="square" size="s"></div></div>
+<div class="tag-plugin tabs"id="tab_2"><div class="nav-tabs"><div class="tab active"><a href="#tab_2-1">示例</a></div><div class="tab"><a href="#tab_2-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><div class="tag-plugin albums-wrap">
+<div class="tag-plugin gallery grid-box" data-layout="grid"
+data-ratio="square" size="s">
+
+</div>
+</div></div><div class="tab-pane" id="tab_2-2"><figure class="highlight md"><figcaption><span>blog/source/_posts/xxx.md</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% albums group<span class="emphasis">_id %&#125;</span></span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="audio-音频标签">audio 音频标签</h2>
 <p>支持音乐外链以及网易云音乐，网易云支持设置 <code>type</code> 以及
 <code>autoplay</code> 参数。</p>
-<center>
 
   <div class="tag-plugin audio">
   <audio controls preload>
@@ -159,16 +162,13 @@
   </audio>
   </div>
   
-</center>
-<center>
 
     <div class="tag-plugin audio">
     <iframe src="//music.163.com/outchain/player?type=2&id=1856385686&auto=0&height=32" frameborder="no" border="0" marginwidth="0" marginheight="0" width=288px height=52>
     </iframe>
     </div>
     
-</center>
-<figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% audio netease:1856385686 %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% audio type:2 netease:1856385686 autoplay:0 %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %&#125;</span><br><span class="line">&#123;% audio [type] netease [autoplay] &#125;</span><br><span class="line">&#123;% audio netease:1856385686 %&#125;</span><br><span class="line">&#123;% audio type:2 netease:1856385686 autoplay:0 %&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><figcaption><span>支持的参数</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="number">2</span><span class="string">/0</span> <span class="comment"># 歌曲/歌单 # 不设置默认为2歌曲模式</span></span><br><span class="line"><span class="attr">netease:</span> <span class="string">xxx</span> <span class="comment"># 歌曲/歌单 id ，具体 id 在网易云网页版的网址链接中寻找 </span></span><br><span class="line"><span class="attr">autoplay:</span> <span class="number">1</span><span class="string">/0</span> <span class="comment"># 自动播放/手动播放 # 不设置默认0手动播放</span></span><br></pre></td></tr></table></figure>
 <h2 id="banner-横幅容器">banner 横幅容器</h2>
 <p>这个功能在 <mark class="tag-plugin colorful mark" color="dark">1.21.0</mark> 版本后开始支持，将会取代 about
@@ -189,15 +189,16 @@
 <figure class="highlight md"><figcaption><span>写法如下：</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% banner 某某 这是个人简介 avatar:/asset/avatar.svg bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg %&#125;</span><br><span class="line">&#123;% endbanner %&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="用作文章摘要卡片">用作文章摘要卡片</h3>
 <p>设置 link 可以让整个卡片响应点击事件，实现点击跳转到对应文章：</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% banner 博客进阶：自动化部署 本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg link:https://xaoxuu.com/blog/20221126/ %&#125;</span><br><span class="line">&#123;% endbanner %&#125;</span><br></pre></td></tr></table></figure>
 <div class="tag-plugin banner"><img class="bg lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg"><div class="content"><div class="top"><div></div></div><div class="bottom"><div class="text-area"><div class="text title">博客进阶：自动化部署</div><div class="text subtitle">本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。</div></div></div></div><a class="banner-link" target="_blank" rel="noopener" href="https://xaoxuu.com/blog/20221126/"></a></div>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% banner 博客进阶：自动化部署 本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg link:https://xaoxuu.com/blog/20221126/ %&#125;</span><br><span class="line">&#123;% endbanner %&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="box-盒子容器">box 盒子容器</h2>
-<p>note 标签就是使用 box 容器实现的，它们样式是相同的：</p>
-<details class="tag-plugin colorful folding" color="warning"><summary><span>更名记录（Stellar 1.18.0）</span></summary><div class="body"><p>因为原 noteblock 标签在升级到 hexo 6.0之后跟官方库冲突了，官方一直没有解释原因，后不得不改名： noteblock -&gt;grid -&gt; border -&gt; ablock -&gt; box 详情见：<atarget="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues/712">#172</a></p></div></details>
-<figure class="highlight md"><figcaption><span>语法格式</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% box [title] [color:color] [child:codeblock/tabs] %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endbox %&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% box Stellar v1.12.0 color:warning %&#125;</span><br><span class="line">因为原 noteblock 标签在升级到 hexo 6.0 之后跟官方库冲突了，官方一直没有解释原因，后不得不改名：</span><br><span class="line">noteblock -&gt; grid -&gt; border -&gt; ablock -&gt; box</span><br><span class="line">详情见：[<span class="string">#172</span>](<span class="link">https://github.com/volantis-x/hexo-theme-volantis/issues/712</span>)</span><br><span class="line">&#123;% endbox %&#125;</span><br></pre></td></tr></table></figure>
+<p>note 标签就是使用 box 容器实现的，它们样式是相同的</p>
+<div class="tag-plugin colorful note" ><div class="title"><strong>Stellar v1.12.0</strong></div><div class="body"><p>因为原 noteblock 标签在升级到 hexo 6.0之后跟官方库冲突了，官方一直没有解释原因，后不得不改名：</p><p>noteblock -&gt; grid -&gt; border -&gt; ablock -&gt; box</p><p>详情见：<atarget="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues/712">#172</a></p></div></div>
+<div class="tag-plugin colorful note" color="red" child="codeblock"><div class="body"><figure class="highlight md"><figcaption><span>代码块1</span></figcaption><table><tr><td class="code"><pre><span class="line">Hello</span><br></pre></td></tr></table></figure><figure class="highlight md"><figcaption><span>代码块2</span></figcaption><table><tr><td class="code"><pre><span class="line">World</span><br></pre></td></tr></table></figure></div></div>
+<figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% box Stellar v1.12.0 color:warning %&#125;</span><br><span class="line">因为原 noteblock 标签在升级到 hexo 6.0 之后跟官方库冲突了，官方一直没有解释原因，后不得不改名：</span><br><span class="line">noteblock -&gt; grid -&gt; border -&gt; ablock -&gt; box</span><br><span class="line">详情见：[<span class="string">#172</span>](<span class="link">https://github.com/volantis-x/hexo-theme-volantis/issues/712</span>)</span><br><span class="line">&#123;% endbox %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% box [title] [color:color] [child] %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endbox %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>支持的参数</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">color:</span> <span class="comment"># 颜色</span></span><br><span class="line"><span class="attr">child:</span> <span class="string">codeblock/tabs</span> <span class="comment"># 嵌套子项目，设置为codeblock时在box内写两个连续代码块会相互链接</span></span><br></pre></td></tr></table></figure>
 <h2 id="checkbox-复选">checkbox 复选</h2>
-<div class="tag-plugin tabs"id="tab_2"><div class="nav-tabs"><div class="tab active"><a href="#tab_2-1">示例</a></div><div class="tab"><a href="#tab_2-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><div class="tag-plugin colorful checkbox">
+<div class="tag-plugin tabs"id="tab_3"><div class="nav-tabs"><div class="tab active"><a href="#tab_3-1">示例</a></div><div class="tab"><a href="#tab_3-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_3-1"><div class="tag-plugin colorful checkbox">
 <input type="checkbox"/><span>普通的没有勾选的复选框</span>
 </div>
 <div class="tag-plugin colorful checkbox">
@@ -214,28 +215,26 @@ data-symbol="minus">
 <div class="tag-plugin colorful checkbox" color="red"
 data-symbol="times">
 <input type="checkbox" checked="true"/><span>显示为乘号的红色的已勾选的复选框</span>
-</div></div><div class="tab-pane" id="tab_2-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% checkbox 普通的没有勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox checked:true 普通的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:plus color:green checked:true 显示为加号的绿色的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:minus color:yellow checked:true 显示为减号的黄色的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:times color:red checked:true 显示为乘号的红色的已勾选的复选框 %&#125;</span><br></pre></td></tr></table></figure>
+</div></div><div class="tab-pane" id="tab_3-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% checkbox 普通的没有勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox checked:true 普通的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:plus color:green checked:true 显示为加号的绿色的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:minus color:yellow checked:true 显示为减号的黄色的已勾选的复选框 %&#125;</span><br><span class="line">&#123;% checkbox symbol:times color:red checked:true 显示为乘号的红色的已勾选的复选框 %&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><figcaption><span>支持的参数</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">checked:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple</span></span><br><span class="line"><span class="attr">symbol:</span> <span class="string">plus/minus/times</span></span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="copy-复制行">copy 复制行</h2>
-<div class="tag-plugin tabs"id="tab_3"><div class="nav-tabs"><div class="tab active"><a href="#tab_3-1">示例</a></div><div class="tab"><a href="#tab_3-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_3-1"><p>对于单行内容，可以使用 <code>copy</code> 标签来实现复制功能：</p>
-<div class="tag-plugin copy">
+<p>对于单行内容，可以使用 <code>copy</code> 标签来实现复制功能</p>
+<div class="tag-plugin tabs"id="tab_4"><div class="nav-tabs"><div class="tab active"><a href="#tab_4-1">示例</a></div><div class="tab"><a href="#tab_4-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_4-1"><div class="tag-plugin copy">
 <span>$</span><input class="copy-area" id="copy_16" value="curl -s https://sh.xaox.cc/install | sh"><button class="copy-btn" onclick="util.copy(&quot;copy_16&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button>
 </div>
 您可以设置 <code>git:https</code> 或者 <code>git:ssh</code> 或者
 <code>git:gh</code> 来快速放置一个 git 仓库链接：
 <div class="tag-plugin copy">
 <span>HTTPS</span><input class="copy-area" id="copy_17" value="https://github.com/xaoxuu.com/hexo-theme-stellar.git"><button class="copy-btn" onclick="util.copy(&quot;copy_17&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button>
-</div></div><div class="tab-pane" id="tab_3-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% copy curl -s https://sh.xaox.cc/install | sh %&#125;</span><br><span class="line">&#123;% copy curl -s https://sh.xaox.cc/install | sh prefix:$ %&#125;</span><br><span class="line">&#123;% copy git:https xaoxuu.com/hexo-theme-stellar %&#125;</span><br><span class="line">&#123;% copy git:ssh xaoxuu.com/hexo-theme-stellar %&#125;</span><br><span class="line">&#123;% copy git:gh xaoxuu.com/hexo-theme-stellar %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="tab-pane" id="tab_4-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% copy curl -s https://sh.xaox.cc/install | sh %&#125;</span><br><span class="line">&#123;% copy curl -s https://sh.xaox.cc/install | sh prefix:$ %&#125;</span><br><span class="line">&#123;% copy git:https xaoxuu.com/hexo-theme-stellar %&#125;</span><br><span class="line">&#123;% copy git:ssh xaoxuu.com/hexo-theme-stellar %&#125;</span><br><span class="line">&#123;% copy git:gh xaoxuu.com/hexo-theme-stellar %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="emoji-表情包">emoji 表情包</h2>
-<div class="tag-plugin tabs"id="tab_4"><div class="nav-tabs"><div class="tab active"><a href="#tab_4-1">效果演示</a></div><div class="tab"><a href="#tab_4-2">语法格式</a></div><div class="tab"><a href="#tab_4-3">引入表情包</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_4-1"><p>内置了可配置的表情标签 <span
+<p>内置了可配置的表情标签</p>
+<div class="tag-plugin tabs"id="tab_5"><div class="nav-tabs"><div class="tab active"><a href="#tab_5-1">效果演示</a></div><div class="tab"><a href="#tab_5-2">语法格式</a></div><div class="tab"><a href="#tab_5-3">引入表情包</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><p><span
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/爱你.png"/></span>
 <span
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatattentionreverse.png"/></span>
 <span
-class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/滑稽.png"/></span>
-使用方法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% emoji 爱你 %&#125;</span><br><span class="line">&#123;% emoji blobcat ablobcatattentionreverse %&#125;</span><br><span class="line">&#123;% emoji tieba 滑稽 %&#125;</span><br></pre></td></tr></table></figure>
-如果对高度有特别要求，可以指定高度，例如：
+class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/滑稽.png"/></span></p>
 <center>
 <span
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatrainbow.png" style="height:1em"/></span><span
@@ -243,21 +242,31 @@ class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatrainbow.png" style="height:3em"/></span><span
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatrainbow.png" style="height:2em"/></span><span
 class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatrainbow.png" style="height:1em"/></span>
-</center>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;&#123;% emoji blobcat ablobcatrainbow height:1em %&#125;&#123;% emoji blobcat ablobcatrainbow height:2em %&#125;&#123;% emoji blobcat ablobcatrainbow height:3em %&#125;&#123;% emoji blobcat ablobcatrainbow height:2em %&#125;&#123;% emoji blobcat ablobcatrainbow height:1em %&#125;&lt;/center&gt;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_4-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% emoji [source] name [height:1.75em] %&#125;</span><br></pre></td></tr></table></figure>
+</center></div><div class="tab-pane" id="tab_5-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% emoji 爱你 %&#125;</span><br><span class="line">&#123;% emoji blobcat ablobcatattentionreverse %&#125;</span><br><span class="line">&#123;% emoji tieba 滑稽 %&#125;</span><br></pre></td></tr></table></figure>
+<p>如果对高度有特别要求，可以指定高度，例如：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span>&#123;% emoji blobcat ablobcatrainbow height:1em %&#125;&#123;% emoji blobcat ablobcatrainbow height:2em %&#125;&#123;% emoji blobcat ablobcatrainbow height:3em %&#125;&#123;% emoji blobcat ablobcatrainbow height:2em %&#125;&#123;% emoji blobcat ablobcatrainbow height:1em %&#125;<span class="language-xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% emoji [source] name [height:1.75em] %&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>source</code> 可省略，默认为配置中的第一个
 <code>source</code>（详见「引入表情包」部分）</p>
 <blockquote>
 <p>表情速查表：<a
 href="https://weekdaycare.cn/posts/emoji-blob/">Stellar内嵌blobcat小表情</a></p>
-</blockquote></div><div class="tab-pane" id="tab_4-3"><figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">emoji:</span></span><br><span class="line">    <span class="attr">default:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">twemoji:</span> <span class="string">https://gcore.jsdelivr.net/gh/twitter/twemoji/assets/svg/$&#123;name&#125;.svg</span></span><br><span class="line">    <span class="attr">qq:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">aru:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/aru-l/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">tieba:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/$&#123;name&#125;.png</span></span><br></pre></td></tr></table></figure>
+</blockquote></div><div class="tab-pane" id="tab_5-3"><figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">emoji:</span></span><br><span class="line">    <span class="attr">default:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">twemoji:</span> <span class="string">https://gcore.jsdelivr.net/gh/twitter/twemoji/assets/svg/$&#123;name&#125;.svg</span></span><br><span class="line">    <span class="attr">qq:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">aru:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/aru-l/$&#123;name&#125;.gif</span></span><br><span class="line">    <span class="attr">tieba:</span> <span class="string">https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/$&#123;name&#125;.png</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>在配置文件中，文件名用 <code>${name}</code> 代替。</p>
 </blockquote></div></div></div>
 <h2 id="folding-折叠容器">folding 折叠容器</h2>
-<p>折叠块标签的语法格式为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% folding title [codeblock:bool] [open:bool] [color:color] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endfolding %&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><figcaption><span>参数说明</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">open:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple/light/dark</span></span><br></pre></td></tr></table></figure>
+<div class="tag-plugin tabs"id="tab_6"><div class="nav-tabs"><div class="tab active"><a href="#tab_6-1">示例</a></div><div class="tab"><a href="#tab_6-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_6-1"><details class="tag-plugin colorful folding">
+<summary>
+<span>title</span>
+</summary>
+<div class="body">
+<p>
+content
+</p>
+</div>
+</details></div><div class="tab-pane" id="tab_6-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% folding title [codeblock:bool] [open:bool] [color:color] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endfolding %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>参数说明</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">open:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple/light/dark</span></span><br></pre></td></tr></table></figure></div></div></div>
 <h3 id="彩色可折叠代码块">彩色可折叠代码块</h3>
 <p>备注标签相较于旧版进行了增强，可以实现更多种颜色，还可以通过设置
 <code>child:codeblock</code>
@@ -273,7 +282,7 @@ href="https://weekdaycare.cn/posts/emoji-blob/">Stellar内嵌blobcat小表情</a
 <p>代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% folders %&#125;</span><br><span class="line">&lt;!-- folder 题目1 --&gt;</span><br><span class="line">这是答案1</span><br><span class="line">&lt;!-- folder 题目2 --&gt;</span><br><span class="line">这是答案2</span><br><span class="line">&lt;!-- folder 题目3 --&gt;</span><br><span class="line">这是答案3</span><br><span class="line">&#123;% endfolders %&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="frame-设备框架">frame 设备框架</h2>
-<div class="tag-plugin tabs"id="tab_5"><div class="nav-tabs"><div class="tab active"><a href="#tab_5-1">示例</a></div><div class="tab"><a href="#tab_5-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><div class="tag-plugin video-wrap">
+<div class="tag-plugin tabs"id="tab_7"><div class="nav-tabs"><div class="tab active"><a href="#tab_7-1">示例</a></div><div class="tab"><a href="#tab_7-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_7-1"><div class="tag-plugin video-wrap">
 <div class="frame-wrap" id="iphone11"focus="top">
 <video poster="/asset/avatar.svg" playsinline="" muted="" loop="" autoplay="" preload="metadata">
 <source src="/assets/wiki/prohud/toast/demo-loading.mp4" type="video/mp4">
@@ -282,7 +291,7 @@ href="https://weekdaycare.cn/posts/emoji-blob/">Stellar内嵌blobcat小表情</a
 
 </div>
 </div>
-</div></div><div class="tab-pane" id="tab_5-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% frame iphone11 img:/assets/wiki/prohud/toast/demo-loading.png video:/assets/wiki/prohud/toast/demo-loading.mp4 focus:top %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="tab-pane" id="tab_7-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% frame iphone11 img:/assets/wiki/prohud/toast/demo-loading.png video:/assets/wiki/prohud/toast/demo-loading.mp4 focus:top %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="friends-友链">friends 友链</h2>
 <div class="tag-plugin users-wrap"><div class="grid-box"></div></div>
 <p>您可以在任何位置插入友链组，支持静态数据和动态数据，静态数据需要写在数据文件中：</p>
@@ -427,7 +436,7 @@ issue 并将 <code>Label</code> 设置为 <code>active</code> 进行测试。</p
 <figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% image https://s.xaox.cc/xaoxuu/posts/202401131914137.jpg-hd 图片由 xaoxuu 拍摄于一个普通的阳光明媚的下午 download:https://s.xaox.cc/xaoxuu/posts/202401131914137.jpg-hd %&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="竖图小图优化">竖图（小图）优化</h3>
 <p>宽度较小而高度较大的图片，可以设置宽、高、填充间距、背景色等对其布局进行优化，使得它在不同宽度的屏幕下都能获得不错的视觉体验：</p>
-<div class="tag-plugin tabs"id="tab_6"><div class="nav-tabs"><div class="tab active"><a href="#tab_6-1">限制宽度</a></div><div class="tab"><a href="#tab_6-2">设置填充区域</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_6-1"><div class="tag-plugin image">
+<div class="tag-plugin tabs"id="tab_8"><div class="nav-tabs"><div class="tab active"><a href="#tab_8-1">限制宽度</a></div><div class="tab"><a href="#tab_8-2">设置填充区域</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_8-1"><div class="tag-plugin image">
 <div class="image-bg">
 <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s.xaox.cc/xaoxuu/posts/202401131924265.jpg-hd" alt="图片由 xaoxuu 拍摄于 Dattle 幼年时期" data-fancybox="true" style="width:350px;"/>
 </div>
@@ -448,7 +457,7 @@ issue 并将 <code>Label</code> 设置为 <code>active</code> 进行测试。</p
 </div>
 </div>
 </div>
-</details></div><div class="tab-pane" id="tab_6-2"><p>可以设置填充宽度和颜色，支持 <code>bg:var(--card)</code>
+</details></div><div class="tab-pane" id="tab_8-2"><p>可以设置填充宽度和颜色，支持 <code>bg:var(--card)</code>
 动态颜色，能够适配暗黑模式：</p>
 <div class="tag-plugin image">
 <div class="image-bg" style="background:var(--card);padding:16px;">
@@ -467,7 +476,7 @@ Fancybox 插件。</p>
 标签都开启此功能，可在主题配置文件中修改以下参数：</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">######## Tag Plugins ########</span></span><br><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="comment"># &#123;% image %&#125;</span></span><br><span class="line">  <span class="attr">image:</span></span><br><span class="line">    <span class="attr">fancybox:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <h2 id="link-链接卡片">link 链接卡片</h2>
-<div class="tag-plugin tabs"id="tab_7"><div class="nav-tabs"><div class="tab active"><a href="#tab_7-1">效果演示</a></div><div class="tab"><a href="#tab_7-2">语法格式</a></div><div class="tab"><a href="#tab_7-3">写法示例</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_7-1"><div class="tag-plugin link dis-select">
+<div class="tag-plugin tabs"id="tab_9"><div class="nav-tabs"><div class="tab active"><a href="#tab_9-1">效果演示</a></div><div class="tab"><a href="#tab_9-2">语法格式</a></div><div class="tab"><a href="#tab_9-3">写法示例</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_9-1"><div class="tag-plugin link dis-select">
 <a class="link-card plain" title="" href="https://xaoxuu.com/blog/20221029/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon">
 <div class="left">
 <span class="title">https://xaoxuu.com/blog/20221029/</span><span
@@ -495,8 +504,8 @@ data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0e
 class="cap desc footnote"></span>
 </div>
 </a>
-</div></div><div class="tab-pane" id="tab_7-2"><p>外链卡片标签的语法格式为： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link href [title] [icon:src] [desc:true/false] %&#125;</span><br></pre></td></tr></table></figure> 参数含义：
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">href:</span> <span class="string">链接</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">可选，手动设置标题（为空时会自动抓取页面标题）</span></span><br><span class="line"><span class="attr">icon:</span> <span class="string">可选，手动设置图标（为空时会自动抓取页面图标）</span></span><br><span class="line"><span class="attr">desc:</span> <span class="string">可选，是否显示摘要描述，为true时将会显示页面描述</span></span><br></pre></td></tr></table></figure></p></div><div class="tab-pane" id="tab_7-3"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">不带摘要的样式：</span><br><span class="line">&#123;% link https://xaoxuu.com/blog/20221029/ %&#125;</span><br><span class="line">带摘要的样式：</span><br><span class="line">&#123;% link https://xaoxuu.com/blog/20221029/ desc:true %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="tab-pane" id="tab_9-2"><p>外链卡片标签的语法格式为： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% link href [title] [icon:src] [desc:true/false] %&#125;</span><br></pre></td></tr></table></figure> 参数含义：
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">href:</span> <span class="string">链接</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">可选，手动设置标题（为空时会自动抓取页面标题）</span></span><br><span class="line"><span class="attr">icon:</span> <span class="string">可选，手动设置图标（为空时会自动抓取页面图标）</span></span><br><span class="line"><span class="attr">desc:</span> <span class="string">可选，是否显示摘要描述，为true时将会显示页面描述</span></span><br></pre></td></tr></table></figure></p></div><div class="tab-pane" id="tab_9-3"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">不带摘要的样式：</span><br><span class="line">&#123;% link https://xaoxuu.com/blog/20221029/ %&#125;</span><br><span class="line">带摘要的样式：</span><br><span class="line">&#123;% link https://xaoxuu.com/blog/20221029/ desc:true %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="mark-标记标签">mark 标记标签</h2>
 <p>支持多彩标记，包括：<mark class="tag-plugin colorful mark" color="orange">默认</mark> <mark class="tag-plugin colorful mark" color="red">红</mark> <mark class="tag-plugin colorful mark" color="orange">橙</mark>
 <mark class="tag-plugin colorful mark" color="yellow">黄</mark> <mark class="tag-plugin colorful mark" color="green">绿</mark> <mark class="tag-plugin colorful mark" color="cyan">青</mark> <mark class="tag-plugin colorful mark" color="blue">蓝</mark>
@@ -514,11 +523,11 @@ class="cap desc footnote"></span>
 </blockquote>
 <div class="tag-plugin navbar"><nav><a class="link" href="/">文章</a><a class="link active" href="/wiki/">项目</a><a class="link" href="#comments">留言</a><a class="link" target="_blank" rel="noopener" href="https://github.com/xaoxuu/">GitHub</a></nav></div>
 <h2 id="note-备注块">note 备注块</h2>
-<div class="tag-plugin tabs"id="tab_8"><div class="nav-tabs"><div class="tab active"><a href="#tab_8-1">示例</a></div><div class="tab"><a href="#tab_8-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_8-1"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% note [title] content [color:color] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_8-2"><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">标题（可选）</span></span><br><span class="line"><span class="attr">content:</span> <span class="string">内容</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple/light/dark/warning/error</span></span><br></pre></td></tr></table></figure></div></div></div>
+<div class="tag-plugin tabs"id="tab_10"><div class="nav-tabs"><div class="tab active"><a href="#tab_10-1">示例</a></div><div class="tab"><a href="#tab_10-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_10-1"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% note [title] content [color:color] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_10-2"><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">标题（可选）</span></span><br><span class="line"><span class="attr">content:</span> <span class="string">内容</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple/light/dark/warning/error</span></span><br></pre></td></tr></table></figure></div></div></div>
 <h3 id="具有标题的备注块">具有标题的备注块</h3>
 <p>直接写备注内容，默认是和代码块一样的样式，第一个空格前面的是标题，后面的是正文，如果标题中需要显示空格，请使用
 <code>&amp;nbsp;</code> 代替。</p>
-<div class="tag-plugin tabs"id="tab_9"><div class="nav-tabs"><div class="tab active"><a href="#tab_9-1">示例</a></div><div class="tab"><a href="#tab_9-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_9-1"><div class="tag-plugin colorful note">
+<div class="tag-plugin tabs"id="tab_11"><div class="nav-tabs"><div class="tab active"><a href="#tab_11-1">示例</a></div><div class="tab"><a href="#tab_11-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_11-1"><div class="tag-plugin colorful note">
 <div class="title">
 这 是标题
 </div>
@@ -527,9 +536,9 @@ class="cap desc footnote"></span>
 这是正文 哈哈。
 </p>
 </div>
-</div></div><div class="tab-pane" id="tab_9-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note 这&amp;nbsp;是标题 这是正文 哈哈。 %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="tab-pane" id="tab_11-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note 这&amp;nbsp;是标题 这是正文 哈哈。 %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h3 id="彩色备注块">彩色备注块</h3>
-<div class="tag-plugin tabs"id="tab_10"><div class="nav-tabs"><div class="tab active"><a href="#tab_10-1">示例</a></div><div class="tab"><a href="#tab_10-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_10-1"><details class="tag-plugin colorful folding">
+<div class="tag-plugin tabs"id="tab_12"><div class="nav-tabs"><div class="tab active"><a href="#tab_12-1">示例</a></div><div class="tab"><a href="#tab_12-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_12-1"><details class="tag-plugin colorful folding">
 <summary>
 <span>备注块示例</span>
 </summary>
@@ -655,7 +664,7 @@ color可设置red、orange、yellow、green、cyan、blue、purple、light、dar
 </div>
 </div>
 </div>
-</details></div><div class="tab-pane" id="tab_10-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% note 一共支持12种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark、warning、error 几种取值。 %&#125;</span><br><span class="line">&#123;% note color:cyan 一共支持12种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark、warning、error 几种取值。 %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</details></div><div class="tab-pane" id="tab_12-2"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% note 一共支持12种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark、warning、error 几种取值。 %&#125;</span><br><span class="line">&#123;% note color:cyan 一共支持12种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark、warning、error 几种取值。 %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="okr-目标管理">okr 目标管理</h2>
 <p>这个功能在 <mark class="tag-plugin colorful mark" color="dark">1.20.0</mark> 版本后开始支持，这是一个 OKR（Objectives
 and Key Results）示例：</p>
@@ -704,7 +713,7 @@ and Key Results）示例：</p>
     </div>
     <div class="okr-center">
       <span class="title">完成主要页面设计稿</span>
-      <div class="note"><div id="tab_11" class="tag-plugin tabs" data-align="left"><div class="nav-tabs"><div class="tab active"><a href="#tab_11-1">小提示1</a></div><div class="tab"><a href="#tab_11-2">小提示2</a></div></div><div class="tab-content"><div id="tab_11-1" class="tab-pane active"><p>您可以在 _config.yml 文件中修改标签的颜色和文案</p></div><div id="tab_11-2" class="tab-pane"><p>您可以在 _config.yml 文件中增加任意的标签配置</p></div></div></div></div>
+      <div class="note"><div id="tab_13" class="tag-plugin tabs" data-align="left"><div class="nav-tabs"><div class="tab active"><a href="#tab_13-1">小提示1</a></div><div class="tab"><a href="#tab_13-2">小提示2</a></div></div><div class="tab-content"><div id="tab_13-1" class="tab-pane active"><p>您可以在 _config.yml 文件中修改标签的颜色和文案</p></div><div id="tab_13-2" class="tab-pane"><p>您可以在 _config.yml 文件中增加任意的标签配置</p></div></div></div></div>
     </div>
     <div class="okr-right colorful" color="orange">
       <div class="labels">
@@ -758,7 +767,7 @@ and Key Results）示例：</p>
 <p>第一行会被作为标题并加粗，写法如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% okr o1 %&#125;</span><br><span class="line"></span><br><span class="line">2024年的小目标：完成 Volantis 6.0 并发布上线</span><br><span class="line">来自2025年的复盘：已《基本》实现目标 &#123;% emoji tieba 滑稽 %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- okr kr1 percent:1 --&gt;</span><br><span class="line">重构 tag-plugins 和 wiki 系统</span><br><span class="line">- 当 &#123;% mark KR %&#125; 进度为 100% 时，标签默认显示为 &#123;% mark color:green 已完成 %&#125;</span><br><span class="line">- 当 &#123;% mark KR %&#125; 未设置进度时，默认为 &#123;% mark 0% %&#125;</span><br><span class="line">- 当 &#123;% mark O %&#125; 未设置进度时，则显示所有 &#123;% mark KR %&#125; 进度平均值</span><br><span class="line"></span><br><span class="line">&lt;!-- okr kr2 percent:0.9 status:off_track --&gt;</span><br><span class="line">完成主要页面设计稿</span><br><span class="line">&#123;% tabs align:left %&#125;</span><br><span class="line">&lt;!-- tab 小提示1 --&gt;</span><br><span class="line">您可以在 _config.yml 文件中修改标签的颜色和文案</span><br><span class="line">&lt;!-- tab 小提示2 --&gt;</span><br><span class="line">您可以在 _config.yml 文件中增加任意的标签配置</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- okr kr3 percent:-0.12 status:unfinished --&gt;</span><br><span class="line">完成前置准备工作（如果你知道答案，请在留言区帮帮我！🥹）</span><br><span class="line">&#123;% checkbox 在咸水和海滩之间找一亩地 %&#125;</span><br><span class="line">&#123;% checkbox 求出圆周率后15位 %&#125;</span><br><span class="line">&#123;% checkbox 找出宇宙的终极逻辑 %&#125;</span><br><span class="line">&#123;% checkbox 去地狱里走两步 %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- okr kr-4 status:at_risk --&gt;</span><br><span class="line">开发、测试和发布</span><br><span class="line">&#123;% image /assets/wiki/stellar/icon.svg height:64px 支持嵌套插入图片等其它简单组件 %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endokr %&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="poetry-诗词">poetry 诗词</h2>
-<div class="tag-plugin tabs"id="tab_12"><div class="nav-tabs"><div class="tab active"><a href="#tab_12-1">示例</a></div><div class="tab"><a href="#tab_12-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_12-1"><div class="tag-plugin poetry">
+<div class="tag-plugin tabs"id="tab_14"><div class="nav-tabs"><div class="tab active"><a href="#tab_14-1">示例</a></div><div class="tab"><a href="#tab_14-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_14-1"><div class="tag-plugin poetry">
 <div class="content">
 <div class="title">
 游山西村
@@ -776,7 +785,7 @@ and Key Results）示例：</p>
 诗词节选
 </div>
 </div>
-</div></div><div class="tab-pane" id="tab_12-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% poetry 游山西村 author:陆游 footer:诗词节选 %&#125;</span><br><span class="line">莫笑农家腊酒浑，丰年留客足鸡豚。</span><br><span class="line">**山重水复疑无路，柳暗花明又一村。**</span><br><span class="line">箫鼓追随春社近，衣冠简朴古风存。</span><br><span class="line">从今若许闲乘月，拄杖无时夜叩门。</span><br><span class="line">&#123;% endpoetry %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+</div></div><div class="tab-pane" id="tab_14-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% poetry 游山西村 author:陆游 footer:诗词节选 %&#125;</span><br><span class="line">莫笑农家腊酒浑，丰年留客足鸡豚。</span><br><span class="line">**山重水复疑无路，柳暗花明又一村。**</span><br><span class="line">箫鼓追随春社近，衣冠简朴古风存。</span><br><span class="line">从今若许闲乘月，拄杖无时夜叩门。</span><br><span class="line">&#123;% endpoetry %&#125;</span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="posters-海报容器">posters 海报容器</h2>
 <p>类似于 gallery 但是支持点击跳转，数据来源于
 <code>blog/source/_data/links/group_id.yml</code></p>
@@ -794,12 +803,12 @@ and Key Results）示例：</p>
 <p>此外，加上 <code>el:h2/h3/h4/h5/h6</code> 可以作为标题使用</p>
 </blockquote>
 <h2 id="radio-单选">radio 单选</h2>
-<div class="tag-plugin tabs"id="tab_13"><div class="nav-tabs"><div class="tab active"><a href="#tab_13-1">示例</a></div><div class="tab"><a href="#tab_13-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_13-1"><div class="tag-plugin colorful checkbox">
+<div class="tag-plugin tabs"id="tab_15"><div class="nav-tabs"><div class="tab active"><a href="#tab_15-1">示例</a></div><div class="tab"><a href="#tab_15-2">写法</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_15-1"><div class="tag-plugin colorful checkbox">
 <input type="radio"/><span>没有勾选的单选框</span>
 </div>
 <div class="tag-plugin colorful checkbox">
 <input type="radio" checked="true"/><span>已勾选的单选框</span>
-</div></div><div class="tab-pane" id="tab_13-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% radio 没有勾选的单选框 %&#125;</span><br><span class="line">&#123;% radio checked:true 已勾选的单选框 %&#125;</span><br></pre></td></tr></table></figure>
+</div></div><div class="tab-pane" id="tab_15-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% radio 没有勾选的单选框 %&#125;</span><br><span class="line">&#123;% radio checked:true 已勾选的单选框 %&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><figcaption><span>支持的参数</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">checked:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">color:</span> <span class="string">red/orange/yellow/green/cyan/blue/purple</span></span><br></pre></td></tr></table></figure></div></div></div>
 <h2 id="sites-网站卡片">sites 网站卡片</h2>
 <div class="tag-plugin sites-wrap"><div class="grid-box"></div></div>
@@ -813,7 +822,7 @@ and Key Results）示例：</p>
 宽度，<code>width:max</code> 设置为 100% 宽度。</p>
 <div class="tag-plugin swiper fancybox" id="swiper-api" effect="cards"><div class="swiper-wrapper"></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
 <figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% swiper effect:cards %&#125;</span><br><span class="line">![](<span class="link">https://images.unsplash.com/photo-1625171515821-1870deb2743b?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</span>)</span><br><span class="line">![](<span class="link">https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</span>)</span><br><span class="line">![](<span class="link">https://images.unsplash.com/photo-1542272201-b1ca555f8505?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</span>)</span><br><span class="line">![](<span class="link">https://images.unsplash.com/photo-1524797905120-92940d3a18d6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</span>)</span><br><span class="line">&#123;% endswiper %&#125;</span><br></pre></td></tr></table></figure>
-<div class="tag-plugin tabs"id="tab_14"><div class="nav-tabs"><div class="tab active"><a href="#tab_14-1">宽度</a></div><div class="tab"><a href="#tab_14-2">切换效果</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_14-1"><figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% swiper width:min/max %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endswiper %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_14-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% swiper effect:cards/coverflow %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endswiper %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin tabs"id="tab_16"><div class="nav-tabs"><div class="tab active"><a href="#tab_16-1">宽度</a></div><div class="tab"><a href="#tab_16-2">切换效果</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_16-1"><figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% swiper width:min/max %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endswiper %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_16-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% swiper effect:cards/coverflow %&#125;</span><br><span class="line">...</span><br><span class="line">&#123;% endswiper %&#125;</span><br></pre></td></tr></table></figure>
 <div class="tag-plugin colorful note" color="warning">
 <div class="title">
 注意
@@ -840,30 +849,30 @@ Stellar 会自动判断）</li>
 <code>fontawesome</code> 图标库）</li>
 <li>轮廓样式简化，可以搭配其它容器类标签嵌套使用。</li>
 </ul>
-<div class="tag-plugin tabs" align="center"id="tab_16"><div class="nav-tabs"><div class="tab active"><a href="#tab_16-1">演示效果</a></div><div class="tab"><a href="#tab_16-2">示例代码</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_16-1"><div id="tab_15" class="tag-plugin tabs" data-align="center">
+<div class="tag-plugin tabs" align="center"id="tab_18"><div class="nav-tabs"><div class="tab active"><a href="#tab_18-1">演示效果</a></div><div class="tab"><a href="#tab_18-2">示例代码</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_18-1"><div id="tab_17" class="tag-plugin tabs" data-align="center">
 <div class="nav-tabs">
 <div class="tab">
-<a href="#tab_15-1">图片</a>
+<a href="#tab_17-1">图片</a>
 </div>
 <div class="tab active">
-<a href="#tab_15-2">代码块</a>
+<a href="#tab_17-2">代码块</a>
 </div>
 <div class="tab">
-<a href="#tab_15-3">表格</a>
+<a href="#tab_17-3">表格</a>
 </div>
 </div>
 <div class="tab-content">
-<div id="tab_15-1" class="tab-pane">
+<div id="tab_17-1" class="tab-pane">
 <div class="tag-plugin image">
 <div class="image-bg">
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg" data-fancybox="true" style="width:300px;"/></p>
 </div>
 </div>
 </div>
-<div id="tab_15-2" class="tab-pane active">
+<div id="tab_17-2" class="tab-pane active">
 <figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x <span class="operator">=</span> <span class="number">123</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure>
 </div>
-<div id="tab_15-3" class="tab-pane">
+<div id="tab_17-3" class="tab-pane">
 <table>
 <thead>
 <tr class="header">
@@ -905,7 +914,7 @@ c2
 </table>
 </div>
 </div>
-</div></div><div class="tab-pane" id="tab_16-2"><script src="https://gist.github.xaox.cc/xaoxuu/cfd4e9645047115c6aa9b19cd9b28e97.js"></script></div></div></div>
+</div></div><div class="tab-pane" id="tab_18-2"><script src="https://gist.github.xaox.cc/xaoxuu/cfd4e9645047115c6aa9b19cd9b28e97.js"></script></div></div></div>
 <h2 id="timeline-时间线">timeline 时间线</h2>
 <p>支持静态和动态时间线数据源： - 静态数据 - github issues
 支持多种筛选参数，详见 <a
@@ -925,7 +934,7 @@ target="_blank" rel="noopener" href="https://docs.gitea.com/zh-cn/api/1.20/#tag/
 <div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header">2021 年 2 月 16 日</div><div class="body fs14">主要部分功能已经开发的差不多了。<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg" data-fancybox="true" style="width:300px;"/></div></div></div></div><div class="timenode" index="1"><div class="header">2021 年 2 月 11 日</div><div class="body fs14"><p>今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。</p></div></div></div>
 <figure class="highlight md"><figcaption><span>写法如下</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% timeline %&#125;</span><br><span class="line">&lt;!-- node 2021 年 2 月 16 日 --&gt;</span><br><span class="line">主要部分功能已经开发的差不多了。</span><br><span class="line">&#123;% image /assets/wiki/stellar/photos/hello@1x.png width:300px %&#125;</span><br><span class="line">&lt;!-- node 2021 年 2 月 11 日 --&gt;</span><br><span class="line">今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="动态时间线">动态时间线</h3>
-<div class="tag-plugin tabs" align="center"id="tab_17"><div class="nav-tabs"><div class="tab active"><a href="#tab_17-1">动态说说</a></div><div class="tab"><a href="#tab_17-2">朋友圈</a></div><div class="tab"><a href="#tab_17-3">微博动态</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_17-1"><p>动态数据是从 GitHub Issues 中拉取的，使用方法为：</p>
+<div class="tag-plugin tabs" align="center"id="tab_19"><div class="nav-tabs"><div class="tab active"><a href="#tab_19-1">动态说说</a></div><div class="tab"><a href="#tab_19-2">朋友圈</a></div><div class="tab"><a href="#tab_19-3">微博动态</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_19-1"><p>动态数据是从 GitHub Issues 中拉取的，使用方法为：</p>
 <ol type="1">
 <li>建一个仓库</li>
 <li>创建一个 <code>issue</code> 并添加一个 <code>label</code>
@@ -938,7 +947,7 @@ target="_blank" rel="noopener" href="https://docs.gitea.com/zh-cn/api/1.20/#tag/
 <div class="tag-plugin timeline ds-timeline"
 data-api="https://api.github.com/repos/xaoxuu/blog-timeline/issues?direction=asc&amp;per_page=3">
 
-</div></div><div class="tab-pane" id="tab_17-2"><div class="tag-plugin link dis-select">
+</div></div><div class="tab-pane" id="tab_19-2"><div class="tag-plugin link dis-select">
 <a class="link-card plain" title="" href="https://xaoxuu.com/wiki/stellar/third-party/fcircle/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon">
 <div class="left">
 <span
@@ -953,7 +962,7 @@ data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0e
 </div>
 </a>
 </div>
-<figure class="highlight md"><figcaption><span>_posts/xxx.md</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% timeline type:fcircle api:https://raw.github.xaox.cc/xaoxuu/friends-rss-generator/output/data.json %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_17-3"><ol type="1">
+<figure class="highlight md"><figcaption><span>_posts/xxx.md</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% timeline type:fcircle api:https://raw.github.xaox.cc/xaoxuu/friends-rss-generator/output/data.json %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_19-3"><ol type="1">
 <li>fork shaoyaoqian/WeiboSpider 的爬虫，修改自己的仓库名</li>
 <li>修改 <code>.github/workflows/main.yml</code>
 中的微博ID为你想爬取的ID，修改完后每天会自动爬取你的微博，存储为 json
@@ -1418,4 +1427,4 @@ data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0e
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div></body></html>
+</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

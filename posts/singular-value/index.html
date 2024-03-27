@@ -58,7 +58,7 @@
 
   
 
-  <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' />
+  <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' /><script src="/asset/js/cw_install.js"></script>
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -186,11 +186,10 @@ mjx-container[display="true"] + br {
 <nav class="menu dis-select"><a class="nav-item active" title="文章" href="/" style="color:var(--text)"><span>文章</span></a><a class="nav-item" title="文档" href="/doc/" style="color:var(--text)"><span>文档</span></a><a class="nav-item" title="说说" href="/shuoshuo/" style="color:var(--text)"><span>说说</span></a><a class="nav-item" title="更多" href="/about/" style="color:var(--text)"><span>更多</span></a></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">你好，旅人：</span></div><div class="widget-body fs14"><script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-<p><span id="hitokoto">一言ing……</span></p>
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">你好，旅人：</span></div><div class="widget-body fs14"><p>星语日点灯</p>
 
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
-<a class="link" title="留言板" href="/about/"><div class="flex"><span>留言板</span></div></a></div></div></widget>
+<a class="link" title="留言" href="/about/"><div class="flex"><span>留言</span></div></a></div></div></widget>
 
 
 
@@ -265,8 +264,8 @@ mjx-container[display="true"] + br {
 <h2 id="实现代码">实现代码</h2>
 <p>使用工具：python(函数库真香)，你需要准备以下内容：</p>
 <ul>
-<li><code>pillow</code> 库：用于图像处理 <div class="tag-plugin copy"><input class="copy-area" id="copy_11" value="pip install pillow"><button class="copy-btn" onclick="util.copy(&quot;copy_11&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
-<li><code>numpy</code> 库：储存处理数组 <div class="tag-plugin copy"><input class="copy-area" id="copy_12" value="pip install numpy"><button class="copy-btn" onclick="util.copy(&quot;copy_12&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
+<li><code>pillow</code> 库：用于图像处理 <div class="tag-plugin copy"><input class="copy-area" id="copy_14" value="pip install pillow"><button class="copy-btn" onclick="util.copy(&quot;copy_14&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
+<li><code>numpy</code> 库：储存处理数组 <div class="tag-plugin copy"><input class="copy-area" id="copy_15" value="pip install numpy"><button class="copy-btn" onclick="util.copy(&quot;copy_15&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
 <li>一张jpg图片，不要太大，放置于与源代码相同的文件夹内，重命名为
 <code>1.jpg</code></li>
 </ul>
@@ -757,4 +756,4 @@ MathJax.Hub.Queue(function() {
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div></body></html>
+</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
