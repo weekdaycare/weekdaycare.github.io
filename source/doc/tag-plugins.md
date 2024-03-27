@@ -6,10 +6,9 @@ title: 标签组件
 
 ## about 关于块容器
 
-{% note color:warning 这个功能即将废弃 在 1.21.0 版本后请使用 banner 组件代替。 %}
+{% note 这个功能即将废弃 在 1.21.0 版本后请使用 banner 组件代替。 %}
 
-{% tabs active:1 align:center %}
-
+{% tabs %}
 <!-- tab 示例 -->
 
 方便在关于页面显示一段图文信息，比普通块容器稍微有一点点不一样：
@@ -44,25 +43,31 @@ title: 标签组件
 
 类似于 gallery 但是支持点击跳转，数据来源于 `blog/source/_data/links/group_id.yml`
 
+{% tabs %}
+<!-- tab 示例 -->
+
+{% albums music %}
+
+<!-- tab 写法 -->
+
 ```md blog/source/_posts/xxx.md
 {% albums group_id %}
 ```
 
-{% albums music %}
+{% endtabs %}
 
 ## audio 音频标签
 
 支持音乐外链以及网易云音乐，网易云支持设置 `type` 以及 `autoplay` 参数。
 
-<center>{% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}</center>
-
-<center>{% audio type:2 netease:1856385686 autoplay:0 %}</center>
-
-```md 写法如下
 {% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}
 
 {% audio netease:1856385686 %}
 
+```md 写法如下
+{% audio https://github.com/volantis-x/volantis-docs/releases/download/assets/Lumia1020.mp3 %}
+{% audio [type] netease [autoplay] }
+{% audio netease:1856385686 %}
 {% audio type:2 netease:1856385686 autoplay:0 %}
 ```
 
@@ -102,29 +107,39 @@ autoplay: 1/0 # 自动播放/手动播放 # 不设置默认0手动播放
 
 设置 link 可以让整个卡片响应点击事件，实现点击跳转到对应文章：
 
+{% banner 博客进阶：自动化部署 本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg link:https://xaoxuu.com/blog/20221126/ %}
+{% endbanner %}
+
 ```md
 {% banner 博客进阶：自动化部署 本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg link:https://xaoxuu.com/blog/20221126/ %}
 {% endbanner %}
 ```
 
-{% banner 博客进阶：自动化部署 本文讲了如何利用脚本和 GitHub Actions 简化博客搭建和部署流程，提高效率。 bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg link:https://xaoxuu.com/blog/20221126/ %}
-{% endbanner %}
-
 ## box 盒子容器
 
-note 标签就是使用 box 容器实现的，它们样式是相同的：
+note 标签就是使用 box 容器实现的，它们样式是相同的
 
-{% folding 更名记录（Stellar 1.18.0） color:warning %}
+{% box Stellar v1.12.0 %}
+
 因为原 noteblock 标签在升级到 hexo 6.0 之后跟官方库冲突了，官方一直没有解释原因，后不得不改名：
-noteblock -> grid -> border -> ablock -> box
-详情见：[#172](https://github.com/volantis-x/hexo-theme-volantis/issues/712)
-{% endfolding %}
 
-```md 语法格式
-{% box [title] [color:color] [child:codeblock/tabs] %}
-...
+noteblock -> grid -> border -> ablock -> box
+
+详情见：[#172](https://github.com/volantis-x/hexo-theme-volantis/issues/712)
+
 {% endbox %}
+
+{% box color:red child:codeblock %}
+
+```md 代码块1
+Hello
 ```
+
+```md 代码块2
+World
+```
+
+{% endbox %}
 
 ```md 写法如下
 {% box Stellar v1.12.0 color:warning %}
@@ -132,6 +147,16 @@ noteblock -> grid -> border -> ablock -> box
 noteblock -> grid -> border -> ablock -> box
 详情见：[#172](https://github.com/volantis-x/hexo-theme-volantis/issues/712)
 {% endbox %}
+
+{% box [title] [color:color] [child] %}
+...
+{% endbox %}
+```
+
+```yaml 支持的参数
+title: # 标题
+color: # 颜色
+child: codeblock/tabs # 嵌套子项目，设置为codeblock时在box内写两个连续代码块会相互链接
 ```
 
 ## checkbox 复选
@@ -163,9 +188,10 @@ symbol: plus/minus/times
 
 ## copy 复制行
 
+对于单行内容，可以使用 `copy` 标签来实现复制功能
+
 {% tabs %}
 <!-- tab 示例 -->
-对于单行内容，可以使用 `copy` 标签来实现复制功能：
 
 {% copy curl -s https://sh.xaox.cc/install | sh prefix:$ %}
 
@@ -183,26 +209,30 @@ symbol: plus/minus/times
 
 ## emoji 表情包
 
+内置了可配置的表情标签
+
 {% tabs %}
 <!-- tab 效果演示 -->
-内置了可配置的表情标签 {% emoji 爱你 %} {% emoji blobcat ablobcatattentionreverse %} {% emoji tieba 滑稽 %} 使用方法如下：
 
-```
+{% emoji 爱你 %} {% emoji blobcat ablobcatattentionreverse %} {% emoji tieba 滑稽 %} 
+
+<center>{% emoji blobcat ablobcatrainbow height:1em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:3em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:1em %}</center>
+
+<!-- tab 语法格式 -->
+
+```md
 {% emoji 爱你 %}
 {% emoji blobcat ablobcatattentionreverse %}
 {% emoji tieba 滑稽 %}
 ```
 
 如果对高度有特别要求，可以指定高度，例如：
+
+```md
 <center>{% emoji blobcat ablobcatrainbow height:1em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:3em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:1em %}</center>
-
-```
-<center>{% emoji blobcat ablobcatrainbow height:1em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:3em %}{% emoji blobcat ablobcatrainbow height:2em %}{% emoji blobcat ablobcatrainbow height:1em %}</center>
 ```
 
-<!-- tab 语法格式 -->
-
-```
+```md
 {% emoji [source] name [height:1.75em] %}
 ```
 
@@ -229,7 +259,14 @@ tag_plugins:
 
 ## folding 折叠容器
 
-折叠块标签的语法格式为：
+{% tabs %}
+<!-- tab 示例 -->
+
+{% folding title %}
+content
+{% endfolding %}
+
+<!-- tab 写法 -->
 
 ```
 {% folding title [codeblock:bool] [open:bool] [color:color] %}
@@ -242,6 +279,8 @@ codeblock: true/false
 open: true/false
 color: red/orange/yellow/green/cyan/blue/purple/light/dark
 ```
+
+{% endtabs %}
 
 ### 彩色可折叠代码块
 

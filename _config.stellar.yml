@@ -1,6 +1,6 @@
 ######## Stellar info ########
 stellar:
-  version: '1.26.8'
+  version: '1.27.0'
   homepage: 'https://xaoxuu.com/wiki/stellar/'
   repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
   main_css: /css/main.css
@@ -12,7 +12,7 @@ preconnect:
   # - https://gcore.jsdelivr.net
   # - https://unpkg.com
   - https://cdnjs.onmicrosoft.cn
-  - https://jsd.onmicrosoft.cn/
+  - https://jsd.onmicrosoft.cn
 
 open_graph:
   enable: true
@@ -284,7 +284,7 @@ footer:
     #   - '[GitHub](/)'
   content: | # 支持 Markdown 格式
     <center><a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-    <br><span id="span"></span><script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);span.innerHTML = "勉强运行"+A+"天"+B+"小时"+C+"分"}setInterval(runtime, 1000);</script>
+    <br><span id="span"></span><script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script> | 基于 <a href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
     <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a></center>
 
 
@@ -598,6 +598,7 @@ api_host:
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-   - <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' /> 
+    - <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' /> 
+    - <script src="/asset/js/cw_install.js"></script>
   script:
     - <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>

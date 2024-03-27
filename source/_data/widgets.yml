@@ -65,10 +65,10 @@ welcome:
     columns: 1
     items:
       - icon: 
-        title: 留言板
+        title: 留言
         url: /about/
   content: | # support markdown
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script><span id="hitokoto">一言ing……</span>
+    星语日点灯
 
 timeline:
   layout: timeline

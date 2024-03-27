@@ -5,7 +5,6 @@ date: 2022-10-08 23:36:06
 menu_id: about
 breadcrumb: false
 h1: ''
-sidebar: [朋友圈]
 ---
 
 {% banner 星日语 事一个破学生，没事喜欢瞎捣鼓，Kono白嫖怪哒！ avatar:https://pic.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg bg:https://pic.imgdb.cn/item/630c11b216f2c2beb1ddc531.jpg %}

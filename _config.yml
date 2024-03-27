@@ -93,7 +93,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -129,15 +129,37 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 6
-  hub:
-  content: true
-  content_limit: 
-  content_limit_delim: ' '
+  limit: 4
+  content: false
+  content_limit: 200
   order_by: -date
   icon: /asset/avatar.svg
   autodiscovery: true
-  template:
+  
+# offline config passed to sw-precache.
+service_worker:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: jsd.onmicrosoft.cn
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdnjs.onmicrosoft.cn
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: 834832894.r.cdn36.com
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: npm.onmicrosoft.cn
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
