@@ -1,5 +1,6 @@
-navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240328003649').then(function() {
+navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240328005129').then(function() {
     navigator.serviceWorker.addEventListener('message', function(event) {
+        console.log(event.data);
         if ('sw.update' === event.data) {
             // 使用hud.toast函数显示更新通知
             hud.toast('已更新最新版本（刷新生效）', 4000);
