@@ -1,4 +1,4 @@
-navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240328003609').then(function() {
+navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240328003649').then(function() {
     navigator.serviceWorker.addEventListener('message', function(event) {
         if ('sw.update' === event.data) {
             // 使用hud.toast函数显示更新通知
