@@ -4908,7 +4908,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_left .widget-wrapper.timeline .body {
   box-shadow: none;
-  background: var(--block);
+  background: var(--alpha50);
 }
 .widget-wrapper.toc {
   background: var(--site-bg);

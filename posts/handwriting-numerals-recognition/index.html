@@ -19,13 +19,18 @@
   <title>手写数字识别模型 - 星日语</title>
 
   
-    <meta name="description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我">
+    <meta name="description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我们将">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写数字识别模型">
 <meta property="og:url" content="http://weekdaycare.cn/posts/handwriting-numerals-recognition/">
 <meta property="og:site_name" content="星日语">
-<meta property="og:description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我">
+<meta property="og:description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我们将">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/1.png">
+<meta property="og:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/2.png">
+<meta property="og:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/3.png">
+<meta property="og:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/4.png">
+<meta property="og:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/5.png">
 <meta property="article:published_time" content="2023-12-16T14:09:38.000Z">
 <meta property="article:modified_time" content="2023-12-16T15:34:40.000Z">
 <meta property="article:author" content="涛声依旧">
@@ -34,6 +39,7 @@
 <meta property="article:tag" content="整活">
 <meta property="article:tag" content="代码">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/1.png">
   
   
   
@@ -101,14 +107,10 @@
   </div>
   </div><article class="md-text content"><h2 id="一前言">一、前言</h2>
 <p>当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。</p>
-<p>在本文中，我们将探讨如何使用深度学习技术来构建一个手写数字识别模型。我们将介绍如何准备数据、构建神经网络模型、训练模型，并最终评估模型的性能。我们将着重介绍如何使用
-TensorFlow 和 Keras 这两个流行的深度学习框架来实现这一目标。</p>
+<p>在本文中，我们将探讨如何使用深度学习技术来构建一个手写数字识别模型。我们将介绍如何准备数据、构建神经网络模型、训练模型，并最终评估模型的性能。我们将着重介绍如何使用 TensorFlow 和 Keras 这两个流行的深度学习框架来实现这一目标。</p>
 <h2 id="二mnist数据集简介">二、MNIST数据集简介</h2>
-<p>当我们学习新的编程语言时，通常第一个程序就是打印输出著名的“Hello
-World!”。在深度学习中，MNIST数据集就相当于Hello
-World。MNIST是一个简单的计算机视觉数据集，它包含手写数字的图像集：</p>
-<p><img
-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/1.png" /></p>
+<p>当我们学习新的编程语言时，通常第一个程序就是打印输出著名的“Hello World!”。在深度学习中，MNIST数据集就相当于Hello World。MNIST是一个简单的计算机视觉数据集，它包含手写数字的图像集：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/1.png" /></p>
 <p>数据集：</p>
 <ul>
 <li>train-images-idx3-ubyte 训练数据图像 (60,000)</li>
@@ -117,8 +119,7 @@ src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/
 <li>t10k-labels-idx1-ubyte 测试数据label</li>
 </ul>
 <p>每张图像是28 * 28像素：</p>
-<p><img
-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/2.png" /></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/2.png" /></p>
 <p>我们的任务是使用上面数据训练一个可以准确识别手写数字的神经网络模型。</p>
 <h2 id="三手写数字识别">三、手写数字识别</h2>
 <h3 id="准备工作">1、准备工作</h3>
@@ -133,12 +134,9 @@ src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/
 <ol type="1">
 <li><strong>Reshape（改变形状）</strong>：
 <ul>
-<li>原始的MNIST图像数据是一个3维的数组（60000, 28,
-28），表示60000张28x28像素的灰度图像。</li>
+<li>原始的MNIST图像数据是一个3维的数组（60000, 28, 28），表示60000张28x28像素的灰度图像。</li>
 <li>为了适应卷积神经网络的输入要求，我们需要将图像的形状改变为4维数组（样本数量，图像高度，图像宽度，通道数）。</li>
-<li>这里使用<code>reshape</code>函数将训练集和测试集的图像数据从（60000,
-28, 28）和（10000, 28, 28）reshape为（60000, 28, 28, 1）和（10000, 28,
-28, 1），表示每个图像是28x28的灰度图像，通道数为1。</li>
+<li>这里使用<code>reshape</code>函数将训练集和测试集的图像数据从（60000, 28, 28）和（10000, 28, 28）reshape为（60000, 28, 28, 1）和（10000, 28, 28, 1），表示每个图像是28x28的灰度图像，通道数为1。</li>
 </ul></li>
 <li><strong>归一化（Normalization）</strong>：
 <ul>
@@ -156,96 +154,60 @@ src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/
 <p>我们使用了 TensorFlow 和 Keras 来构建 CNN 模型。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)),</span><br><span class="line">    keras.layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)),</span><br><span class="line">    keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    keras.layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)),</span><br><span class="line">    keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    keras.layers.Flatten(),</span><br><span class="line">    keras.layers.Dense(<span class="number">64</span>, activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=<span class="string">&#x27;softmax&#x27;</span>)</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
 <ol type="1">
-<li><p><code>keras.Sequential([])</code>: 这是 Keras
-中用于构建序列模型的方法。它允许我们按顺序堆叠各种神经网络层。</p></li>
-<li><p><code>keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1))</code>:
-这是一个卷积层，用于提取图像特征。其中的参数含义如下：</p>
+<li><p><code>keras.Sequential([])</code>: 这是 Keras 中用于构建序列模型的方法。它允许我们按顺序堆叠各种神经网络层。</p></li>
+<li><p><code>keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1))</code>: 这是一个卷积层，用于提取图像特征。其中的参数含义如下：</p>
 <ul>
 <li><code>32</code>: 这表示卷积核的数量，也就是输出的特征图的深度。</li>
 <li><code>(3, 3)</code>: 这是卷积核的大小。</li>
 <li><code>activation='relu'</code>: 这表示使用 ReLU 激活函数。</li>
-<li><code>input_shape=(28, 28, 1)</code>: 这是输入图像的形状，表示为
-(height, width, channels)。在这里，输入图像的大小是 28x28，通道数为
-1（因为这是灰度图像）。</li>
+<li><code>input_shape=(28, 28, 1)</code>: 这是输入图像的形状，表示为 (height, width, channels)。在这里，输入图像的大小是 28x28，通道数为 1（因为这是灰度图像）。</li>
 </ul></li>
-<li><p><code>keras.layers.MaxPooling2D((2, 2))</code>:
-这是池化层，用于对特征图进行下采样，以减少参数数量并提取最显著的特征。</p></li>
+<li><p><code>keras.layers.MaxPooling2D((2, 2))</code>: 这是池化层，用于对特征图进行下采样，以减少参数数量并提取最显著的特征。</p></li>
 <li><p>接下来的两个部分是类似的卷积层和池化层，用于进一步提取和压缩特征。</p></li>
-<li><p><code>keras.layers.Flatten()</code>:
-这一层用于将多维的特征图展开成一维，以便连接全连接层。</p></li>
-<li><p><code>keras.layers.Dense(64, activation='relu')</code>:
-这是一个全连接层，包含 64 个神经元，并使用 ReLU 激活函数。</p></li>
-<li><p><code>keras.layers.Dense(10, activation='softmax')</code>:
-这是输出层，包含 10 个神经元，对应于数据集中的 10 个类别（数字 0 到
-9），并使用 softmax 激活函数输出分类概率。</p></li>
+<li><p><code>keras.layers.Flatten()</code>: 这一层用于将多维的特征图展开成一维，以便连接全连接层。</p></li>
+<li><p><code>keras.layers.Dense(64, activation='relu')</code>: 这是一个全连接层，包含 64 个神经元，并使用 ReLU 激活函数。</p></li>
+<li><p><code>keras.layers.Dense(10, activation='softmax')</code>: 这是输出层，包含 10 个神经元，对应于数据集中的 10 个类别（数字 0 到 9），并使用 softmax 激活函数输出分类概率。</p></li>
 </ol>
 <h3 id="编译模型">4、编译模型</h3>
 <p>我们使用 Adam 优化器、分类交叉熵损失函数和准确率作为评估指标。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编译模型</span></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;adam&#x27;</span>,</span><br><span class="line">              loss=<span class="string">&#x27;categorical_crossentropy&#x27;</span>,</span><br><span class="line">              metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br></pre></td></tr></table></figure>
-<p>在这段代码中，<code>compile</code> 方法用于编译神经网络模型。传递给
-<code>compile</code> 方法的参数包括：</p>
+<p>在这段代码中，<code>compile</code> 方法用于编译神经网络模型。传递给 <code>compile</code> 方法的参数包括：</p>
 <ol type="1">
-<li><p>优化器（optimizer）：在这里，我们使用了 Adam 优化器。Adam
-是一种常用的随机梯度下降优化算法，它结合了 AdaGrad 和 RMSProp
-的优点，并添加了偏差修正。</p></li>
-<li><p>损失函数（loss）：对于分类任务，我们通常使用交叉熵损失函数。在这个例子中，我们使用了
-<code>categorical_crossentropy</code>，它适用于多类别分类问题。</p></li>
-<li><p>评估指标（metrics）：在训练过程中，我们通常需要监控模型的性能。在这里，我们使用了
-<code>accuracy</code>
-作为评估指标，以便在每个训练周期（epoch）结束后输出模型在训练集和测试集上的准确率。</p></li>
+<li><p>优化器（optimizer）：在这里，我们使用了 Adam 优化器。Adam 是一种常用的随机梯度下降优化算法，它结合了 AdaGrad 和 RMSProp 的优点，并添加了偏差修正。</p></li>
+<li><p>损失函数（loss）：对于分类任务，我们通常使用交叉熵损失函数。在这个例子中，我们使用了 <code>categorical_crossentropy</code>，它适用于多类别分类问题。</p></li>
+<li><p>评估指标（metrics）：在训练过程中，我们通常需要监控模型的性能。在这里，我们使用了 <code>accuracy</code> 作为评估指标，以便在每个训练周期（epoch）结束后输出模型在训练集和测试集上的准确率。</p></li>
 </ol>
-<p>这样，编译模型的过程就完成了。一旦模型被编译，它就可以被用于训练（通过
-<code>fit</code> 方法）、评估（通过 <code>evaluate</code>
-方法）和预测（通过 <code>predict</code> 方法）。</p>
+<p>这样，编译模型的过程就完成了。一旦模型被编译，它就可以被用于训练（通过 <code>fit</code> 方法）、评估（通过 <code>evaluate</code> 方法）和预测（通过 <code>predict</code> 方法）。</p>
 <h3 id="模型训练">5、模型训练</h3>
 <p>这部分代码是用于训练神经网络模型的关键部分。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">5</span>, batch_size=<span class="number">64</span>, validation_data=(test_images, test_labels))</span><br></pre></td></tr></table></figure>
-<p><code>model.fit</code>: 这是 Keras
-模型中用于训练模型的方法。它接受训练数据、标签数据以及一些训练的参数。</p>
+<p><code>model.fit</code>: 这是 Keras 模型中用于训练模型的方法。它接受训练数据、标签数据以及一些训练的参数。</p>
 <ul>
-<li><p><code>train_images, train_labels</code>:
-这是用于训练的图像数据和对应的标签。</p></li>
-<li><p><code>epochs=1</code>:
-这指定了训练的轮数，即模型将对整个训练数据集进行一次完整的迭代。在这里，模型仅进行了一次迭代（一个epoch）。</p></li>
-<li><p><code>batch_size=64</code>:
-这指定了每个训练批次的大小。在每个epoch中，训练数据将被分成多个小批次，每个批次包含的样本数为64。</p></li>
-<li><p><code>validation_data=(test_images, test_labels)</code>:
-这是用于在训练过程中验证模型性能的数据。在每个epoch结束时，模型将在这些验证数据上进行性能评估。</p></li>
+<li><p><code>train_images, train_labels</code>: 这是用于训练的图像数据和对应的标签。</p></li>
+<li><p><code>epochs=1</code>: 这指定了训练的轮数，即模型将对整个训练数据集进行一次完整的迭代。在这里，模型仅进行了一次迭代（一个epoch）。</p></li>
+<li><p><code>batch_size=64</code>: 这指定了每个训练批次的大小。在每个epoch中，训练数据将被分成多个小批次，每个批次包含的样本数为64。</p></li>
+<li><p><code>validation_data=(test_images, test_labels)</code>: 这是用于在训练过程中验证模型性能的数据。在每个epoch结束时，模型将在这些验证数据上进行性能评估。</p></li>
 </ul>
 <p>当你调用<code>model.fit</code>方法时，模型将根据训练数据和标签进行训练，并且在每个epoch结束时，它会计算并输出一些指标，比如损失值和准确率。</p>
 <h3 id="创建预测函数">6、创建预测函数</h3>
 <p>我们需要对输入的图像进行预处理，并使用预训练的模型对图像进行分类预测。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">classify_image_with_loaded_model</span>(<span class="params">img</span>):</span><br><span class="line">    <span class="comment"># 图像预处理</span></span><br><span class="line">    img = np.array(img)</span><br><span class="line">    img = np.mean(img, axis=<span class="number">2</span>, keepdims=<span class="literal">True</span>)  <span class="comment"># 将 RGB 图像转换为灰度图像</span></span><br><span class="line">    img = tf.image.resize(img, (<span class="number">28</span>, <span class="number">28</span>))  <span class="comment"># 调整图像尺寸</span></span><br><span class="line">    img = img / <span class="number">255.0</span>  <span class="comment"># 像素值归一化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用加载的模型进行预测</span></span><br><span class="line">    prediction = loaded_model.predict(np.expand_dims(img, axis=<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将预测结果转换为字典格式，其中键为类别标签，值为预测概率</span></span><br><span class="line">    <span class="comment"># 这里假设模型输出的类别数为 10</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="built_in">str</span>(i): <span class="built_in">float</span>(prediction[<span class="number">0</span>][i]) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)&#125;</span><br></pre></td></tr></table></figure>
-<p>在进行预测之前，需要将图像的维度扩展一个维度，因为模型期望的输入维度为
-(batch_size, height, width, channels)，这里我们的 batch_size 为
-1，因此使用 np.expand_dims 将图像的维度从 (28, 28, 1) 扩展到 (1, 28, 28,
-1)</p>
-<p>在这个函数中，我们首先将输入的图像转换为 NumPy
-数组，并将其转换为灰度图像。然后，我们调整图像尺寸为模型期望的大小（28x28），并对图像的像素值进行归一化处理。接下来，我们使用预训练的模型对处理后的图像进行分类预测，并将预测结果以字典的形式返回，其中键为类别标签，值为预测概率。</p>
-<p>这个预测函数将会被 Gradio
-库用于创建一个交互式界面，使用户能够上传手写数字图像，并通过模型进行实时的分类预测。</p>
+<p>在进行预测之前，需要将图像的维度扩展一个维度，因为模型期望的输入维度为 (batch_size, height, width, channels)，这里我们的 batch_size 为 1，因此使用 np.expand_dims 将图像的维度从 (28, 28, 1) 扩展到 (1, 28, 28, 1)</p>
+<p>在这个函数中，我们首先将输入的图像转换为 NumPy 数组，并将其转换为灰度图像。然后，我们调整图像尺寸为模型期望的大小（28x28），并对图像的像素值进行归一化处理。接下来，我们使用预训练的模型对处理后的图像进行分类预测，并将预测结果以字典的形式返回，其中键为类别标签，值为预测概率。</p>
+<p>这个预测函数将会被 Gradio 库用于创建一个交互式界面，使用户能够上传手写数字图像，并通过模型进行实时的分类预测。</p>
 <h2 id="四运行程序">四、运行程序</h2>
 <p>运行整个程序，在控制台中可以看到输出</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">accuracy: <span class="number">0.9448</span> - val_loss: <span class="number">0.0550</span> - val_accuracy: <span class="number">0.9827</span></span><br><span class="line">accuracy: <span class="number">0.9830</span> - val_loss: <span class="number">0.0375</span> - val_accuracy: <span class="number">0.9888</span></span><br><span class="line">accuracy: <span class="number">0.9889</span> - val_loss: <span class="number">0.0419</span> - val_accuracy: <span class="number">0.9870</span></span><br><span class="line">accuracy: <span class="number">0.9909</span> - val_loss: <span class="number">0.0276</span> - val_accuracy: <span class="number">0.9911</span></span><br><span class="line">accuracy: <span class="number">0.9925</span> - val_loss: <span class="number">0.0444</span> - val_accuracy: <span class="number">0.9865</span></span><br></pre></td></tr></table></figure>
 <p>可以看到随着循环次数的增加，模型识别的准确度也在增加。</p>
 <p>在演示空间中运行有</p>
 <figure>
-<img
-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/3.png"
-alt="5" />
-<figcaption aria-hidden="true">5</figcaption>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/3.png" alt="" /><figcaption>5</figcaption>
 </figure>
 <figure>
-<img
-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/4.png"
-alt="3" />
-<figcaption aria-hidden="true">3</figcaption>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/4.png" alt="" /><figcaption>3</figcaption>
 </figure>
 <figure>
-<img
-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/5.png"
-alt="9" />
-<figcaption aria-hidden="true">9</figcaption>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://swanhub.co/git/repo/weekdaycare%2Fhandwriting-numerals-recognition/file/preview?ref=main&amp;path=img/5.png" alt="" /><figcaption>9</figcaption>
 </figure>
 <h2 id="五优化">五、优化</h2>
 <p>用训练好的模型来识别手写图片的时候，发现图片为黑底白字时识别率显著较高，而其他底色的图片识别率很低，应该是Minst数据集都是黑底白字的图片导致的。所以为了提高准确性，对训练模型用的数据图片加强了一下，同时增加类别权重，现在准确度提高了很多。</p>
@@ -253,8 +215,7 @@ alt="9" />
 <p>这里9的权重是2的原因是手写的9容易和4混淆。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类别加权</span></span><br><span class="line">class_weight = &#123;<span class="number">0</span>: <span class="number">1.0</span>, <span class="number">1</span>: <span class="number">1.0</span>, <span class="number">2</span>: <span class="number">1.0</span>, <span class="number">3</span>: <span class="number">1.0</span>, <span class="number">4</span>: <span class="number">1.0</span>, <span class="number">5</span>: <span class="number">1.0</span>, <span class="number">6</span>: <span class="number">1.0</span>, <span class="number">7</span>: <span class="number">1.0</span>, <span class="number">8</span>: <span class="number">1.0</span>, <span class="number">9</span>: <span class="number">2.0</span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="六体验">六、体验</h2>
-<iframe src="https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition" frameborder="0" width="670" height="800">
-</iframe>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span><span class="cap link footnote">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
 <div class="article-footer fs14">
     <section id="references">
@@ -262,9 +223,7 @@ alt="9" />
       <div class="body">
         <ul>
         <li class="post-title">
-          <p><a
-target="_blank" rel="noopener" href="https://cuijiahua.com/blog/2018/01/dl_4.html">Tensorflow实战（一）：打响深度学习的第一枪
-– 手写数字识别（Tensorboard可视化）</a></p>
+          <p><a target="_blank" rel="noopener" href="https://cuijiahua.com/blog/2018/01/dl_4.html">Tensorflow实战（一）：打响深度学习的第一枪 – 手写数字识别（Tensorboard可视化）</a></p>
 
         </li>
         </ul>
@@ -273,8 +232,7 @@ target="_blank" rel="noopener" href="https://cuijiahua.com/blog/2018/01/dl_4.htm
     
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
-BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
+      <div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </div>
     </section>
     </div>
@@ -299,14 +257,9 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 <footer class="page-footer footnote"><hr><div class="text"><center>
-<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
-由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-<br><span id="span"></span>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速 <br><span id="span"></span>
 <script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script>
-| 基于
-<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
-<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+| 基于 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题 <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
@@ -699,4 +652,4 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</div></body></html>

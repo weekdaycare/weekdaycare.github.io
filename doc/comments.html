@@ -19,15 +19,15 @@
   <title>文档重构：评论组件 - 星日语</title>
 
   
-    <meta name="description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Ar">
+    <meta name="description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Art">
 <meta property="og:type" content="website">
 <meta property="og:title" content="评论组件">
 <meta property="og:url" content="http://weekdaycare.cn/doc/comments.html">
 <meta property="og:site_name" content="星日语">
-<meta property="og:description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Ar">
+<meta property="og:description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Art">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-21T16:12:21.214Z">
-<meta property="article:modified_time" content="2024-01-21T16:12:21.214Z">
+<meta property="article:published_time" content="2024-03-28T05:55:39.599Z">
+<meta property="article:modified_time" content="2024-03-28T05:55:39.599Z">
 <meta property="article:author" content="涛声依旧">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/doc/">文档重构</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-01-21T16:12:21.214Z">2024-01-22</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-03-28T05:55:39.599Z">2024-03-28</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -96,50 +96,34 @@
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">artalk</span></span><br><span class="line">  <span class="comment"># Artalk</span></span><br><span class="line">  <span class="comment"># https://artalk.js.org/</span></span><br><span class="line">  <span class="attr">artalk:</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">https://unpkg.com/artalk@2.7/dist/Artalk.css</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">https://unpkg.com/artalk@2.7/dist/Artalk.js</span> </span><br><span class="line">    <span class="attr">server:</span> <span class="comment"># 后端服务地址</span></span><br><span class="line">    <span class="attr">placeholder:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="attr">darkMode:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://artalk.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://artalk.js.org</span><span class="cap link footnote">https://artalk.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="beaudar">Beaudar</h2>
-<p>Beaudar 是 Utterances 的中文版本，相比 Utterances
-有更多的体验优化，可以按时间倒序排序。</p>
+<p>Beaudar 是 Utterances 的中文版本，相比 Utterances 有更多的体验优化，可以按时间倒序排序。</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">beaudar</span></span><br><span class="line">  <span class="attr">beaudar:</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">xaoxuu/blog-comments</span></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://beaudar.lipk.org">Beaudar</a>
-的配置方法很简单，创建一个仓库，在仓库中创建一个 <a
-target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/beaudar.json">域名白名单文件</a>，然后在
-<a target="_blank" rel="noopener" href="https://github.com/apps/beaudar">此处</a> 授权安装即可。</p>
+<p><a target="_blank" rel="noopener" href="https://beaudar.lipk.org">Beaudar</a> 的配置方法很简单，创建一个仓库，在仓库中创建一个 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/beaudar.json">域名白名单文件</a>，然后在 <a target="_blank" rel="noopener" href="https://github.com/apps/beaudar">此处</a> 授权安装即可。</p>
 <h2 id="utterances">utterances</h2>
-<p>A lightweight comments widget built on GitHub issues. Use GitHub
-issues for blog comments, wiki pages and more!</p>
+<p>A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more!</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">utterances</span></span><br><span class="line">  <span class="attr">utterances:</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">xaoxuu/blog-comments</span></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://utteranc.es">utterances</a>
-的配置方法很简单，创建一个仓库，在仓库中创建一个 <a
-target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/utterances.json">域名白名单文件</a>，然后在
-<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">此处</a> 授权安装即可。</p>
+<p><a target="_blank" rel="noopener" href="https://utteranc.es">utterances</a> 的配置方法很简单，创建一个仓库，在仓库中创建一个 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/utterances.json">域名白名单文件</a>，然后在 <a target="_blank" rel="noopener" href="https://github.com/apps/utterances">此处</a> 授权安装即可。</p>
 <h2 id="giscus">giscus</h2>
-<p><a target="_blank" rel="noopener" href="https://giscus.app/zh-CN">giscus</a> 是由 GitHub Discussions
-驱动的评论系统。让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目受
-utterances 强烈启发。</p>
+<p><a target="_blank" rel="noopener" href="https://giscus.app/zh-CN">giscus</a> 是由 GitHub Discussions 驱动的评论系统。让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目受 utterances 强烈启发。</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">giscus</span></span><br><span class="line">  <span class="comment"># giscus</span></span><br><span class="line">  <span class="comment"># https://giscus.app/zh-CN</span></span><br><span class="line">  <span class="attr">giscus:</span></span><br><span class="line">    <span class="attr">src:</span> <span class="string">https://giscus.app/client.js</span></span><br><span class="line">    <span class="attr">data-repo:</span> <span class="string">xxx/xxx</span> <span class="comment"># [在此输入仓库]</span></span><br><span class="line">    <span class="attr">data-repo-id:</span> <span class="comment"># [在此输入仓库 ID]</span></span><br><span class="line">    <span class="attr">data-category:</span> <span class="comment"># [在此输入分类名]</span></span><br><span class="line">    <span class="attr">data-category-id:</span></span><br><span class="line">    <span class="attr">data-mapping:</span> <span class="string">pathname</span></span><br><span class="line">    <span class="attr">data-strict:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">data-reactions-enabled:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">data-emit-metadata:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">data-input-position:</span> <span class="string">top</span> <span class="comment"># top, bottom</span></span><br><span class="line">    <span class="attr">data-theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">    <span class="attr">data-lang:</span> <span class="string">zh-CN</span></span><br><span class="line">    <span class="attr">data-loading:</span> <span class="string">lazy</span></span><br><span class="line">    <span class="attr">crossorigin:</span> <span class="string">anonymous</span></span><br></pre></td></tr></table></figure>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://giscus.app/zh-CN" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://giscus.app/zh-CN</span><span class="cap link footnote">https://giscus.app/zh-CN</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="twikoo">Twikoo</h2>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">twikoo</span></span><br><span class="line">  <span class="attr">twikoo:</span></span><br><span class="line">    <span class="attr">envId:</span> <span class="string">https://xxx</span> <span class="comment"># vercel函数</span></span><br></pre></td></tr></table></figure>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://twikoo.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://twikoo.js.org</span><span class="cap link footnote">https://twikoo.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="utterances-1">utterances</h2>
-<p>A lightweight comments widget built on GitHub issues. Use GitHub
-issues for blog comments, wiki pages and more!</p>
+<p>A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more!</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">utterances</span></span><br><span class="line">  <span class="attr">utterances:</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">xaoxuu/blog-comments</span></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://utteranc.es">utterances</a>
-的配置方法很简单，创建一个仓库，在仓库中创建一个 <a
-target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/utterances.json">域名白名单文件</a>，然后在
-<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">此处</a> 授权安装即可。</p>
+<p><a target="_blank" rel="noopener" href="https://utteranc.es">utterances</a> 的配置方法很简单，创建一个仓库，在仓库中创建一个 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blob/main/utterances.json">域名白名单文件</a>，然后在 <a target="_blank" rel="noopener" href="https://github.com/apps/utterances">此处</a> 授权安装即可。</p>
 <h2 id="waline">Waline</h2>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">waline</span></span><br><span class="line">  <span class="attr">waline:</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">https://unpkg.com/@waline/client@v2/dist/waline.js</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">https://unpkg.com/@waline/client@v2/dist/waline.css</span></span><br><span class="line">    <span class="comment"># Waline server address url, you should set this to your own link</span></span><br><span class="line">    <span class="attr">serverURL:</span> <span class="string">https://xxx</span> <span class="comment"># waline 地址</span></span><br><span class="line">    <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">    <span class="attr">commentCount:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Pageviews count, <span class="doctag">Note:</span> You should not enable both `waline.pageview` and `leancloud_visitors`.</span></span><br><span class="line">    <span class="attr">pageview:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Custom locales</span></span><br><span class="line">    <span class="attr">locale:</span></span><br><span class="line">      <span class="attr">placeholder:</span> <span class="comment"># 输入框内提示文字</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Custom emoji</span></span><br><span class="line">    <span class="attr">emoji:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/weibo</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/alus</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/bilibili</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/qq</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/tieba</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji</span></span><br><span class="line">    <span class="comment">#   - https://unpkg.com/@waline/emojis@1.1.0/bmoji</span></span><br></pre></td></tr></table></figure>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://waline.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://waline.js.org</span><span class="cap link footnote">https://waline.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 <h2 id="评论的灵活用法">评论的灵活用法</h2>
 <h3 id="共用评论数据">共用评论数据</h3>
-<p>如果您有多个页面需要共用评论数据，可以在 <code>front-matter</code>
-中覆盖评论参数，例如：</p>
+<p>如果您有多个页面需要共用评论数据，可以在 <code>front-matter</code> 中覆盖评论参数，例如：</p>
 <figure class="highlight yaml"><figcaption><span>blog/source/about/index.md</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">关于</span></span><br><span class="line"><span class="attr">beaudar:</span></span><br><span class="line">  <span class="attr">&#x27;issue-term&#x27;:</span> <span class="string">&#x27;留言板&#x27;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><figcaption><span>blog/source/friends/index.md</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">友链</span></span><br><span class="line"><span class="attr">beaudar:</span></span><br><span class="line">  <span class="attr">&#x27;issue-term&#x27;:</span> <span class="string">&#x27;留言板&#x27;</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用其它评论数据">使用其它评论数据</h3>
-<p>如果您有多个页面需要另外一个数据库的评论数据，以 Beaudar
-为例，您可以这样：</p>
+<p>如果您有多个页面需要另外一个数据库的评论数据，以 Beaudar 为例，您可以这样：</p>
 <figure class="highlight yaml"><figcaption><span>blog/source/wiki/stellar/index.md</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">快速开始您的博客之旅</span></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">data-repo:</span> <span class="string">xaoxuu/hexo-theme-stellar</span></span><br><span class="line">  <span class="attr">data-mapping:</span> <span class="string">number</span></span><br><span class="line">  <span class="attr">data-term:</span> <span class="number">226</span></span><br></pre></td></tr></table></figure>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/theme-config.html">_config.stellar.yml</a></div><div class="item" id="next"></div></section></div>
@@ -163,14 +147,9 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 
 
 <footer class="page-footer footnote"><hr><div class="text"><center>
-<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
-由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-<br><span id="span"></span>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速 <br><span id="span"></span>
 <script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script>
-| 基于
-<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
-<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+| 基于 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题 <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
@@ -566,4 +545,4 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</div></body></html>

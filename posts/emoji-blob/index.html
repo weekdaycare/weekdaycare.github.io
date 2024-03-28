@@ -19,12 +19,12 @@
   <title>Stellar内嵌blobcat小表情 - 星日语</title>
 
   
-    <meta name="description" content="看看这些可爱的小玩意儿     好看吗？好看就是好表情。那就把它内置到Stellar中吧">
+    <meta name="description" content="看看这些可爱的小玩意儿     好看吗？好看就是好表情。那就把它内置到Stellar中吧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Stellar内嵌blobcat小表情">
 <meta property="og:url" content="http://weekdaycare.cn/posts/emoji-blob/">
 <meta property="og:site_name" content="星日语">
-<meta property="og:description" content="看看这些可爱的小玩意儿     好看吗？好看就是好表情。那就把它内置到Stellar中吧">
+<meta property="og:description" content="看看这些可爱的小玩意儿     好看吗？好看就是好表情。那就把它内置到Stellar中吧">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatattentionreverse.png">
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatnomblobcat.png">
@@ -174,15 +174,7 @@
 <p>好看吗？好看就是好表情。那就把它内置到Stellar中吧 <span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png"/></span></p>
 <span id="more"></span>
 <h2 id="表情速查">表情速查</h2>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th style="text-align: center;">表情</th>
@@ -365,10 +357,9 @@
 </tbody>
 </table>
 <h2 id="内置使用">内置使用</h2>
-<div class="tag-plugin colorful note" ><div class="body"><p>最新版的Stellar已经默认内置了blobcat捏（大大真的快）</p></div></div>
+<div class="tag-plugin colorful note" ><div class="body"><p>最新版的Stellar已经默认内置了blobcat捏（大大真的快）</p></div></div>
 <h3 id="引入-blobcat-1.0">引入 blobcat 1.0</h3>
-<p>这是blobcat
-1.0版本的表情，2.0版本的表情太多了，俺整理不过来。我是直接吧waline里面的搬过来哩，换了个CDN</p>
+<p>这是blobcat 1.0版本的表情，2.0版本的表情太多了，俺整理不过来。我是直接吧waline里面的搬过来哩，换了个CDN</p>
 <p>在根目录中的 <code>_config.stellar.yml</code> 增加</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="comment"># &#123;% emoji %&#125;</span></span><br><span class="line">  <span class="attr">emoji:</span></span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">    <span class="attr">blobcat:</span> <span class="string">https://raw.githubusercontent.com/gh/norevi/waline-blobcatemojis@1.0/blobs/%s.png</span></span><br></pre></td></tr></table></figure>
 <p>默认的raw线路的速度实在是一言难尽，可以使用公共CDN（自行测试节点速度），例如（列出来的不一定有效，看地区实际情况）</p>
@@ -381,27 +372,23 @@
 <li>gcore.jsdelivr.net</li>
 <li>github.moeyy.xyz</li>
 </ul>
-<p>食用方法：ping以上链接，选择速度最快的替换
-<code>raw.githubusercontent.com</code> 即可</p>
+<p>食用方法：ping以上链接，选择速度最快的替换 <code>raw.githubusercontent.com</code> 即可</p>
 <p>使用示例：<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png"/></span></p>
 <figure class="highlight md"><figcaption><span>源代码</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% emoji blobcat ablobcatrainbow %&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="引入-blobcat-2.0">引入 blobcat 2.0</h3>
-<div class="tag-plugin colorful note" ><div class="title">不再建议引入2.0</div><div class="body"><p>该表情仓库已经Archived，同时由于Freenom被吊销执证等原因，表情链接也已失效</p></div></div>
+<div class="tag-plugin colorful note" ><div class="title">不再建议引入2.0</div><div class="body"><p>该表情仓库已经Archived，同时由于Freenom被吊销执证等原因，表情链接也已失效</p></div></div>
 <p>因为这个仓库里面表情文件后缀不统一，所以你可以分两部分，一部分<code>png</code>，一部分<code>gif</code></p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="comment"># &#123;% emoji %&#125;</span></span><br><span class="line">  <span class="attr">emoji:</span></span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">    <span class="attr">bbpng:</span> <span class="string">https://emoj.ml/blob%s.png</span></span><br><span class="line">    <span class="attr">bbgif:</span> <span class="string">https://emoj.ml/ablob%s.gif</span></span><br></pre></td></tr></table></figure>
-<div class="tag-plugin colorful note" color="orange"><div class="body"><p>1.0与2.0文件不通用！</p></div></div>
-<p>2.0
-版本blob表情<code>png</code>文件有个统一前缀<code>blob</code>，<code>gif</code>文件有个统一前缀<code>ablob</code>，本着少写一点是一点的原则，引用的时候只需要写表情文件名blob后半部分的名称即可</p>
+<div class="tag-plugin colorful note" color="orange"><div class="body"><p>1.0与2.0文件不通用！</p></div></div>
+<p>2.0 版本blob表情<code>png</code>文件有个统一前缀<code>blob</code>，<code>gif</code>文件有个统一前缀<code>ablob</code>，本着少写一点是一点的原则，引用的时候只需要写表情文件名blob后半部分的名称即可</p>
 <figure class="highlight md"><figcaption><span>源代码</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% emoji bbpng enjoy %&#125;&#123;% emoji bbgif attention %&#125;</span><br></pre></td></tr></table></figure>
-<p>建议自己 fork
-一下仓库，当然若你想自定义属于自己的表情，也可以进行修改</p>
+<p>建议自己 fork 一下仓库，当然若你想自定义属于自己的表情，也可以进行修改</p>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://github.com/Raymo111/emoji" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://github.com/Raymo111/emoji</span><span class="cap link footnote">https://github.com/Raymo111/emoji</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
-BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
+      <div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </div>
     </section>
     </div>
@@ -426,14 +413,9 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 <footer class="page-footer footnote"><hr><div class="text"><center>
-<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
-由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-<br><span id="span"></span>
+<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速 <br><span id="span"></span>
 <script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script>
-| 基于
-<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
-<br><a href="https://www.foreverblog.cn/go.html" target="_blank">
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+| 基于 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题 <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
@@ -826,4 +808,4 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</div></body></html>
