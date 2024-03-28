@@ -60,15 +60,15 @@ linklist:
 
 welcome:
   layout: markdown
-  title: 你好，旅人：
+  title: 小时光：
   linklist:
     columns: 1
     items:
       - icon: 
-        title: 留言
+        title: 星语日点灯
         url: /about/
   content: | # support markdown
-    星语日点灯
+    就随着暖暖的风慢慢地走牵着你的手，甜蜜的话说不出口。小时候心脏扑通扑通那种感觉叫心动，长大之后我们都懂。
 
 timeline:
   layout: timeline

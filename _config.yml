@@ -130,7 +130,7 @@ feed:
   type: atom
   path: atom.xml
   limit: 4
-  content: false
+  content: true
   content_limit: 200
   order_by: -date
   icon: /asset/avatar.svg
@@ -155,7 +155,11 @@ service_worker:
     - urlPattern: /*
       handler: cacheFirst
       options:
-        origin: 834832894.r.cdn36.com
+        origin: ik.imagekit.io
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: raw.weekdaycare.cn
     - urlPattern: /*
       handler: cacheFirst
       options:

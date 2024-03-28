@@ -136,6 +136,13 @@ article:
   license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 若你喜欢我的文章欢迎互动，玩的愉快！'
   # 分享
   share: # [wechat, weibo, email, link]
+  # npm i --save hexo-wordcount
+  post_wordcount: 
+    item_text: true
+    wordcount: true         # 单篇 字数统计
+    min2read: true          # 单篇 阅读时长
+    totalcount: false       # 网站 字数统计
+    separated_meta: true
   # 相关文章，需要安装插件 (for layout: post)
   # npm i hexo-related-popular-posts
   related_posts:
@@ -396,8 +403,6 @@ data_services:
     js: /js/services/memos.js
   twikoo:
     js: /js/services/twikoo_new.js
-  netease:
-    js: /js/services/netease.js
 
 
 # 扩展插件接入方法：(插件名下面用 #plugin# 代替)
@@ -598,7 +603,6 @@ api_host:
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - <link rel='stylesheet' href='https://192960944.r.cdn36.com/chinesefonts3/packages/sypxzs/dist/思源屏显臻宋/result.css' /> 
-    - <script src="/asset/js/cw_install.js"></script>
+    - <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css?updatedAt=1711547815661' /> 
   script:
     - <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>

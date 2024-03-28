@@ -3244,9 +3244,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.3.47, electron-to-chromium@^1.4.668:
-  version "1.4.717"
-  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.717.tgz"
-  integrity sha512-6Fmg8QkkumNOwuZ/5mIbMU9WI3H2fmn5ajcVya64I5Yr5CcNmO7vcLt0Y7c96DCiMO5/9G+4sI2r6eEvdg1F7A==
+  version "1.4.719"
+  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.719.tgz"
+  integrity sha512-FbWy2Q2YgdFzkFUW/W5jBjE9dj+804+98E4Pup78JBPnbdb3pv6IneY2JCPKdeKLh3AOKHQeYf+KwLr7mxGh6Q==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -4867,10 +4867,9 @@ hexo-log@^4.0.1:
   dependencies:
     picocolors "^1.0.0"
 
-hexo-offline-popup@^1.0.3:
+"hexo-offline-popup@git+https://git@github.com/weekdaycare/hexo-offline-popup.git":
   version "1.0.3"
-  resolved "https://registry.npmmirror.com/hexo-offline-popup/-/hexo-offline-popup-1.0.3.tgz"
-  integrity sha512-Lhv0vAXffJVwqMObyK+EjW4lfsjmzj+sVnCJc/pssmj9W+O+Mal57bgLV5dLuAV82u/57TQ4BtvdpLOTtkH99Q==
+  resolved "git+https://git@github.com/weekdaycare/hexo-offline-popup.git#dd4b8cfc79eb1d6317c9656b41cda14b777b20a5"
   dependencies:
     babel-cli "^6.26.0"
     babel-plugin-istanbul "^6.0.0"
