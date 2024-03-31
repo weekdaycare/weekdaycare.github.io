@@ -1,1 +1,1 @@
-navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240331152922').then(function() {navigator.serviceWorker.addEventListener('message', function(event) {if ('sw.update' === event.data) {hud.toast('SW已更至最新版本', 5000);}});});
+navigator.serviceWorker && navigator.serviceWorker.register('/sw.js?v=20240331185954').then(function() {navigator.serviceWorker.addEventListener('message', function(event) {if ('sw.update' === event.data) {hud.toast('SW已更至最新版本', 5000);}});});
