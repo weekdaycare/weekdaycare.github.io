@@ -6111,7 +6111,10 @@ img[data-fancybox] {
   cursor: pointer;
   padding: 0.75em;
   text-align: center;
-  transition: all 0.5s;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
   border-radius: 6px;
   letter-spacing: 5px;
   background: var(--block);
@@ -6157,12 +6160,16 @@ img[data-fancybox] {
 .twikoo .tk-comments .el-button--primary.is-disabled:focus,
 .twikoo .tk-comments .el-button--primary.is-disabled:hover {
   background-color: var(--block);
+  color: var(--text-meta);
 }
 .twikoo .tk-comments .el-button--primary {
   border-color: var(--text-p1);
-  color: var(--card);
+  color: var(--text);
   border-radius: 6px;
-  transition: 0.3s;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
   width: 6.25rem;
   position: absolute;
   top: -40px;
@@ -6200,7 +6207,6 @@ img[data-fancybox] {
 .twikoo .tk-comments .el-input-group__prepend {
   background-color: var(--card);
   color: var(--text-p1);
-  border-color: var(--card-border);
   border: none;
 }
 .twikoo .tk-comments .el-input-group--prepend .el-input__inner,
@@ -6243,13 +6249,9 @@ img[data-fancybox] {
   margin-top: 0;
   justify-content: space-around;
 }
-.twikoo .tk-comments .tk-admin {
-  backdrop-filter: blur(5px);
-}
 .twikoo .tk-comments .el-button {
   background-color: var(--card);
   border: none;
-  color: var(--text);
 }
 .twikoo .tk-comments .tk-tag-green {
   background-color: var(--theme-link-opa);
@@ -6282,9 +6284,6 @@ a
 .twikoo .tk-comments .tk-content p {
   margin: 0;
 }
-.twikoo .tk-comments .tk-admin-config-input .el-input__inner {
-  background: transparent !important;
-}
 .twikoo .tk-comment .tk-submit .tk-avatar,
 .twikoo .tk-replies .tk-avatar {
   height: 2.5rem !important;
@@ -6309,20 +6308,26 @@ a
   border-radius: 6px;
   padding: 1rem 0px 0px;
   margin-top: 0;
-  transition: all 0.3s ease 0s;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 .tk-replies .tk-content span:first-child:not(.token) {
   font-size: 0.75rem;
-  color: var(--anzhiyu-secondtext);
+  color: var(--text-p2);
 }
 .twikoo .tk-extra {
-  background: var(--card);
+  background: var(--block);
   padding: 4px 8px;
   border-radius: 6px;
   margin-right: 4px;
-  color: var(--anzhiyu-secondtext);
+  color: var(--text-p3);
   margin-top: 6px;
   font-size: 0.8rem;
+}
+.twikoo .tk-time {
+  color: var(--text-p3);
 }
 .twikoo .tk-extra-text {
   font-size: 0.75rem;
@@ -6355,18 +6360,19 @@ a
 .tk-comments-container > .tk-comment {
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
-  transition: 0.3s;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
   border-radius: 6px;
   padding: 0;
   padding-top: 1rem;
   border: none;
-  border-top: var(--style-border-dashed);
 }
 .page .tk-comments-container > .tk-comment {
   background: var(--card);
   padding: 1rem;
   padding-bottom: 1rem;
-  border-top: var(--style-border);
 }
 .tk-content {
   margin-top: 0.5rem;
