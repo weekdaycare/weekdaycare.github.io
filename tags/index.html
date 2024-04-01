@@ -100,12 +100,12 @@
           <span class='name'>hexo</span>
         </a>
       
-        <a class='tag' href="/tags/%E4%BD%9C%E4%B8%9A/">
-          <span class='name'>作业</span>
-        </a>
-      
         <a class='tag' href="/tags/%E7%99%BD%E5%AB%96/">
           <span class='name'>白嫖</span>
+        </a>
+      
+        <a class='tag' href="/tags/%E4%BD%9C%E4%B8%9A/">
+          <span class='name'>作业</span>
         </a>
       
         <a class='tag' href="/tags/%E4%BB%A3%E7%A0%81/">
@@ -429,7 +429,7 @@
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {
