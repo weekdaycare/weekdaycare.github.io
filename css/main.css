@@ -6253,7 +6253,8 @@ img[data-fancybox] {
   background-color: var(--card);
   border: none;
 }
-.twikoo .tk-comments .tk-tag-green {
+.twikoo .tk-comments .tk-tag-green,
+.twikoo .tk-comments .tk-tag-red {
   background-color: var(--theme-link-opa);
   border: none;
   border-radius: 4px;
