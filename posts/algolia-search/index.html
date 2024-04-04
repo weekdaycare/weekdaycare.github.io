@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel="preconnect" href="https://cdnjs.onmicrosoft.cn" crossorigin><link rel="preconnect" href="https://jsd.onmicrosoft.cn" crossorigin>
@@ -16,23 +16,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>归档 - 星日语</title>
+  <title>Stellar适配Algolia DocSearch - 星日语</title>
 
   
-    <meta name="description" content="苦难不值得追求，磨练意志是因为苦难无法躲开">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://weekdaycare.cn/archives/2022/12/">
+    <meta name="description" content="DocSearch 启动！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stellar适配Algolia DocSearch">
+<meta property="og:url" content="http://weekdaycare.cn/posts/algolia-search/">
 <meta property="og:site_name" content="星日语">
-<meta property="og:description" content="苦难不值得追求，磨练意志是因为苦难无法躲开">
+<meta property="og:description" content="DocSearch 启动！">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatgooglytrash.png">
+<meta property="og:image" content="https://bu.dusays.com/2024/04/04/660e64ab31ea9.webp">
+<meta property="article:published_time" content="2024-04-04T07:22:58.000Z">
+<meta property="article:modified_time" content="2024-04-04T07:22:58.000Z">
 <meta property="article:author" content="涛声依旧">
-<meta property="article:tag" content="博客">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="代码">
+<meta property="article:tag" content="Stellar">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatgooglytrash.png">
   
   
   
-  <meta name="keywords" content="博客">
+  <meta name="keywords" content="编程,代码,Stellar">
 
   <!-- feed -->
   
@@ -51,7 +58,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">我随便写写</div><div class="sub hover cap" style="opacity:0">你随便看看</div></a></div></header>
@@ -68,17 +75,102 @@
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="星语日点灯" href="/about/"><div class="flex"><span>星语日点灯</span></div></a></div></div></widget>
 
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/algolia-search/"><span class="title">Stellar适配Algolia DocSearch</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">展示 Twikoo 最新评论</span></a><a class="item title" href="/posts/emoji-blob/"><span class="title">Stellar内嵌blobcat小表情</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><img no-lazy class="avatar" src="/asset/avatar.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">星日语</div><div class="sub normal cap">我随便写写</div><div class="sub hover cap" style="opacity:0">你随便看看</div></a></div></header>
-
- 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a class="active" href="/archives/">归档</a><a href="/shuoshuo/">说说</a></nav></div><div class="post-list archives"><article class="" id="archive"><div class='archive-header h4'>2024</div><div class="archive-list"><a class='post fs14' href="/posts/algolia-search/"><time>04-04</time><span>Stellar适配Algolia DocSearch</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/z-inverse-transformation/"><time>03-08</time><span>求z逆变换的三种方法</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/twikoo-new/"><time>03-04</time><span>展示 Twikoo 最新评论</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/2024/"><time>02-15</time><span>你好2024</span></a></div></article><article class="" id="archive"><div class='archive-header h4'>2023</div><div class="archive-list"><a class='post fs14' href="/posts/disease-diagnosis/"><time>12-16</time><span>人工智导小作业</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/handwriting-numerals-recognition/"><time>12-16</time><span>手写数字识别模型</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/zui-font/"><time>11-01</time><span>Fiddler抓包替换ZUI字体</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/work-run/"><time>08-16</time><span>🪣提桶跑路🏃</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/summer-work/"><time>07-19</time><span>进厂打工</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/summer-time/"><time>07-15</time><span>夏天，日落于八点</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/chengdu/"><time>05-08</time><span>你好成都</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/changan/"><time>03-13</time><span>千年古都，常来长安</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/hometown/"><time>01-20</time><span>回老家</span></a></div></article><article class="" id="archive"><div class='archive-header h4'>2022</div><div class="archive-list"><a class='post fs14' href="/posts/rickroll-pi/"><time>12-30</time><span>你被骗了，但是树莓派</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/mail-massacre/"><time>12-19</time><span>改个邮箱引发的惨案</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/brazier/"><time>12-12</time><span>冬天的炉火</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/past-summer/"><time>12-11</time><span>来一杯乌龙茶？</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/singular-value/"><time>11-16</time><span>用奇异值压缩图像</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/finger-scarf/"><time>11-13</time><span>失败的手指围巾</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/ten-years/"><time>11-07</time><span>十年之约</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/stellar-update/"><time>11-01</time><span>Stellar更新&备份</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/stellar-friends/"><time>10-31</time><span>Stellar动态友链教程</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/emoji-blob/"><time>10-30</time><span>Stellar内嵌blobcat小表情</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/stellar-beautify-one/"><time>10-29</time><span>Stellar滚动框美化</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/inkrss/"><time>10-27</time><span>inkrss：优雅的实现rss更新通知</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/yingti-0to1/"><time>10-18</time><span>引体向上：从0到1</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/big-orange/"><time>10-13</time><span>大橘</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/ispeak-depoly/"><time>10-11</time><span>说说</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/umami/"><time>10-04</time><span>Umami统计个人网站访问数据</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/about-my-phone/"><time>09-30</time><span>关于我の手机一些吐槽</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/hutao-shake/"><time>09-08</time><span>胡桃摇</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/vector-analysis/"><time>09-05</time><span>矢量分析</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/data-structure/"><time>09-02</time><span>数据结构与算法学习</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/cloudflare-pages/"><time>08-28</time><span>部署 Hexo 于 Cloudflare Pages</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/onedrive+rclone/"><time>06-28</time><span>轻量云服务期搭建Ondrive离线下载</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/rss/"><time>06-11</time><span>RSS</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/ondrive/"><time>05-19</time><span>OneDrive</span></a></div></article><article class="" id="archive"><div class='archive-header h4'>2021</div><div class="archive-list"><a class='post fs14' href="/posts/c-study/"><time>12-04</time><span>C语言学习</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/cad-draw/"><time>12-03</time><span>CAD画图</span></a></div><div class="archive-list"><a class='post fs14' href="/posts/hello/"><time>11-16</time><span>Hello World</span></a></div></article></div>
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-04-04T07:22:58.000Z">2024-04-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-04T07:22:58.000Z">2024-04-04</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Stellar适配Algolia DocSearch</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>作为一个静态博客哈，你们觉得最耗流量的的文件是啥呢？我先来，是我的
+RSS 文件 <code>atom.xml</code>
+，哈哈哈离题了离题了。不论如何，对于那些技术文档，一个好的搜索肯定是必不可少的，但是同样的，基于技术文档庞大的文本量，生成的本地搜索文件，<del>那也是不可忽视的流量大户</del>（有缓存当我没说<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatgooglytrash.png"/></span>），巴拉巴拉反正多一个方法多一种选择何乐而不为捏。</p>
+<blockquote>
+<p>原谅我这史一样的代码水平</p>
+</blockquote>
+<h2 id="引入-ejs-模板">引入 EJS 模板</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  window.addEventListener(&#x27;DOMContentLoaded&#x27;, (event) =&gt; &#123;</span><br><span class="line">    window.searchConfig = &#123;</span><br><span class="line">      appId: &#x27;&lt;%- conf.appId %&gt;&#x27;, </span><br><span class="line">      apiKey: &#x27;&lt;%- conf.apiKey %&gt;&#x27;, </span><br><span class="line">      indexName: &#x27;&lt;%- conf.indexName %&gt;&#x27;, </span><br><span class="line">      hitsPerPage: 100, </span><br><span class="line">    &#125;;</span><br><span class="line">    utils.js(&#x27;https://gcore.jsdelivr.net/algoliasearch/3/algoliasearch.min.js&#x27;, &#123; defer: true &#125;);</span><br><span class="line">    utils.js(&#x27;/js/search/algolia-search.js&#x27;, &#123; defer: true &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>本来想用<a
+target="_blank" rel="noopener" href="https://cdn.onmicrosoft.cn/">渺软公益CDN</a>的，没想到点击页面一看在两天前就停止服务了，唉，哀悼惋惜。</p>
+<h2 id="js-搜索">JS 搜索</h2>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">utils.<span class="title function_">jq</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> $inputArea = $(<span class="string">&quot;input#search-input&quot;</span>);</span><br><span class="line">  <span class="keyword">if</span> ($inputArea.<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> $resultArea = $(<span class="string">&quot;#search-result&quot;</span>);</span><br><span class="line">  <span class="keyword">var</span> $searchWrapper = $(<span class="string">&quot;#search-wrapper&quot;</span>);</span><br><span class="line">  <span class="keyword">var</span> client = <span class="title function_">algoliasearch</span>(<span class="variable language_">window</span>.<span class="property">searchConfig</span>.<span class="property">appId</span>, <span class="variable language_">window</span>.<span class="property">searchConfig</span>.<span class="property">apiKey</span>);</span><br><span class="line">  <span class="keyword">var</span> index = client.<span class="title function_">initIndex</span>(<span class="variable language_">window</span>.<span class="property">searchConfig</span>.<span class="property">indexName</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">displayResults</span>(<span class="params">hits</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> $resultList = $(<span class="string">&quot;&lt;ul&gt;&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;search-result-list&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (hits.<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      $searchWrapper.<span class="title function_">addClass</span>(<span class="string">&#x27;noresult&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      $searchWrapper.<span class="title function_">removeClass</span>(<span class="string">&#x27;noresult&#x27;</span>);</span><br><span class="line">      hits.<span class="title function_">forEach</span>(<span class="keyword">function</span>(<span class="params">hit</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> contentSnippet = hit.<span class="property">_snippetResult</span>.<span class="property">content</span>.<span class="property">value</span>;</span><br><span class="line">        <span class="keyword">var</span> title = hit.<span class="property">hierarchy</span>.<span class="property">lvl1</span> || <span class="string">&#x27;Untitled&#x27;</span>;</span><br><span class="line">        <span class="keyword">var</span> $item = $(<span class="string">&quot;&lt;li&gt;&quot;</span>).<span class="title function_">html</span>(<span class="string">`&lt;a href=&quot;<span class="subst">$&#123;hit.url&#125;</span>&quot;&gt;&lt;span class=&#x27;search-result-title&#x27;&gt;<span class="subst">$&#123;title&#125;</span>&lt;/span&gt;&lt;p class=&quot;search-result-content&quot;&gt;<span class="subst">$&#123;contentSnippet&#125;</span>&lt;/p&gt;&lt;/a&gt;`</span>);</span><br><span class="line">        $resultList.<span class="title function_">append</span>($item);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    $resultArea.<span class="title function_">html</span>($resultList);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  $inputArea.<span class="title function_">on</span>(<span class="string">&quot;input&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> query = $(<span class="variable language_">this</span>).<span class="title function_">val</span>().<span class="title function_">trim</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (query.<span class="property">length</span> &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">      $searchWrapper.<span class="title function_">attr</span>(<span class="string">&#x27;searching&#x27;</span>, <span class="string">&#x27;false&#x27;</span>);</span><br><span class="line">      $resultArea.<span class="title function_">empty</span>();</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $searchWrapper.<span class="title function_">attr</span>(<span class="string">&#x27;searching&#x27;</span>, <span class="string">&#x27;true&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    index.<span class="title function_">search</span>(query, &#123;</span><br><span class="line">      <span class="attr">hitsPerPage</span>: <span class="variable language_">window</span>.<span class="property">searchConfig</span>.<span class="property">hitsPerPage</span>,</span><br><span class="line">      <span class="attr">attributesToHighlight</span>: [<span class="string">&#x27;content&#x27;</span>],</span><br><span class="line">      <span class="attr">attributesToSnippet</span>: [<span class="string">&#x27;content:30&#x27;</span>],</span><br><span class="line">      <span class="attr">highlightPreTag</span>: <span class="string">&#x27;&lt;span class=&quot;search-keyword&quot;&gt;&#x27;</span>,</span><br><span class="line">      <span class="attr">highlightPostTag</span>: <span class="string">&#x27;&lt;/span&gt;&#x27;</span>,</span><br><span class="line">      <span class="attr">restrictSearchableAttributes</span>: [<span class="string">&#x27;content&#x27;</span>]</span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">responses</span>) &#123;</span><br><span class="line">      <span class="title function_">displayResults</span>(responses.<span class="property">hits</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  $inputArea.<span class="title function_">on</span>(<span class="string">&quot;keydown&quot;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">which</span> == <span class="number">13</span>) &#123;</span><br><span class="line">      e.<span class="title function_">preventDefault</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> observer = <span class="keyword">new</span> <span class="title class_">MutationObserver</span>(<span class="keyword">function</span>(<span class="params">mutationsList</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (mutationsList.<span class="property">length</span> === <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (mutationsList[<span class="number">0</span>].<span class="property">addedNodes</span>.<span class="property">length</span>) &#123;</span><br><span class="line">        $searchWrapper.<span class="title function_">removeClass</span>(<span class="string">&#x27;noresult&#x27;</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mutationsList[<span class="number">0</span>].<span class="property">removedNodes</span>.<span class="property">length</span>) &#123;</span><br><span class="line">        $searchWrapper.<span class="title function_">addClass</span>(<span class="string">&#x27;noresult&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  observer.<span class="title function_">observe</span>($resultArea[<span class="number">0</span>], &#123; <span class="attr">childList</span>: <span class="literal">true</span> &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="如何使用">如何使用</h2>
+<p>首先你得是技术类博客或者项目文档，然后你才能申请
+<code>DocSearch</code> ，会有人工审核。</p>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://docsearch.algolia.com/apply/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://docsearch.algolia.com/apply/</span><span class="cap link footnote">https://docsearch.algolia.com/apply/</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<p>一般几个小时之后就会回复你一封邮件</p>
+<blockquote>
+<p>Congratulations, your search is now ready! We've successfully created
+your DocSearch app, please follow the steps in order to implement
+DocSearch on your website</p>
+</blockquote>
+<p>邮件中会带有你的 <code>appId</code> <code>apiKey</code>
+<code>indexName</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">  <span class="title function_">docsearch</span>(&#123;</span><br><span class="line">    <span class="attr">appId</span>: <span class="string">&quot;xxxxx&quot;</span>,</span><br><span class="line">    <span class="attr">apiKey</span>: <span class="string">&quot;xxxxxxxxxxxxxx&quot;</span>,</span><br><span class="line">    <span class="attr">indexName</span>: <span class="string">&quot;xxxxxxxxxx&quot;</span>,</span><br><span class="line">    <span class="attr">container</span>: <span class="string">&#x27;### REPLACE ME WITH A CONTAINER (e.g. div) ###&#x27;</span></span><br><span class="line">    <span class="attr">debug</span>: <span class="literal">false</span> </span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>拿到这三个参数后往下填就完了。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">algolia_search</span></span><br><span class="line">  <span class="attr">algolia_search:</span></span><br><span class="line">    <span class="attr">appId:</span> <span class="string">&#x27;xxxxxxxxx&#x27;</span></span><br><span class="line">    <span class="attr">apiKey:</span> <span class="string">&#x27;xxxxxxxxxxxxxxxxxxxxxx&#x27;</span></span><br><span class="line">    <span class="attr">indexName:</span> <span class="string">&#x27;xxxxxxx&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>我的代码 belike:</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2024/04/04/660e64ab31ea9.webp" data-fancybox="true"/></div></div>
+
+<div class="article-footer fs14">
+    <section id="references">
+      <div class="header"><span>参考资料</span></div>
+      <div class="body">
+        <ul>
+        <li class="post-title">
+          <p><a href="">GPT</a></p>
+
+        </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/z-inverse-transformation/">求z逆变换的三种方法</a></div></section></div>
+
+
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>来即是客，坐坐坐坐~</p>
+
+    </section>
+    <section class='body cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </section>
+  </div>
+
+
+
 <footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
@@ -92,7 +184,10 @@
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
-<widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline ds-timeline" api="https://raw.weekdaycare.cn/api/repos/weekdaycare/weekdaycare.github.io/issues?per_page=3" user="weekdaycare"></div></div></widget>
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16m-10 6h10M6 18h14"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5-ejs-%E6%A8%A1%E6%9D%BF"><span class="toc-text">引入 EJS 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E6%90%9C%E7%B4%A2"><span class="toc-text">JS 搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-text">如何使用</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 13.825L8.1 17.7q-.275.275-.687.288T6.7 17.7q-.275-.275-.275-.7t.275-.7l4.6-4.6q.15-.15.325-.213t.375-.062q.2 0 .375.062t.325.213l4.6 4.6q.275.275.288.688t-.288.712q-.275.275-.7.275t-.7-.275zm0-6L8.1 11.7q-.275.275-.687.288T6.7 11.7q-.275-.275-.275-.7t.275-.7l4.6-4.6q.15-.15.325-.212T12 5.425q.2 0 .375.063t.325.212l4.6 4.6q.275.275.288.688t-.288.712q-.275.275-.7.275t-.7-.275z"/></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16m-10 6h10M6 18h14"/></svg>
@@ -323,6 +418,27 @@
 <script src="/js/main.js?v=1.27.0" async></script>
 
 <!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
