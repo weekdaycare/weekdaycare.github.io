@@ -14,7 +14,8 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" content="#f8f8f8">
+  <meta name="theme-color" content="#f9fafb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1e21">
   
   <title>文档重构：widgets.yml - 星日语</title>
 
@@ -485,7 +486,7 @@
           spaceBetween: 8,
           centeredSlides: true,
           effect: effect,
-          loop: true,
+          rewind: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -498,7 +499,8 @@
       })
     }
   });
-</script><script>
+</script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     window.codeElements = document.querySelectorAll('.code');
     if (window.codeElements.length > 0) {

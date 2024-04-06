@@ -6,7 +6,7 @@
   <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="http://weekdaycare.cn/"/>
-  <updated>2024-04-04T07:22:58.000Z</updated>
+  <updated>2024-04-06T13:12:58.000Z</updated>
   <id>http://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-renderer-pandoc渲染swiper失败问题</title>
+    <link href="http://weekdaycare.cn/posts/fix-swiper-invalid/"/>
+    <id>http://weekdaycare.cn/posts/fix-swiper-invalid/</id>
+    <published>2024-04-06T13:12:58.000Z</published>
+    <updated>2024-04-06T13:12:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="水-pr">水 pr</h2><blockquote><p>不想看废话的可以跳过我的碎碎念 <a href="#咋办">解决方法</a></p></blockquote><p>日常逛博客的时候瞄了瞄主题仓库，瞟到了 issue:关于swiper轮播容器右箭头失效 <ahref="https://github.com/xaoxuu/hexo-theme-stellar/issues/408">#408</a>，想起来之前用Swiper 的时候也出现了一样的问题，于是我就跑去翻了翻 Swiper API的官方文档。很快啊很快，啪的一下，我就翻到了，和轮播有关的参数就俩儿，一个<code>loop</code> ，一个 <code>rewind</code>。</p><p>看看官方怎么解释的：</p><table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">名称</th><th style="text-align: left;">描述</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;">loop</td><tdstyle="text-align: left;">设置true为启用连续循环模式<br>由于循环模式的工作原理（它将重新排列幻灯片），幻灯片总数必须为：<br>大于或等于<code>slidesPerView+slidesPerGroup</code> ；<br>甚至<code>slidesPerGroup</code>（或使用 <code>loopAddBlankSlides</code>参数）；<br>甚至 <code>grid.rows</code>（或使用<code>loopAddBlankSlides</code> 参数）</td></tr><tr class="even"><td style="text-align: left;">rewind</td><tdstyle="text-align: left;">设置true为启用倒带模式<br>在最后一张幻灯片上单击“下一页”导航按钮将滑回到第一张幻灯片。<br>在第一张幻灯片上单击“上一页”导航按钮将向前滑动到最后一张幻灯片。</td></tr></tbody></table><p>根据 issue 所提，在 Swiper中图片数量不超过两张时轮询会失效，这是怎么回事呢？我们看看主题的引入脚本就知道了</p><figure class="highlight plaintext"><figcaption><span>theme/layout/_plugins/swiper.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line">var swiper = new Swiper(&#x27;.swiper#swiper-api&#x27;, &#123;</span><br><span class="line">  slidesPerView: &#x27;auto&#x27;,</span><br><span class="line">  spaceBetween: 8,</span><br><span class="line">  centeredSlides: true,</span><br><span class="line">  effect: effect,</span><br><span class="line">  loop: true, //这里</span><br><span class="line">  pagination: &#123;</span><br><span class="line">el: &#x27;.swiper-pagination&#x27;,</span><br><span class="line">clickable: true,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure><p>上面这一段就是主题调用的 api 参数，我们可以看到在这里主题使用的是loop 参数，根据官方 api 说明，当图片数量小于 3 的时候应该没满足 loop的条件，所以不会轮询，还会带有莫名的鬼畜。那直接改成 rewind就好了，简单粗暴。</p><p>那么这样就水了一个 pr 了 <span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatheadphones.png"/></span></p><p>但是提交 pr之前惯例是要先本地测试一波的，这一测不要紧，却测出来另外一个 Bug。</p><h2 id="来真的了">来真的了</h2><p>撇脚英语：How I find it？Activating the command <code>hexo s</code> ,I discovered an unexpected void in the designated area where "Swiper"should have emerged. There's nothing! Dumbfounded, for I had merely madea solitary alteration to an API parameter. Urgency seized me, for I amthe monarch of haste. Consequently, I promptly executed the command clonce more. Alas, to no avail!</p><p>当我启动 <code>hexo s</code> 的时候，我发现本该显示<code>Swiper</code>的地方居然是空的！啥都没有！我傻掉了。不应该啊，我只改了一个 api参数，不可能连 Swiper 都显示不了啊？急急急，我是急急国王。所以我赶紧<code>cl</code> 重新跑了一遍。但是，没有！<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatshocked.png"/></span></p><p>好好，看我 <kbd>Ctrl</kbd> + <kbd>Z</kbd> 大法好！</p><p>泻药，失败了。不对啊，之前都好好的，怎么现在就出问题了。转身我就跑去看我之前写的MD，然后我Copy了一份放到新的文章里，再次预览。没用嘞！不是我直接复制的怎么还出问题，我敲我傻了。我坐在这里ponder是不是我改主题文件把哪里动了，于是我去翻了翻我之前的用过Swiper的文章，是正常显示的啊。等等，等等等，好像有哪里不对劲，哥们我的图呢？<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatshocked.png"/></span></p><p>四张图你给我偷两张是叭！看了看其他的都是只有两张图，就尼玛奇怪。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/04/06/661159b767e82.webp" data-fancybox="true"/></div></div><p>查 Bug 第一步，<kbd>F12</kbd> 启动！</p><p>然而怪，很怪，网页元素里只有那两张图，另外两张图甚至连网络请求都没有，仿佛从来不存在一样。我看了看我的主题文件，也没改过Swiper 啊，莫非是 Bug ，提个 issue？但是官网又是好的，肯定是我哪里出问题了。直接拉了个新仓库，不改配置但是主题仓库用我自己的，跑了一下，嘿！可以嘞没得问题。既然如此那肯定是装的第三方插件有冲突了。<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobbanhammerr.png"/></span></p><p>一个个的排查，最后，我发现你了！<code>hexo-renderer-pandoc</code></p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/04/06/66115f565d67c.webp" data-fancybox="true" style="width:300px;"/></div></div><h2 id="分析">分析</h2><p>找到了没用啊，让我把 <code>hexo-renderer-pandoc</code>卸了吧，你别说它还挺好用的，至少我的数学公式他就渲染的挺好，而且不用引入额外的JS 和 CSS。那只能回去看看 Swiper 那边的逻辑咯。瞄一眼</p><p><code>Swiper.js</code> 核心就两句</p><figure class="highlight js"><figcaption><span>theme/scripts/tag/lib/swiper.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> imgs = ctx.<span class="property">render</span>.<span class="title function_">renderSync</span>(&#123;<span class="attr">text</span>: content, <span class="attr">engine</span>: <span class="string">&#x27;markdown&#x27;</span>&#125;)</span><br><span class="line">imgs = imgs.<span class="title function_">match</span>(<span class="regexp">/&lt;img(.*?)src=&quot;(.*?)&quot;(.*?)&gt;/gi</span>)</span><br></pre></td></tr></table></figure><p>第一句用 Hexo 默认的渲染器把获取到的 <code>content</code> 内容转化为HTML 元素。第二句则是用正则匹配去获取 <code>&lt;img&gt;</code> 标签中<code>src</code> 的内容。</p><p>这下子就不难解释为什么我生成 Swiper 会出错了，Hexo 默认的渲染器是<code>hexo-renderer-marked</code>，但是我把它干掉了，这一干掉就出问题了。<code>ctx.render.renderSync</code>是一个同步渲染函数，但是 <code>hexo-renderer-pandoc</code> 是调用 Pandoc渲染，基于异步的渲染逻辑的，它没法立即获取渲染结果。所以两个玩意儿不兼容，自然整不出来结果。<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatfearful.png"/></span></p><h2 id="咋办">咋办</h2><p>不会写异步函数啊，改渲染器那更不会了，还是要在 <code>Swiper.js</code>上动刀比较好。记得我们刚刚说的那关键的两句吗？翻译一下就是，我要拿到<code>content</code> 字段中所有的图片地址然后存入 <code>imgs</code>中。那我为什么不直接从 <code>content</code>字段中获取嘞？这样不就可以直接跳过生成 HTML 这一步了，动手！</p><figure class="highlight js"><figcaption><span>theme/scripts/tag/lib/swiper.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="function"><span class="params">ctx</span> =&gt;</span> <span class="keyword">function</span>(<span class="params">args, content</span>) &#123;</span><br><span class="line">  args = ctx.<span class="property">args</span>.<span class="title function_">map</span>(args, [<span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;effect&#x27;</span>])</span><br><span class="line">  <span class="keyword">var</span> el = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">slide</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> matches = content.<span class="title function_">match</span>(<span class="regexp">/!\[.*?\]\((.*?)\)/g</span>) || [];</span><br><span class="line">    <span class="keyword">let</span> imgUrls = matches.<span class="title function_">map</span>(<span class="function"><span class="params">img</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> match = img.<span class="title function_">match</span>(<span class="regexp">/!\[.*?\]\((.*?)\)/</span>);</span><br><span class="line">      <span class="keyword">return</span> match &amp;&amp; match[<span class="number">1</span>];</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (imgUrls.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      imgUrls.<span class="title function_">forEach</span>(<span class="function">(<span class="params">url, i</span>) =&gt;</span> &#123;</span><br><span class="line">        el += <span class="string">`&lt;div class=&quot;swiper-slide&quot;&gt;&lt;img no-lazy src=&quot;<span class="subst">$&#123;url&#125;</span>&quot; alt=&quot;image-<span class="subst">$&#123;i&#125;</span>&quot;&gt;&lt;/div&gt;`</span>;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  el += <span class="string">&#x27;&lt;div class=&quot;tag-plugin swiper fancybox&quot; id=&quot;swiper-api&quot;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27; &#x27;</span> + ctx.<span class="property">args</span>.<span class="title function_">joinTags</span>(args, [<span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;effect&#x27;</span>]).<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">  el += <span class="string">&#x27;&gt;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27;&lt;div class=&quot;swiper-wrapper&quot;&gt;&#x27;</span></span><br><span class="line">  <span class="title function_">slide</span>()</span><br><span class="line">  el += <span class="string">&#x27;&lt;/div&gt;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27;&lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27;&lt;div class=&quot;swiper-button-prev blur&quot;&gt;&lt;/div&gt;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27;&lt;div class=&quot;swiper-button-next blur&quot;&gt;&lt;/div&gt;&#x27;</span></span><br><span class="line">  el += <span class="string">&#x27;&lt;/div&gt;&#x27;</span></span><br><span class="line">  <span class="keyword">return</span> el</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我直接从 <code>content</code> 中匹配 MD语法获取图片地址，缺点就是只支持严格的 MD 语法，就是只能写成<code>![xxx](https://xxx)</code> 这种，不过无伤大雅<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatrainbow.png"/></span></p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/04/06/66116793abdb3.webp" data-fancybox="true" style="width:230px;"/></div></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;水-pr&quot;&gt;水 pr&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不想看废话的可以跳过我的碎碎念 &lt;a href=&quot;#咋办&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;日常逛博客的时候瞄了瞄主题仓库，瞟到了 issue:
+关于swiper轮播容器右箭头失效 &lt;a
+href=&quot;https://github.com/xaoxuu/hexo-theme-ste</summary>
+      
+    
+    
+    
+    <category term="奇技淫巧" scheme="http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="编程" scheme="http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="教程" scheme="http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="Stellar" scheme="http://weekdaycare.cn/tags/Stellar/"/>
+    
+  </entry>
   
   <entry>
     <title>Stellar适配Algolia DocSearch</title>
@@ -81,34 +117,11 @@
     
     <category term="教程" scheme="http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
-    
     <category term="代码" scheme="http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
     
+    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
+    
     <category term="Stellar" scheme="http://weekdaycare.cn/tags/Stellar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你好2024</title>
-    <link href="http://weekdaycare.cn/posts/2024/"/>
-    <id>http://weekdaycare.cn/posts/2024/</id>
-    <published>2024-02-15T12:45:58.000Z</published>
-    <updated>2024-02-15T12:45:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="辞旧">辞旧</h2><p>岁月的年轮不知不觉又增加了一圈，时间的尺度再一次被拉长，而每一年却又越过越短了。似是嫌弃城市没有年味儿，今年也是回到老家过。腌萝卜和炸花生的年味儿弥散在将将落下的雪花中，等等，有雪？这不整一波！</p><p>本来是想搭个马桶的，奈何难度有点高，而且实在是太冻动手了。咳咳，说实话堆的有点丑了...</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/02/15/65ce2870b940c.webp" alt="不要在意他的嘴巴，没找到合适的哈哈" data-fancybox="true" style="width:300px;"/></div><div class="image-meta"><span class="image-caption center">不要在意他的嘴巴，没找到合适的哈哈</span></div></div><p>在无食（零食）无网（信号贼差）无电（忘带充电器）的情况下，唯一的乐趣就只剩翻箱倒柜了（bushi，像是寻宝，称之为“翻新”更为合适，轻轻拭去灰尘，仔细端详名为记忆的宝物。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/02/15/65ce2553f344c.webp" alt="初中同学毕业写的明信片" data-fancybox="true" style="width:500px;"/></div><div class="image-meta"><span class="image-caption center">初中同学毕业写的明信片</span></div></div><p>当十岁的小朋友津津有味地看着我10年前的书时，我突然有一种错觉，仿佛坐在那里的不是他，而是我。</p><div class="tag-plugin gallery grid-box" size="mix" ratio="square"><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce2e42679c6.webp" alt="我那十岁的弟弟"/><div class="image-meta"><span class="image-caption">我那十岁的弟弟</span></div></div><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce2dbe32b65.webp" alt="加菲猫的幸福生活"/><div class="image-meta"><span class="image-caption">加菲猫的幸福生活</span></div></div><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce325eb2b67.webp" alt="爆笑校园"/><div class="image-meta"><span class="image-caption">爆笑校园</span></div></div><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce311b5c4cd.webp" alt="小学生天地"/><div class="image-meta"><span class="image-caption">小学生天地</span></div></div><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce309de58ae.webp" alt="我的日记"/><div class="image-meta"><span class="image-caption">我的日记</span></div></div><div class="grid-cell"><img data-fancybox="gallery-19" src="https://bu.dusays.com/2024/02/15/65ce321c556c2.webp"/><div class="image-meta"></div></div></div><h2 id="迎新">迎新</h2><p>说到过年就不得不提一嘴春晚了哈，虽然小品和相声还是很抽象，但是小尼的魔术失败承包了我一整晚的笑点哈哈哈</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/02/15/65ce34fbe98c5.webp" alt="救救我救救我" data-fancybox="true" style="width:200px;"/></div><div class="image-meta"><span class="image-caption center">救救我救救我</span></div></div><p>嗨嗨嗨春晚有什么意思，来放烟花啊！</p><div class="tag-plugin gallery grid-box" size="mix" ratio="square"><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce36327cf09.webp"/><div class="image-meta"></div></div><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce3649ecf66.webp" alt="召唤！奇异博士！"/><div class="image-meta"><span class="image-caption">召唤！奇异博士！</span></div></div><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce363c0389d.webp"/><div class="image-meta"></div></div><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce375e2f10d.webp"/><div class="image-meta"></div></div><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce37690caa6.webp"/><div class="image-meta"></div></div><div class="grid-cell"><img data-fancybox="gallery-20" src="https://bu.dusays.com/2024/02/16/65ce37710d717.webp"/><div class="image-meta"></div></div></div><h2 id="二十岁">二十岁</h2><p>时间过得太快了，小时候总是期盼时间能够快一点，能够自己挣票子。现在只希望时间能够慢一些，再慢一些，让我再当一回小孩。</p><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/02/16/65ce386a046b5.webp" data-fancybox="true" style="width:500px;"/></div></div><div class="tag-plugin image"><div class="image-bg"><img src="https://bu.dusays.com/2024/02/16/65ce3a38292b0.webp" data-fancybox="true" style="width:300px;"/></div></div><div class="tag-plugin quot"><p class="content" type="text"><span class="empty"></span><span class="text">新年快乐，龙年大吉！</span><span class="empty"></span></p></div>]]></content>
-    
-    
-    <summary type="html">新年快乐！</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
     
   </entry>
   
