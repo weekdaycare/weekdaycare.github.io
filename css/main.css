@@ -5137,11 +5137,8 @@ details.toc[open] >div.body section .header+.doc_tree {
   .widget-wrapper.toc .toc a {
     color: var(--text-p2);
   }
-  .widget-wrapper.toc .widget-footer a {
-    background: var(--block);
-  }
-  .widget-wrapper.toc .widget-footer a+a {
-    margin-top: 4px;
+  .widget-wrapper.toc .widget-footer {
+    display: none;
   }
 }
 .widgets .loading-wrap {
