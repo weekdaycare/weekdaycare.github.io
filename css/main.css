@@ -797,6 +797,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scroll-padding-top: 8px;
+  scroll-behavior: smooth;
 }
 body {
   background: var(--site-bg);
