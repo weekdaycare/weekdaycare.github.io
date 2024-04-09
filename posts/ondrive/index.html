@@ -670,7 +670,15 @@ Plus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#
     }
     utils.js('/js/search/local-search.js', { defer: true });
   });
-</script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally

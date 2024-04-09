@@ -98,21 +98,6 @@
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/site-config.html">_config.yml</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/comments.html">评论组件</a></div></section></div>
 
 
-  <div class="related-wrap md-text" id="comments">
-    <section class='header cmt-title cap theme'>
-      <p>来即是客，坐坐坐坐~</p>
-
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" src="https://giscus.app/client.js" data-repo="weekdaycare/weekdaycare.github.io" data-repo-id="R_kgDOGZiRHw" data-category="Stellar" data-category-id="DIC_kwDOGZiRH84CTXJN" data-mapping="number" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" data-term="80"></div>
-
-    </section>
-  </div>
-
 
 
 <footer class="page-footer footnote"><hr><div class="text"><center>
@@ -137,10 +122,6 @@
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15 3.5v17M10 15l-3-3l3-3"/><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/></g></svg>
   </button>
-  
-    <button type='button' style='display:none' class='laptop-only button-toggle mobile' onclick='util.scrollComment()'>
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9h8m-8 4h6m-5 5H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-3l-3 3z"/></svg>
-    </button>
   
 </div>
 </div><div class="scripts">
@@ -367,28 +348,25 @@
 <!-- optional -->
 
   <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
-      }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
@@ -429,7 +407,15 @@
     }
     utils.js('/js/search/local-search.js', { defer: true });
   });
-</script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -519,6 +505,20 @@
     }
   });
 </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var expiredDays = `45`;
+      var postDate = new Date('Mon Mar 11 2024 12:53:46 GMT+0800').getTime();
+      var currentDate = new Date().getTime();
+      var daysDiff = Math.floor((currentDate - postDate) / (1000 * 3600 * 24));
+  
+      if (daysDiff > expiredDays) {
+        var cell = '<div class="tag-plugin colorful note" color="orange"><div class="title">文章时效提醒</div><div class="body"><p>这篇文章上次更新于' + daysDiff + '天前，部分信息可能已发生改变，请注意甄别。</p></div></div>';
+        document.querySelector('article.content').insertAdjacentHTML('afterbegin', cell);
+      }
+    });
+  </script>
+
 
 
 <!-- inject -->

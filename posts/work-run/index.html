@@ -62,8 +62,8 @@
 <meta property="article:modified_time" content="2023-08-17T03:22:33.000Z">
 <meta property="article:author" content="涛声依旧">
 <meta property="article:tag" content="生活">
-<meta property="article:tag" content="体验">
 <meta property="article:tag" content="夏天">
+<meta property="article:tag" content="体验">
 <meta property="article:tag" content="旅游">
 <meta property="article:tag" content="工作">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
   
   
   
-  <meta name="keywords" content="生活,体验,夏天,旅游,工作">
+  <meta name="keywords" content="生活,夏天,体验,旅游,工作">
 
   <!-- feed -->
   
@@ -544,7 +544,15 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     }
     utils.js('/js/search/local-search.js', { defer: true });
   });
-</script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
