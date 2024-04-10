@@ -20,7 +20,7 @@ utils.jq(() => {
           cell += '</div>';
           cell += '<span>' + new Date(item.date).toLocaleString() + '</span>';
           cell += '</div>';
-          cell += '<a class="body" href="' + item.page_url + '" target="_blank" rel="external nofollow noopener noreferrer">';
+          cell += '<a class="body" href="' + item.page_url + '#atk-comment-' + item.id + '" target="_blank" rel="external nofollow noopener noreferrer">';
           cell += item.content_marked;
           cell += '</a>';
           cell += '</div>';

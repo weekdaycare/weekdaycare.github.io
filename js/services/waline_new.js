@@ -20,7 +20,7 @@ utils.jq(() => {
           cell += '</div>';
           cell += '<span>' + new Date(item.time).toLocaleString() + '</span>';
           cell += '</div>';
-          cell += '<a class="body" href="' + item.url + '" target="_blank" rel="external nofollow noopener noreferrer">';
+          cell += '<a class="body" href="' + item.url + '#' + item.pid + '" target="_blank" rel="external nofollow noopener noreferrer">';
           cell += item.comment.replace(/<a\b[^>]*>(.*?)<\/a>/g, '$1');
           cell += '</a>';
           cell += '</div>';

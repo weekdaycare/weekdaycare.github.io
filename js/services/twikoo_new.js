@@ -26,7 +26,7 @@ utils.jq(() => {
           cell += '</div>';
           cell += '<span>' + comment.relativeTime + '</span>';
           cell += '</div>';
-          cell += '<a class="body" href="' + comment.url + '">';
+          cell += '<a class="body" href="' + comment.url + '#' + comment.id + '">';
           cell += commentText;
           cell += '</a>';
           cell += '</div>';
