@@ -505,19 +505,24 @@
     }
   });
 </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var expiredDays = `45`;
-      var postDate = new Date('Mon Jan 22 2024 13:08:16 GMT+0800').getTime();
-      var currentDate = new Date().getTime();
-      var daysDiff = Math.floor((currentDate - postDate) / (1000 * 3600 * 24));
-  
-      if (daysDiff > expiredDays) {
-        var cell = '<div class="tag-plugin colorful note" color="orange"><div class="title">文章时效提醒</div><div class="body"><p>这篇文章上次更新于' + daysDiff + '天前，部分信息可能已发生改变，请注意甄别。</p></div></div>';
-        document.querySelector('article.content').insertAdjacentHTML('afterbegin', cell);
-      }
-    });
-  </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var expiredDays = '45' || 60;
+  var postDate = new Date('Mon Jan 22 2024 13:08:16 GMT+0800').getTime();
+  var currentDate = new Date().getTime();
+  var daysDiff = Math.floor((currentDate - postDate) / (1000 * 3600 * 24));
+  if (daysDiff > expiredDays) {
+    var message = '这篇文章上次更新于 %s 天前，部分信息可能已发生改变，请注意甄别'.replace('%s', daysDiff);
+    var cell = '<div class="tag-plugin colorful note" color="' + 'orange' + '">';
+    cell += '<div class="title">' + '文章时效提醒' + '</div>';
+    cell += '<div class="body">';
+    cell += '<span>' + message + '</span>';
+    cell += '</div>';
+    cell += '</div>';
+    document.querySelector('article.content').insertAdjacentHTML('afterbegin', cell);
+  }
+});
+</script>
 
 
 
