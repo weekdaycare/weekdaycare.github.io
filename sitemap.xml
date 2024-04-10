@@ -495,20 +495,6 @@
   </url>
   
   <url>
-    <loc>http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2024-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://weekdaycare.cn/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2024-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -544,7 +530,14 @@
   </url>
   
   <url>
-    <loc>http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://weekdaycare.cn/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -552,6 +545,13 @@
   
   <url>
     <loc>http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
