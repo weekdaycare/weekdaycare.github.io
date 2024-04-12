@@ -129,12 +129,19 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 4
-  content: true
+  limit: 3
+  content: false
   content_limit: 200
   order_by: -date
   icon: /asset/avatar.svg
   autodiscovery: true
+  
+# sitemap
+sitemap:
+  path: 
+    - sitemap.xml
+  tags: true
+  categories: true
   
 # offline config passed to sw-precache.
 service_worker:

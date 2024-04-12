@@ -11,13 +11,7 @@ leftbar:
   - tree
 rightbar:
   - toc
-
-comments:
-  service: giscus
-  giscus:
-    'data-term': '80'
-    'data-mapping': number
-
+comments: false
 base_dir: /doc/
 tree:
   '简介':
