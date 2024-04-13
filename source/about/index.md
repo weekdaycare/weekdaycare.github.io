@@ -25,9 +25,8 @@ h1: ''
 
 {% checkbox checked:true color:green 大陆内能够正常访问 %}
 {% checkbox checked:true color:green 近三个月至少发布过一篇原创文章 %}
-{% checkbox checked:true color:green 合法、非营利性、无商业广告（有广告的会酌情考虑） %}
-{% checkbox checked:true color:green 至少与我有过三次次互动，来回往返站点算一次 %}
-{% checkbox symbol:times color:red checked:true 不接受纯搬运站 %}
+{% checkbox checked:true color:yellow 合法、非营利性、非搬运站 %}
+{% checkbox checked:true color:red 至少与我有过三次次互动，来回往返站点算一次 %}
 
 我会不定时访问您的站点，若您的站点出现 404 等情况，我会暂时下架您的网站链接，当您的站点恢复时留言即可
 
