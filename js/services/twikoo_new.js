@@ -15,7 +15,7 @@ utils.jq(() => {
         utils.onLoadSuccess(el); // 移除动画
         res.forEach((comment, j) => {
           let commentText = comment.commentText;
-          if (!commentText) return;
+          if (!commentText || commentText.trim()==='') return;
           // 转义字符
           commentText = commentText.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
           commentText = commentText.length > 50 ? commentText.substring(0, 50) + '...' : commentText;
