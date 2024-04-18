@@ -909,8 +909,11 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark/warning/error
 
 {% poetry 游山西村 author:陆游 footer:诗词节选 %}
 莫笑农家腊酒浑，丰年留客足鸡豚。
+
 **山重水复疑无路，柳暗花明又一村。**
+
 箫鼓追随春社近，衣冠简朴古风存。
+
 从今若许闲乘月，拄杖无时夜叩门。
 {% endpoetry %}
 

@@ -5,11 +5,11 @@
 # Site
 title: 星日语
 avatar: /asset/avatar.svg
-favicon: /asset/favicon.svg
+favicon: /asset/avatar.svg
 description: '苦难不值得追求，磨练意志是因为苦难无法躲开'
 subtitle: '我随便写写|你随便看看'
 keywords: 博客
-author: 涛声依旧
+author: 星日语
 language: zh-CN
 timezone: ''
 
@@ -123,6 +123,16 @@ mathjax:
   extension_options: {}
     # you can put your extension options here
     # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
+
+# wordcount
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: false
+  total_time: false
+  exclude_codeblock: false
+  wpm: 300
+  suffix: "分钟"
 
 # rss
 feed:

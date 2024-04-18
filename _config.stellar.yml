@@ -135,6 +135,8 @@ article:
   license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 若你喜欢我的文章欢迎互动，玩的愉快！'
   # 分享
   share: # [wechat, weibo, email, link]
+  wordcount:
+    enable: true
   # 相关文章，需要安装插件 (for layout: post)
   # npm i hexo-related-popular-posts
   related_posts:
