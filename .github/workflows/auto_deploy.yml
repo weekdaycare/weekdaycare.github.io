@@ -42,7 +42,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
           aws_bucket: ${{ secrets.R2_BUCKET_NAME }}
-          endpoint: 'https://582d5db47fd6799d836b5d9a3f63f5d4.r2.cloudflarestorage.com'
+          endpoint: '${{ secrets.R2_ENDPOINT }}'
           source: ''
           target: './source'
 
