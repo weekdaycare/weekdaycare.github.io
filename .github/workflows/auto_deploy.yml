@@ -14,7 +14,7 @@ env:
   THEME_BRANCH: main
   DEPLOY_REPO: weekdaycare/weekdaycare.github.io
   DEPLOY_BRANCH: main
-  
+
 secrets:
   R2_BUCKET_NAME: obsidian-hexo
   R2_REGION: us-east-1
@@ -41,11 +41,11 @@ jobs:
           repository: ${{ env.THEME_REPO }}
           ref: ${{ env.THEME_BRANCH }}
           path: themes/stellar
-
+          
       - name: Setup AWS CLI for Cloudflare R2
         run: |
           sudo apt-get update
-          sudo apt-get install -y awscli
+          sudo apt-get install awscli
           aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
           aws configure set default.region ${{ secrets.R2_REGION }}
