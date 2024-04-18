@@ -14,8 +14,6 @@ env:
   THEME_BRANCH: main
   DEPLOY_REPO: weekdaycare/weekdaycare.github.io
   DEPLOY_BRANCH: main
-
-secrets:
   R2_BUCKET_NAME: obsidian-hexo
   R2_REGION: us-east-1
   R2_ACCESS_KEY_ID: 1e240ee148c037aebcf01e40c8c29510
