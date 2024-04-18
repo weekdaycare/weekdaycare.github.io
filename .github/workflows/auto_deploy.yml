@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types: publish
 
 env:
   GIT_USER: weekdaycare
@@ -16,6 +18,13 @@ env:
   DEPLOY_BRANCH: main
 
 jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger workflow
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.WEBHOOK_TOKEN }}
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ubuntu-latest
