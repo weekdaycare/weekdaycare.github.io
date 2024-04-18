@@ -14,11 +14,6 @@ env:
   THEME_BRANCH: main
   DEPLOY_REPO: weekdaycare/weekdaycare.github.io
   DEPLOY_BRANCH: main
-  R2_BUCKET_NAME: obsidian-hexo
-  R2_REGION: us-east-1
-  R2_ACCESS_KEY_ID: 1e240ee148c037aebcf01e40c8c29510
-  R2_SECRET_ACCESS_KEY: 5901a28a274125807c2f2a4b33ae466b9033754d87797d6b9e515f903c722725
-  R2_ENDPOINT: https://582d5db47fd6799d836b5d9a3f63f5d4.r2.cloudflarestorage.com/obsidian-hexo
 
 jobs:
   build:
@@ -40,20 +35,16 @@ jobs:
           ref: ${{ env.THEME_BRANCH }}
           path: themes/stellar
           
-      - name: Setup AWS CLI for Cloudflare R2
-        run: |
-          sudo apt-get update
-          sudo apt-get install awscli
-          aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          aws configure set default.region ${{ secrets.R2_REGION }}
-          aws configure set default.s3.signature_version s3v4
-          aws configure set default.s3.endpoint_url ${{ secrets.R2_ENDPOINT }}
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.R2_REGION }}
 
-      - name: Sync files from Cloudflare R2 to source directory
+      - name: Sync files from R2
         run: |
-          mkdir -p source
-          aws s3 sync s3://${{ secrets.R2_BUCKET_NAME }} source
+          aws s3 sync s3://${{ env.R2_BUCKET_NAME }} source/ --endpoint-url=${{ env.R2_ENDPOINT }}
 
       - name: Checkout deploy repo
         uses: actions/checkout@v2
