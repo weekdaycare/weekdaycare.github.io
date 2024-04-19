@@ -64,7 +64,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm audit fix --only=prod
 
       - name: Install pandoc
         run: |
@@ -85,4 +84,5 @@ jobs:
           
       - name: Deploy hexo
         run: |
-          npm run deploy
+          hexo cl & hexo g
+          hexo d
