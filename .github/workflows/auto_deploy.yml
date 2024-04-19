@@ -61,10 +61,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
-      - name: Install dependencies
-        run: |
-          npm install
-
       - name: Install pandoc
         run: |
           sudo apt-get update
@@ -81,8 +77,11 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
+          npm install hexo-cli-g
+          npm install
           
       - name: Deploy hexo
         run: |
-          hexo cl & hexo g
+          hexo cl
+          hexo g
           hexo d
