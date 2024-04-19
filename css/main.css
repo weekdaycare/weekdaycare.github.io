@@ -3725,6 +3725,9 @@ p>strong>span.tag-plugin.icon {
   box-shadow: 0 12px 20px -4px rgba(0,0,0,0.15);
   transform: translate3d(0, -2px, 0);
 }
+.md-text .tag-plugin.span {
+  color: var(--text-p2);
+}
 .tag-plugin.tabs {
   position: relative;
   margin-top: 1rem;

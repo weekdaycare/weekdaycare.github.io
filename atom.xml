@@ -6,15 +6,42 @@
   <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="http://weekdaycare.cn/"/>
-  <updated>2024-04-06T13:12:58.000Z</updated>
+  <updated>2024-04-19T10:31:30.000Z</updated>
   <id>http://weekdaycare.cn/</id>
   
   <author>
-    <name>涛声依旧</name>
+    <name>星日语</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>探索Hexo多端写作</title>
+    <link href="http://weekdaycare.cn/posts/hexo-obsidian/"/>
+    <id>http://weekdaycare.cn/posts/hexo-obsidian/</id>
+    <published>2024-04-19T04:31:30.000Z</published>
+    <updated>2024-04-19T10:31:30.000Z</updated>
+    
+    
+    <summary type="html">如何在不离开编辑器的情况下完成并推送一篇文章到博客？</summary>
+    
+    
+    
+    <category term="奇技淫巧" scheme="http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="整活" scheme="http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/"/>
+    
+    <category term="白嫖" scheme="http://weekdaycare.cn/tags/%E7%99%BD%E5%AB%96/"/>
+    
+    <category term="教程" scheme="http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="markdown" scheme="http://weekdaycare.cn/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-renderer-pandoc渲染swiper失败问题</title>
@@ -70,25 +97,6 @@ href=&quot;https://github.com/xaoxuu/hexo-theme-ste</summary>
     <category term="代码" scheme="http://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
     
     <category term="Stellar" scheme="http://weekdaycare.cn/tags/Stellar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求z逆变换的三种方法</title>
-    <link href="http://weekdaycare.cn/posts/z-inverse-transformation/"/>
-    <id>http://weekdaycare.cn/posts/z-inverse-transformation/</id>
-    <published>2024-03-08T05:12:55.000Z</published>
-    <updated>2024-03-08T09:46:00.000Z</updated>
-    
-    
-    <summary type="html">幂级数展开法、部分因式展开法、留数法</summary>
-    
-    
-    
-    <category term="学习感悟" scheme="http://weekdaycare.cn/categories/%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/"/>
-    
-    
-    <category term="考研" scheme="http://weekdaycare.cn/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
