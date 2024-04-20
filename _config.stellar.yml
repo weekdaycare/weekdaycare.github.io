@@ -66,6 +66,7 @@ site_tree:
     rightbar: timeline
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
       '说说': /shuoshuo/
+      '表情速查': /posts/emoji-blob/
   # 博客专栏列表页配置
   index_topic:
     base_dir: topic # 只影响自动生成的页面路径
