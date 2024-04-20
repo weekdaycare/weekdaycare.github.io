@@ -1,21 +1,33 @@
 import os
 import re
 import requests
+import time
 
 def upload_image(image_path, auth_token):
-    print(f"Attempting to upload {image_path}")
     url = "https://7bu.top/api/v1/upload"
     headers = {
         "Authorization": f"Bearer {auth_token}",
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
     }
     files = {'file': open(image_path, 'rb')}
-    response = requests.post(url, headers=headers, files=files)
-    if response.status_code == 200 and response.json()['status']:
-        print(f"Upload successful: {response.json()['data']['links']['url']}")
-        return response.json()['data']['links']['url']
-    else:
-        raise Exception(f"Failed to upload image {image_path}: {response.text}")
+    try:
+        response = requests.post(url, headers=headers, files=files)
+        response.raise_for_status()  # 将引发异常的响应（如4xx或5xx）触发异常
+        data = response.json()
+        if data.get('status'):
+            return data['data']['links']['url']
+        else:
+            raise Exception(f"Upload failed: {data.get('message')}")
+    except requests.exceptions.HTTPError as e:
+        print(f"HTTP Error: {e}")
+    except requests.exceptions.ConnectionError as e:
+        print(f"Connection Error: {e}")
+    except requests.exceptions.Timeout as e:
+        print(f"Timeout Error: {e}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
+    time.sleep(1)  # 简单的限流措施，避免请求过快
 
 def process_markdown_files(source_dir, auth_token):
     for root, dirs, files in os.walk(source_dir):
@@ -40,7 +52,7 @@ def process_markdown_files(source_dir, auth_token):
 
 if __name__ == "__main__":
     source_dir = './source'
-    auth_token = '1261|TcY4uAzEuyZrZrzXNHGm9he0GA9pl5zydRvessWm'
+    auth_token = os.getenv('IMAGE_UPLOAD_TOKEN')
     if not auth_token:
         raise ValueError("IMAGE_UPLOAD_TOKEN is not set.")
     print("Starting image upload and link replacement...")
