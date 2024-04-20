@@ -40,7 +40,7 @@ def process_markdown_files(source_dir, auth_token):
 
 if __name__ == "__main__":
     source_dir = './source'
-    auth_token = 'os.getenv('IMAGE_UPLOAD_TOKEN')'
+    auth_token = '1261|TcY4uAzEuyZrZrzXNHGm9he0GA9pl5zydRvessWm'
     if not auth_token:
         raise ValueError("IMAGE_UPLOAD_TOKEN is not set.")
     print("Starting image upload and link replacement...")
