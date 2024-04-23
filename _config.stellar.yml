@@ -57,13 +57,13 @@ site_tree:
   # 主页配置
   home:
     leftbar: welcome, recent
-    rightbar: timeline
+    rightbar: new_comment, timeline
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     leftbar: welcome, recent # for categories/tags/archives
-    rightbar: timeline
+    rightbar: new_comment, timeline
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
       '说说': /shuoshuo/
       '表情速查': /posts/emoji-blob/
@@ -418,7 +418,6 @@ data_services:
 # 2.3. 如果需要本地 js 文件，请放入 /source/js/plugins 文件夹中，引入方式为：utils.js('/js/plugins/xxx.js');
 # 3. 如果这个插件只需要引入外部文件，可以在【步骤 1】处增加 inject 字段，而无需进入【步骤 2】创建 ejs，参考 katex
 plugins:
-
   # preload
   preload:
     enable: true
