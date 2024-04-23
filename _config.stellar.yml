@@ -442,7 +442,7 @@ plugins:
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
     # 使用 twikoo 评论可以写: .tk-content img:not([class*="emo"])
     # 使用 waline 评论可以写: #waline_container .vcontent img
-    selector: .timenode p>img # 多个选择器用英文逗号隔开
+    selector: .tk-content img:not([class*="emo"]) # 多个选择器用英文逗号隔开
 
   # swiper
   swiper:
