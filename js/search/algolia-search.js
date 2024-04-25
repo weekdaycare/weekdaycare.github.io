@@ -9,6 +9,12 @@ utils.jq(() => {
   var client = algoliasearch(window.searchConfig.appId, window.searchConfig.apiKey);
   var index = client.initIndex(window.searchConfig.indexName);
 
+  function filterResults(hits, filterPath) {
+    if (!filterPath || filterPath === '/') return hits;
+    var regex = new RegExp(filterPath);
+    return hits.filter(hit => regex.test(hit.url));
+  }
+
   function displayResults(hits) {
     var $resultList = $("<ul>").addClass("search-result-list");
     if (hits.length === 0) {
@@ -27,6 +33,7 @@ utils.jq(() => {
 
   $inputArea.on("input", function() {
     var query = $(this).val().trim();
+    var filterPath = $inputArea.data('filter');
 
     if (query.length <= 0) {
       $searchWrapper.attr('searching', 'false');
@@ -44,7 +51,7 @@ utils.jq(() => {
       highlightPostTag: '</span>',
       restrictSearchableAttributes: ['content']
     }).then(function(responses) {
-      displayResults(responses.hits);
+      displayResults(filterResults(responses.hits, filterPath));
     });
   });
 

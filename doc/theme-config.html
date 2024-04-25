@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.0" theme-name="Stellar" theme-version="1.28.0">
   
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
-  <link rel="preconnect" href="https://mirrors.sustech.edu.cn/cdnjs/" crossorigin>
+  
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -42,7 +42,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+  <link rel="stylesheet" href="/css/main.css?v=1.28.0">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -152,8 +152,8 @@
     cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
   };
   const deps = {
-    jquery: `https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/jquery/3.7.1/jquery.min.js`,
-    marked: `https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/marked/4.0.18/marked.min.js`
+    jquery: `https://cdnjs.onmicrosoft.cn/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdnjs.onmicrosoft.cn/ajax/libs/marked/4.0.18/marked.min.js`
   }
   
 
@@ -345,7 +345,7 @@
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.27.0" async></script>
+<script src="/js/main.js?v=1.28.0" async></script>
 
 <!-- optional -->
 
@@ -374,7 +374,7 @@
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {
@@ -417,7 +417,7 @@
     hoverDelay: 25
   };
 </script>
-<script defer src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdnjs.onmicrosoft.cn/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -439,9 +439,9 @@
   });
 </script><script>
   ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
-    js: `https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+    selector: `.tk-content img:not([class*="emo"])`,
+    css: `https://cdnjs.onmicrosoft.cn/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdnjs.onmicrosoft.cn/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
   };
   var selector = '[data-fancybox]:not(.error)';
   if (ctx.fancybox.selector) {
@@ -463,12 +463,13 @@
           autoStart: false,
         },
         caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || null
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
         }
       });
     })
   }
-</script><script>
+</script>
+<script>
   window.addEventListener('DOMContentLoaded', (event) => {
     const swiper_api = document.getElementById('swiper-api');
     if (swiper_api != undefined) {
