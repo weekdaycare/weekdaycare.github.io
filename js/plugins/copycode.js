@@ -13,7 +13,7 @@ function addCopyButtons() {
 
     // 添加点击事件监听
     codeCopyBtn.addEventListener('click', async () => {
-      const codeToCopy = codeElement.querySelector('code')?.textContent || '';
+      const codeToCopy = codeElement.querySelector('pre')?.innerText || '';
       if (navigator.clipboard) {
         try {
           await navigator.clipboard.writeText(codeToCopy);
