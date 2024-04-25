@@ -327,11 +327,15 @@ tag_plugins:
   button:
     default_color: theme # theme, accent, red, orange, yellow, green, cyan, blue, purple
   # {% image %}
-  image:
+  image: 
     fancybox: true # true, false
   # {% copy xxx %}
   copy:
     toast: 复制成功( •̀ ω •́ )✧
+  # {% coding %}
+  coding:
+    api: https://code.weekdaycare.cn/
+    css: 
   # {% timeline %}
   timeline:
     max-height: 80vh
@@ -407,6 +411,8 @@ data_services:
     js: /js/services/twikoo_new.js
   waline:
     js: /js/services/waline_new.js
+  coding:
+    js: /js/services/coding.js
 
 
 
