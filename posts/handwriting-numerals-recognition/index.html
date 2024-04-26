@@ -53,7 +53,7 @@
 
   
 
-  <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css?updatedAt=1711547815661' />
+  <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
 </head>
 <body>
 
@@ -256,7 +256,7 @@ alt="9" />
 <p>这里9的权重是2的原因是手写的9容易和4混淆。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类别加权</span></span><br><span class="line">class_weight = &#123;<span class="number">0</span>: <span class="number">1.0</span>, <span class="number">1</span>: <span class="number">1.0</span>, <span class="number">2</span>: <span class="number">1.0</span>, <span class="number">3</span>: <span class="number">1.0</span>, <span class="number">4</span>: <span class="number">1.0</span>, <span class="number">5</span>: <span class="number">1.0</span>, <span class="number">6</span>: <span class="number">1.0</span>, <span class="number">7</span>: <span class="number">1.0</span>, <span class="number">8</span>: <span class="number">1.0</span>, <span class="number">9</span>: <span class="number">2.0</span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="六体验">六、体验</h2>
-<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span><span class="cap link footnote">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition" target="_blank" rel="external nofollow noopener noreferrer" cardlink api="https://raw.weekdaycare.cn/site/api/v1?url=https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition" autofill="title,icon"><div class="left"><span class="title">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span><span class="cap link footnote">https://swanhub.co/demo/weekdaycare/handwriting-numerals-recognition</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
 <div class="article-footer fs14">
     <section id="references">
@@ -350,7 +350,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"placeholder":"Power by Algolia","sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -581,7 +581,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {

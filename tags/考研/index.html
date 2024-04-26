@@ -48,7 +48,7 @@
 
   
 
-  <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css?updatedAt=1711547815661' />
+  <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
 </head>
 <body>
 
@@ -81,7 +81,7 @@
 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：考研</a><a href="/archives/">归档</a><a href="/shuoshuo/">说说</a><a href="/posts/emoji-blob/">表情速查</a></nav></div>
+<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：考研</a><a href="/archives/">归档</a><a href="/posts/emoji-blob/">表情速查</a></nav></div>
 <div class="post-list post"><a class="post-card post" href="/posts/z-inverse-transformation/">
 <article class="md-text"><h2 class="post-title">求z逆变换的三种方法</h2><div class="excerpt"><p>幂级数展开法、部分因式展开法、留数法</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0"/><path d="M12 7v5l3 3"/></g></svg><time datetime="2024-03-08T05:12:55.000Z">2024-03-08</time></span><span class="cap breadcrumb" style="--text-p2:#F14E32;--theme-block:#F14E3220"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.816 13.58c2.292 2.138 3.546 4 3.092 4.9c-.745 1.46-5.783-.259-11.255-3.838c-5.47-3.579-9.304-7.664-8.56-9.123c.464-.91 2.926-.444 5.803.805"/><path d="M5 12a7 7 0 1 0 14 0a7 7 0 1 0-14 0"/></g></svg><span>学习感悟</span></span></div></article>
 </a></div>
@@ -132,7 +132,7 @@
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"placeholder":"Power by Algolia","sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -342,7 +342,7 @@
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {

@@ -48,7 +48,7 @@
 
   
 
-  <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css?updatedAt=1711547815661' />
+  <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
 </head>
 <body>
 
@@ -81,7 +81,7 @@
 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories/">分类：日常随笔</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/shuoshuo/">说说</a><a href="/posts/emoji-blob/">表情速查</a></nav></div>
+<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories/">分类：日常随笔</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/posts/emoji-blob/">表情速查</a></nav></div>
 <div class="post-list post"><a class="post-card post photo" href="/posts/hutao-shake/">
 <div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.imgdb.cn/item/634234eb16f2c2beb1f90a24.png"/><div class="cover-info"position="top"><div class="cap">俺滴胡桃，完成啦啊哈哈哈</div><div class="title">胡桃摇</div></div></div>
 </a></div>
@@ -136,7 +136,7 @@
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"placeholder":"Power by Algolia","sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -346,7 +346,7 @@
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {

@@ -14,7 +14,6 @@ utils.jq(() => {
       }
       utils.request(el, apiUrl, function (data) {
         $(el).append(data.result)
-        addCopyButtons()
       })
     }
   });

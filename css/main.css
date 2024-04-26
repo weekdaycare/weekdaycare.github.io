@@ -320,6 +320,7 @@ a.button.start.gradient {
   right: 0;
   bottom: 2rem;
   float: right;
+  transform: translateZ(1px);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -2977,7 +2978,7 @@ details.folding[child=iframe] >div.body {
 }
 .tag-plugin.grid[bg='card']>.cell:hover {
   box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
-  transform: translate3d(0, 0, 1px);
+  transform: translateZ(1px);
 }
 .md-text .tag-plugin.hashtag {
   padding: 0px 8px;
@@ -3153,7 +3154,7 @@ p>strong>span.tag-plugin.icon {
 }
 .md-text .link-card:hover {
   box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
-  transform: translate3d(0, 0, 1px);
+  transform: translateZ(1px);
 }
 .md-text .link-card.plain {
   flex-direction: row;
@@ -3724,7 +3725,7 @@ p>strong>span.tag-plugin.icon {
 }
 .sites-wrap .site-card .card-link:hover >img {
   box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
-  transform: translate3d(0, 0, 1px);
+  transform: translateZ(1px);
 }
 .md-text .tag-plugin.span {
   color: var(--text-p2);
@@ -4616,7 +4617,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .widget-wrapper.ghrepo .repo:hover {
   box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
-  transform: translate3d(0, 0, 1px);
+  transform: translateZ(1px);
 }
 .widget-wrapper.ghrepo .repo >div+div {
   margin-top: 0.5rem;
@@ -5573,7 +5574,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .post-list .post-card:hover {
   box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
-  transform: translate3d(0, 0, 1px);
+  transform: translateZ(1px);
 }
 .post-list .post-card .excerpt {
   margin: 1rem 0;
