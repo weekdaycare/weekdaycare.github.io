@@ -335,7 +335,6 @@ tag_plugins:
   # {% coding %}
   coding:
     api: https://code.weekdaycare.cn/
-    css: 
   # {% timeline %}
   timeline:
     max-height: 80vh
