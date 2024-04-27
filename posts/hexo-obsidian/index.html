@@ -233,7 +233,7 @@ hexo 根目录下依次执行以下命令，将 <code>your-name/your-repo</code>
 替换为你的仓库地址。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line">git remote add origin https://github.com/your-name/your-repo</span><br><span class="line">git push -u origin main </span><br></pre></td></tr></table></figure>
 <p>上传完成之后你的 github 空仓库现在应该有如下内容</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo 根目录</span><br><span class="line">├─ .github</span><br><span class="line">│    ├─ dependabot.yml</span><br><span class="line">│    └─ workflows</span><br><span class="line">│          └─ auto_deploy.yml</span><br><span class="line">├─ _config.stellar.yml</span><br><span class="line">├─ _config.yml</span><br><span class="line">├─ .gitignore</span><br><span class="line">└─ package.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>github仓库</span></figcaption><table><tr><td class="code"><pre><span class="line">├─ .github</span><br><span class="line">│    ├─ dependabot.yml</span><br><span class="line">│    └─ workflows</span><br><span class="line">│          └─ auto_deploy.yml</span><br><span class="line">├─ _config.stellar.yml</span><br><span class="line">├─ _config.yml</span><br><span class="line">├─ .gitignore</span><br><span class="line">└─ package.json</span><br></pre></td></tr></table></figure>
 <h2 id="obsidian">Obsidian</h2>
 <p>PC 下载安装 Obsidian ，移动端先不要急，PC
 配置好之后再配置移动端。</p>
@@ -663,7 +663,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"coding":{"js":"/js/services/coding.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"coding":{"js":"/js/services/coding.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"artalk":{"js":"/js/services/artalk_new.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"giscus":{"js":"/js/services/giscus_new.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {
