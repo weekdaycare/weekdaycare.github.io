@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.0" theme-name="Stellar" theme-version="1.28.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -36,21 +36,21 @@
 <meta property="article:published_time" content="2022-10-04T04:42:34.000Z">
 <meta property="article:modified_time" content="2022-10-06T04:00:00.000Z">
 <meta property="article:author" content="星日语">
-<meta property="article:tag" content="白嫖">
 <meta property="article:tag" content="教程">
+<meta property="article:tag" content="白嫖">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://bu.dusays.com/2022/10/12/634681890d04b.webp">
   
   
   
-  <meta name="keywords" content="白嫖,教程">
+  <meta name="keywords" content="教程,白嫖">
 
   <!-- feed -->
   
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.28.0">
+  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -77,7 +77,7 @@
 <widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">小时光：</span></div><div class="widget-body fs14"><p>就随着暖暖的风慢慢地走牵着你的手，甜蜜的话说不出口。小时候心脏扑通扑通那种感觉叫心动，长大之后我们都懂。</p>
 
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
-<a class="link" title="星语日点灯" href="/about/"><div class="flex"><span>星语日点灯</span></div></a></div></div></widget>
+<a class="link" title="点不点灯？" href="javascript:switchTheme()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-1.65 0-2.825-1.175T8 17H5q-.825 0-1.412-.587T3 15q0-3.5 2.3-6.038T11 6.05V4q0-.425.288-.712T12 3t.713.288T13 4v2.05q3.4.375 5.7 2.913T21 15q0 .825-.587 1.413T19 17h-3q0 1.65-1.175 2.825T12 21m-7-6h14q0-2.9-2.05-4.95T12 8t-4.95 2.05T5 15m7 4q.825 0 1.413-.587T14 17h-4q0 .825.588 1.413T12 19m0-2"/></svg><span>点不点灯？</span></div></a></div></div></widget>
 
 
 
@@ -528,7 +528,71 @@ info里面的链接呢？</span></a></li><li class="toc-item toc-level-3"><a cla
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.0" async></script>
+<script src="/js/main.js?v=1.28.1" async></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
 
 <!-- optional -->
 
