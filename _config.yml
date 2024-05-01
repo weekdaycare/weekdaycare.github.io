@@ -82,6 +82,13 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+archive_generator:
+  per_page: 1000
+  yearly: false
+  monthly: false
+  daily: false
+  order_by: -date
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -157,7 +164,7 @@ sitemap:
 service_worker:
   maximumFileSizeToCacheInBytes: 5242880
   staticFileGlobs:
-  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+  - public/**/*.{js,html,css,png,jpg,webp,gif,svg,eot,json,woff,woff2}
   stripPrefix: public
   verbose: true
   runtimeCaching:
@@ -169,11 +176,7 @@ service_worker:
       handler: cacheFirst
       options:
         origin: cdnjs.onmicrosoft.cn
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: ik.imagekit.io
-    - urlPattern: /*
+    - urlPattern: /raw/*
       handler: cacheFirst
       options:
         origin: raw.weekdaycare.cn
@@ -181,26 +184,12 @@ service_worker:
       handler: cacheFirst
       options:
         origin: npm.onmicrosoft.cn
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: bu.dusays.com
+        
 
-cinema: # 追剧设置
-  enable: true
-  path:
-  vmid:
-  title: '追剧列表'
-  quote: '生命不息，追剧不止！'
-  show: 1
-  lazyload: true
-  srcValue: '__image__'
-  lazyloadAttrName: 'data-src=__image__'
-  loading:
-  metaColor:
-  color:
-  webp:
-  progress:
-  extraOrder:
-  order:
-  extra_options:
-    key: value
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

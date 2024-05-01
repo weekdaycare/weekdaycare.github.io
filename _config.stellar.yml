@@ -32,7 +32,7 @@ menubar:
     - id: post
       # icon: ph:signpost-duotone
       theme: var(--text)
-      title: 文章
+      title: 星雨
       url: /
     #- id: doc
       # icon: ph:books-duotone
@@ -40,13 +40,13 @@ menubar:
     #  title: 文档
     #  url: /doc/
     - id: shuoshuo
-      title: 说说
+      title: 星语
       theme: var(--text)
       url: /shuoshuo/
     - id: about
       # icon: ph:planet-duotone
       theme: var(--text)
-      title: 更多
+      title: 星与
       url: /about/
 
 
@@ -65,7 +65,6 @@ site_tree:
     leftbar: welcome, recent # for categories/tags/archives
     rightbar: new_comment, timeline
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
-      '说说': /shuoshuo/
       '表情速查': /posts/emoji-blob/
   # 博客专栏列表页配置
   index_topic:
@@ -150,7 +149,6 @@ search:
     field: all # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
-    placeholder: 'Power by Algolia'
   algolia_search:
     appId: 'AIDF40S612'
     apiKey: '7ee4e2d3c61bbf8a826cb3e0ab74b0cf'
@@ -276,6 +274,9 @@ footer:
     # comments:
     #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
     #   url: /about/#comments
+    # theme:
+    #   icon: default:theme
+    #   onclick: 'switchTheme()'
   sitemap:
     # '博客':
     #   - '[近期](/)'
@@ -334,7 +335,7 @@ tag_plugins:
     toast: 复制成功( •̀ ω •́ )✧
   # {% coding %}
   coding:
-    api: https://code.weekdaycare.cn/
+    api: https://raw.weekdaycare.cn/code/
   # {% timeline %}
   timeline:
     max-height: 80vh
@@ -343,7 +344,7 @@ tag_plugins:
     default_color: orange # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
   # {% hashtag %}
   hashtag:
-    default_color: # red, orange, yellow, green, cyan, blue, purple
+    default_color: orange # red, orange, yellow, green, cyan, blue, purple
   # {% okr o1 percent:0.5 status:normal %}
   okr:
     border: true # 是否显示边框
@@ -388,9 +389,11 @@ data_services:
     js: /js/services/siteinfo.js
     # 设置 api 可以自动提取网页标题、图标，服务部署方法：https://github.com/xaoxuu/site-info-api/
     # 接口测试通过后，把按钮的 href 部分替换成 {href} 之后填写到下方，例如：https://api.vlts.cc/site_info/v1?url={href}
-    api: 
+    api: https://raw.weekdaycare.cn/site/api/v1?url={href}
   ghinfo:
     js: /js/services/ghinfo.js
+  coding:
+    js: /js/services/coding.js
   # 网格布局类
   sites:
     js: /js/services/sites.js
@@ -410,9 +413,8 @@ data_services:
     js: /js/services/twikoo_new.js
   waline:
     js: /js/services/waline_new.js
-  coding:
-    js: /js/services/coding.js
-
+  giscus:
+    js: /js/services/giscus_new.js
 
 
 # 扩展插件接入方法：(插件名下面用 #plugin# 代替)
@@ -619,6 +621,7 @@ api_host:
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css?updatedAt=1711547815661' /> 
+    - <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' /> 
+
   script:
     - <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
