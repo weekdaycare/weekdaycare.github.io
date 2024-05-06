@@ -6,7 +6,6 @@ node_modules/
 public/
 .deploy*/
 .vscode/
-_multiconfig.yml
 themes/
 source/
 yarn.lock
