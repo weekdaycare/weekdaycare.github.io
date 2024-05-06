@@ -22,11 +22,24 @@ module.exports.config = {
         }
     },
     dom: {
-        onsuccess: undefined
+        onsuccess: () => {
+            caches.match('https://id.v3/').then(function (response) {
+                if (response) {
+                    // 如果找到了匹配的缓存响应
+                    response.json().then(function () {
+                        hud && hud.toast('SW已更新', 5000);
+                    });
+                } else {
+                    console.info('未找到匹配的缓存响应');
+                }
+            }).catch(function (error) {
+                console.error('缓存匹配出错:', error);
+            });
+        },
     },
     json: {
         maxHtml: 15,
-        charLimit: 0,
+        charLimit: 256,
         merge: ['categories', 'tags', 'archives'],
         exclude: {
             localhost: [],
