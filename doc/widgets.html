@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+                (() => {
+                    let sw = navigator.serviceWorker
+                    let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                    if (!sw?.register('/sw.js')
+                        
+                        ?.catch(error)
+                    ) error()
+                })()
+            </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -51,7 +60,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 
@@ -65,7 +74,7 @@
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" data-filter="/doc/" placeholder="要找点什么？"></form><div id="search-result"></div><div class="search-no-result">啥都没有</div></div>
 
 
-<nav class="menu dis-select"><a class="nav-item" title="文章" href="/" style="color:var(--text)"><span>文章</span></a><a class="nav-item" title="说说" href="/shuoshuo/" style="color:var(--text)"><span>说说</span></a><a class="nav-item" title="更多" href="/about/" style="color:var(--text)"><span>更多</span></a></nav>
+<nav class="menu dis-select"><a class="nav-item" title="星雨" href="/" style="color:var(--text)"><span>星雨</span></a><a class="nav-item" title="星语" href="/shuoshuo/" style="color:var(--text)"><span>星语</span></a><a class="nav-item" title="星与" href="/about/" style="color:var(--text)"><span>星与</span></a></nav>
 </div>
 <div class="widgets">
 
@@ -597,4 +606,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</div></body></html>
