@@ -53,17 +53,16 @@
 web: {
 clean: true,
 search: false,
-match: url => url.host === ejectDomain && url.pathname.match(/\.(xml|json|js|css|html|svg)$/)}
+match: url => url.host === ejectDomain}
 ,
 cdn: {
 clean: true,
 search: false,
-match: url => url.host.endsWith('onmicrosoft.cn') || url.host === 'raw.weekdaycare.cn' && url.pathname.startsWith('/raw/')}
-,
-image: {
-clean: false,
-search: false,
-match: url => url.host === 'bu.dusays.com' && url.pathname.match(/\.(jpg|png|gif|webp)$/)}
+match: url => [
+      "bu.dusays.com",
+      "onmicrosoft.cn",
+      "raw.weekdaycare.cn/raw"
+    ].includes(url.host)}
 }
 
 let isCors = () => false

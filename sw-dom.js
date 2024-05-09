@@ -20,7 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const SESSION_KEY = 'updated'
     // noinspection JSFileReferences
-    const onSuccess = () => {}
+    const onSuccess = () => {
+      caches.match('https://id.v3/').then(function (response) {
+        if (response) {
+          // 如果找到了匹配的缓存响应
+          response.json().then(function (data) {
+            hud && hud.toast(`已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`, 5000);
+          });
+        } else {
+          hud.toast('未找到匹配的缓存响应');
+        }
+      }).catch(function (error) {
+        hud.toast('缓存匹配出错:', error);
+      });
+    };
     if (sessionStorage.getItem(SESSION_KEY)) {
         onSuccess()
         sessionStorage.removeItem(SESSION_KEY)

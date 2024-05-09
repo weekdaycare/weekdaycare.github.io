@@ -2,15 +2,24 @@
 <!DOCTYPE html><html lang="zh-CN">
 
 <head><!-- hexo injector head_begin start --><script>
-                (() => {
-                    let sw = navigator.serviceWorker
-                    let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
-                    if (!sw?.register('/sw.js')
-                        
-                        ?.catch(error)
-                    ) error()
-                })()
-            </script><!-- hexo injector head_begin end -->
+          (() => {
+              const sw = navigator.serviceWorker;
+              if (!sw) {
+                  console.error('Service Worker 不支持此浏览器。');
+                  return;
+              }
+              sw.register('/sw.js')
+                  .then(registration => {
+                      if (onsuccess) {
+                          onsuccess(registration);
+                      }
+                      console.log('Service Worker 注册成功。');
+                  })
+                  .catch(error => {
+                      console.error('Service Worker 注册失败：', error);
+                  });
+          })();
+      </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   <meta name="robots" content="noindex,nofollow">
