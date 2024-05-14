@@ -15,7 +15,7 @@ timezone: ''
 
 # URL
 # # If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://weekdaycare.cn
+url: http://weekdaycare.cn
 root: /
 # permalink: :year/:month/:day/:title/  # 旧的注释掉
 # permalink_defaults:                   # 旧的注释掉
@@ -40,7 +40,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: /_drafts/dict.md
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -154,16 +154,34 @@ feed:
   autodiscovery: true
   
 
-swpp:
-  # 是否启用插件
-  enable: true
-  # 是否在发布前自动执行脚本
-  auto_exec: true
-  # 构建时拉取版本文件的警告等级，缺省为 1（该功能仅在 swpp-backends 版本号 >= 2.1.2 时可用）
-  # 0 - 表示不允许出现 404 情况；1 - 表示允许服务器返回 404 状态码；2 - 表示允许任何 404（包括 DNS 解析失败等）
-  warn_level: 2
-  # 检查版本的 URL，不能以 '/' 结尾
-  # npm_url: 'https://registry.npmmirror.com'
+service_worker:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+  - public/**/*.{js,html,css,svg,xml,webp,gif,eot,json,woff,woff2}
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin:
+          - jsd.onmicrosoft.cn
+          - cdnjs.onmicrosoft.cn
+          - npm.onmicrosoft.cn
+          - bu.dusays.com
+    - urlPattern: /raw/*
+      handler: cacheFirst
+      options:
+        origin: raw.weekdaycare.cn
+    - urlPattern: /font/*
+      handler: cacheFirst
+      options:
+        origin: raw.weekdaycare.cn
+    - urlPattern: /site/*
+      handler: cacheFirst
+      options:
+        origin: raw.weekdaycare.cn
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

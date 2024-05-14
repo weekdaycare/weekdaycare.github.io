@@ -87,7 +87,8 @@ jobs:
           hexo d
           
       - name: Refresh CDN
-        run: node cdn-refresh.js
-        env:
-          UPYUN_USERNAME: ${{ secrets.UPYUN_USERNAME }}
-          UPYUN_PASSWORD: ${{ secrets.UPYUN_PASSWORD }}
+        uses: yiyungent/upyun-action@main
+        with:
+          upyun_username: ${{ secrets.UPYUN_USERNAME }}
+          upyun_password: ${{ secrets.UPYUN_PASSWORD }}
+          refresh_cache_urls: "https://weekdaycare.cn/*"
