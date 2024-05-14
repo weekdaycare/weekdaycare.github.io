@@ -2225,79 +2225,79 @@ a.tag-plugin.button:hover {
   width: 2px;
   height: 10px;
 }
-.md-text .tag-plugin.checkbox[symbol=minus] input[type=checkbox]:before {
+.md-text .tag-plugin.checkbox[data-symbol=minus] input[type=checkbox]:before {
   transform: rotate(0);
   left: 1px;
   top: 5px;
   width: 0px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=minus] input[type=checkbox]:after {
+.md-text .tag-plugin.checkbox[data-symbol=minus] input[type=checkbox]:after {
   transform: rotate(0);
   left: 1px;
   top: 5px;
   width: 0px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=minus] input[type=checkbox]:checked:before {
+.md-text .tag-plugin.checkbox[data-symbol=minus] input[type=checkbox]:checked:before {
   left: 1px;
   top: 5px;
   width: 10px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=minus] input[type=checkbox]:checked:after {
+.md-text .tag-plugin.checkbox[data-symbol=minus] input[type=checkbox]:checked:after {
   left: 1px;
   top: 5px;
   width: 10px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=plus] input[type=checkbox]:before {
+.md-text .tag-plugin.checkbox[data-symbol=plus] input[type=checkbox]:before {
   transform: rotate(0);
   left: 1px;
   top: 5px;
   width: 0px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=plus] input[type=checkbox]:after {
+.md-text .tag-plugin.checkbox[data-symbol=plus] input[type=checkbox]:after {
   transform: rotate(0);
   left: 5px;
   top: 1px;
   width: 2px;
   height: 0px;
 }
-.md-text .tag-plugin.checkbox[symbol=plus] input[type=checkbox]:checked:before {
+.md-text .tag-plugin.checkbox[data-symbol=plus] input[type=checkbox]:checked:before {
   left: 1px;
   top: 5px;
   width: 10px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=plus] input[type=checkbox]:checked:after {
+.md-text .tag-plugin.checkbox[data-symbol=plus] input[type=checkbox]:checked:after {
   left: 5px;
   top: 1px;
   width: 2px;
   height: 10px;
 }
-.md-text .tag-plugin.checkbox[symbol=times] input[type=checkbox]:before {
+.md-text .tag-plugin.checkbox[data-symbol=times] input[type=checkbox]:before {
   transform: rotate(45deg);
   left: 3px;
   top: 1px;
   width: 0px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=times] input[type=checkbox]:after {
+.md-text .tag-plugin.checkbox[data-symbol=times] input[type=checkbox]:after {
   transform: rotate(135deg);
   right: 3px;
   top: 1px;
   width: 0px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=times] input[type=checkbox]:checked:before {
+.md-text .tag-plugin.checkbox[data-symbol=times] input[type=checkbox]:checked:before {
   left: 1px;
   top: 5px;
   width: 10px;
   height: 2px;
 }
-.md-text .tag-plugin.checkbox[symbol=times] input[type=checkbox]:checked:after {
+.md-text .tag-plugin.checkbox[data-symbol=times] input[type=checkbox]:checked:after {
   right: 1px;
   top: 5px;
   width: 10px;
@@ -6346,19 +6346,6 @@ a[data-fancybox] {
 .twikoo svg {
   color: var(--text-p1);
 }
-.tk-expand {
-  width: 100%;
-  cursor: pointer;
-  padding: 0.75em;
-  text-align: center;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
-  border-radius: 6px;
-  letter-spacing: 5px;
-  background: var(--block);
-}
 .twikoo .tk-comments > .tk-submit {
   overflow: visible !important;
 }
@@ -6476,6 +6463,19 @@ a[data-fancybox] {
 }
 .twikoo .tk-comments .tk-action-link {
   color: var(--text-p2);
+  background: var(--block);
+  border-radius: 6px;
+  padding: 2px 10px 2px 14px;
+}
+.twikoo .tk-comments .tk-action-link:hover {
+  background: var(--card);
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+}
+.twikoo .tk-comments .tk-action-link:first-child {
+  display: none;
 }
 .twikoo .tk-comments .tk-row .tk-avatar {
   display: none;
@@ -6518,6 +6518,16 @@ a
 .twikoo .tk-comments .tk-extras {
   margin-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.twikoo .tk-comments .tk-expand {
+  width: auto;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  border-radius: 6px;
+  letter-spacing: 5px;
+  background: var(--block);
 }
 .twikoo .tk-comments .tk-expand:hover {
   background-color: var(--card);

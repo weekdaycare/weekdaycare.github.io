@@ -6,7 +6,7 @@
   <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="http://weekdaycare.cn/"/>
-  <updated>2024-05-06T08:50:00.000Z</updated>
+  <updated>2024-05-10T03:16:00.000Z</updated>
   <id>http://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拣爱</title>
+    <link href="http://weekdaycare.cn/posts/lovechoice/"/>
+    <id>http://weekdaycare.cn/posts/lovechoice/</id>
+    <published>2024-05-10T03:16:00.000Z</published>
+    <updated>2024-05-10T03:16:00.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin colorful note&quot; &gt;&lt;div class=&quot;body&quot;&gt;&lt;p&gt;下面内容包含大量剧透以及瞎编警告，请酌情观看😶‍🌫️&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;tag-plugin audio&quot;&gt;
+    &lt;iframe src=&quot;//music.163.com/outchain/player?type=2&amp;i</summary>
+      
+    
+    
+    
+    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="游戏" scheme="http://weekdaycare.cn/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>五月，i人也小e了一下</title>
@@ -31,13 +60,13 @@
     <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
+    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
     
     <category term="夏天" scheme="http://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
     
   </entry>
   
@@ -56,44 +85,15 @@
     <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
     <category term="失败" scheme="http://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/"/>
     
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
     <category term="番剧" scheme="http://weekdaycare.cn/tags/%E7%95%AA%E5%89%A7/"/>
     
+    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    
     <category term="女朋友" scheme="http://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>探索Hexo多端写作</title>
-    <link href="http://weekdaycare.cn/posts/hexo-obsidian/"/>
-    <id>http://weekdaycare.cn/posts/hexo-obsidian/</id>
-    <published>2024-04-19T04:31:30.000Z</published>
-    <updated>2024-04-19T10:31:30.000Z</updated>
-    
-    
-    <summary type="html">如何在不离开编辑器的情况下完成并推送一篇文章到博客？</summary>
-    
-    
-    
-    <category term="奇技淫巧" scheme="http://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
-    
-    
-    <category term="教程" scheme="http://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="整活" scheme="http://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/"/>
-    
-    <category term="白嫖" scheme="http://weekdaycare.cn/tags/%E7%99%BD%E5%AB%96/"/>
-    
-    <category term="hexo" scheme="http://weekdaycare.cn/tags/hexo/"/>
-    
-    <category term="Stellar" scheme="http://weekdaycare.cn/tags/Stellar/"/>
-    
-    <category term="markdown" scheme="http://weekdaycare.cn/tags/markdown/"/>
     
   </entry>
   

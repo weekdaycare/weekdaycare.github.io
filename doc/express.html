@@ -1,25 +1,7 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head><!-- hexo injector head_begin start --><script>
-          (() => {
-              const sw = navigator.serviceWorker;
-              if (!sw) {
-                  console.error('Service Worker 不支持此浏览器。');
-                  return;
-              }
-              sw.register('/sw.js')
-                  .then(registration => {
-                      if (onsuccess) {
-                          onsuccess(registration);
-                      }
-                      console.log('Service Worker 注册成功。');
-                  })
-                  .catch(error => {
-                      console.error('Service Worker 注册失败：', error);
-                  });
-          })();
-      </script><!-- hexo injector head_begin end -->
+<head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -69,7 +51,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
+</head>
 <body>
 
 
@@ -629,4 +611,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div></body></html>
+</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

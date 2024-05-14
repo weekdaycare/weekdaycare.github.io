@@ -1,25 +1,7 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head><!-- hexo injector head_begin start --><script>
-          (() => {
-              const sw = navigator.serviceWorker;
-              if (!sw) {
-                  console.error('Service Worker 不支持此浏览器。');
-                  return;
-              }
-              sw.register('/sw.js')
-                  .then(registration => {
-                      if (onsuccess) {
-                          onsuccess(registration);
-                      }
-                      console.log('Service Worker 注册成功。');
-                  })
-                  .catch(error => {
-                      console.error('Service Worker 注册失败：', error);
-                  });
-          })();
-      </script><!-- hexo injector head_begin end -->
+<head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   <meta name="robots" content="noindex,follow">
@@ -67,7 +49,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
+</head>
 <body>
 
 <div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
@@ -87,7 +69,7 @@
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="星光" href="javascript:switchTheme()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-1.65 0-2.825-1.175T8 17H5q-.825 0-1.412-.587T3 15q0-3.5 2.3-6.038T11 6.05V4q0-.425.288-.712T12 3t.713.288T13 4v2.05q3.4.375 5.7 2.913T21 15q0 .825-.587 1.413T19 17h-3q0 1.65-1.175 2.825T12 21m-7-6h14q0-2.9-2.05-4.95T12 8t-4.95 2.05T5 15m7 4q.825 0 1.413-.587T14 17h-4q0 .825.588 1.413T12 19m0-2"/></svg><span>星光</span></div></a></div></div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a><a class="item title" href="/posts/hexo-obsidian/"><span class="title">探索Hexo多端写作</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -562,4 +544,4 @@
 
 <!-- inject -->
 <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
-</div></body></html>
+</div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
