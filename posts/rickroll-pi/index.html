@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="前言 又是摸鱼划水的一天，我打开了 Rss 阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。 “罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？” 少年再次动了动手指，准备退出阅读器。却又忘记了 iOS 反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你被骗了，但是树莓派">
-<meta property="og:url" content="http://weekdaycare.cn/posts/rickroll-pi/">
+<meta property="og:url" content="https://weekdaycare.github.io/posts/rickroll-pi/">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="前言 又是摸鱼划水的一天，我打开了 Rss 阅读器，试图从互联网中找到一些新鲜有趣的事物。几分钟后，一位少年手指微动，失望地从正在阅读的文章中退出来，似乎这一次并没有汲取到他所中意的东西。 “罢了，这只是无数次探讨中的一次，没什么好伤感的，互联网就是这样的，不是吗？” 少年再次动了动手指，准备退出阅读器。却又忘记了 iOS 反人类的返回机制，进入了一个神秘的熟悉又陌生之地。神秘之门的门牌">
 <meta property="og:locale" content="zh_CN">
@@ -45,14 +54,14 @@
 <meta property="article:author" content="星日语">
 <meta property="article:tag" content="整活">
 <meta property="article:tag" content="树莓派">
-<meta property="article:tag" content="RickRoll">
 <meta property="article:tag" content="Linux">
+<meta property="article:tag" content="RickRoll">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://bu.dusays.com/2022/12/29/63ad5cad90aa2.webp">
   
   
   
-  <meta name="keywords" content="整活,树莓派,RickRoll,Linux">
+  <meta name="keywords" content="整活,树莓派,Linux,RickRoll">
 
   <!-- feed -->
   
@@ -68,7 +77,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 <div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
@@ -478,6 +487,34 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -551,13 +588,13 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

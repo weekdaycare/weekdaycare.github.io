@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="1.27.0 ⚠️ 主题配置变更 取消 layout: wiki 不再需要在 wiki 类页面文章的 front-matter 中设置 layout: wiki，例如 blog&#x2F;source&#x2F;wiki&#x2F;stellar&#x2F;index.md---wiki: hexo-stellar # 这是项目id，对应 &#x2F;data&#x2F;wiki&#x2F;hexo-stellar.ymltitle: 这是分页标题---">
 <meta property="og:type" content="website">
 <meta property="og:title" content="跟随更新">
-<meta property="og:url" content="http://weekdaycare.cn/doc/update.html">
+<meta property="og:url" content="https://weekdaycare.github.io/doc/update.html">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="1.27.0 ⚠️ 主题配置变更 取消 layout: wiki 不再需要在 wiki 类页面文章的 front-matter 中设置 layout: wiki，例如 blog&#x2F;source&#x2F;wiki&#x2F;stellar&#x2F;index.md---wiki: hexo-stellar # 这是项目id，对应 &#x2F;data&#x2F;wiki&#x2F;hexo-stellar.ymltitle: 这是分页标题---">
 <meta property="og:locale" content="zh_CN">
@@ -58,7 +67,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 
@@ -232,6 +241,8 @@ target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/pages/#许�
 </ol>
 <div class="tag-plugin quot"><h2 class="content" id="1.23.0" type="icon"><a href="#1.23.0" class="headerlink" title="1.23.0"></a><img class="icon prefix lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/10/24/63567d3e07da3.png" /><span class="text">1.23.0</span><span class="empty"></span></h2></div>
 <p>waiting for write...</p>
+
+<div class="article-footer fs14"></div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/">说在前头</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/structure.html">文件目录树</a></div></section></div>
 
@@ -484,6 +495,34 @@ target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/pages/#许�
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -557,13 +596,13 @@ target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/pages/#许�
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

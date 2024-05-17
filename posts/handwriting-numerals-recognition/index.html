@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,22 +32,22 @@
     <meta name="description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写数字识别模型">
-<meta property="og:url" content="http://weekdaycare.cn/posts/handwriting-numerals-recognition/">
+<meta property="og:url" content="https://weekdaycare.github.io/posts/handwriting-numerals-recognition/">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="一、前言 当涉及手写数字识别时，我们通常指的是将手写数字的图像作为输入，然后使用机器学习或深度学习模型对这些图像进行分类，以确定它们代表的数字是什么。手写数字识别在许多现实世界的应用中都具有重要意义，比如邮政编码识别、支票处理、自动化填写表格等。此外，随着智能手机和平板电脑的普及，手写数字输入也成为了用户与设备交互的一种方式，因此手写数字识别模型在移动设备上也有着重要的应用前景。 在本文中，我">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-16T14:09:38.000Z">
 <meta property="article:modified_time" content="2023-12-16T15:34:40.000Z">
 <meta property="article:author" content="星日语">
-<meta property="article:tag" content="作业">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="整活">
 <meta property="article:tag" content="代码">
+<meta property="article:tag" content="作业">
+<meta property="article:tag" content="整活">
+<meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="作业,编程,整活,代码">
+  <meta name="keywords" content="代码,作业,整活,编程">
 
   <!-- feed -->
   
@@ -54,7 +63,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 <div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
@@ -550,6 +559,34 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -623,13 +660,13 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

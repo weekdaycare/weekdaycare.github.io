@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="我十分建议您先去 blog&#x2F;scaffolds 目录中改动 post.md ，新建一篇文章时的以该文件为模板新建文章，配置一次之后就不需要每次都去写那冗杂的 front-matter ，下面给出全面配置，请按需删改。 blog&#x2F;scaffolds&#x2F;post.md---title: &#123;&#123; title &#125;&#125;h1: &#123;&#123; title &amp;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="front-matter">
-<meta property="og:url" content="http://weekdaycare.cn/doc/front-matter.html">
+<meta property="og:url" content="https://weekdaycare.github.io/doc/front-matter.html">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="我十分建议您先去 blog&#x2F;scaffolds 目录中改动 post.md ，新建一篇文章时的以该文件为模板新建文章，配置一次之后就不需要每次都去写那冗杂的 front-matter ，下面给出全面配置，请按需删改。 blog&#x2F;scaffolds&#x2F;post.md---title: &#123;&#123; title &#125;&#125;h1: &#123;&#123; title &amp;">
 <meta property="og:locale" content="zh_CN">
@@ -51,7 +60,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 
@@ -100,6 +109,8 @@
 ，新建一篇文章时的以该文件为模板新建文章，配置一次之后就不需要每次都去写那冗杂的
 <code>front-matter</code> ，下面给出全面配置，请按需删改。</p>
 <figure class="highlight md"><figcaption><span>blog/scaffolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">h1: &#123;&#123; title &#125;&#125; # 默认的一级标题是 title，可以指定 h1 为一级标题，也可以设置 h1: &#x27;&#x27; 来隐藏标题</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: []</span><br><span class="line">categories: []</span><br><span class="line">description: </span><br><span class="line">cover: # 文章封面</span><br><span class="line">banner: # 文章横幅</span><br><span class="line">poster: # 海报（可选，全图封面卡片）</span><br><span class="line">  topic: # 标题上方的小字</span><br><span class="line">  headline: # 大标题 # 必选</span><br><span class="line">  caption: # 标题下方的小字 </span><br><span class="line">  color: # 标题颜色 </span><br><span class="line">open<span class="emphasis">_graph: # 如果分享到社交平台的缩略图不理想，可以通过这个特性覆盖为自己想要的</span></span><br><span class="line"><span class="emphasis">  image: </span></span><br><span class="line"><span class="emphasis">sidebar:</span></span><br><span class="line"><span class="emphasis">  - toc # 只写一个字符串代表引用对应的通用组件</span></span><br><span class="line"><span class="emphasis">  - override: timeline # 覆盖组件</span></span><br><span class="line"><span class="emphasis">    api: https://xxx # 在该页面设置单独的 api 地址</span></span><br><span class="line"><span class="emphasis">  - layout: markdown</span></span><br><span class="line"><span class="emphasis">    title: &#x27;&#x27;</span></span><br><span class="line"><span class="emphasis">    content: | # 支持 MD 语法</span></span><br><span class="line"><span class="emphasis">      </span></span><br><span class="line"><span class="emphasis">    src: # 可以设置外部 md 文件链接</span></span><br><span class="line"><span class="emphasis">mermaid: # 先安装mermaid插件，要使用图表请在该处写上 true</span></span><br><span class="line"><span class="emphasis">katex: # 要使用katex请在该处写上 true</span></span><br><span class="line"><span class="emphasis">author: # 若配置了作者信息，默认作者为第一作者，用该项指定其他作者</span></span><br><span class="line"><span class="emphasis">references: # 用 markdown 格式填写引用的文章</span></span><br><span class="line"><span class="emphasis">  - &#x27;[](<span class="link"></span>)&#x27;</span></span><br><span class="line"><span class="emphasis">---</span></span><br></pre></td></tr></table></figure>
+
+<div class="article-footer fs14"></div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/express.html">文本修饰标签集</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/widgets.html">widgets.yml</a></div></section></div>
 
@@ -347,6 +358,34 @@
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -420,13 +459,13 @@
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="最近看到有不少朋友在问Stellar怎么更新版本，应该是刚刚接触hexo，那俺就浅浅讲一下吧 Git  Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub  首先我们需要对git的基本流程有个初步的概念，这里我推荐你花几分钟分钟去看 G">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Stellar更新&amp;备份">
-<meta property="og:url" content="http://weekdaycare.cn/posts/stellar-update/">
+<meta property="og:url" content="https://weekdaycare.github.io/posts/stellar-update/">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="最近看到有不少朋友在问Stellar怎么更新版本，应该是刚刚接触hexo，那俺就浅浅讲一下吧 Git  Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub  首先我们需要对git的基本流程有个初步的概念，这里我推荐你花几分钟分钟去看 G">
 <meta property="og:locale" content="zh_CN">
@@ -50,6 +59,9 @@
 <meta property="og:image" content="https://bu.dusays.com/2024/04/28/662e4e5a54ae8.webp">
 <meta property="og:image" content="https://bu.dusays.com/2024/04/28/662e4f6496247.webp">
 <meta property="og:image" content="https://bu.dusays.com/2024/04/28/662e5027043d7.webp">
+<meta property="og:image" content="https://bu.dusays.com/2024/05/15/6644262fdf6a6.webp">
+<meta property="og:image" content="https://bu.dusays.com/2024/05/15/6644276ac6944.webp">
+<meta property="og:image" content="https://bu.dusays.com/2024/05/15/66442989a3ab3.webp">
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatattentionreverse.png">
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatscared.png">
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatopenmouth.png">
@@ -80,7 +92,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 <div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
@@ -116,7 +128,7 @@
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2022-11-01T04:44:07.000Z">2022-11-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-28T12:44:07.000Z">2024-04-28</time></span></div>
-<div class="flex-row" id="post-wordcount"><span class="text word-count">字数：2.2k 字</span><span class="sep"></span><span class="text read-time">时长：7 分钟</span></div>
+<div class="flex-row" id="post-wordcount"><span class="text word-count">字数：2.5k 字</span><span class="sep"></span><span class="text read-time">时长：8 分钟</span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -159,7 +171,7 @@
 <div class="tag-plugin colorful note" ><div class="body"><p>稳定版由npm包发放，与github上的最新版比较可能会有延迟</p></div></div>
 <p>在 <code>package.json</code> 中修改 <code>stellar</code>
 的版本号为你想要的版本号，然后执行：</p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_14" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_14&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_12" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_12&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <div class="tag-plugin image"><div class="image-bg" style="background:white;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/11/01/6360b6fe92f43.webp" data-fancybox="true" style="width:500px;"/></div></div>
 <p>更新完记得对照更新日志进行迁移操作</p>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://xaoxuu.com/wiki/stellar/releases/" target="_blank" rel="external nofollow noopener noreferrer" cardlink api="https://raw.weekdaycare.cn/site/api/v1?url=https://xaoxuu.com/wiki/stellar/releases/" autofill="title,icon"><div class="left"><span class="title">https://xaoxuu.com/wiki/stellar/releases/</span><span class="cap link footnote">https://xaoxuu.com/wiki/stellar/releases/</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
@@ -176,7 +188,7 @@
 <figure class="highlight shell"><figcaption><span>blog根目录下gitbash</span></figcaption><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar</span><br></pre></td></tr></table></figure>
 <p>然后我们进入 <code>themes/stellar</code> 文件夹，在此目录下右键
 <code>git bash</code></p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_15" value="git pull"><button class="copy-btn" onclick="util.copy(&quot;copy_15&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_13" value="git pull"><button class="copy-btn" onclick="util.copy(&quot;copy_13&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h3 id="自定义">自定义</h3>
 <p>自定义主题源码的（你都会自定义了还需要我教你咋更新嘛🥹）有两种方案，一种是在
 github
@@ -226,9 +238,9 @@ github
 进行可视化操作，不需要敲命令，方便很多。（而且不会有瞎交 PR 的风险）</p>
 <p>与上文不同的是，这里我们需要你在本地设置上游仓库。首先在本地 stellar
 主题仓库中打开命令行，输入</p>
-<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_16" value="git remote add upstream git@github.com:xaoxuu/hexo-theme-stellar.git"><button class="copy-btn" onclick="util.copy(&quot;copy_16&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_14" value="git remote add upstream git@github.com:xaoxuu/hexo-theme-stellar.git"><button class="copy-btn" onclick="util.copy(&quot;copy_14&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <p>然后检查你链接的仓库</p>
-<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_17" value="git remote -v"><button class="copy-btn" onclick="util.copy(&quot;copy_17&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_15" value="git remote -v"><button class="copy-btn" onclick="util.copy(&quot;copy_15&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <p>输出如下</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">origin  git@github.com:weekdaycare/hexo-theme-stellar.git (fetch)</span><br><span class="line">origin  git@github.com:weekdaycare/hexo-theme-stellar.git (push)</span><br><span class="line">upstream        git@github.com:xaoxuu/hexo-theme-stellar.git (fetch)</span><br><span class="line">upstream        git@github.com:xaoxuu/hexo-theme-stellar.git (push)</span><br></pre></td></tr></table></figure>
 <p>这里解释一下</p>
@@ -237,7 +249,7 @@ github
 <li>origin 是你自己在 GitHub fork 的仓库，原始仓库的clone</li>
 </ul>
 <p>再同步一下上游的记录。</p>
-<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_18" value="git fetch upstream"><button class="copy-btn" onclick="util.copy(&quot;copy_18&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><span>$</span><input class="copy-area" id="copy_16" value="git fetch upstream"><button class="copy-btn" onclick="util.copy(&quot;copy_16&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <p>好了现在可以关掉你的命令行，使用 VS Code 打开你的本地主题仓库
 <code>Blog/theme/stellar</code></p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2024/04/28/662e4dbc9b677.webp" data-fancybox="true" style="width:400px;"/></div></div>
@@ -253,17 +265,32 @@ github
 <p>再选择你要拉取仓库的分支，选择 <code>main</code>
 分支。如果有冲突，则会在左侧展示待处理的冲突文件。点击即可进入文件，在右下角有一个
 <mark class="tag-plugin colorful mark" color="orange">在合并编辑器中解析</mark></p>
-<p>OK，Stellar更新至此就结束了<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatattentionreverse.png"/></span></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2024/05/15/6644262fdf6a6.webp" data-fancybox="true" style="width:700px;"/></div></div>
+<p>需要说明的是，左上方是主题更新传入的文件，右上方是本地文件（你更改的文件）</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2024/05/15/6644276ac6944.webp" data-fancybox="true" style="width:700px;"/></div></div>
+<ul>
+<li>接受传入：舍弃个人更改接受主题上游传入</li>
+<li>接受当前：使用个人更改而不使用上游传入</li>
+<li>接受组合：智能合并主题传入和个人更改，当个人改动比较复杂的时候这玩意儿没啥用</li>
+<li>下方的结果区域可以编辑手动合并两个文件</li>
+</ul>
+<p>完成文件的合并之后，点击完成合并，文件就会自动加入暂存区（<code>git add</code>），解决完所有的冲突之后，你可以在左上角的消息中填写此次
+commit 消息（简略）并提交，你也可以直接点击提交按钮再弹出的
+<code>COMMIT_EDITMSG</code> 中编写更详细的 commit 消息。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2024/05/15/66442989a3ab3.webp" data-fancybox="true" style="width:400px;"/></div></div>
+<p>在点击同步更改就会将本地的 commit 消息推送到 github
+上啦。OK，Stellar更新至此就结束了<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/ablobcatattentionreverse.png"/></span></p>
 <h2 id="备份">备份</h2>
 <h3 id="手动备份">手动备份</h3>
-<p>血与泪的教训，一定一定一定要备份，否则哪天你文件夹丢失了都没地方哭去<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatscared.png"/></span></p>
+<p>血与泪的教训，一定一定一定要备份，否则哪天你文件夹丢失了都没地方哭去
+<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatscared.png"/></span></p>
 <div class="tag-plugin colorful note" ><div class="body"><p>所有版本的备份方法都相同</p></div></div>
 <p>你需要备份你整个 <code>source</code> 文件夹和
 <code>_config.yml</code>、<code>_comfig.stellar.yml</code>、<code>package.json</code>
 即可</p>
 <p>恢复的时候把他们放到原来的位置，根目录下右键
 <code>git bash</code></p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_19" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_19&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_17" value="npm i"><button class="copy-btn" onclick="util.copy(&quot;copy_17&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 <h3 id="借助插件">借助插件</h3>
 <p>除了手动备份，你还可以借助 <code>hexo-git-backup</code> 插件</p>
 <p>链接在这里<span class="tag-plugin emoji"><img no-lazy="" class="inline lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatopenmouth.png"/></span></p>
@@ -547,6 +574,34 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -620,13 +675,13 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

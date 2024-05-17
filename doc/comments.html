@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Ar">
 <meta property="og:type" content="website">
 <meta property="og:title" content="评论组件">
-<meta property="og:url" content="http://weekdaycare.cn/doc/comments.html">
+<meta property="og:url" content="https://weekdaycare.github.io/doc/comments.html">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="Artalk blog&#x2F;_config.stellar.ymlcomments:  service: artalk  # Artalk  # https:&#x2F;&#x2F;artalk.js.org&#x2F;  artalk:    css: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Artalk.css    js: https:&#x2F;&#x2F;unpkg.com&#x2F;artalk@2.7&#x2F;dist&#x2F;Ar">
 <meta property="og:locale" content="zh_CN">
@@ -51,7 +60,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 
@@ -144,6 +153,8 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
 <p>如果您有多个页面需要另外一个数据库的评论数据，以 Beaudar
 为例，您可以这样：</p>
 <figure class="highlight yaml"><figcaption><span>blog/source/wiki/stellar/index.md</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">快速开始您的博客之旅</span></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">data-repo:</span> <span class="string">xaoxuu/hexo-theme-stellar</span></span><br><span class="line">  <span class="attr">data-mapping:</span> <span class="string">number</span></span><br><span class="line">  <span class="attr">data-term:</span> <span class="number">226</span></span><br></pre></td></tr></table></figure>
+
+<div class="article-footer fs14"></div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/theme-config.html">_config.stellar.yml</a></div><div class="item" id="next"></div></section></div>
 
@@ -396,6 +407,34 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -469,13 +508,13 @@ target="_blank" rel="noopener" href="https://github.com/xaoxuu/blog-comments/blo
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

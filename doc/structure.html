@@ -1,7 +1,16 @@
 
 <!DOCTYPE html><html lang="zh-CN">
 
-<head>
+<head><!-- hexo injector head_begin start --><script>
+              (() => {
+                  let sw = navigator.serviceWorker
+                  let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                  if (!sw?.register('/sw.js')
+                      
+                      ?.catch(error)
+                  ) error()
+              })()
+          </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
   
@@ -23,7 +32,7 @@
     <meta name="description" content="source目录树source├─ _data # _data 下存放数据类 yaml 文件│    ├─ widgets.yml # 小组件配置文件│    ├─ authors.yml # 作者信息配置文件│    ├─ wiki │    |      ├─ notes.yml # 笔记页面配置文件│    │      └─ wiki.yml # wiki页面配置文件│    └─ top">
 <meta property="og:type" content="website">
 <meta property="og:title" content="文件目录树">
-<meta property="og:url" content="http://weekdaycare.cn/doc/structure.html">
+<meta property="og:url" content="https://weekdaycare.github.io/doc/structure.html">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="source目录树source├─ _data # _data 下存放数据类 yaml 文件│    ├─ widgets.yml # 小组件配置文件│    ├─ authors.yml # 作者信息配置文件│    ├─ wiki │    |      ├─ notes.yml # 笔记页面配置文件│    │      └─ wiki.yml # wiki页面配置文件│    └─ top">
 <meta property="og:locale" content="zh_CN">
@@ -51,7 +60,7 @@
   
 
   <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/%E6%80%9D%E6%BA%90%E5%B1%8F%E6%98%BE%E8%87%BB%E5%AE%8B/result.css' />
-</head>
+<!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --></head>
 <body>
 
 
@@ -96,6 +105,8 @@
     
   </div>
   </div><article class="md-text content"><figure class="highlight yaml"><figcaption><span>source目录树</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">source</span></span><br><span class="line"><span class="string">├─</span> <span class="string">_data</span> <span class="comment"># _data 下存放数据类 yaml 文件</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">widgets.yml</span> <span class="comment"># 小组件配置文件</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">authors.yml</span> <span class="comment"># 作者信息配置文件</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">wiki</span> </span><br><span class="line"><span class="string">│</span>    <span class="string">|</span>      <span class="string">├─</span> <span class="string">notes.yml</span> <span class="comment"># 笔记页面配置文件</span></span><br><span class="line"><span class="string">│</span>    <span class="string">│</span>      <span class="string">└─</span> <span class="string">wiki.yml</span> <span class="comment"># wiki页面配置文件</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="string">topic</span> </span><br><span class="line"><span class="string">│</span>           <span class="string">└─</span> <span class="string">blog.yml</span> <span class="comment"># 专栏配置文件</span></span><br><span class="line"><span class="string">│</span></span><br><span class="line"><span class="string">├─</span> <span class="string">asset</span> <span class="comment"># 网站资源存放处，需要引用时可以使用相对路径 /asset/css/pace.css</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">avatar.svg</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">favicon.svg</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="string">css</span></span><br><span class="line"><span class="string">│</span>    <span class="string">│</span>    <span class="string">└─</span> <span class="string">pace.css</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="string">js</span></span><br><span class="line"><span class="string">│</span>         <span class="string">└─</span> <span class="string">pace.min.js</span></span><br><span class="line"><span class="string">│</span>   </span><br><span class="line"><span class="string">├─</span> <span class="string">_posts</span> <span class="comment"># 你创建的普通文章默认存放在此处</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="string">hello-world.md</span>  </span><br><span class="line"><span class="string">├─</span> <span class="string">notes</span> <span class="comment"># 笔记文章存放处</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">1.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">2.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">3.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="number">4.</span><span class="string">md</span></span><br><span class="line"><span class="string">├─</span> <span class="string">wiki</span> <span class="comment"># wiki 文章存放处</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">1.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">2.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">├─</span> <span class="number">3.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="number">4.</span><span class="string">md</span></span><br><span class="line"><span class="string">│</span></span><br><span class="line"><span class="string">├─</span> <span class="string">about</span> <span class="comment"># 自建第三方页面</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="string">index.md</span></span><br><span class="line"><span class="string">├─</span> <span class="string">friends</span></span><br><span class="line"><span class="string">│</span>    <span class="string">└─</span> <span class="string">index.md</span></span><br><span class="line"><span class="string">└─</span> <span class="string">shuoshuo</span></span><br><span class="line">     <span class="string">└─</span> <span class="string">index.md</span></span><br></pre></td></tr></table></figure>
+
+<div class="article-footer fs14"></div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/update.html">跟随更新</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/tag-plugins.html">标签组件</a></div></section></div>
 
@@ -343,6 +354,34 @@
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
 <script src="/js/main.js?v=1.28.1" async></script>
@@ -416,13 +455,13 @@
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.32', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.32","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

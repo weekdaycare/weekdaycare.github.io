@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>星日语</title>
-  <icon>http://weekdaycare.cn/asset/avatar.svg</icon>
+  <icon>https://weekdaycare.github.io/asset/avatar.svg</icon>
   <subtitle>我随便写写|你随便看看</subtitle>
-  <link href="http://weekdaycare.cn/atom.xml" rel="self"/>
+  <link href="https://weekdaycare.github.io/atom.xml" rel="self"/>
   
-  <link href="http://weekdaycare.cn/"/>
+  <link href="https://weekdaycare.github.io/"/>
   <updated>2024-05-10T03:16:00.000Z</updated>
-  <id>http://weekdaycare.cn/</id>
+  <id>https://weekdaycare.github.io/</id>
   
   <author>
     <name>星日语</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>拣爱</title>
-    <link href="http://weekdaycare.cn/posts/lovechoice/"/>
-    <id>http://weekdaycare.cn/posts/lovechoice/</id>
+    <link href="https://weekdaycare.github.io/posts/lovechoice/"/>
+    <id>https://weekdaycare.github.io/posts/lovechoice/</id>
     <published>2024-05-10T03:16:00.000Z</published>
     <updated>2024-05-10T03:16:00.000Z</updated>
     
@@ -34,21 +34,21 @@
     
     
     
-    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    <category term="日常随笔" scheme="https://weekdaycare.github.io/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
+    <category term="体验" scheme="https://weekdaycare.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
     
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="回忆" scheme="https://weekdaycare.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
     
-    <category term="游戏" scheme="http://weekdaycare.cn/tags/%E6%B8%B8%E6%88%8F/"/>
+    <category term="游戏" scheme="https://weekdaycare.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
   <entry>
     <title>五月，i人也小e了一下</title>
-    <link href="http://weekdaycare.cn/posts/e-mask/"/>
-    <id>http://weekdaycare.cn/posts/e-mask/</id>
+    <link href="https://weekdaycare.github.io/posts/e-mask/"/>
+    <id>https://weekdaycare.github.io/posts/e-mask/</id>
     <published>2024-05-04T08:50:00.000Z</published>
     <updated>2024-05-06T08:50:00.000Z</updated>
     
@@ -57,23 +57,23 @@
     
     
     
-    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    <category term="日常随笔" scheme="https://weekdaycare.github.io/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="体验" scheme="https://weekdaycare.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
     
-    <category term="体验" scheme="http://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
+    <category term="回忆" scheme="https://weekdaycare.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
     
-    <category term="夏天" scheme="http://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
+    <category term="夏天" scheme="https://weekdaycare.github.io/tags/%E5%A4%8F%E5%A4%A9/"/>
     
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="生活" scheme="https://weekdaycare.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>四月，是倾盆的雨天</title>
-    <link href="http://weekdaycare.cn/posts/april-fool/"/>
-    <id>http://weekdaycare.cn/posts/april-fool/</id>
+    <link href="https://weekdaycare.github.io/posts/april-fool/"/>
+    <id>https://weekdaycare.github.io/posts/april-fool/</id>
     <published>2024-04-30T12:15:00.000Z</published>
     <updated>2024-04-30T12:15:00.000Z</updated>
     
@@ -82,18 +82,18 @@
     
     
     
-    <category term="日常随笔" scheme="http://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    <category term="日常随笔" scheme="https://weekdaycare.github.io/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="生活" scheme="http://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="回忆" scheme="https://weekdaycare.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
     
-    <category term="失败" scheme="http://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/"/>
+    <category term="失败" scheme="https://weekdaycare.github.io/tags/%E5%A4%B1%E8%B4%A5/"/>
     
-    <category term="番剧" scheme="http://weekdaycare.cn/tags/%E7%95%AA%E5%89%A7/"/>
+    <category term="生活" scheme="https://weekdaycare.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="回忆" scheme="http://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="番剧" scheme="https://weekdaycare.github.io/tags/%E7%95%AA%E5%89%A7/"/>
     
-    <category term="女朋友" scheme="http://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
+    <category term="女朋友" scheme="https://weekdaycare.github.io/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
     
   </entry>
   
