@@ -78,12 +78,12 @@ jobs:
           git config --global user.email $GIT_EMAIL
           npm install hexo-cli -g
           npm install
-          npm install cdn-refresher --save
           
       - name: Deploy hexo
         run: |
           hexo cl
           hexo g
+          hexo swpp
           hexo d
           
       - name: Refresh CDN

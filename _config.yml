@@ -15,7 +15,7 @@ timezone: ''
 
 # URL
 # # If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://weekdaycare.cn
+url: http://weekdaycare.cn
 root: /
 # permalink: :year/:month/:day/:title/  # 旧的注释掉
 # permalink_defaults:                   # 旧的注释掉
@@ -172,10 +172,7 @@ deploy:
     message: 🎉Update my site
     repository: git@github.com:weekdaycare/weekdaycare.github.io.git
     branch: main
-  - type: upyun
-    serviceName: weekdaycare-blog
-    operatorName: hexo
-    operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK
+
   - type: ali-oss
     region: oss-cn-chengdu
     accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG

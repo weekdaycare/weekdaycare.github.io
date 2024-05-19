@@ -44,7 +44,7 @@ module.exports.config = {
     charLimit: 256,
     merge: ['categories', 'tags', 'archives'],
     exclude: {
-      localhost: [],
+      localhost: ['sw.js'],
       other: []
     }
   },
@@ -52,7 +52,9 @@ module.exports.config = {
     timeout: 5000,
     concurrencyLimit: 100,
     js: [],
-    stable: [],
+    stable: [
+      /^https:\/\/bu\.dusays\.com\/.*$/,
+    ],
     replacer: srcUrl => srcUrl
   }
 }
@@ -75,12 +77,7 @@ module.exports.cacheRules = {
   cdn: {
     clean: true,
     search: false,
-    match: url => url.host.endsWith('onmicrosoft.cn') || (url.host === 'raw.weekdaycare.cn' && (url.pathname.startsWith('/font/') || url.pathname.startsWith('/site/')))
-  },
-  image: {
-    clean: false,
-    search: false,
-    match: url => url.host === 'bu.dusays.com' && url.pathname.match(/\.(jpg|png|gif|webp)$/)
+    match: url => url.host.endsWith('onmicrosoft.cn') || url.host === 'font.weekdaycare.cn'
   },
   emoji: {
     clean: false,
