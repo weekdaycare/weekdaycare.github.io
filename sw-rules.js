@@ -1,6 +1,6 @@
 module.exports.config = {
   serviceWorker: {
-    escape: 1,
+    escape: 0,
     cacheName: 'BlogCache'
   },
   register: {
