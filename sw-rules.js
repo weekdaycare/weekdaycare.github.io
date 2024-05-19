@@ -77,7 +77,7 @@ module.exports.cacheRules = {
   font: {
     clean: false,
     search: false,
-    match: url => url.host === 'font.weekdaycare.cn'
+    match: url => url.host === 'raw.weekdaycare.cn' && url.pathname.startsWith('/font/')
   },
   cdn: {
     clean: true,
