@@ -163,7 +163,7 @@ swpp:
   # 0 - 表示不允许出现 404 情况；1 - 表示允许服务器返回 404 状态码；2 - 表示允许任何 404（包括 DNS 解析失败等）
   # warn_level: 1
   # 检查版本的 URL，不能以 '/' 结尾
-  # npm_url: 'https://registry.npmmirror.com'
+  npm_url: 'https://registry.npmmirror.com'
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

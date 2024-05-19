@@ -1,6 +1,6 @@
 module.exports.config = {
   serviceWorker: {
-    escape: 0,
+    escape: 1,
     cacheName: 'BlogCache'
   },
   register: {
@@ -44,7 +44,7 @@ module.exports.config = {
     charLimit: 256,
     merge: ['categories', 'tags', 'archives'],
     exclude: {
-      localhost: ['sw.js'],
+      localhost: [],
       other: []
     }
   },
@@ -74,10 +74,15 @@ module.exports.cacheRules = {
     search: false,
     match: (url, $eject) => url.host === $eject.domain && url.pathname.match(/\.(xml|json|js|css|html|svg)$/)
   },
+  font: {
+    clean: false,
+    search: false,
+    match: url => url.host === 'font.weekdaycare.cn'
+  },
   cdn: {
     clean: true,
     search: false,
-    match: url => url.host.endsWith('onmicrosoft.cn') || url.host === 'font.weekdaycare.cn'
+    match: url => url.host.endsWith('onmicrosoft.cn')
   },
   emoji: {
     clean: false,
