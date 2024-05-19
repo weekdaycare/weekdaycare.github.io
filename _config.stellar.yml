@@ -615,13 +615,12 @@ default:
 
 api_host:
   ghapi: https://raw.weekdaycare.cn/api
-  ghraw: https://jsd.onmicrosoft.cn
+  ghraw: https://raw.onmicrosoft.cn/raw
   gist: https://raw.weekdaycare.cn/gist
  
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - <link rel='stylesheet' href='https://font.weekdaycare.cn/result.css' /> 
-    # - <link rel='stylesheet' href='https://ik.imagekit.io/kkv1qgyco/%E4%BB%93%E8%80%B3%E4%BB%8A%E6%A5%B7/result.css' />
+    - <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/result.css' />
   script:
     - <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
