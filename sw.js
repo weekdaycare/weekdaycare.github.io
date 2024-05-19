@@ -1,271 +1,374 @@
-/**
- * 自动引入模板，在原有 sw-precache 插件默认模板基础上做的二次开发
- *
- * 因为是自定导入的模板，项目一旦生成，不支持随 sw-precache 的版本自动升级。
- * 可以到 Lavas 官网下载 basic 模板内获取最新模板进行替换
- *
- */
+// noinspection JSIgnoredPromiseFromCall
 
-/* eslint-disable */
+(() => {
+    /** 缓存库名称 */
+    const CACHE_NAME = 'BlogCache'
+    /** 控制信息存储地址（必须以`/`结尾） */
+    const CTRL_PATH = 'https://id.v3/'
 
-'use strict';
-
-var precacheConfig = [];
-var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
-var firstRegister = 1; // 默认1是首次安装SW， 0是SW更新
+    const ejectDomain = 'weekdaycare.cn'
 
 
-var ignoreUrlParametersMatching = [/^utm_/];
+    /**
+     * 读取本地版本号
+     * @return {Promise<BrowserVersion|undefined>}
+     */
+    const readVersion = () => caches.match(CTRL_PATH).then(response => response?.json())
+    /**
+     * 写入版本号
+     * @param version {BrowserVersion}
+     * @return {Promise<void>}
+     */
+    const writeVersion = version => caches.open(CACHE_NAME)
+        .then(cache => cache.put(CTRL_PATH, new Response(JSON.stringify(version))))
 
-
-var addDirectoryIndex = function (originalUrl, index) {
-    var url = new URL(originalUrl);
-    if (url.pathname.slice(-1) === '/') {
-        url.pathname += index;
-    }
-    return url.toString();
-};
-
-var cleanResponse = function (originalResponse) {
-    // 如果没有重定向响应，不需干啥
-    if (!originalResponse.redirected) {
-        return Promise.resolve(originalResponse);
-    }
-
-    // Firefox 50 及以下不知处 Response.body 流, 所以我们需要读取整个body以blob形式返回。
-    var bodyPromise = 'body' in originalResponse ?
-        Promise.resolve(originalResponse.body) :
-        originalResponse.blob();
-
-    return bodyPromise.then(function (body) {
-        // new Response() 可同时支持 stream or Blob.
-        return new Response(body, {
-            headers: originalResponse.headers,
-            status: originalResponse.status,
-            statusText: originalResponse.statusText
-        });
-    });
-};
-
-var createCacheKey = function (originalUrl, paramName, paramValue,
-    dontCacheBustUrlsMatching) {
-
-    // 创建一个新的URL对象，避免影响原始URL
-    var url = new URL(originalUrl);
-
-    // 如果 dontCacheBustUrlsMatching 值没有设置，或是没有匹配到，将值拼接到url.serach后
-    if (!dontCacheBustUrlsMatching ||
-        !(url.pathname.match(dontCacheBustUrlsMatching))) {
-        url.search += (url.search ? '&' : '') +
-            encodeURIComponent(paramName) + '=' + encodeURIComponent(paramValue);
-    }
-
-    return url.toString();
-};
-
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
-    // 如果 whitelist 是空数组，则认为全部都在白名单内
-    if (whitelist.length === 0) {
-        return true;
-    }
-
-    // 否则逐个匹配正则匹配并返回
-    var path = (new URL(absoluteUrlString)).pathname;
-    return whitelist.some(function (whitelistedPathRegex) {
-        return path.match(whitelistedPathRegex);
-    });
-};
-
-var stripIgnoredUrlParameters = function (originalUrl,
-    ignoreUrlParametersMatching) {
-    var url = new URL(originalUrl);
-    // 移除 hash; 查看 https://github.com/GoogleChrome/sw-precache/issues/290
-    url.hash = '';
-
-    url.search = url.search.slice(1) // 是否包含 '?'
-        .split('&') // 分割成数组 'key=value' 的形式
-        .map(function (kv) {
-            return kv.split('='); // 分割每个 'key=value' 字符串成 [key, value] 形式
-        })
-        .filter(function (kv) {
-            return ignoreUrlParametersMatching.every(function (ignoredRegex) {
-                return !ignoredRegex.test(kv[0]); // 如果 key 没有匹配到任何忽略参数正则，就 Return true
-            });
-        })
-        .map(function (kv) {
-            return kv.join('='); // 重新把 [key, value] 格式转换为 'key=value' 字符串
-        })
-        .join('&'); // 将所有参数 'key=value' 以 '&' 拼接
-
-    return url.toString();
-};
-
-
-var addDirectoryIndex = function (originalUrl, index) {
-    var url = new URL(originalUrl);
-    if (url.pathname.slice(-1) === '/') {
-        url.pathname += index;
-    }
-    return url.toString();
-};
-
-var hashParamName = '_sw-precache';
-var urlsToCacheKeys = new Map(
-    precacheConfig.map(function (item) {
-        var relativeUrl = item[0];
-        var hash = item[1];
-        var absoluteUrl = new URL(relativeUrl, self.location);
-        var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
-        return [absoluteUrl.toString(), cacheKey];
-    })
-);
-
-function setOfCachedUrls(cache) {
-    return cache.keys().then(function (requests) {
-        // 如果原cacheName中没有缓存任何收，就默认是首次安装，否则认为是SW更新
-        if (requests && requests.length > 0) {
-            firstRegister = 0; // SW更新
-        }
-        return requests.map(function (request) {
-            return request.url;
-        });
-    }).then(function (urls) {
-        return new Set(urls);
-    });
-}
-
-self.addEventListener('install', function (event) {
-    event.waitUntil(
-        caches.open(cacheName).then(function (cache) {
-            return setOfCachedUrls(cache).then(function (cachedUrls) {
-                return Promise.all(
-                    Array.from(urlsToCacheKeys.values()).map(function (cacheKey) {
-                        // 如果缓存中没有匹配到cacheKey，添加进去
-                        if (!cachedUrls.has(cacheKey)) {
-                            var request = new Request(cacheKey, { credentials: 'same-origin' });
-                            return fetch(request).then(function (response) {
-                                // 只要返回200才能继续，否则直接抛错
-                                if (!response.ok) {
-                                    throw new Error('Request for ' + cacheKey + ' returned a ' +
-                                        'response with status ' + response.status);
-                                }
-
-                                return cleanResponse(response).then(function (responseToCache) {
-                                    return cache.put(cacheKey, responseToCache);
-                                });
-                            });
-                        }
-                    })
-                );
-            });
-        })
-            .then(function () {
-            
-            // 强制 SW 状态 installing -> activate
-            return self.skipWaiting();
-            
-        })
-    );
-});
-
-self.addEventListener('activate', function (event) {
-    var setOfExpectedUrls = new Set(urlsToCacheKeys.values());
-
-    event.waitUntil(
-        caches.open(cacheName).then(function (cache) {
-            return cache.keys().then(function (existingRequests) {
-                return Promise.all(
-                    existingRequests.map(function (existingRequest) {
-                        // 删除原缓存中相同键值内容
-                        if (!setOfExpectedUrls.has(existingRequest.url)) {
-                            return cache.delete(existingRequest);
-                        }
-                    })
-                );
-            });
-        }).then(function () {
-            
-            return self.clients.claim();
-            
-        }).then(function () {
-                // 如果是首次安装 SW 时, 不发送更新消息（是否是首次安装，通过指定cacheName 中是否有缓存信息判断）
-                // 如果不是首次安装，则是内容有更新，需要通知页面重载更新
-                if (!firstRegister) {
-                    return self.clients.matchAll()
-                        .then(function (clients) {
-                            if (clients && clients.length) {
-                                clients.forEach(function (client) {
-                                    client.postMessage('sw.update');
-                                })
-                            }
-                        })
+    self.addEventListener('install', () => {
+        self.skipWaiting()
+        const escape = 0
+        if (escape) {
+            readVersion().then(async oldVersion => {
+                // noinspection JSIncompatibleTypesComparison
+                if (oldVersion && oldVersion.escape !== escape) {
+                    const list = await caches.open(CACHE_NAME)
+                        .then(cache => cache.keys())
+                        .then(keys => keys?.map(it => it.url))
+                    await caches.delete(CACHE_NAME)
+                    const info = await updateJson()
+                    info.type = 'escape'
+                    info.list = list
+                    // noinspection JSUnresolvedReference
+                    const clientList = await clients.matchAll()
+                    clientList.forEach(client => client.postMessage(info))
                 }
             })
-    );
-});
+        }
+    })
 
+    // sw 激活后立即对所有页面生效，而非等待刷新
+    // noinspection JSUnresolvedReference
+    self.addEventListener('activate', event => event.waitUntil(clients.claim()))
 
+    /**
+     * 基础 fetch
+     * @param request {Request|string}
+     * @param banCache {boolean} 是否禁用缓存
+     * @param cors {boolean} 是否启用 cors
+     * @param optional {RequestInit?} 额外的配置项
+     * @return {Promise<Response>}
+     */
+    const baseFetcher = (request, banCache, cors, optional) => {
+        if (!optional) optional = {}
+        optional.cache = banCache ? 'no-store' : 'default'
+        if (cors) {
+            optional.mode = 'cors'
+            optional.credentials = 'same-origin'
+        }
+        return fetch(request, optional)
+    }
 
-    self.addEventListener('fetch', function (event) {
-        if (event.request.method === 'GET') {
+    /**
+     * 添加 cors 配置请求指定资源
+     * @param request {Request}
+     * @param optional {RequestInit?} 额外的配置项
+     * @return {Promise<Response>}
+     */
+    const fetchWithCache = (request, optional) =>
+        baseFetcher(request, false, isCors(request), optional)
 
-            // 是否应该 event.respondWith()，需要我们逐步的判断
-            // 而且也方便了后期做特殊的特殊
-            var shouldRespond;
+    // noinspection JSUnusedLocalSymbols
+    /**
+     * 添加 cors 配置请求指定资源
+     * @param request {Request}
+     * @param banCache {boolean} 是否禁用 HTTP 缓存
+     * @param optional {RequestInit?} 额外的配置项
+     * @return {Promise<Response>}
+     */
+    const fetchWithCors = (request, banCache, optional) =>
+        baseFetcher(request, banCache, true, optional)
 
+    /**
+     * 判断指定 url 击中了哪一种缓存，都没有击中则返回 null
+     * @param url {URL}
+     */
+    const findCache = url => {
+        if (url.hostname === 'localhost') return
+        for (let key in cacheRules) {
+            const value = cacheRules[key]
+            if (value.match(url)) return value
+        }
+    }
 
-            // 首先去除已配置的忽略参数及hash
-            // 查看缓存简直中是否包含该请求，包含就将shouldRespond 设为true
-            var url = stripIgnoredUrlParameters(event.request.url, ignoreUrlParametersMatching);
-            shouldRespond = urlsToCacheKeys.has(url);
+    // noinspection JSFileReferences
+    let cacheRules = {
+web: {
+clean: true,
+search: false,
+match: url => url.host === ejectDomain && url.pathname.match(/\.(xml|json|js|css|html|svg)$/)}
+,
+cdn: {
+clean: true,
+search: false,
+match: url => url.host.endsWith('onmicrosoft.cn') || url.host === 'font.weekdaycare.cn'}
+,
+emoji: {
+clean: false,
+search: false,
+match: url => url.host === 'raw.weekdaycare.cn' && url.pathname.match(/\.png$/)}
+,
+avatar: {
+clean: true,
+search: false,
+match: url => url.host === 'cravatar.cn' && url.pathname.startsWith('/avatar/')}
+}
 
-            // 如果 shouldRespond 是 false, 我们在url后默认增加 'index.html'
-            // (或者是你在配置文件中自行配置的 directoryIndex 参数值)，继续查找缓存列表
-            var directoryIndex = 'index.html';
-            if (!shouldRespond && directoryIndex) {
-                url = addDirectoryIndex(url, directoryIndex);
-                shouldRespond = urlsToCacheKeys.has(url);
-            }
+let isCors = () => false
+let isMemoryQueue = () => false
+const fetchFile = fetchWithCors;
+const getSpareUrls = _ => {}
 
-            // 如果 shouldRespond 仍是 false，检查是否是navigation
-            // request， 如果是的话，判断是否能与 navigateFallbackWhitelist 正则列表匹配
-            var navigateFallback = '';
-            if (!shouldRespond &&
-                navigateFallback &&
-                (event.request.mode === 'navigate') &&
-                isPathWhitelisted([], event.request.url)
-            ) {
-                url = new URL(navigateFallback, self.location).toString();
-                shouldRespond = urlsToCacheKeys.has(url);
-            }
+    // 检查请求是否成功
+    // noinspection JSUnusedLocalSymbols
+    const checkResponse = response => response.ok || [301, 302, 307, 308].includes(response.status)
 
-            // 如果 shouldRespond 被置为 true
-            // 则 event.respondWith()匹配缓存返回结果，匹配不成就直接请求.
-            if (shouldRespond) {
-                event.respondWith(
-                    caches.open(cacheName).then(function (cache) {
-                        return cache.match(urlsToCacheKeys.get(url)).then(function (response) {
-                            if (response) {
-                                return response;
-                            }
-                            throw Error('The cached response that was expected is missing.');
-                        });
-                    }).catch(function (e) {
-                        // 如果捕获到异常错误，直接返回 fetch() 请求资源
-                        console.warn('Couldn\'t serve response for "%s" from cache: %O', event.request.url, e);
-                        return fetch(event.request);
+    /**
+     * 删除指定缓存
+     * @param list 要删除的缓存列表
+     * @return {Promise<string[]>} 删除的缓存的URL列表
+     */
+    const deleteCache = list => caches.open(CACHE_NAME).then(cache => cache.keys()
+        .then(keys => Promise.all(
+            keys.map(async it => {
+                const url = it.url
+                if (url !== CTRL_PATH && list.match(url)) {
+                    // [debug delete]
+                    // noinspection ES6MissingAwait,JSCheckFunctionSignatures
+                    cache.delete(it)
+                    return url
+                }
+                return null
+            })
+        )).then(list => list.filter(it => it))
+    )
+
+    /**
+     * 缓存列表
+     * @type {Map<string, function(any)[]>}
+     */
+    const cacheMap = new Map()
+
+    self.addEventListener('fetch', event => {
+        let request = event.request
+        let url = new URL(request.url)
+        // [blockRequest call]
+        if (request.method !== 'GET' || !request.url.startsWith('http')) return
+        // [modifyRequest call]
+        // [skipRequest call]
+        let cacheKey = url.hostname + url.pathname + url.search
+        let cache
+        if (isMemoryQueue(request)) {
+            cache = cacheMap.get(cacheKey)
+            if (cache) {
+                return event.respondWith(
+                    new Promise((resolve, reject) => {
+                        cacheMap.get(cacheKey).push(arg => arg.body ? resolve(arg) : reject(arg))
                     })
-                );
+                )
+            }
+            cacheMap.set(cacheKey, cache = [])
+        }
+        /** 处理拉取 */
+        const handleFetch = promise => {
+            event.respondWith(
+                cache ? promise.then(response => {
+                    for (let item of cache) {
+                        item(response.clone())
+                    }
+                }).catch(err => {
+                    for (let item of cache) {
+                        item(err)
+                    }
+                }).then(() => {
+                    cacheMap.delete(cacheKey)
+                    return promise
+                }) : promise
+            )
+        }
+        const cacheRule = findCache(url)
+        if (cacheRule) {
+            let key = `https://${url.host}${url.pathname}`
+            if (key.endsWith('/index.html')) key = key.substring(0, key.length - 10)
+            if (cacheRule.search) key += url.search
+            handleFetch(
+                caches.match(key).then(
+                    cache => cache ?? fetchFile(request, true)
+                        .then(response => {
+                            if (checkResponse(response)) {
+                                const clone = response.clone()
+                                caches.open(CACHE_NAME).then(it => it.put(key, clone))
+                                // [debug put]
+                            }
+                            return response
+                        })
+                )
+            )
+        } else {
+            const urls = null
+            if (urls) handleFetch(fetchFile(request, false, urls))
+            // [modifyRequest else-if]
+            else handleFetch(fetchWithCache(request).catch(err => new Response(err, {status: 499})))
+        }
+    })
+
+    self.addEventListener('message', event => {
+        // [debug message]
+        if (event.data === 'update')
+            updateJson().then(info => {
+                info.type = 'update'
+                event.source.postMessage(info)
+            })
+    })
+
+    /**
+     * 根据JSON删除缓存
+     * @returns {Promise<UpdateInfo>}
+     */
+    const updateJson = async () => {
+        /**
+         * 解析elements，并把结果输出到list中
+         * @return boolean 是否刷新全站缓存
+         */
+        const parseChange = (list, elements, ver) => {
+            for (let element of elements) {
+                const {version, change} = element
+                if (version === ver) return false
+                if (change) {
+                    for (let it of change)
+                        list.push(new CacheChangeExpression(it))
+                }
+            }
+            // 跨版本幅度过大，直接清理全站
+            return true
+        }
+        /**
+         * 解析字符串
+         * @return {Promise<{
+         *     list?: VersionList,
+         *     new: BrowserVersion,
+         *     old: BrowserVersion
+         * }>}
+         */
+        const parseJson = json => readVersion().then(oldVersion => {
+            const {info, global} = json
+            /** @type {BrowserVersion} */
+            const newVersion = {global, local: info[0].version, escape: oldVersion?.escape ?? 0}
+            // 新用户和刚进行过逃逸操作的用户不进行更新操作
+            if (!oldVersion) {
+                // noinspection JSValidateTypes
+                newVersion.escape = 0
+                writeVersion(newVersion)
+                return {new: newVersion, old: oldVersion}
+            }
+            let list = new VersionList()
+            let refresh = parseChange(list, info, oldVersion.local)
+            writeVersion(newVersion)
+            // [debug escape]
+            // 如果需要清理全站
+            if (refresh) {
+                if (global !== oldVersion.global) list.force = true
+                else list.refresh = true
+            }
+            return {list, new: newVersion, old: oldVersion}
+        })
+        const response = await fetchFile(new Request('/update.json'), false)
+        if (!checkResponse(response))
+            throw `加载 update.json 时遇到异常，状态码：${response.status}`
+        const json = await response.json()
+        const result = await parseJson(json)
+        if (result.list) {
+            const list = await deleteCache(result.list)
+            result.list = list?.length ? list : null
+        }
+        // noinspection JSValidateTypes
+        return result
+    }
+
+    /**
+     * 版本列表
+     * @constructor
+     */
+    function VersionList() {
+
+        const list = []
+
+        /**
+         * 推送一个表达式
+         * @param element {CacheChangeExpression} 要推送的表达式
+         */
+        this.push = element => {
+            list.push(element)
+        }
+
+        /**
+         * 判断指定 URL 是否和某一条规则匹配
+         * @param url {string} URL
+         * @return {boolean}
+         */
+        this.match = url => {
+            if (this.force) return true
+            // noinspection JSValidateTypes
+            url = new URL(url)
+            if (this.refresh) {
+                // noinspection JSCheckFunctionSignatures
+                return findCache(url).clean
+            }
+            else {
+                for (let it of list) {
+                    if (it.match(url)) return true
+                }
+            }
+            return false
+        }
+
+    }
+
+    // noinspection SpellCheckingInspection
+    /**
+     * 缓存更新匹配规则表达式
+     * @param json 格式{"flag": ..., "value": ...}
+     * @see https://kmar.top/posts/bcfe8408/#23bb4130
+     * @constructor
+     */
+    function CacheChangeExpression(json) {
+        /**
+         * 遍历所有value
+         * @param action {function(string): boolean} 接受value并返回bool的函数
+         * @return {boolean} 如果value只有一个则返回`action(value)`，否则返回所有运算的或运算（带短路）
+         */
+        const forEachValues = action => {
+            const value = json.value
+            if (Array.isArray(value)) {
+                for (let it of value) {
+                    if (action(it)) return true
+                }
+                return false
+            } else return action(value)
+        }
+        const getMatch = () => {
+            switch (json['flag']) {
+                case 'html':
+                    return url => url.pathname.match(/(\/|\.html)$/)
+                case 'end':
+                    return url => forEachValues(value => url.href.endsWith(value))
+                case 'begin':
+                    return url => forEachValues(value => url.pathname.startsWith(value))
+                case 'str':
+                    return url => forEachValues(value => url.href.includes(value))
+                case 'reg':
+                    // noinspection JSCheckFunctionSignatures
+                    return url => forEachValues(value => url.href.match(new RegExp(value, 'i')))
+                default: throw `未知表达式：${JSON.stringify(json)}`
             }
         }
-    });
-
-
-
-
-
-
-
-
-
-/* eslint-enable */
+        this.match = getMatch()
+    }
+})()
