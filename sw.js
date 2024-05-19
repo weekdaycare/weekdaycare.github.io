@@ -105,10 +105,15 @@ clean: true,
 search: false,
 match: url => url.host === ejectDomain && url.pathname.match(/\.(xml|json|js|css|html|svg)$/)}
 ,
+font: {
+clean: false,
+search: false,
+match: url => url.host === 'raw.weekdaycare.cn' && url.pathname.startsWith('/font/')}
+,
 cdn: {
 clean: true,
 search: false,
-match: url => url.host.endsWith('onmicrosoft.cn') || url.host === 'font.weekdaycare.cn'}
+match: url => url.host.endsWith('onmicrosoft.cn')}
 ,
 emoji: {
 clean: false,
