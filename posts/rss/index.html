@@ -12,7 +12,7 @@
         switch (data.type) {
           case 'update':
             if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
-              hud.toast(`已更新至新版本：${data.new.escape}#${data.new.global}.${data.new.local}`, 5000);
+              hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             }
             break
           case 'escape':
