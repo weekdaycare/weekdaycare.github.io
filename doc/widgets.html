@@ -6,7 +6,21 @@
                   let sw = navigator.serviceWorker
                   let error = () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
                   if (!sw?.register('/sw.js')
-                      
+                      ?.then(() => {
+      navigator.serviceWorker.addEventListener('message', event => {
+        const data = event.data
+        switch (data.type) {
+          case 'update':
+            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
+              hud.toast(`已更新至新版本：${data.new.escape}#${data.new.global}.${data.new.local}`, 5000);
+            }
+            break
+          case 'escape':
+            hud.toast('逃生门缓存更新完毕', 5000)
+            break
+        }
+      });
+    })
                       ?.catch(error)
                   ) error()
               })()
