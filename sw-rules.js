@@ -4,7 +4,21 @@ module.exports.config = {
     cacheName: 'BlogCache'
   },
   register: {
-    onsuccess: undefined,
+    onsuccess: () => {
+      navigator.serviceWorker.addEventListener('message', event => {
+        const data = event.data
+        switch (data.type) {
+          case 'update':
+            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
+              hud.toast(`已更新至新版本：${data.new.escape}#${data.new.global}.${data.new.local}`, 5000);
+            }
+            break
+          case 'escape':
+            hud.toast('逃生门缓存更新完毕', 5000)
+            break
+        }
+      });
+    },
     onerror: () => console.error('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'),
     builder: (root, framework, pluginConfig) => {
       const registerConfig = pluginConfig.register
@@ -25,19 +39,7 @@ module.exports.config = {
     }
   },
   dom: {
-    onsuccess: () => {
-      caches.match('https://id.v3/')
-        .then(response => response?.json())
-        .then(json => {
-          if (json) {
-            hud && hud.toast(`已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`, 5000);
-          } else {
-            console.info('未找到匹配的缓存响应');
-          }
-        }).catch(function (error) {
-          console.error('缓存匹配出错:', error);
-        });
-    },
+    onsuccess: undefined
   },
   json: {
     maxHtml: 15,
