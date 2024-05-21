@@ -172,7 +172,10 @@ deploy:
     message: 🎉Update my site
     repository: git@github.com:weekdaycare/weekdaycare.github.io.git
     branch: main
-
+  - type: upyun
+    serviceName: weekdaycare-blog
+    operatorName: hexo
+    operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK
   - type: ali-oss
     region: oss-cn-chengdu
     accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
