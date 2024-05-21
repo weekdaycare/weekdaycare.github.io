@@ -1341,30 +1341,21 @@ data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0e
     }
   }
 
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
+  const switchTheme = (theme) => {
+    applyTheme(theme)
+    window.localStorage.setItem('Stellar.theme', theme)
 
     const messages = {
       light: `切换到浅色模式`,
       dark: `切换到深色模式`,
       auto: `切换到跟随系统配色`,
     }
-    hud?.toast?.(messages[newTheme])
+    hud?.toast?.(messages[theme])
   }
+
+  const switchTolight = () => switchTheme('light')
+  const switchTodark = () => switchTheme('dark')
+  const switchTosystem = () => switchTheme('auto')
 
   (() => {
     // Apply user's preferred theme, if any.
@@ -1381,13 +1372,13 @@ data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0e
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.34', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.34","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));

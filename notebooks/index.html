@@ -384,30 +384,21 @@
     }
   }
 
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
+  const switchTheme = (theme) => {
+    applyTheme(theme)
+    window.localStorage.setItem('Stellar.theme', theme)
 
     const messages = {
       light: `切换到浅色模式`,
       dark: `切换到深色模式`,
       auto: `切换到跟随系统配色`,
     }
-    hud?.toast?.(messages[newTheme])
+    hud?.toast?.(messages[theme])
   }
+
+  const switchTolight = () => switchTheme('light')
+  const switchTodark = () => switchTheme('dark')
+  const switchTosystem = () => switchTheme('auto')
 
   (() => {
     // Apply user's preferred theme, if any.

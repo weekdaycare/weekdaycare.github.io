@@ -3196,7 +3196,7 @@ details.folding[child=iframe] >div.body {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
 }
 .tag-plugin.grid[bg='card']>.cell:hover {
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 1px var(--text-meta);
   transform: translateZ(1px);
 }
 .md-text .tag-plugin.hashtag {
@@ -3610,7 +3610,7 @@ p>strong>span.tag-plugin.icon {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
 }
 .md-text .link-card:hover {
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 1px var(--text-meta);
   transform: translateZ(1px);
 }
 .md-text .link-card.plain {
@@ -4181,7 +4181,7 @@ p>strong>span.tag-plugin.icon {
   -o-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 .sites-wrap .site-card .card-link:hover >img {
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 1px var(--text-meta);
   transform: translateZ(1px);
 }
 .md-text .tag-plugin.span {
@@ -5073,7 +5073,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
 }
 .widget-wrapper.ghrepo .repo:hover {
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 1px var(--text-meta);
   transform: translateZ(1px);
 }
 .widget-wrapper.ghrepo .repo >div+div {
@@ -5703,7 +5703,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   background: var(--site-bg);
   position: sticky;
   z-index: 2;
-  top: 0;
+  top: -1px;
 }
 @media screen and (max-width: 1180px) {
   .l_right .widgets .widget-wrapper {
@@ -5965,7 +5965,6 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_body .l_right {
   justify-self: left;
-  --gap-margin: 0px;
   max-height: calc(100% - 8px * 2);
 }
 .l_body .l_right .widgets {
@@ -6100,7 +6099,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   position: relative;
 }
 .post-list .post-card:hover {
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 1px var(--text-meta);
   transform: translateZ(1px);
 }
 .post-list .post-card .excerpt {
@@ -6149,7 +6148,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   color: #f44336;
 }
 .post-list.post .post-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .post-list .md-text {
   padding: 1rem;
