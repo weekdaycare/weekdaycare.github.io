@@ -290,8 +290,8 @@ mjx-container[display="true"] + br {
 <h2 id="实现代码">实现代码</h2>
 <p>使用工具：python(函数库真香)，你需要准备以下内容：</p>
 <ul>
-<li><code>pillow</code> 库：用于图像处理 <div class="tag-plugin copy"><input class="copy-area" id="copy_18" value="pip install pillow"><button class="copy-btn" onclick="util.copy(&quot;copy_18&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
-<li><code>numpy</code> 库：储存处理数组 <div class="tag-plugin copy"><input class="copy-area" id="copy_19" value="pip install numpy"><button class="copy-btn" onclick="util.copy(&quot;copy_19&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
+<li><code>pillow</code> 库：用于图像处理 <div class="tag-plugin copy"><input class="copy-area" id="copy_17" value="pip install pillow"><button class="copy-btn" onclick="util.copy(&quot;copy_17&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
+<li><code>numpy</code> 库：储存处理数组 <div class="tag-plugin copy"><input class="copy-area" id="copy_18" value="pip install numpy"><button class="copy-btn" onclick="util.copy(&quot;copy_18&quot;,&quot;复制成功( •̀ ω •́ )✧&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></li>
 <li>一张jpg图片，不要太大，放置于与源代码相同的文件夹内，重命名为
 <code>1.jpg</code></li>
 </ul>
@@ -342,7 +342,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/past-summer/">来一杯乌龙茶？</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/finger-scarf/">失败的手指围巾</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><a class="item" id="prev" href="/posts/past-summer/"><div class="note">较新文章</div>来一杯乌龙茶？</a><a class="item" id="next" href="/posts/finger-scarf/"><div class="note">较早文章</div>失败的手指围巾</a></section></div>
 
 
 
@@ -646,55 +646,55 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 <script type="text/javascript">
   const applyTheme = (theme) => {
     if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.removeAttribute('data-theme');
     } else {
-      document.documentElement.setAttribute('data-theme', theme)
+      document.documentElement.setAttribute('data-theme', theme);
     }
 
-    applyThemeToGiscus(theme)
+    applyThemeToGiscus(theme);
   }
 
   const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme;
 
-    const cmt = document.getElementById('giscus')
+    const cmt = document.getElementById('giscus');
     if (cmt) {
       // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
+      cmt.setAttribute('data-theme', theme);
     }
 
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    const iframe = document.querySelector('#comments > section.giscus > iframe');
     if (iframe) {
       // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
+      const src = iframe.src;
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`);
+      iframe.src = newSrc;
     }
   }
 
   const switchTheme = (theme) => {
-    applyTheme(theme)
-    window.localStorage.setItem('Stellar.theme', theme)
+    applyTheme(theme);
+    window.localStorage.setItem('Stellar.theme', theme);
 
     const messages = {
       light: `切换到浅色模式`,
       dark: `切换到深色模式`,
       auto: `切换到跟随系统配色`,
     }
-    hud?.toast?.(messages[theme])
+    hud?.toast?.(messages[theme]);
   }
 
-  const switchTolight = () => switchTheme('light')
-  const switchTodark = () => switchTheme('dark')
-  const switchTosystem = () => switchTheme('auto')
+  const switchTolight = () => switchTheme('light');
+  const switchTodark = () => switchTheme('dark');
+  const switchTosystem = () => switchTheme('auto');
 
   (() => {
     // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
+    const theme = window.localStorage.getItem('Stellar.theme');
     if (theme !== null) {
-      applyTheme(theme)
+      applyTheme(theme);
     }
-  })()
+  })();
 </script>
 
 

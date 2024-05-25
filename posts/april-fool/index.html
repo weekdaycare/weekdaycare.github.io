@@ -303,7 +303,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/e-mask/">五月，i人也小e了一下</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/hexo-obsidian/">探索Hexo多端写作</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><a class="item" id="prev" href="/posts/e-mask/"><div class="note">较新文章</div>五月，i人也小e了一下</a><a class="item" id="next" href="/posts/hexo-obsidian/"><div class="note">较早文章</div>探索Hexo多端写作</a></section></div>
 
 
 
@@ -607,55 +607,55 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 <script type="text/javascript">
   const applyTheme = (theme) => {
     if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.removeAttribute('data-theme');
     } else {
-      document.documentElement.setAttribute('data-theme', theme)
+      document.documentElement.setAttribute('data-theme', theme);
     }
 
-    applyThemeToGiscus(theme)
+    applyThemeToGiscus(theme);
   }
 
   const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme;
 
-    const cmt = document.getElementById('giscus')
+    const cmt = document.getElementById('giscus');
     if (cmt) {
       // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
+      cmt.setAttribute('data-theme', theme);
     }
 
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    const iframe = document.querySelector('#comments > section.giscus > iframe');
     if (iframe) {
       // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
+      const src = iframe.src;
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`);
+      iframe.src = newSrc;
     }
   }
 
   const switchTheme = (theme) => {
-    applyTheme(theme)
-    window.localStorage.setItem('Stellar.theme', theme)
+    applyTheme(theme);
+    window.localStorage.setItem('Stellar.theme', theme);
 
     const messages = {
       light: `切换到浅色模式`,
       dark: `切换到深色模式`,
       auto: `切换到跟随系统配色`,
     }
-    hud?.toast?.(messages[theme])
+    hud?.toast?.(messages[theme]);
   }
 
-  const switchTolight = () => switchTheme('light')
-  const switchTodark = () => switchTheme('dark')
-  const switchTosystem = () => switchTheme('auto')
+  const switchTolight = () => switchTheme('light');
+  const switchTodark = () => switchTheme('dark');
+  const switchTosystem = () => switchTheme('auto');
 
   (() => {
     // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
+    const theme = window.localStorage.getItem('Stellar.theme');
     if (theme !== null) {
-      applyTheme(theme)
+      applyTheme(theme);
     }
-  })()
+  })();
 </script>
 
 

@@ -126,7 +126,7 @@
 
 <div class="article-footer fs14"></div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/doc/express.html">文本修饰标签集</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/doc/widgets.html">widgets.yml</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><a class="item" id="prev" href="/doc/express.html"><div class="note">回顾上一篇</div>文本修饰标签集</a><a class="item" id="next" href="/doc/widgets.html"><div class="note">接下来阅读</div>widgets.yml</a></section></div>
 
 
 
@@ -407,55 +407,55 @@
 <script type="text/javascript">
   const applyTheme = (theme) => {
     if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.removeAttribute('data-theme');
     } else {
-      document.documentElement.setAttribute('data-theme', theme)
+      document.documentElement.setAttribute('data-theme', theme);
     }
 
-    applyThemeToGiscus(theme)
+    applyThemeToGiscus(theme);
   }
 
   const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme;
 
-    const cmt = document.getElementById('giscus')
+    const cmt = document.getElementById('giscus');
     if (cmt) {
       // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
+      cmt.setAttribute('data-theme', theme);
     }
 
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    const iframe = document.querySelector('#comments > section.giscus > iframe');
     if (iframe) {
       // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
+      const src = iframe.src;
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`);
+      iframe.src = newSrc;
     }
   }
 
   const switchTheme = (theme) => {
-    applyTheme(theme)
-    window.localStorage.setItem('Stellar.theme', theme)
+    applyTheme(theme);
+    window.localStorage.setItem('Stellar.theme', theme);
 
     const messages = {
       light: `切换到浅色模式`,
       dark: `切换到深色模式`,
       auto: `切换到跟随系统配色`,
     }
-    hud?.toast?.(messages[theme])
+    hud?.toast?.(messages[theme]);
   }
 
-  const switchTolight = () => switchTheme('light')
-  const switchTodark = () => switchTheme('dark')
-  const switchTosystem = () => switchTheme('auto')
+  const switchTolight = () => switchTheme('light');
+  const switchTodark = () => switchTheme('dark');
+  const switchTosystem = () => switchTheme('auto');
 
   (() => {
     // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
+    const theme = window.localStorage.getItem('Stellar.theme');
     if (theme !== null) {
-      applyTheme(theme)
+      applyTheme(theme);
     }
-  })()
+  })();
 </script>
 
 
