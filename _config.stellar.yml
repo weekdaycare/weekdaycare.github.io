@@ -203,7 +203,7 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js # 建议锁定版本
+    js: https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js # 建议锁定版本
     envId: https://comment.weekdaycare.cn # vercel函数
 
   # Waline
@@ -319,8 +319,7 @@ tag_plugins:
   emoji:
     default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/{name}.png
     fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets/{name}.svg
-    bbpng: https://emoj.ml/blob{name}.png
-    bbgif: https://emoj.ml/ablob{name}.gif
+
   icon:
     # 留空时，图标和文字颜色相同
     default_color: accent # theme, accent, red, orange, yellow, green, cyan, blue, purple
@@ -573,7 +572,7 @@ style:
     text: 'hsl(0 0% 20%)' # 文本颜色
     # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
     theme: '#F4511E' # 主题色
-    accent: '#D50000' # 强调色
+    accent: '#F4511E' # 强调色
     link: '#F4511E' # 超链接颜色
     hover: '#7E57C2' # 按钮高亮颜色
   animated_avatar:
