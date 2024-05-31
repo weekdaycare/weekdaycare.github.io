@@ -94,6 +94,6 @@ module.exports.cacheRules = {
   avatar: {
     clean: true,
     search: false,
-    match: url => url.host === 'cravatar.cn' && url.pathname.startsWith('/avatar/')
+    match: url => url.host === 'weavatar.com' && url.pathname.startsWith('/avatar/')
   }
 }
