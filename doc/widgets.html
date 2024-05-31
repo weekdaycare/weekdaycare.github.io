@@ -37,8 +37,8 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
   
   <title>文档重构：widgets.yml - 星日语</title>
 
@@ -50,8 +50,8 @@
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="您可以在这里创建属于自己的侧边栏组件库，在主题配置的相应位置放置自己的组件，layout 即组件布局模板，支持自定义的有： - markdown: 渲染 md 文本 blog&#x2F;source&#x2F;_data&#x2F;widgets.yml# welcome 为组件名，可自由设置，在主题配置中会引用到，其他组件同理welcome:   layout: markdown  title: 你好，旅人：  cont">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-19T06:21:39.503Z">
-<meta property="article:modified_time" content="2024-04-19T06:21:39.503Z">
+<meta property="article:published_time" content="2024-05-28T05:24:26.749Z">
+<meta property="article:modified_time" content="2024-05-28T05:24:26.749Z">
 <meta property="article:author" content="星日语">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
@@ -105,7 +105,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/doc/">文档重构</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-04-19T06:21:39.503Z">2024-04-19</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-05-28T05:24:26.749Z">2024-05-28</time></span></div>
 <div class="flex-row" id="post-wordcount"><span class="text word-count">字数：528 字</span><span class="sep"></span><span class="text read-time">时长：2 分钟</span></div>
 </div></div>
     
@@ -462,13 +462,13 @@
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));
@@ -621,7 +621,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var expiredDays = '45' || 60;
-  var postDate = new Date('Fri Apr 19 2024 14:21:39 GMT+0800').getTime();
+  var postDate = new Date('Tue May 28 2024 13:24:26 GMT+0800').getTime();
   var currentDate = new Date().getTime();
   var daysDiff = Math.floor((currentDate - postDate) / (1000 * 3600 * 24));
   if (daysDiff > expiredDays) {

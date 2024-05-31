@@ -37,8 +37,8 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
   
   <title>RSS - 星日语</title>
 
@@ -212,22 +212,23 @@ Feedly、NewsBlur、Feedio...</p>
       <div class="body">
         <ul>
         <li class="post-title">
-          <p>[object Object]</p>
+          <p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/消息來源">消息来源</a></p>
 
         </li>
         
         <li class="post-title">
-          <p>[object Object]</p>
+          <p><a target="_blank" rel="noopener" href="https://sspai.com/post/43998">论 RSS 的「复兴」</a></p>
 
         </li>
         
         <li class="post-title">
-          <p>[object Object]</p>
+          <p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Atom">Atom</a>]</p>
 
         </li>
         
         <li class="post-title">
-          <p>[object Object]</p>
+          <p><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/349349861">知道RSS的人越少，我就越希望它能被人知道!</a></p>
 
         </li>
         </ul>
@@ -603,13 +604,13 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
   <script>
     function load_twikoo() {
         if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js', {defer: true}).then(function () {
+        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
             const el = document.getElementById("twikoo_container");
             var path = el.getAttribute('comment_id');
             if (!path) {
                 path = decodeURI(window.location.pathname);
             }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.35/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
+            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
                 el: '#twikoo_container',
                 path: path,
             }));
