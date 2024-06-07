@@ -11,7 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
+            if (data.new.local !== data.old.local) {
               hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             }
             break
@@ -163,7 +163,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     <section class='body cmt-body twikoo'>
       
 
-<div id="twikoo_container"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+<div id="twikoo_container"><svg class="loading" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>
     </section>
   </div>
 
@@ -181,7 +181,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+</aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only button-toggle mobile' onclick='util.scrollTop()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m8.5 13.25l3.5-3.5l3.5 3.5"/><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/></g></svg>
   </button>
@@ -444,7 +444,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" async></script>
+<script src="/js/main.js?v=1.28.1" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {
@@ -503,25 +503,19 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <!-- optional -->
 
-  <script>
-    function load_twikoo() {
-        if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
-            const el = document.getElementById("twikoo_container");
-            var path = el.getAttribute('comment_id');
-            if (!path) {
-                path = decodeURI(window.location.pathname);
-            }
-            twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
-                el: '#twikoo_container',
-                path: path,
-            }));
-        });
-    }
-
-    window.addEventListener('DOMContentLoaded', (event) => {
-        load_twikoo();
+  <script type="module">
+  const el = document.getElementById('twikoo_container');
+  util.viewportLazyload(el, load_twikoo, true);
+  function load_twikoo() {
+    if (!el) return;
+    utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
+      const path = el.getAttribute('comment_id') ?? decodeURI(window.location.pathname);
+      twikoo.init(Object.assign({"js":"https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://comment.weekdaycare.cn"}, {
+        el: '#twikoo_container',
+        path: path,
+      }));
     });
+  }
 </script>
 
 

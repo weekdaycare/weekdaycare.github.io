@@ -11,7 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
+            if (data.new.local !== data.old.local) {
               hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             }
             break
@@ -111,7 +111,7 @@
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/ri:git-branch-line.svg?color=%237363bf"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-11-01T04:44:07.000Z">2022-11-01&nbsp;·&nbsp;2.5k&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-update/">Stellar更新&备份</a><div class="excerpt"><p>Stellar更新&备份</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
 </div><div class="post-card post">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/material-symbols:attachment-rounded.svg?color=%2388bf63"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-31T12:29:00.000Z">2022-10-31&nbsp;·&nbsp;1.4k&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-friends/">Stellar动态友链教程</a><div class="excerpt"><p>俺又来啦，今天带来的是Stellar友链的小白教程</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
-</div><div class="post-card post photo">
+</div><div class="post-card post">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/solar:emoji-funny-square-linear.svg?color=%23bf63bc"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-30T15:46:37.000Z">2022-10-30&nbsp;·&nbsp;638&nbsp;字</time></span></div><a class="post-title" href="/posts/emoji-blob/">Stellar内嵌blobcat小表情</a><div class="excerpt"><p>你们真的我哭死，整个网站的流量大部分都是这篇文章贡献的</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
 </div><div class="post-card post">
 <article class="md-text"><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-29T14:15:53.000Z">2022-10-29&nbsp;·&nbsp;576&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-beautify-one/">Stellar滚动框美化</a><div class="excerpt"><p>前言
@@ -176,7 +176,7 @@ QQ空间的地方可以放一些我的吐槽&amp;一些不正经的东西😎。
 <widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">星迹</span></div><div class="widget-body fs14"><div class="tag-plugin timeline ds-twikoo" api="https://comment.weekdaycare.cn" hide="reply" limit="6"></div></div></widget>
 
 <widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">星语</span></div><div class="widget-body fs14"><div class="tag-plugin timeline ds-timeline" api="https://raw.weekdaycare.cn/api/repos/weekdaycare/weekdaycare.github.io/issues?per_page=5" user="weekdaycare"></div></div></widget>
-</div></aside><div class='float-panel blur'>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only button-toggle mobile' onclick='util.scrollTop()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m8.5 13.25l3.5-3.5l3.5 3.5"/><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/></g></svg>
   </button>
@@ -435,7 +435,7 @@ QQ空间的地方可以放一些我的吐槽&amp;一些不正经的东西😎。
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" async></script>
+<script src="/js/main.js?v=1.28.1" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {

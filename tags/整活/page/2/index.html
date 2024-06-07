@@ -11,7 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
+            if (data.new.local !== data.old.local) {
               hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             }
             break
@@ -151,7 +151,7 @@ Office ...</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--te
 <widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">星迹</span></div><div class="widget-body fs14"><div class="tag-plugin timeline ds-twikoo" api="https://comment.weekdaycare.cn" hide="reply" limit="6"></div></div></widget>
 
 <widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">星语</span></div><div class="widget-body fs14"><div class="tag-plugin timeline ds-timeline" api="https://raw.weekdaycare.cn/api/repos/weekdaycare/weekdaycare.github.io/issues?per_page=5" user="weekdaycare"></div></div></widget>
-</div></aside><div class='float-panel blur'>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only button-toggle mobile' onclick='util.scrollTop()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m8.5 13.25l3.5-3.5l3.5 3.5"/><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/></g></svg>
   </button>
@@ -410,7 +410,7 @@ Office ...</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--te
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" async></script>
+<script src="/js/main.js?v=1.28.1" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {

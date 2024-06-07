@@ -31,7 +31,7 @@ utils.jq(() => {
       cell += '<div class="user-info">';
       cell += '<span>' + comment.nick + '</span>';
       cell += '</div>';
-      cell += '<span>' + new Date(comment.created).toLocaleString() + '</span>';
+      cell += '<span>' + new Date(comment.created).toLocaleString('zh-CN', {month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false}) + '</span>';
       cell += '</div>';
       cell += '<a class="body" href="' + comment.url + '#' + comment.id + '">';
       cell += commentText;
