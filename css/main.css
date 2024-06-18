@@ -3650,7 +3650,7 @@ p>strong>span.tag-plugin.icon {
 }
 .tag-plugin.video {
   line-height: 0;
-  text-align: center;
+  margin: auto;
 }
 .tag-plugin.video video,
 .tag-plugin.video iframe {
@@ -6110,47 +6110,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   object-fit: cover;
   aspect-ratio: 2.4;
 }
-.post-list .post-card.post.photo .cover .cover-info {
-  padding: 1.5rem 1rem;
-  position: absolute;
-  line-height: 1.2;
-  width: calc(100% - 1rem * 2);
-  --text-banner: #fff;
-  color: var(--text-banner);
-}
-.post-list .post-card.post.photo .cover .cover-info[position=top] {
-  top: 0;
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0));
-}
-.post-list .post-card.post.photo .cover .cover-info[position=bottom] {
-  bottom: 0;
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
-}
-.post-list .post-card.post.photo .cover .cover-info div+div {
-  margin-top: 4px;
-}
-.post-list .post-card.post.photo .cover .cover-info .cap {
-  font-size: 0.8125rem;
-  color: unset;
-}
-.post-list .post-card.post.photo .cover .cover-info .title {
-  font-weight: 500;
-  font-size: calc(17px + 7px);
-}
-@media screen and (max-width: 500px) {
-  .post-list .post-card.post.photo .cover .cover-info {
-    padding: 1rem;
-  }
-  .post-list .post-card.post.photo .cover .cover-info div+div {
-    margin-top: 2px;
-  }
-  .post-list .post-card.post.photo .cover .cover-info .title {
-    font-size: calc(17px + 4px);
-  }
-  .post-list .post-card.post.photo .cover .cover-info .cap {
-    font-size: 0.75rem;
-  }
-}
 .post-list .post-card.post.photo h2 {
   margin: 0.25rem 0;
   font-size: calc(17px + 4px);
@@ -6749,6 +6708,7 @@ a
   -o-transition: background 0.2s ease-out;
   border-radius: 6px;
   letter-spacing: 5px;
+  margin-top: 0.5em;
   background: var(--block);
 }
 .twikoo .tk-comments .tk-expand:hover {

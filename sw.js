@@ -123,7 +123,7 @@ match: url => url.host === 'raw.weekdaycare.cn' && url.pathname.match(/\.png$/)}
 avatar: {
 clean: true,
 search: false,
-match: url => url.host === ('cravatar.cn' || 'api.iconify.design')}
+match: url => url.host === ('weavatar.com' || 'api.iconify.design')}
 }
 
 let isCors = () => false

@@ -11,9 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.local !== data.old.local) {
-              hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
-            }
+            hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             break
           case 'escape':
             hud.toast('逃生门缓存更新完毕', 5000)
@@ -26,7 +24,7 @@
               })()
           </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
   
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -37,7 +35,7 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1e21">
   <meta name="theme-color" content="#f9fafb">
   
   <title>Stellar展示最新评论 - 星日语</title>
@@ -55,7 +53,7 @@
 <meta property="og:image" content="https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/blobcatgooglytrash.png">
 <meta property="og:image" content="https://bu.dusays.com/2022/12/20/63a095585da5c.webp">
 <meta property="article:published_time" content="2024-03-04T13:11:39.000Z">
-<meta property="article:modified_time" content="2024-04-27T07:15:00.000Z">
+<meta property="article:modified_time" content="2024-06-17T07:15:00.000Z">
 <meta property="article:author" content="星日语">
 <meta property="article:tag" content="代码">
 <meta property="article:tag" content="教程">
@@ -73,7 +71,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -104,7 +102,7 @@
 <a class="link" title="星辉" href="javascript:switchTosystem()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2zm18 11V5H4v11z"/></svg></div></a>
 <a class="link" title="月光" href="javascript:switchTodark()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75"/></svg></div></a></div></div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -117,8 +115,8 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-04T13:11:39.000Z">2024-03-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-27T07:15:00.000Z">2024-04-27</time></span></div>
-<div class="flex-row" id="post-wordcount"><span class="text word-count">字数：889 字</span><span class="sep"></span><span class="text read-time">时长：3 分钟</span></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-04T13:11:39.000Z">2024-03-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-06-17T07:15:00.000Z">2024-06-17</time></span></div>
+<div class="flex-row" id="post-wordcount"><span class="text word-count">字数：1.1k 字</span><span class="sep"></span><span class="text read-time">时长：4 分钟</span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -232,11 +230,12 @@ src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
 </tbody>
 </table>
 <ul>
-<li><code>GITHUB_CATEGORY_ID</code> :你可以在 https://giscus.app/
-中填写你的仓库和分类找到 <code>data-category-id</code>
-<span class="tag-plugin colorful span" color="red">注意是id不是名称！</span></li>
+<li><code>GITHUB_CATEGORY_ID</code> :你可以在 <a
+target="_blank" rel="noopener" href="https://giscus.app/">Giscus</a> 中填写你的仓库和分类找到
+<code>data-category-id</code> <mark class="tag-plugin colorful mark" color="red">注意是id不是名称！</mark></li>
 <li><code>GITHUB_TOKEN</code> :Github 设置中新建一个 Token，权限给
-<code>repo</code></li>
+<code>repo</code> （似乎不给也行？）主要是不用 Token 的话 Github
+对访问频率的限制会比较大。</li>
 </ul>
 <h3 id="新建-giscus_new.js">新建 giscus_new.js</h3>
 <p>位于 <code>theme/source/js/services/</code> 下</p>
@@ -247,6 +246,14 @@ src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
 <p>在 <code>_data/widgets.yml</code> 中创建小组件，示例</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">new_comment:</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">timeline</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">最新评论</span></span><br><span class="line">  <span class="attr">api:</span> <span class="string">https://xxx.vercel.app</span> <span class="comment"># 你的 vercel 函数地址</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">giscus</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">16</span> <span class="comment"># 限制获取数量，这是客户端，刚刚是服务端</span></span><br></pre></td></tr></table></figure>
 <h2 id="more">More</h2>
+<p>关于共用评论的链接跳转问题，没有想到好的解决方法。多个页面共用应该跳转到哪一个页面？如何获取该页面的url？</p>
+<p>客户端在请求评论的时候会传入 <code>comment_id</code>
+，在共用评论的页面 <code>comment_id</code>
+为我们手动设置的值。所以目前的方案是在不改变原来评论请求代码的情况下，将
+<code>comment_id</code> 设置为指定的url路径，比如
+<code>comment_id: '/posts/1/index.html'</code>
+，但是这个方法有个坏处是对于已有的评论的，我们需要手动去数据库更改
+<code>url</code> 十分麻烦。</p>
 <p>感谢各位大佬们的脚本制作以及反馈问题的朋友，有你们在社区就更加活跃！</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://bu.dusays.com/2022/12/20/63a095585da5c.webp" alt="这个时候就不得不拿出我的老图了" data-fancybox="true" style="width:300px;"/></div><div class="image-meta"><span class="image-caption center">这个时候就不得不拿出我的老图了</span></div></div>
 
@@ -291,6 +298,10 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">Notice</span></div><div class="widget-body fs14"><p>更新到 Stellar 1.29.0 版本之后有个评论区 <code>lazyload</code>
+选项，开启会导致最新评论小组件无法跳转到对应的精确评论。</p>
+</div></widget>
+
 
 <widget class="widget-wrapper toc" id="data-toc" collapse="true"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15 3.5v17M10 15l-3-3l3-3"/><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/></g></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#twikoo"><span class="toc-number">1.</span> <span class="toc-text">twikoo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-twikoo_new.js"><span class="toc-number">1.1.</span> <span class="toc-text">新建 twikoo_new.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BC%95%E5%85%A5"><span class="toc-number">1.2.</span> <span class="toc-text">主题配置中引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">如何使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#waline"><span class="toc-number">2.</span> <span class="toc-text">waline</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-waline_new.js"><span class="toc-number">2.1.</span> <span class="toc-text">新建 waline_new.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BC%95%E5%85%A5-1"><span class="toc-number">2.2.</span> <span class="toc-text">主题配置中引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-1"><span class="toc-number">2.3.</span> <span class="toc-text">如何使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#artalk"><span class="toc-number">3.</span> <span class="toc-text">Artalk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-artalk_new.js"><span class="toc-number">3.1.</span> <span class="toc-text">新建 artalk_new.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BC%95%E5%85%A5-2"><span class="toc-number">3.2.</span> <span class="toc-text">主题配置中引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-2"><span class="toc-number">3.3.</span> <span class="toc-text">如何使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#giscus"><span class="toc-number">4.</span> <span class="toc-text">Giscus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="toc-number">4.1.</span> <span class="toc-text">一键部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">4.2.</span> <span class="toc-text">环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-giscus_new.js"><span class="toc-number">4.3.</span> <span class="toc-text">新建 giscus_new.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BC%95%E5%85%A5-3"><span class="toc-number">4.4.</span> <span class="toc-text">主题配置中引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-3"><span class="toc-number">4.5.</span> <span class="toc-text">如何使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#more"><span class="toc-number">5.</span> <span class="toc-text">More</span></a></li></ol></div><div class="widget-footer">
 
@@ -558,7 +569,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" defer></script>
+<script src="/js/main.js?v=1.29.0" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {
@@ -619,7 +630,8 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
   <script type="module">
   const el = document.getElementById('twikoo_container');
-  util.viewportLazyload(el, load_twikoo, true);
+  util.viewportLazyload(el, load_twikoo, false);
+
   function load_twikoo() {
     if (!el) return;
     utils.js('https://npm.onmicrosoft.cn/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
@@ -773,7 +785,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var expiredDays = '45' || 60;
-  var postDate = new Date('Sat Apr 27 2024 15:15:00 GMT+0800').getTime();
+  var postDate = new Date('Mon Jun 17 2024 15:15:00 GMT+0800').getTime();
   var currentDate = new Date().getTime();
   var daysDiff = Math.floor((currentDate - postDate) / (1000 * 3600 * 24));
   if (daysDiff > expiredDays) {

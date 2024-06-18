@@ -11,9 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.local !== data.old.local) {
-              hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
-            }
+            hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             break
           case 'escape':
             hud.toast('逃生门缓存更新完毕', 5000)
@@ -26,7 +24,7 @@
               })()
           </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
   
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -37,7 +35,7 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1e21">
   <meta name="theme-color" content="#f9fafb">
   
   <title>星日语</title>
@@ -63,7 +61,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -367,7 +365,7 @@
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" defer></script>
+<script src="/js/main.js?v=1.29.0" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {

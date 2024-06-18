@@ -11,9 +11,7 @@
         const data = event.data
         switch (data.type) {
           case 'update':
-            if (data.new.local !== data.old.local) {
-              hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
-            }
+            hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
             break
           case 'escape':
             hud.toast('逃生门缓存更新完毕', 5000)
@@ -26,7 +24,7 @@
               })()
           </script><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
   
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -37,7 +35,7 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1e21">
   <meta name="theme-color" content="#f9fafb">
   
   <title>星日语</title>
@@ -63,7 +61,7 @@
     <link rel="alternate" href="/atom.xml" title="星日语" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
 
   
     <link rel="shortcut icon" href="/asset/favicon.svg">
@@ -94,7 +92,7 @@
 <a class="link" title="星辉" href="javascript:switchTosystem()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2zm18 11V5H4v11z"/></svg></div></a>
 <a class="link" title="月光" href="javascript:switchTodark()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75"/></svg></div></a></div></div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -107,11 +105,11 @@
 <div class="navbar top"><nav class="post"><a class="active" href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/posts/emoji-blob/">表情速查</a></nav></div>
 <div class="post-list post"><div class="post-card post">
 <article class="md-text"><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-11-07T08:05:18.000Z">2022-11-07&nbsp;·&nbsp;480&nbsp;字</time></span></div><a class="post-title" href="/posts/ten-years/">十年之约</a><div class="excerpt"><p>一个人的寂寞，一群人的狂欢</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#854836;--theme-block:#85483620" href="/categories/杂七杂八/"><span>杂七杂八</span></a><a class="cap tag" href="/tags/整活/">整活</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/ri:git-branch-line.svg?color=%237363bf"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-11-01T04:44:07.000Z">2022-11-01&nbsp;·&nbsp;2.5k&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-update/">Stellar更新&备份</a><div class="excerpt"><p>Stellar更新&备份</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/material-symbols:attachment-rounded.svg?color=%2388bf63"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-31T12:29:00.000Z">2022-10-31&nbsp;·&nbsp;1.4k&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-friends/">Stellar动态友链教程</a><div class="excerpt"><p>俺又来啦，今天带来的是Stellar友链的小白教程</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/solar:emoji-funny-square-linear.svg?color=%23bf63bc"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-30T15:46:37.000Z">2022-10-30&nbsp;·&nbsp;638&nbsp;字</time></span></div><a class="post-title" href="/posts/emoji-blob/">Stellar内嵌blobcat小表情</a><div class="excerpt"><p>你们真的我哭死，整个网站的流量大部分都是这篇文章贡献的</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
 </div><div class="post-card post">
 <article class="md-text"><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-29T14:15:53.000Z">2022-10-29&nbsp;·&nbsp;576&nbsp;字</time></span></div><a class="post-title" href="/posts/stellar-beautify-one/">Stellar滚动框美化</a><div class="excerpt"><p>前言
@@ -119,11 +117,11 @@
 好吧好吧，大大真勤快，我文章还没发出来2天捏大大就搞定了这个问题，不愧是大大🤣
 
 旧的前言众所周知，Stellar是一款十分精美的主题，我一看就喜欢上了啊，主题很漂亮，佬更新的也很勤快，然后就嘿嘿嘿...咳咳，跑题了跑题了，有一点小...</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/hexo/">hexo</a><a class="cap tag" href="/tags/Stellar/">Stellar</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/mingcute:rss-2-fill.svg?color=%23d5662a"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-27T00:25:57.000Z">2022-10-27&nbsp;·&nbsp;679&nbsp;字</time></span></div><a class="post-title" href="/posts/inkrss/">inkrss：优雅的实现rss更新通知</a><div class="excerpt"><p>RSS是个好东西，然而市面上的大部分本地rss阅读器并不支持通知推送，因为这需要软件在后台定时抓取更新，这显然不够优雅。一些在线的RSS阅读器似乎支持邮件订阅，然而抓取频率感人，价格感人，遂不做考虑。那rss的折腾之旅就要止步于此了吗？当然不会，办法总比困难多，现在就来看看今天的主角——inkrss</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/白嫖/">白嫖</a><a class="cap tag" href="/tags/rss/">rss</a></div></article>
 </div><div class="post-card post">
 <article class="md-text"><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-18T15:31:17.000Z">2022-10-18&nbsp;·&nbsp;1.3k&nbsp;字</time></span></div><a class="post-title" href="/posts/yingti-0to1/">引体向上：从0到1</a><div class="excerpt"><p>引体向上，一个让人挥之不去的噩梦，困扰了我初高中直到大学。以至每次体测之时，引体向上那一栏总是会给上大大的鸭蛋😿在5个开始给分20个满分的情况下，我决定开始整活了ጿ ኈ ቼ ዽ ጿ（非正规动作教学:D）</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#854836;--theme-block:#85483620" href="/categories/杂七杂八/"><span>杂七杂八</span></a><a class="cap tag" href="/tags/整活/">整活</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/solar:cat-outline.svg?color=%23884c90"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-13T14:41:50.000Z">2022-10-13&nbsp;·&nbsp;299&nbsp;字</time></span></div><a class="post-title" href="/posts/big-orange/">大橘</a><div class="excerpt"><p>大橘总是一副慵懒的样子捏
 霸王之气
 摸摸头
@@ -139,18 +137,18 @@
 在花坛挺好，但是冬天很快就要来了，再不走就冷了
 
 </p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#7B68EE;--theme-block:#7B68EE20" href="/categories/日常随笔/"><span>日常随笔</span></a><a class="cap tag" href="/tags/生活/">生活</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/ph:megaphone-simple-bold.svg?color=%23904c60"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-11T15:54:42.000Z">2022-10-11&nbsp;·&nbsp;973&nbsp;字</time></span></div><a class="post-title" href="/posts/ispeak-depoly/">说说</a><div class="excerpt"><p>对于我来说，平时也会记录一点点琐碎的事情，一般不会长，都是一两句话或者吐槽，而为此专门发一篇博文又未免太过于麻烦（指每次都要hexo g
 hexo d而且只能在电脑上完成），我想要一个类似于朋友圈 or
 QQ空间的地方可以放一些我的吐槽&amp;一些不正经的东西😎。</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/整活/">整活</a><a class="cap tag" href="/tags/白嫖/">白嫖</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/simple-icons:umami.svg?color=%233d49a9"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-10-04T04:42:34.000Z">2022-10-04&nbsp;·&nbsp;3.4k&nbsp;字</time></span></div><a class="post-title" href="/posts/umami/">Umami统计个人网站访问数据</a><div class="excerpt"><p>于Netlify部署Umami，白嫖赛高</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#E2A5AD;--theme-block:#E2A5AD20" href="/categories/奇技淫巧/"><span>奇技淫巧</span></a><a class="cap tag" href="/tags/教程/">教程</a><a class="cap tag" href="/tags/白嫖/">白嫖</a></div></article>
 </div><div class="post-card post">
 <article class="md-text"><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-09-30T11:04:48.000Z">2022-09-30&nbsp;·&nbsp;3.4k&nbsp;字</time></span></div><a class="post-title" href="/posts/about-my-phone/">关于我の手机一些吐槽</a><div class="excerpt"><p>
 本篇文章具有很强烈的主观性，如有让您感到不舒服或者被侵犯，请左上角退出本文(
 ´_ゝ` )
 </p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#7B68EE;--theme-block:#7B68EE20" href="/categories/日常随笔/"><span>日常随笔</span></a><a class="cap tag" href="/tags/生活/">生活</a></div></article>
-</div><div class="post-card post">
+</div><div class="post-card post photo">
 <article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.iconify.design/mingcute:settings-7-line.svg?color=%23d68080"/></div><div class="meta cap"><span class="cap" id="post-meta"><time datetime="2022-09-08T12:29:49.000Z">2022-09-08&nbsp;·&nbsp;756&nbsp;字</time></span></div><a class="post-title" href="/posts/hutao-shake/">胡桃摇</a><div class="excerpt"><p>其实胡桃摇两个月前就做好了，那为啥现在才发捏？绝不是因为懒
 这里浅浅记录一下</p></div><div class="meta cap"><a class="cap breadcrumb"  style="--text-p4:#7B68EE;--theme-block:#7B68EE20" href="/categories/日常随笔/"><span>日常随笔</span></a><a class="cap tag" href="/tags/整活/">整活</a><a class="cap tag" href="/tags/生活/">生活</a></div></article>
 </div></div>
@@ -435,7 +433,7 @@ QQ空间的地方可以放一些我的吐槽&amp;一些不正经的东西😎。
 
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" defer></script>
+<script src="/js/main.js?v=1.29.0" defer></script>
 
 <script type="text/javascript">
   const applyTheme = (theme) => {
