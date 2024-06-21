@@ -8,14 +8,20 @@
                   if (!sw?.register('/sw.js')
                       ?.then(() => {
       navigator.serviceWorker.addEventListener('message', event => {
-        const data = event.data
+        const data = event.data;
         switch (data.type) {
           case 'update':
-            hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
-            break
+            const newVersion = `${data.new.global}.${data.new.local}`;
+            const lastVersion = localStorage.getItem('lastVersion');
+            
+            if (lastVersion !== newVersion) {
+              hud.toast(`已更新至新版本：${newVersion}`, 5000);
+              localStorage.setItem('lastVersion', newVersion);
+            }
+            break;
           case 'escape':
-            hud.toast('逃生门缓存更新完毕', 5000)
-            break
+            hud.toast('逃生门缓存更新完毕', 5000);
+            break;
         }
       });
     })
@@ -96,7 +102,7 @@
 <a class="link" title="星辉" href="javascript:switchTosystem()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2zm18 11V5H4v11z"/></svg></div></a>
 <a class="link" title="月光" href="javascript:switchTodark()"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75"/></svg></div></a></div></div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a><a class="item title" href="/posts/stellar-update/"><span class="title">Stellar更新&备份</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/the-day-of-farewells/"><span class="title">于离别之日，束起约定之花</span></a><a class="item title" href="/posts/twikoo-new/"><span class="title">Stellar展示最新评论</span></a><a class="item title" href="/posts/lovechoice/"><span class="title">拣爱</span></a><a class="item title" href="/posts/e-mask/"><span class="title">五月，i人也小e了一下</span></a><a class="item title" href="/posts/april-fool/"><span class="title">四月，是倾盆的雨天</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -149,7 +155,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><a class="item" id="prev"><a class="item" id="next" href="/posts/e-mask/"><div class="note">较早文章</div>五月，i人也小e了一下</a></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><a class="item" id="prev" href="/posts/the-day-of-farewells/"><div class="note">较新文章</div>于离别之日，束起约定之花</a><a class="item" id="next" href="/posts/e-mask/"><div class="note">较早文章</div>五月，i人也小e了一下</a></section></div>
 
 
 

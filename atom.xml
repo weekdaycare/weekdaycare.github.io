@@ -6,7 +6,7 @@
   <link href="https://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="https://weekdaycare.cn/"/>
-  <updated>2024-05-10T03:16:00.000Z</updated>
+  <updated>2024-06-21T14:16:00.000Z</updated>
   <id>https://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>于离别之日，束起约定之花</title>
+    <link href="https://weekdaycare.cn/posts/the-day-of-farewells/"/>
+    <id>https://weekdaycare.cn/posts/the-day-of-farewells/</id>
+    <published>2024-06-21T14:16:00.000Z</published>
+    <updated>2024-06-21T14:16:00.000Z</updated>
+    
+    
+    <summary type="html">六月的主旋律，是离别。时间悄悄流过，甚至来不及告别，就又匆匆踏上了行程。</summary>
+    
+    
+    
+    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
+    
+    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>拣爱</title>
@@ -61,33 +84,6 @@
     <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
     <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>四月，是倾盆的雨天</title>
-    <link href="https://weekdaycare.cn/posts/april-fool/"/>
-    <id>https://weekdaycare.cn/posts/april-fool/</id>
-    <published>2024-04-30T12:15:00.000Z</published>
-    <updated>2024-04-30T12:15:00.000Z</updated>
-    
-    
-    <summary type="html">悲伤的四月，太阳很毒，雨却没有停过。</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-    <category term="失败" scheme="https://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/"/>
-    
-    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="番剧" scheme="https://weekdaycare.cn/tags/%E7%95%AA%E5%89%A7/"/>
-    
-    <category term="女朋友" scheme="https://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
     
   </entry>
   

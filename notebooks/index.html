@@ -8,14 +8,20 @@
                   if (!sw?.register('/sw.js')
                       ?.then(() => {
       navigator.serviceWorker.addEventListener('message', event => {
-        const data = event.data
+        const data = event.data;
         switch (data.type) {
           case 'update':
-            hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
-            break
+            const newVersion = `${data.new.global}.${data.new.local}`;
+            const lastVersion = localStorage.getItem('lastVersion');
+            
+            if (lastVersion !== newVersion) {
+              hud.toast(`已更新至新版本：${newVersion}`, 5000);
+              localStorage.setItem('lastVersion', newVersion);
+            }
+            break;
           case 'escape':
-            hud.toast('逃生门缓存更新完毕', 5000)
-            break
+            hud.toast('逃生门缓存更新完毕', 5000);
+            break;
         }
       });
     })
