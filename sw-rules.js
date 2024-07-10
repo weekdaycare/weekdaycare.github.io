@@ -3,19 +3,23 @@ module.exports.config = {
     escape: 0,
     cacheName: 'BlogCache'
   },
-  register: {
+register: {
     onsuccess: () => {
       navigator.serviceWorker.addEventListener('message', event => {
-        const data = event.data
+        const data = event.data;
         switch (data.type) {
           case 'update':
-            if (data.new.global !== data.old.global || data.new.local !== data.old.local || data.new.escape !== data.old.escape) {
-              hud.toast(`已更新至新版本：${data.new.global}.${data.new.local}`, 5000);
+            const newVersion = `${data.new.global}.${data.new.local}`;
+            const lastVersion = localStorage.getItem('lastVersion');
+            
+            if (lastVersion !== newVersion) {
+              hud.toast(`已更新至新版本：${newVersion}`, 5000);
+              localStorage.setItem('lastVersion', newVersion);
             }
-            break
+            break;
           case 'escape':
-            hud.toast('逃生门缓存更新完毕', 5000)
-            break
+            hud.toast('逃生门缓存更新完毕', 5000);
+            break;
         }
       });
     },
@@ -56,6 +60,8 @@ module.exports.config = {
     js: [],
     stable: [
       /^https:\/\/bu\.dusays\.com\/.*$/,
+      /^https:\/\/lain\.bgm\.tv\/.*$/,
+      /^https:\/\/api\.iconify\.design\/.*$/,
     ],
     replacer: srcUrl => srcUrl
   }
@@ -90,10 +96,5 @@ module.exports.cacheRules = {
     clean: false,
     search: false,
     match: url => url.host === 'raw.weekdaycare.cn' && url.pathname.match(/\.png$/)
-  },
-  avatar: {
-    clean: true,
-    search: false,
-    match: url => url.host === 'weavatar.com' && url.pathname.startsWith('/avatar/')
   }
 }

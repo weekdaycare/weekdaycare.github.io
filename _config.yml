@@ -7,11 +7,10 @@ title: 星日语
 avatar: /asset/avatar.svg
 favicon: /asset/favicon.svg
 description: '苦难不值得追求，磨练意志是因为苦难无法躲开'
-subtitle: '我随便写写|你随便看看'
+subtitle: '妳只是靜靜的坐著|卻撥動我所有的情緒'
 keywords: 博客
 author: 星日语
 language: zh-CN
-timezone: ''
 
 # URL
 # # If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -40,7 +39,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: /_drafts/dict.md
+skip_render: 
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -111,7 +110,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
-ignore:
+ignore: source/_drafts/dict.md
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -146,7 +145,7 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 3
+  limit: 5
   content: false
   content_limit: 200
   order_by: -date
@@ -176,9 +175,10 @@ deploy:
     serviceName: weekdaycare-blog
     operatorName: hexo
     operatorPassword: KMn3zNdIHPrgDBQ5dhyNWDaRVe3lMuyK
-  - type: ali-oss
+  - type: cos-cdn
+    cloud: aliyun
     region: oss-cn-chengdu
-    accessKeyId: LTAI5tPLu77Qm9LUrwZ82YzG
-    accessKeySecret: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7
+    secretId: LTAI5tPLu77Qm9LUrwZ82YzG
+    secretKey: 5ZZshvYW7Nce4IGU0CPxVI2tpCj0L7
     bucket: weeblog
    
