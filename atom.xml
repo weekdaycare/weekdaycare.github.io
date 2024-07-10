@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>星日语</title>
   <icon>https://weekdaycare.cn/asset/avatar.svg</icon>
-  <subtitle>我随便写写|你随便看看</subtitle>
+  <subtitle>妳只是靜靜的坐著|卻撥動我所有的情緒</subtitle>
   <link href="https://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="https://weekdaycare.cn/"/>
@@ -84,6 +84,62 @@
     <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
     <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四月，是倾盆的雨天</title>
+    <link href="https://weekdaycare.cn/posts/april-fool/"/>
+    <id>https://weekdaycare.cn/posts/april-fool/</id>
+    <published>2024-04-30T12:15:00.000Z</published>
+    <updated>2024-04-30T12:15:00.000Z</updated>
+    
+    
+    <summary type="html">悲伤的四月，太阳很毒，雨却没有停过。</summary>
+    
+    
+    
+    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="失败" scheme="https://weekdaycare.cn/tags/%E5%A4%B1%E8%B4%A5/"/>
+    
+    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="番剧" scheme="https://weekdaycare.cn/tags/%E7%95%AA%E5%89%A7/"/>
+    
+    <category term="女朋友" scheme="https://weekdaycare.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探索Hexo多端写作</title>
+    <link href="https://weekdaycare.cn/posts/hexo-obsidian/"/>
+    <id>https://weekdaycare.cn/posts/hexo-obsidian/</id>
+    <published>2024-04-19T04:31:30.000Z</published>
+    <updated>2024-04-19T10:31:30.000Z</updated>
+    
+    
+    <summary type="html">如何在不离开编辑器的情况下完成并推送一篇文章到博客？</summary>
+    
+    
+    
+    <category term="奇技淫巧" scheme="https://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="教程" scheme="https://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="整活" scheme="https://weekdaycare.cn/tags/%E6%95%B4%E6%B4%BB/"/>
+    
+    <category term="白嫖" scheme="https://weekdaycare.cn/tags/%E7%99%BD%E5%AB%96/"/>
+    
+    <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
+    
+    <category term="markdown" scheme="https://weekdaycare.cn/tags/markdown/"/>
     
   </entry>
   
