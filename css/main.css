@@ -2100,6 +2100,43 @@ a.tag-plugin.button:hover {
   width: 100%;
   box-sizing: border-box;
 }
+.tag-plugin.chat {
+  margin: 0.9em;
+}
+.tag-plugin.chat .chat-item {
+  margin-bottom: 0.9em;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.tag-plugin.chat .chat-title {
+  text-align: center;
+  color: var(--text-p1);
+}
+.tag-plugin.chat .chat-item.left {
+  align-items: flex-start;
+}
+.tag-plugin.chat .chat-item.left .message {
+  background-color: var(--block);
+}
+.tag-plugin.chat .chat-item.right {
+  align-items: flex-end;
+}
+.tag-plugin.chat .chat-item.right .message {
+  background-color: var(--theme-link-opa);
+}
+.tag-plugin.chat .user {
+  font-size: 0.8rem;
+  color: var(--text-p3);
+}
+.tag-plugin.chat .message {
+  padding: 0 0.7rem;
+  border-radius: 6px;
+  max-width: 80%;
+  text-align: left;
+  width: fit-content;
+}
 .md-text .tag-plugin.checkbox {
   display: flex;
   align-items: center;
