@@ -32,7 +32,7 @@ menubar:
     - id: post
       # icon: ph:signpost-duotone
       theme: var(--text)
-      title: 星雨
+      title: 日光
       url: /
     #- id: doc
       # icon: ph:books-duotone
@@ -40,13 +40,13 @@ menubar:
     #  title: 文档
     #  url: /doc/
     - id: shuoshuo
-      title: 星语
+      title: 月辉
       theme: var(--text)
       url: /shuoshuo/
     - id: about
       # icon: ph:planet-duotone
       theme: var(--text)
-      title: 星与
+      title: 星海
       url: /about/
 
 
