@@ -2104,7 +2104,6 @@ a.tag-plugin.button:hover {
   margin: 0.9em;
 }
 .tag-plugin.chat .chat-item {
-  margin-bottom: 0.9em;
   border-radius: 8px;
   position: relative;
   display: flex;
@@ -2136,6 +2135,7 @@ a.tag-plugin.button:hover {
   max-width: 80%;
   text-align: left;
   width: fit-content;
+  margin-bottom: 5px;
 }
 .md-text .tag-plugin.checkbox {
   display: flex;
