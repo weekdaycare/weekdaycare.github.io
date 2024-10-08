@@ -4610,6 +4610,44 @@ details.toc[open] >div.body section .header+.doc_tree {
 .l_left footer.footer {
   margin: 0.5rem var(--gap-max) 1rem;
 }
+.theme-switch {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2px;
+  gap: 2px;
+  background: var(--block);
+  border-radius: 1rem;
+  border: 1px solid var(--block-border);
+}
+.theme-switch .switch-item {
+  display: grid;
+  padding: 4px 1rem;
+  border-radius: 1rem;
+  background: var(--block);
+}
+.theme-switch .switch-item svg {
+  color: var(--text-p3);
+}
+.theme-switch .switch-item:hover {
+  background: var(--block-hover);
+}
+:root[data-theme="light"] .theme-switch .switch-item[data-theme="light"],
+:root:not([data-theme]) .theme-switch .switch-item[data-theme="auto"],
+:root[data-theme="dark"] .theme-switch .switch-item[data-theme="dark"] {
+  background: var(--card);
+  box-shadow: 0 0 2px 0px rgba(0,0,0,0.04), 0 0 8px 0px rgba(0,0,0,0.04);
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+:root[data-theme="light"] .theme-switch .switch-item[data-theme="light"] svg,
+:root:not([data-theme]) .theme-switch .switch-item[data-theme="auto"] svg,
+:root[data-theme="dark"] .theme-switch .switch-item[data-theme="dark"] svg {
+  color: var(--text-p1);
+}
 .social-wrap {
   display: grid;
   grid-gap: 0.25rem 0.25rem;
@@ -4716,9 +4754,9 @@ details.toc[open] >div.body section .header+.doc_tree {
   opacity: 1 !important;
 }
 .nav-area .menu {
-  width: 100%;
   display: grid;
   margin: 8px 0;
+  padding: 1px;
   border: 1px solid var(--block-border);
   border-radius: 6px;
   background: var(--block);
@@ -4737,7 +4775,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .nav-area .menu .nav-item {
   box-sizing: border-box;
   width: 100%;
-  min-height: 40px;
+  min-height: 38px;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--text-p3);
@@ -5212,7 +5250,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .widget-wrapper.markdown .widget-body {
   border-radius: 6px;
   padding: 4px 16px;
-  background: var(--block);
+  background: var(--card);
   border: 1px solid var(--block-border);
 }
 .widget-wrapper.markdown .widget-body a:not([class]) {
@@ -5683,7 +5721,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 @media screen and (min-width: 1180px) {
   .l_right .widgets .widget-wrapper.markdown .widget-body {
-    background: var(--block);
+    background: var(--card);
   }
 }
 .post-list #archive {

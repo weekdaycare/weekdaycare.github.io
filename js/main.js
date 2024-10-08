@@ -56,7 +56,7 @@ const util = {
   },
 
   scrollComment: () => {
-    document.getElementById('comments').scrollIntoView({behavior: "smooth"});
+    document.getElementById('comments').scrollIntoView();
   },
 
   viewportLazyload: (target, func, enabled = true) => {
