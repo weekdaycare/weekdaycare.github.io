@@ -450,8 +450,6 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 <footer class="page-footer footnote"><hr><div class="text"><center>
 <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> |
 由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-<br><span id="span"></span>
-<script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script>
 | 基于
 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
 <br><a href="https://www.foreverblog.cn/go.html" target="_blank">
@@ -497,7 +495,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":[],"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -806,7 +804,7 @@ BY-NC-ND 4.0</a> 若你喜欢我的文章欢迎互动，玩的愉快！</p>
 
 <script defer>
   window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"coding":{"js":"/js/services/coding.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"artalk":{"js":"/js/services/artalk_new.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"giscus":{"js":"/js/services/giscus_new.js"}}`));
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":"https://raw.weekdaycare.cn/site/api/v1?url={href}"},"ghinfo":{"js":"/js/services/ghinfo.js"},"coding":{"js":"/js/services/coding.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"artalk":{"js":"/js/services/artalk_new.js"},"twikoo":{"js":"/js/services/twikoo_new.js"},"waline":{"js":"/js/services/waline_new.js"},"giscus":{"js":"/js/services/giscus_new.js"},"webinfo":{"js":"/js/services/webinfo.js"}}`));
     for (let id of Object.keys(ctx.services)) {
       const js = ctx.services[id].js;
       if (id == 'siteinfo') {

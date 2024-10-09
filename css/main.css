@@ -5613,6 +5613,23 @@ details.toc[open] >div.body section .header+.doc_tree {
     display: none;
   }
 }
+.widget-wrapper.webinfo .widget-body {
+  border-radius: 6px;
+  padding: 8px 16px;
+  background: var(--card);
+  border: 1px solid var(--block-border);
+}
+.widget-wrapper.webinfo .widget-body .webinfo-item {
+  display: block;
+  padding: 8px 0;
+}
+.widget-wrapper.webinfo .widget-body .webinfo-item div:first-child {
+  display: inline-block;
+}
+.widget-wrapper.webinfo .widget-body .webinfo-item div:last-child {
+  display: inline-block;
+  float: right;
+}
 .widgets .loading-wrap {
   margin: 0.5rem 0;
   background: var(--block);
