@@ -5620,15 +5620,10 @@ details.toc[open] >div.body section .header+.doc_tree {
   border: 1px solid var(--block-border);
 }
 .widget-wrapper.webinfo .widget-body .webinfo-item {
-  display: block;
+  display: flex;
   padding: 8px 0;
-}
-.widget-wrapper.webinfo .widget-body .webinfo-item div:first-child {
-  display: inline-block;
-}
-.widget-wrapper.webinfo .widget-body .webinfo-item div:last-child {
-  display: inline-block;
-  float: right;
+  justify-content: space-between;
+  align-items: center;
 }
 .widgets .loading-wrap {
   margin: 0.5rem 0;
