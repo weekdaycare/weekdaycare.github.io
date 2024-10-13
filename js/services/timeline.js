@@ -101,9 +101,9 @@ utils.jq(() => {
             $(el).append(cell);
           });
         });
-        const lazyload = ctx.theme.config.plugins.lazyload.enable
-        util.viewportLazyload(el, loadTimeline, lazyload)
       }
+      const lazyload = el.hasAttribute('lazyload');
+      util.viewportLazyload(el, loadTimeline, lazyload);
     }
   });
 });
