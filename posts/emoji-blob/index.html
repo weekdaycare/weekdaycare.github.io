@@ -44,12 +44,12 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1e21">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>Stellar内嵌blobcat小表情 - 星日语</title>
+  <title>Blobcat表情速查 - 星日语</title>
 
   
     <meta name="description" content="你们真的我哭死，整个网站的流量大部分都是这篇文章贡献的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stellar内嵌blobcat小表情">
+<meta property="og:title" content="Blobcat表情速查">
 <meta property="og:url" content="https://weekdaycare.cn/posts/emoji-blob/">
 <meta property="og:site_name" content="星日语">
 <meta property="og:description" content="你们真的我哭死，整个网站的流量大部分都是这篇文章贡献的">
@@ -183,7 +183,7 @@
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>Stellar内嵌blobcat小表情</span></h1>
+        <h1 class="text title"><span>Blobcat表情速查</span></h1>
         
       </div>
     </div>
@@ -883,12 +883,17 @@
       utils.css(`https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.css`);
       utils.js(`https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
         const effect = swiper_api.getAttribute('effect') || '';
+        const isHomepage = swiper_api.getAttribute('homepage') === 'true';
         var swiper = new Swiper('.swiper#swiper-api', {
           slidesPerView: 'auto',
           spaceBetween: 8,
-          centeredSlides: true,
+          centeredSlides: !isHomepage,
           effect: effect,
-          rewind: true,
+          rewind: !isHomepage,
+          loop: isHomepage,
+          autoplay: isHomepage ? {
+            disableOnInteraction: false
+          } : false,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
