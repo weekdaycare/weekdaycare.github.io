@@ -636,8 +636,8 @@
   window.addEventListener('DOMContentLoaded', (event) => {
     const swiper_api = document.getElementById('swiper-api');
     if (swiper_api != undefined) {
-      utils.css(`https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+      utils.css(`https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.css`);
+      utils.js(`https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.js`, { defer: true }).then(function () {
         const effect = swiper_api.getAttribute('effect') || '';
         const isHomepage = swiper_api.getAttribute('homepage') === 'true';
         var swiper = new Swiper('.swiper#swiper-api', {
