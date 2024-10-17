@@ -33,7 +33,7 @@
     
     <category term="代码" scheme="https://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
     
-    <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
+    <category term="教程" scheme="https://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
     
@@ -55,6 +55,8 @@
     
     
     <category term="代码" scheme="https://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+    <category term="教程" scheme="https://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
     
@@ -79,8 +81,6 @@
     
     <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
     
-    <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
-    
     <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
@@ -99,8 +99,6 @@
     
     <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
-    
-    <category term="体验" scheme="https://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
     
     <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
     
@@ -123,11 +121,7 @@
     <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="体验" scheme="https://weekdaycare.cn/tags/%E4%BD%93%E9%AA%8C/"/>
-    
     <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-    <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
     
     <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
