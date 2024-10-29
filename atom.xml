@@ -6,7 +6,7 @@
   <link href="https://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="https://weekdaycare.cn/"/>
-  <updated>2024-10-17T16:37:00.000Z</updated>
+  <updated>2024-10-29T14:56:00.000Z</updated>
   <id>https://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>穿行的列车，下一站是何处？</title>
+    <link href="https://weekdaycare.cn/posts/slilence/"/>
+    <id>https://weekdaycare.cn/posts/slilence/</id>
+    <published>2024-10-29T14:56:00.000Z</published>
+    <updated>2024-10-29T14:56:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;追忆，端坐，提笔，忘字。就像哑剧演员做着一点都不好笑的滑稽动作，我的夏天就是没有语言的吃播，不够鲜艳，不够精彩，甚至没有广告词，一如落在地上的蝉，两腿一蹬，再无了声息。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
+    
+    <category term="游戏" scheme="https://weekdaycare.cn/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Stellar首页轮播图</title>
@@ -105,27 +130,6 @@
     <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
     
     <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>拣爱</title>
-    <link href="https://weekdaycare.cn/posts/lovechoice/"/>
-    <id>https://weekdaycare.cn/posts/lovechoice/</id>
-    <published>2024-05-10T03:16:00.000Z</published>
-    <updated>2024-05-10T03:16:00.000Z</updated>
-    
-    
-    <summary type="html">如果可以再选一次，结局是否会不一样？</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-    <category term="游戏" scheme="https://weekdaycare.cn/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
