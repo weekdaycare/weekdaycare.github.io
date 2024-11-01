@@ -6,7 +6,7 @@
   <link href="https://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="https://weekdaycare.cn/"/>
-  <updated>2024-10-29T14:56:00.000Z</updated>
+  <updated>2024-10-17T16:37:00.000Z</updated>
   <id>https://weekdaycare.cn/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>穿行的列车，下一站是何处？</title>
-    <link href="https://weekdaycare.cn/posts/slilence/"/>
-    <id>https://weekdaycare.cn/posts/slilence/</id>
-    <published>2024-10-29T14:56:00.000Z</published>
-    <updated>2024-10-29T14:56:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;追忆，端坐，提笔，忘字。就像哑剧演员做着一点都不好笑的滑稽动作，我的夏天就是没有语言的吃播，不够鲜艳，不够精彩，甚至没有广告词，一如落在地上的蝉，两腿一蹬，再无了声息。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-    <category term="夏天" scheme="https://weekdaycare.cn/tags/%E5%A4%8F%E5%A4%A9/"/>
-    
-    <category term="游戏" scheme="https://weekdaycare.cn/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
   
   <entry>
     <title>Stellar首页轮播图</title>
@@ -113,23 +88,57 @@
   </entry>
   
   <entry>
-    <title>于离别之日，束起约定之花</title>
-    <link href="https://weekdaycare.cn/posts/the-day-of-farewells/"/>
-    <id>https://weekdaycare.cn/posts/the-day-of-farewells/</id>
-    <published>2024-06-21T14:16:00.000Z</published>
-    <updated>2024-06-21T14:16:00.000Z</updated>
+    <title>探索Hexo多端写作</title>
+    <link href="https://weekdaycare.cn/posts/hexo-obsidian/"/>
+    <id>https://weekdaycare.cn/posts/hexo-obsidian/</id>
+    <published>2024-04-19T04:31:30.000Z</published>
+    <updated>2024-04-19T10:31:30.000Z</updated>
     
     
-    <summary type="html">六月的主旋律，是离别。时间悄悄流过，甚至来不及告别，就又匆匆踏上了行程。</summary>
+    <summary type="html">如何在不离开编辑器的情况下完成并推送一篇文章到博客？</summary>
     
     
     
-    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
+    <category term="奇技淫巧" scheme="https://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
     
     
-    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
+    <category term="教程" scheme="https://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-renderer-pandoc渲染swiper失败问题</title>
+    <link href="https://weekdaycare.cn/posts/fix-swiper-invalid/"/>
+    <id>https://weekdaycare.cn/posts/fix-swiper-invalid/</id>
+    <published>2024-04-06T13:12:58.000Z</published>
+    <updated>2024-04-06T13:12:58.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;水-pr&quot;&gt;水 pr&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不想看废话的可以跳过我的碎碎念 &lt;a href=&quot;#%E5%92%8B%E5%8A%9E&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;日常逛博客的时候瞄了瞄主题仓库，瞟到了 issue: 关于swiper轮播容器右箭头失效 &lt;a href=&quot;https://github.com/xaoxuu/hexo</summary>
+      
+    
+    
+    
+    <category term="奇技淫巧" scheme="https://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="代码" scheme="https://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+    <category term="教程" scheme="https://weekdaycare.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
     
   </entry>
   
