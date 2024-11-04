@@ -6,7 +6,7 @@
   <link href="https://weekdaycare.cn/atom.xml" rel="self"/>
   
   <link href="https://weekdaycare.cn/"/>
-  <updated>2024-10-29T14:56:00.000Z</updated>
+  <updated>2024-11-04T02:34:16.000Z</updated>
   <id>https://weekdaycare.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS实况live图标签</title>
+    <link href="https://weekdaycare.cn/posts/web-live/"/>
+    <id>https://weekdaycare.cn/posts/web-live/</id>
+    <published>2024-11-04T02:34:16.000Z</published>
+    <updated>2024-11-04T02:34:16.000Z</updated>
+    
+    
+    <summary type="html">我可以不用但我不能没有😋，就像我每周都白嫖e宝送的游戏，但从不打开epic启动器。</summary>
+    
+    
+    
+    <category term="奇技淫巧" scheme="https://weekdaycare.cn/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"/>
+    
+    
+    <category term="代码" scheme="https://weekdaycare.cn/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+    <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
+    
+    <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
+    
+  </entry>
   
   <entry>
     <title>穿行的列车，下一站是何处？</title>
@@ -109,27 +132,6 @@
     <category term="hexo" scheme="https://weekdaycare.cn/tags/hexo/"/>
     
     <category term="Stellar" scheme="https://weekdaycare.cn/tags/Stellar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>于离别之日，束起约定之花</title>
-    <link href="https://weekdaycare.cn/posts/the-day-of-farewells/"/>
-    <id>https://weekdaycare.cn/posts/the-day-of-farewells/</id>
-    <published>2024-06-21T14:16:00.000Z</published>
-    <updated>2024-06-21T14:16:00.000Z</updated>
-    
-    
-    <summary type="html">六月的主旋律，是离别。时间悄悄流过，甚至来不及告别，就又匆匆踏上了行程。</summary>
-    
-    
-    
-    <category term="日常随笔" scheme="https://weekdaycare.cn/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="回忆" scheme="https://weekdaycare.cn/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-    <category term="生活" scheme="https://weekdaycare.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
