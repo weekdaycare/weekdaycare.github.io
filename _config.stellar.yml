@@ -56,16 +56,16 @@ site_tree:
   # -- 列表类页面 -- #
   # 主页配置
   home:
-    leftbar: welcome, recent
-    rightbar: new_comment, timeline
+    leftbar: recent
+    rightbar: welcome, webinfo
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    leftbar: welcome, recent, switch # for categories/tags/archives
-    rightbar: new_comment, timeline
+    leftbar: recent # for categories/tags/archives
+    rightbar: welcome, webinfo
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
-      '表情速查': /posts/emoji-blob/
+      #'表情速查': /posts/emoji-blob/
   # 博客专栏列表页配置
   index_topic:
     base_dir: topic # 只影响自动生成的页面路径
@@ -82,7 +82,7 @@ site_tree:
   # 博客文章内页配置
   post:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    leftbar: welcome, recent # for pages using 'layout:post'
+    leftbar: recent # for pages using 'layout:post'
     rightbar: toc
   # 博客专栏文章内页配置
   topic:
@@ -94,7 +94,7 @@ site_tree:
     rightbar: ghrepo, toc
   # 笔记本列表页配置
   notebooks:
-    base_dir: notebooks # 笔记本列表页的路径。以及未指定 base_dir 的笔记本的路径前缀。
+    base_dir:  # 笔记本列表页的路径。以及未指定 base_dir 的笔记本的路径前缀。
     menu_id: notebooks # 笔记本列表页高亮的主导航栏菜单按钮。
     # 笔记本列表页的左侧栏和右侧栏。
     leftbar: recent # recent within all notebooks
@@ -129,10 +129,8 @@ site_tree:
     rightbar: timeline
   # 其它自定义页面配置 layout: page
   page:
-    leftbar: welcome, recent
-    rightbar: 朋友圈
-
-
+    leftbar: recent
+    rightbar: new_comment, 朋友圈
 
 ######## Article ########
 article:
@@ -167,27 +165,29 @@ article:
     max_count: 2
 
 search:
-  service: local_search # local_search, todo...
+  service: algolia_search # local_search, todo...
   local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
     field: all # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
+    skip_search: ['shuoshuo*', 'about*']
   algolia_search:
-    appId: 'AIDF40S612'
-    apiKey: '7ee4e2d3c61bbf8a826cb3e0ab74b0cf'
-    indexName: 'weekdaycare'
+    appId: '6KHRZIWYJC'
+    apiKey: 'f914eb4e95cd503d20c3fef0f62effcc'
+    indexName: 'weekdaycareio'
     placeholder: 'Power by Algolia'
+    js: https://jsd.onmicrosoft.cn/algoliasearch/3/algoliasearch.min.js
     
 
 ######## Comments ########
 comments:
   service: twikoo # beaudar, utterances, giscus, twikoo, waline, artalk
   comment_title: 来即是客，坐坐坐坐~
-  lazyload: # true
+  lazyload: true
   # beaudar
   # https://beaudar.lipk.org/
   beaudar:
-    repo: xxx/xxx
+    repo: weekdaycare/comment-test
     issue-term: pathname
     issue-number:
     theme: preferred-color-scheme
@@ -209,12 +209,11 @@ comments:
   # https://giscus.app/zh-CN
   giscus:
     src: https://giscus.app/client.js
-    data-repo: weekdaycare/weekdaycare.github.io # [在此输入仓库]
-    data-repo-id: R_kgDOGZiRHw # [在此输入仓库 ID]
-    data-category: Stellar # [在此输入分类名]
-    data-category-id: DIC_kwDOGZiRH84CTXJN
-    data-term: 80
-    data-mapping: number
+    data-repo: weekdaycare/comment-test # [在此输入仓库]
+    data-repo-id: R_kgDONhvWjQ # [在此输入仓库 ID]
+    data-category: Announcements # [在此输入分类名]
+    data-category-id: DIC_kwDONhvWjc4ClfPP
+    data-mapping: pathname
     data-strict: 0
     data-reactions-enabled: 0
     data-emit-metadata: 0
@@ -227,7 +226,7 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://npm.onmicrosoft.cn/twikoo@1.6.38/dist/twikoo.all.min.js # 建议锁定版本
+    js: https://npm.onmicrosoft.cn/twikoo@1.6.40/dist/twikoo.all.min.js # 建议锁定版本
     envId: https://comment.weekdaycare.cn # vercel函数
 
   # Waline
@@ -315,9 +314,8 @@ footer:
     # '更多':
     #   - '[关于本站](/)'
     #   - '[GitHub](/)'
-  content: | # 支持 Markdown 格式
-    <center><a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>提供CDN加速
-    <br><span id="span"></span><script type="text/javascript">function runtime(){X = new Date("11/16/2021 23:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);span.innerHTML = "勉强运行"+A+"天"}setInterval(runtime, 1000);</script> | 基于 <a href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
+  content: | # 支持 Markdown 格式 # <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>
+    <center><a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a>提供CDN加速 | 基于 <a href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
     <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a></center>
 
 
@@ -353,6 +351,11 @@ tag_plugins:
   # {% image %}
   image: 
     fancybox: true # true, false
+  # {% live %}
+  live:
+    effect: live # live/loop/exposure/bounce
+    preload: true # 是否在用户开始播放之前下载
+    style: full # full/hint/loop
   # {% copy xxx %}
   copy:
     toast: 复制成功( •̀ ω •́ )✧
@@ -399,7 +402,7 @@ tag_plugins:
 # 基础依赖
 dependencies:
   jquery: https://cdnjs.onmicrosoft.cn/ajax/libs/jquery/3.7.1/jquery.min.js
-  marked: https://cdnjs.onmicrosoft.cn/ajax/libs/marked/4.0.18/marked.min.js
+  marked: https://npm.onmicrosoft.cn/marked@14.1.2/marked.min.js
 
 
 # 内置服务，按需加载（页面内用到了就会加载，没有用到就不会加载）
@@ -438,6 +441,11 @@ data_services:
     js: /js/services/waline_new.js
   giscus:
     js: /js/services/giscus_new.js
+  # 其他类
+  webinfo:
+    js: /js/services/webinfo.js
+  live:
+    js: https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js
 
 
 # 扩展插件接入方法：(插件名下面用 #plugin# 代替)
@@ -452,7 +460,7 @@ plugins:
   preload:
     enable: true
     service: flying_pages # flying_pages
-    flying_pages: https://npm.onmicrosoft.cn/flying-pages@2/flying-pages.min.js
+    flying_pages: https://jsd.onmicrosoft.cn/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
 
   # lazyload
   # https://www.npmjs.com/package/vanilla-lazyload
@@ -477,14 +485,15 @@ plugins:
   # swiper
   swiper:
     enable: true
-    css: https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.css
-    js: https://npm.onmicrosoft.cn/swiper@10.3.1/swiper-bundle.min.js
+    homepage: true
+    css: https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.css
+    js: https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.js
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
-    enable: #true
+    enable: true
     js: https://npm.onmicrosoft.cn/scrollreveal@4.0.9/dist/scrollreveal.min.js
-    distance: 16px
+    distance: 3rem
     duration: 800 # ms
     interval: 100 # ms
     scale: 1 # 0.1~1
@@ -540,7 +549,7 @@ plugins:
     enable: # true # 可以在特定文章的 front-matter 中设置 mermaid: true 来开启，也可以在这里设置全局开启
     style_optimization: false # use custom style in stellar
     # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
-    js: https://npm.onmicrosoft.cn/mermaid@9.0.0/dist/mermaid.min.js
+    js: https://npm.onmicrosoft.cn/mermaid@11.3.0/dist/mermaid.min.js
     # Available themes: default | dark | forest | neutral
     theme: neutral
   
@@ -555,7 +564,7 @@ plugins:
     enable: true
     field: wiki # post, wiki, all 
     color: orange # red, orange...
-    expiredDays: 45
+    expiredDays: 90
     
   
   # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
@@ -606,8 +615,8 @@ style:
     scrollbar: 4px
     highlightjs_theme: https://jsd.onmicrosoft.cn/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css
   loading:
-    loading: '∠( ᐛ 」∠)＿'
-    error: 'Σ(っ °Д °;)っ'
+    loading: ∠( ᐛ 」∠)＿
+    error: Σ(っ °Д °;)っ
   gradient: # https://webgradients.com/
     start: 'linear-gradient(to right, hsl(215, 95%, 64%), hsl(195, 95%, 60%), hsl(165, 95%, 56%), hsl(165, 95%, 56%), hsl(195 95% 60%), hsl(215, 95%, 64%))'
   leftbar:
@@ -644,6 +653,6 @@ api_host:
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
-    - <link rel='stylesheet' href='https://raw.weekdaycare.cn/font/result.css' />
+    - <link rel="stylesheet" href="https://raw.weekdaycare.cn/font/result.css" media="only x" onload="this.onload=null;this.media='all'"/>
   script:
     - <script async src="https://umami.weekdaycare.cn/umamis" data-website-id="bbc30999-1e34-49d2-a98e-9a1318948de6"></script>
