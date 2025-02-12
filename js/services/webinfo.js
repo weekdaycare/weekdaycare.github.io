@@ -1,0 +1,1 @@
+utils.jq((()=>{$((function(){const t=document.getElementsByClassName("ds-webinfo");for(var e=0;e<t.length;e++){const n=t[e],s=n.getAttribute("datetime"),i=n.hasAttribute("version");if(s){const t=util.diffDate(s,!1);$(n).prepend(t)}if(i){const t=localStorage.getItem("lastVersion")||"NULL";$(n).append(t)}}}))}));

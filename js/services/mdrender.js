@@ -1,0 +1,1 @@
+utils.jq((()=>{$((function(){const t=document.getElementsByClassName("ds-mdrender");for(var e=0;e<t.length;e++){const n=t[e],s=()=>{const t=`${n.getAttribute("src")}?t=${(new Date).getTime()}`;utils.request(n,t,(function(t){n.innerHTML=marked.parse(resp.data)}))},a=n.hasAttribute("lazyload");util.viewportLazyload(n,s,a)}}))}));

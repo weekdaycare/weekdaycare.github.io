@@ -1,0 +1,1 @@
+utils.jq((()=>{$((function(){const t=document.getElementsByClassName("ds-sites");for(var e=0;e<t.length;e++){const n=t[e],s=n.getAttribute("api");if(null==s)continue;def.avatar,def.cover}}))}));

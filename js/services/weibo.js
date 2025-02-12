@@ -1,0 +1,1 @@
+utils.jq((()=>{$((function(){const t=document.getElementsByClassName("ds-weibo");for(var e=0;e<t.length;e++){const a=t[e],n=a.getAttribute("api");if(null==n)continue;a.getAttribute("avatar")||def.avatar}}))}));
