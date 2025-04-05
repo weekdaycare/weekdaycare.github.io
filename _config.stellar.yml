@@ -11,7 +11,6 @@ stellar:
 preconnect:
   # - https://gcore.jsdelivr.net
   # - https://unpkg.com
-  # - https://cdnjs.onmicrosoft.cn/
 
 open_graph:
   enable: true
@@ -226,7 +225,7 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://npm.onmicrosoft.cn/twikoo@1.6.40/dist/twikoo.all.min.js # 建议锁定版本
+    js: https://s4.zstatic.net/ajax/libs/twikoo/1.6.40/twikoo.all.min.js # 建议锁定版本
     envId: https://comment.weekdaycare.cn # vercel函数
 
   # Waline
@@ -401,8 +400,8 @@ tag_plugins:
 
 # 基础依赖
 dependencies:
-  jquery: https://cdnjs.onmicrosoft.cn/ajax/libs/jquery/3.7.1/jquery.min.js
-  marked: https://npm.onmicrosoft.cn/marked@14.1.2/marked.min.js
+  jquery: https://s4.zstatic.net/ajax/libs/jquery/3.7.1/jquery.min.js
+  marked: https://s4.zstatic.net/ajax/libs/marked/14.1.2/marked.min.js
 
 
 # 内置服务，按需加载（页面内用到了就会加载，没有用到就不会加载）
@@ -474,8 +473,8 @@ plugins:
   fancybox:
     enable: true
     loader: /js/plugins/fancybox-loader.js
-    js: https://npm.onmicrosoft.cn/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
-    css: https://npm.onmicrosoft.cn/@fancyapps/ui@5.0/dist/fancybox/fancybox.css
+    js: https://s4.zstatic.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
+    css: https://s4.zstatic.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css
     # 让 md 语法图片支持放大可以这样写: .md-text img:not([class]), .md-text .image img
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
     # 使用 twikoo 评论可以写: .tk-content img:not([class*="emo"])
@@ -486,13 +485,13 @@ plugins:
   swiper:
     enable: true
     homepage: true
-    css: https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.css
-    js: https://npm.onmicrosoft.cn/swiper@11.1.14/swiper-bundle.min.js
+    css: https://s4.zstatic.net/npm/swiper@11.1.14/swiper-bundle.min.css
+    js: https://s4.zstatic.net/npm/swiper@11.1.14/swiper-bundle.min.js
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
     enable: true
-    js: https://npm.onmicrosoft.cn/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    js: https://s4.zstatic.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 3rem
     duration: 800 # ms
     interval: 100 # ms
@@ -549,7 +548,7 @@ plugins:
     enable: # true # 可以在特定文章的 front-matter 中设置 mermaid: true 来开启，也可以在这里设置全局开启
     style_optimization: false # use custom style in stellar
     # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
-    js: https://npm.onmicrosoft.cn/mermaid@11.3.0/dist/mermaid.min.js
+    js: https://s4.zstatic.net/npm/mermaid@11.3.0/dist/mermaid.min.js
     # Available themes: default | dark | forest | neutral
     theme: neutral
   
