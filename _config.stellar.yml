@@ -225,7 +225,7 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: https://s4.zstatic.net/ajax/libs/twikoo/1.6.40/twikoo.all.min.js # 建议锁定版本
+    js: https://s4.zstatic.net/npm/twikoo@1.6.44/dist/twikoo.min.js # 建议锁定版本
     envId: https://comment.weekdaycare.cn # vercel函数
 
   # Waline
@@ -242,7 +242,7 @@ comments:
     pageview: false
     # Custom emoji
     emoji:
-      - https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs
+      - https://raw.weekdaycare.cn/raw/twikoo-blobcat/refs/heads/main/blobs
     #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
     #   - https://unpkg.com/@waline/emojis@1.1.0/alus
     #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
