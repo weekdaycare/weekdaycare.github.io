@@ -1,11 +1,10 @@
 ######## Stellar info ########
 stellar:
-  version: '1.29.1'
-  homepage: 'https://xaoxuu.com/wiki/stellar/'
-  repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
+  version: "1.29.1"
+  homepage: "https://xaoxuu.com/wiki/stellar/"
+  repo: "https://github.com/xaoxuu/hexo-theme-stellar"
   main_css: /css/main.css
   main_js: /js/main.js
-
 
 ######## head tags ########
 preconnect:
@@ -16,13 +15,12 @@ open_graph:
   enable: true
   twitter_id: # for open_graph meta
 
-
 ######## Sidebar ########
 # 左上角显示的 logo 区域，包含图标、大标题、副标题
 logo:
-  avatar: '[{config.avatar}](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
-  title: '[{config.title}](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
-  subtitle: '{config.subtitle}' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
+  avatar: "[{config.avatar}](/about/)" # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  title: "[{config.title}](/)" # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  subtitle: "{config.subtitle}" # '文字1 | 文字2' (鼠标放上去会切换到文字2)
 
 # 侧边栏主功能导航菜单
 menubar:
@@ -34,7 +32,7 @@ menubar:
       title: 日光
       url: /
     #- id: doc
-      # icon: ph:books-duotone
+    # icon: ph:books-duotone
     #  theme: var(--text)
     #  title: 文档
     #  url: /doc/
@@ -47,7 +45,6 @@ menubar:
       theme: var(--text)
       title: 星海
       url: /about/
-
 
 ######## Main ########
 # 站点主结构树
@@ -63,7 +60,7 @@ site_tree:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     leftbar: recent # for categories/tags/archives
     rightbar: welcome, webinfo
-    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+    nav_tabs: # 近期发布 分类 标签 专栏 归档 and ...
       #'表情速查': /posts/emoji-blob/
   # 博客专栏列表页配置
   index_topic:
@@ -74,7 +71,7 @@ site_tree:
     base_dir: wiki # 只影响自动生成的页面路径
     menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
     leftbar: related, recent # for wiki
-    rightbar: 
+    rightbar:
     nav_tabs:
       # 'more': https://github.com/xaoxuu
   # -- 内容类页面 -- #
@@ -93,7 +90,7 @@ site_tree:
     rightbar: ghrepo, toc
   # 笔记本列表页配置
   notebooks:
-    base_dir:  # 笔记本列表页的路径。以及未指定 base_dir 的笔记本的路径前缀。
+    base_dir: # 笔记本列表页的路径。以及未指定 base_dir 的笔记本的路径前缀。
     menu_id: notebooks # 笔记本列表页高亮的主导航栏菜单按钮。
     # 笔记本列表页的左侧栏和右侧栏。
     leftbar: recent # recent within all notebooks
@@ -115,7 +112,7 @@ site_tree:
     leftbar: tagtree, recent # recent of current notebook
     rightbar: toc
   # 作者信息配置
-  author: 
+  author:
     base_dir: author # 只影响自动生成的页面路径
     menu_id: post
     leftbar: recent, timeline
@@ -123,7 +120,7 @@ site_tree:
   # 错误页配置
   error_page:
     menu_id: post
-    '404': '/404.html'
+    "404": "/404.html"
     leftbar: recent
     rightbar: timeline
   # 其它自定义页面配置 layout: page
@@ -147,12 +144,12 @@ article:
   auto_excerpt: 128
   # 分类颜色
   category_color:
-    '杂七杂八': "#854836"
-    '学习感悟': "#F14E32"
-    '奇技淫巧': "#E2A5AD"
-    '日常随笔': "#7B68EE"
+    "杂七杂八": "#854836"
+    "学习感悟": "#F14E32"
+    "奇技淫巧": "#E2A5AD"
+    "日常随笔": "#7B68EE"
   # 文章许可协议
-  license: '[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 若你喜欢我的文章欢迎互动，玩的愉快！'
+  license: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 若你喜欢我的文章欢迎互动，玩的愉快！"
   # 分享
   share: # [wechat, weibo, email, link]
   wordcount:
@@ -169,14 +166,13 @@ search:
     field: all # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
-    skip_search: ['shuoshuo*', 'about*']
+    skip_search: ["shuoshuo*", "about*"]
   algolia_search:
-    appId: '6KHRZIWYJC'
-    apiKey: 'f914eb4e95cd503d20c3fef0f62effcc'
-    indexName: 'weekdaycareio'
-    placeholder: 'Power by Algolia'
+    appId: "6KHRZIWYJC"
+    apiKey: "f914eb4e95cd503d20c3fef0f62effcc"
+    indexName: "weekdaycareio"
+    placeholder: "Power by Algolia"
     js: https://jsd.onmicrosoft.cn/algoliasearch/3/algoliasearch.min.js
-    
 
 ######## Comments ########
 comments:
@@ -252,19 +248,19 @@ comments:
     #   - https://unpkg.com/@waline/emojis@1.1.0/bmoji
     # 设置自己的图床服务，替换默认的 Base 64 编码嵌入（有体积大小限制），在评论中上传图片更加方便
     # imageUploader:
-      # 适配了兰空图床V1、V2版本
-      # 以兰空图床V1为例，下列填写内容为：
-      # fileName: file
-      # tokenName: Authorization
-      # api: https://xxxxxx/api/v1/upload
-      # token: Bearer xxxxxxxxxxxxxx
-      # resp: data.links.url
-      # 以兰空图床V2为例，下列填写内容为：
-      # fileName: image
-      # tokenName: token
-      # api: https://xxxxxx/api/upload
-      # token: xxxxxxxxxxxxxx
-      # resp: data.url
+    # 适配了兰空图床V1、V2版本
+    # 以兰空图床V1为例，下列填写内容为：
+    # fileName: file
+    # tokenName: Authorization
+    # api: https://xxxxxx/api/v1/upload
+    # token: Bearer xxxxxxxxxxxxxx
+    # resp: data.links.url
+    # 以兰空图床V2为例，下列填写内容为：
+    # fileName: image
+    # tokenName: token
+    # api: https://xxxxxx/api/upload
+    # token: xxxxxxxxxxxxxx
+    # resp: data.url
     #   fileName: # 根据版本二选一
     #   tokenName: # 根据版本二选一
     #   api: # 图床 api 地址
@@ -277,9 +273,8 @@ comments:
     css: https://unpkg.com/artalk@2.7/dist/Artalk.css
     js: https://unpkg.com/artalk@2.7/dist/Artalk.js
     server: # 后端服务地址
-    placeholder: ''
+    placeholder: ""
     darkMode: auto
-
 
 ######## Footer ########
 footer:
@@ -313,16 +308,16 @@ footer:
     # '更多':
     #   - '[关于本站](/)'
     #   - '[GitHub](/)'
-  content: | # 支持 Markdown 格式 # <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a>
-    <center><a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a>提供CDN加速 | 基于 <a href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
+  content:
+    | # 支持 Markdown 格式 # | 由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a>提供CDN加速
+    <center>由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"> <img src="https://bu.dusays.com/2024/06/13/666a494ded7c9.png" height="20px" alt="又拍云_logo2.png" title="又拍云_logo2.png" /></a>提供加速 | <a href="https://beian.miit.gov.cn/">陕ICP备2022011813</a> | 基于 <a href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题
     <br><a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_4_tp.gif" alt="十年之约" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a></center>
-
 
 ######## Tag Plugins ########
 tag_plugins:
   # {% box %} / {% note %}
   note:
-    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+    default_color: "" # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
     border: true # true / false
   # {% checkbox %}
   checkbox:
@@ -338,8 +333,8 @@ tag_plugins:
       prefix: ph:seal-question-fill
   # {% emoji %}
   emoji:
-    default: https://raw.weekdaycare.cn/raw/waline-blobcatemojis/main/blobs/{name}.png
-    fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/main/assets/{name}.svg
+    default: https://raw.weekdaycare.cn/raw/twikoo-blobcat/refs/heads/main/blobs/{name}.png
+    fluent: https://raw.weekdaycare.cn/raw/waline-fluentemoji/refs/heads/main/assets/{name}.svg
 
   icon:
     # 留空时，图标和文字颜色相同
@@ -348,7 +343,7 @@ tag_plugins:
   button:
     default_color: theme # theme, accent, red, orange, yellow, green, cyan, blue, purple
   # {% image %}
-  image: 
+  image:
     fancybox: true # true, false
   # {% live %}
   live:
@@ -378,7 +373,7 @@ tag_plugins:
       in_track:
         color: blue # red, orange, yellow, green, cyan, blue, purple
         label: 进行中
-      at_risk: 
+      at_risk:
         color: yellow
         label: 风险
       off_track:
@@ -397,12 +392,10 @@ tag_plugins:
     size: mix # s / m / l / xl / mix
     ratio: square # origin / square
 
-
 # 基础依赖
 dependencies:
   jquery: https://s4.zstatic.net/ajax/libs/jquery/3.7.1/jquery.min.js
   marked: https://s4.zstatic.net/ajax/libs/marked/14.1.2/marked.min.js
-
 
 # 内置服务，按需加载（页面内用到了就会加载，没有用到就不会加载）
 data_services:
@@ -435,17 +428,16 @@ data_services:
     js: /js/services/memos.js
   # 评论获取类
   twikoo:
-    js: /js/services/twikoo_new.js
+    js: /js/services/twikoo_latest_comment.js
   waline:
-    js: /js/services/waline_new.js
+    js: /js/services/waline_latest_comment.js
   giscus:
-    js: /js/services/giscus_new.js
+    js: /js/services/giscus_latest_comment.js
   # 其他类
   webinfo:
     js: /js/services/webinfo.js
   live:
     js: https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js
-
 
 # 扩展插件接入方法：(插件名下面用 #plugin# 代替)
 # 1. 在这里增加 #plugin# 配置，至少赢含有 enable 字段，默认为空（不启用）
@@ -496,26 +488,25 @@ plugins:
     duration: 800 # ms
     interval: 100 # ms
     scale: 1 # 0.1~1
-  
+
   # AI 摘要
   # https://github.com/qxchuckle/Post-Summary-AI
-  tianli_gpt: 
+  tianli_gpt:
     enable: #true
     js: https://jsd.onmicrosoft.cn/gh/qxchuckle/Post-Summary-AI@6.0/chuckle-post-ai.min.js
     field: wiki # all, post, wiki
     key: 5Q5mpqRK5DkwT1X9Gi5e # tianli_gpt key
     total_length: 1000 # 设置提交的字数限制，默认为1000字，上限为5000，超过5000字符将被截断
-    typewriter: true # 打字机动画 
+    typewriter: true # 打字机动画
     summary_directly: true # 是否直接显示摘要，否则显示 AI 简介
     rec_method: all # all, web # 文章推荐方式，all：匹配数据库内所有文章进行推荐，web：仅当前站内的文章，默认all
     hide_shuttle: true # 是否隐藏矩阵穿梭
     summary_toggle: false
     interface:
       name: AI摘要
-      introduce: '我是文章辅助AI: QX-AI，点击下方的按钮，让我生成本文简介、推荐相关文章等。'
+      introduce: "我是文章辅助AI: QX-AI，点击下方的按钮，让我生成本文简介、推荐相关文章等。"
       version: TianliGPT
       button: ["介绍自己", "推荐文章", "生成摘要", "矩阵穿梭"]
-
 
   # Katex - The fastest math typesetting library for the web
   # https://katex.org/docs/autorender.html
@@ -527,7 +518,7 @@ plugins:
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
       <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
       <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
-  
+
   # MathJax
   # 需在Markdown文件开头加入mathjax: true
   # 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save & npm install hexo-renderer-pandoc --save
@@ -551,29 +542,26 @@ plugins:
     js: https://s4.zstatic.net/npm/mermaid@11.3.0/dist/mermaid.min.js
     # Available themes: default | dark | forest | neutral
     theme: neutral
-  
+
   # 代码块复制按钮
   copycode:
     enable: true
-    default_text: 'Copy'
-    success_text: 'Copied'
+    default_text: "Copy"
+    success_text: "Copied"
     toast: 复制成功
-  
+
   expire: # 文章时效提醒
     enable: true
-    field: wiki # post, wiki, all 
+    field: wiki # post, wiki, all
     color: orange # red, orange...
     expiredDays: 90
-    
-  
+
   # 赫蹏 (Heti) - 专为中文网页内容设计的排版样式增强
   # https://github.com/sivan/heti
   heti:
     enable: false # 此插件会和代码块冲突，仅适用于纯中文博主。
     css: https://unpkg.com/heti@0.9.2/umd/heti.min.css
     js: https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js
-
-
 
 style:
   prefers_theme: auto # auto / light / dark
@@ -598,15 +586,15 @@ style:
     image: 6px # 图片圆角
   color:
     # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
-    background: 'hsl(212 16% 98%)' # 浅色背景颜色
-    block: 'hsl(212 8% 95%)' # 块背景颜色
-    code: 'hsl(220 20% 10%)' # 'hsl(14 100% 48%)' # 行内代码颜色
-    text: 'hsl(0 0% 20%)' # 文本颜色
+    background: "hsl(212 16% 98%)" # 浅色背景颜色
+    block: "hsl(212 8% 95%)" # 块背景颜色
+    code: "hsl(220 20% 10%)" # 'hsl(14 100% 48%)' # 行内代码颜色
+    text: "hsl(0 0% 20%)" # 文本颜色
     # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
-    theme: '#F4511E' # 主题色
-    accent: '#F4511E' # 强调色
-    link: '#F4511E' # 超链接颜色
-    hover: '#7E57C2' # 按钮高亮颜色
+    theme: "#F4511E" # 主题色
+    accent: "#F4511E" # 强调色
+    link: "#F4511E" # 超链接颜色
+    hover: "#7E57C2" # 按钮高亮颜色
   animated_avatar:
     animate: # auto, always
     background: https://jsd.onmicrosoft.cn/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp
@@ -617,7 +605,7 @@ style:
     loading: ∠( ᐛ 」∠)＿
     error: Σ(っ °Д °;)っ
   gradient: # https://webgradients.com/
-    start: 'linear-gradient(to right, hsl(215, 95%, 64%), hsl(195, 95%, 60%), hsl(165, 95%, 56%), hsl(165, 95%, 56%), hsl(195 95% 60%), hsl(215, 95%, 64%))'
+    start: "linear-gradient(to right, hsl(215, 95%, 64%), hsl(195, 95%, 60%), hsl(165, 95%, 56%), hsl(165, 95%, 56%), hsl(195 95% 60%), hsl(215, 95%, 64%))"
   leftbar:
     # 可以设置：纯色/渐变色/图片作为背景
     # background: var(--leftbar-bg)
@@ -633,7 +621,6 @@ style:
     blur-px: #100px
     blur-bg: #var(--alpha75)
 
-
 default:
   avatar: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg
   link: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg
@@ -643,12 +630,11 @@ default:
   banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
   topic: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png
 
-
 api_host:
   ghapi: https://raw.weekdaycare.cn/api
   ghraw: https://raw.onmicrosoft.cn/raw
   gist: https://raw.weekdaycare.cn/gist
- 
+
 inject:
   head:
     # - <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
