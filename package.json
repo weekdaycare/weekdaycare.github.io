@@ -33,7 +33,7 @@
     "hexo-server": "^3.0.0",
     "hexo-swpp": "^3.3.7",
     "hexo-uglify": "^2.0.0",
-    "hexo-word-counter": "^0.2.0",
+    "hexo-word-counter": "^0.2.2",
     "swpp-backends": "^2.3.12"
   }
 }
